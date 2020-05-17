@@ -1,27 +1,16 @@
 {
-  "name": "eleventy-base-blog",
-  "version": "5.0.2",
-  "description": "A starter repository for a blog web site using the Eleventy static site generator.",
-  "scripts": {
-    "build": "eleventy",
-    "watch": "eleventy --watch",
-    "serve": "eleventy --serve",
-    "debug": "DEBUG=* eleventy"
-  },
+  "name": "nerdycode",
+  "version": "2.0.0",
+  "description": "A website about software and sometimes non-software things.",
+
   "repository": {
     "type": "git",
-    "url": "git://github.com/11ty/eleventy-base-blog.git"
+    "url": "git://github.com/kahboom/nerdycode.com.git"
   },
-  "author": {
-    "name": "Zach Leatherman",
-    "email": "zachleatherman@gmail.com",
-    "url": "https://zachleat.com/"
-  },
+  "author": "Rachel Yordán <nerdycodeblog@gmail.com> (https://www.nerdycode.com/)",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/11ty/eleventy-base-blog/issues"
-  },
-  "homepage": "https://github.com/11ty/eleventy-base-blog#readme",
+
+  "homepage": "https://www.github.com/kahboom/nerdycode.com#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-navigation": "^0.1.3",
@@ -30,5 +19,15 @@
     "luxon": "^1.21.3",
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.2.5"
-  }
+  },
+  "scripts": {
+    "build": "eleventy",
+    "watch": "eleventy --watch",
+    "serve": "eleventy --serve",
+    "debug": "DEBUG=* eleventy"
+  },
+  "bugs": {
+    "url": "https://www.github.com/kahboom/nerdycode.com/issues"
+  },
+  "main": "index.js"
 }
