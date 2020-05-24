@@ -22,9 +22,9 @@
   },
   "scripts": {
     "build": "eleventy",
-    "watch": "eleventy --watch",
-    "serve": "eleventy --serve",
-    "debug": "DEBUG=* eleventy"
+    "debug": "DEBUG=* eleventy",
+    "start": "eleventy --serve",
+    "watch": "eleventy --watch"
   },
   "bugs": {
     "url": "https://www.github.com/kahboom/nerdycode.com/issues"

@@ -1,11 +1,10 @@
 ---
-title: This is my first post.
-description: This is a post on My Blog about agile frameworks.
-date: 2018-05-01
-permalink: "/this-will-be-a-string-without-templating/"
+title: Top Webstorm Plugins for React Developers
+date: 2020-05-01
+permalink: "/top-webstorm-plugins/"
 dynamicPermalink: false
 tags:
-  - another-tag
+  - tops
 layout: layouts/post.njk
 ---
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
@@ -26,3 +25,6 @@ function myCommand() {
 // Test with a line break above this line.
 console.log('Test');
 ```
+
+
+Top 5 WebStorm Plugins for React Developers
