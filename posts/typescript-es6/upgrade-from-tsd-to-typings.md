@@ -4,7 +4,7 @@ date: "2016-02-26"
 layout: layouts/post.njk
 ---
 
-As you may or may not know, **TSD** was recently deprecated and the author has recommended that users switch to **Typings** instead. Luckily for us, it's something that can be done in just a few easy steps. I've outlined them below:
+As you may or may not know, **TSD** was recently deprecated, and the author has recommended that users switch to **Typings** instead. Luckily for us, it's something that can be done in just a few easy steps. I've outlined them below:
 
 **Step 1:** Remove \`typings\` dir.
 

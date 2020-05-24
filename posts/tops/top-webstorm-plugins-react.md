@@ -25,6 +25,3 @@ function myCommand() {
 // Test with a line break above this line.
 console.log('Test');
 ```
-
-
-Top 5 WebStorm Plugins for React Developers

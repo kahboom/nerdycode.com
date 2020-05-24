@@ -61,17 +61,19 @@ The command `node_modules/.bin/cypress open` will open the Cypress CLI (or das
 
 You can also add the following script to your `package.json` to make it easier to run Cypress:
 
-"cypress": "cypress open"
+`"cypress": "cypress open"`
 
 It's possible to run Cypress tests without the UI or dashboard by adding this script as well, which will run tests strictly in the terminal:
 
-"cypress:all": "cypress run"
+`"cypress:all": "cypress run"`
 
 Make sure your `baseUrl` is correctly defined in the `cypress.json` file in the root of your project. You'll need to make sure your app is running when you run Cypress, and that the `baseUrl` corresponds to the server and port your app runs on:
 
+```
 {
   "baseUrl": "http://localhost:3000"
 }
+```
 
 When you first run Cypress, you'll notice it also provides a nice example test in `cypress/integration/example_spec.js`.
 
@@ -83,7 +85,7 @@ Something I don't like about Cypress is that, as you can see, it creates an `int
 
 It's common that you'll need to interact with a server to determine some type of state, and the _usually_ comes in the form of some JSON data returned by an API. If you've written E2E tests before, you may be familiar with the concept and **setup** and **teardown** on a server (hopefully one specifically for testing). Cypress gives you a few options and alternatives.
 
-1\. **You could continue to seed a database** using one of the following methods:
+1. **You could continue to seed a database** using one of the following methods:
 
 - [`cy.exec()`](https://docs.cypress.io/api/commands/exec.html) - to run system commands
 - [`cy.task()`](https://docs.cypress.io/api/commands/task.html) - to run code in Node via the [`pluginsFile`](https://docs.cypress.io/guides/references/configuration.html#Folders-Files)
@@ -91,16 +93,18 @@ It's common that you'll need to interact with a server to determine some type of
 
 If you need to load data and seed the application, it's likely you will probably want to use [fixtures](https://docs.cypress.io/api/commands/fixture.html#Notes) to accomplish that. You can set this up in the `beforeEach`, which runs before each test, as it implies:
 
+```
 beforeEach(function () {
     // This will reset and seed the database before each test
     cy.exec('yarn db:reset && yarn db:seed')
 })
+```
 
-2\. **You could also just bypass the server completely by stubbing the JSON data it returns.** This is less cumbersome than seeding a database, but likely a bit less accurate since you're not working with data actually returned by the API.
+2. **You could also just bypass the server completely by stubbing the JSON data it returns.** This is less cumbersome than seeding a database, but likely a bit less accurate since you're not working with data actually returned by the API.
 
 Purists might argue that true E2E testing should use _real_ data. I'm not convinced that this should be the case 100% of the time, but there is validity to the argument. I think the best approach here is to do a bit of each, depending on the needs of the test.
 
-To circumvent the issue of not having the contract of the server when you stub it, Cypress recommends either having the server stub out the data ahead of time, or writing a single test that uses "real data" (no stubs) and the rest with stubs.
+To circumvent the issue of not having the contract of the server when you stub it, Cypress recommends either having the server stub out the data ahead of time, or writing a single test that uses "real data" (no stubs), and the rest with stubs.
 
 If you need to stub calls to the API (for instance, for form submission), you can use `cy.server()` and `cy.route()`.
 
@@ -110,6 +114,7 @@ If there is one thing I want for you to take away from this article, it's that *
 
 Back to our app, here is a very basic example of a test:
 
+```
 describe('DessertApp', () => {
   beforeEach(() => {
     cy.visit('/')
@@ -125,6 +130,7 @@ describe('DessertApp', () => {
     cy.get('li').should('have.length', 10)
   })
 })
+```
 
 You may notice a lot of `it` s and `should` s. Cypress is built on top of Mocha and Chai, so if you've worked with those before, Cypress should be even easier for you.
 
@@ -139,6 +145,7 @@ Everything else can vary, such as whether or not you need to seed data, login, c
 
 E2E tests are most useful when they become part of the developer's workflow. If you use CircleCI, it's easy to integration Cypress using the [Cypress CircleCI Orb](https://docs.cypress.io/guides/guides/continuous-integration.html#CircleCI) configuration set. For more info, visit the repo [here](https://github.com/cypress-io/circleci-orb). A brief example provided by Cypress shows a simple `circle.yml` file with the following settings:
 
+```
 version: 2.1
 orbs:
   # "cypress-io/cypress@1" installs the latest published
@@ -150,6 +157,7 @@ workflows:
   build:
     jobs:
       - cypress/run # "run" job comes from "cypress" orb
+```
 
 ## Final Thoughts
 

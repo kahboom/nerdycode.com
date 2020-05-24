@@ -34,16 +34,20 @@ module.exports = {
 
 It's basically a Node.js module that accepts a bunch of configuration options. For more information on each of those options, you can refer to the Webpack Config docs [here](http://webpack.github.io/docs/configuration.html).
 
-In our case, we use the \`entry\` option to pass in a polyfill, then some third-party dependencies, and, finally, our Angular application. Therefore, if you'd like to include a third-party dependency, the file referenced in this option, `vendor.browser.ts` is the place to do it. If you'd like to do Angular-related things, you'd follow the "main" file, located in `/src/main.browser.ts`, which will lead you to all things Angular.
+In our case, we use the `entry` option to pass in a polyfill, then some third-party dependencies, and, finally, our Angular application. Therefore, if you'd like to include a third-party dependency, the file referenced in this option, `vendor.browser.ts` is the place to do it. If you'd like to do Angular-related things, you'd follow the "main" file, located in `/src/main.browser.ts`, which will lead you to all things Angular.
 
 ### Angular 2
 
 You'll enter Angular world from the `./src/main.browser.ts` file. You'll notice that a file is imported at the top --
 
+```
 import {AppModule} from './app';
+```
 
-\-- and that some bootstrapping is done, just as with Angular 1, even though it may look a little different. If you open up that file, you'll see that it is quite a simple file, just importing our main Angular application like so:
+-- and that some bootstrapping is done, just as with Angular 1, even though it may look a little different. If you open up that file, you'll see that it is quite a simple file, just importing our main Angular application like so:
 
-export \* from './app.module';
+```
+export * from './app.module';
+```
 
 Now, the `app.module` file is where things really start to look strange. Angular 2 differs quite a bit from Angular 1, so you may want to check out some of the differences [here](https://dzone.com/articles/typed-front-end-with-angular-2).

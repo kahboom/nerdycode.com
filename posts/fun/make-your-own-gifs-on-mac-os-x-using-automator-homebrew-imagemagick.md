@@ -16,7 +16,7 @@ In this brief tutorial I’ll be teaching you how to make a service on macOS (o
 
 Okay, let’s get this party started.
 
-## 1\. Install or setup Homebrew
+## 1. Install or setup Homebrew
 
 **What is Homebrew and why do I need it?**
 
@@ -26,23 +26,22 @@ If you normally use MacPorts, Fink, or are just compiling things manually, feel
 
 So, if you don’t already have Homebrew installed, let’s do that first. Open up Terminal by going to **Applications > Utilities > Terminal.app**. Execute the following command to get Homebrew installed:
 
+```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-If you already have Homebrew installed, run it by the doctor to make sure it’s good to go:
-
-brew doctor
+```
 
 If your system is ready to brew, continue to step #2.
 
-## 2\. Install Imagemagick
+## 2. Install Imagemagick
 
 **What is [Imagemagick](http://www.imagemagick.org/script/index.php)?**
 
 Imagemagick is a very powerful tool for working with images, but it also comes with a convenient tool called **convert**. That is what we need in order to create the GIF service:
-
+```
 brew install imagemagick
+```
 
-## 3\. Create Automator Script
+## 3. Create Automator Script
 
 Open up Automator by going to **Applications > Automator.app**. If a window pops up asking you to select a file, just press “Done”. Then go to the top menu bar where it reads **File** and click on “New”. Then select “Service” and press the “Choose” button on the bottom right-hand corner.
 
@@ -68,15 +67,17 @@ You should now see a **“pass input”** option that defaults to {**to stdin*
 
 Copy and paste the following command in the text area:
 
+```
 /usr/local/bin/convert -delay 35 -loop 0 "$@" ~/Desktop/animated.gif
+```
 
 ![screenshot-2016-11-01-15-43-40](https://i2.wp.com/www.nerdycode.com/wp-content/uploads/2016/11/Screenshot-2016-11-01-15.43.40-1024x539.png?fit=686%2C361)
 
-The **\-delay** flag simply denotes how long each image in the series is displayed for, in milliseconds. I like 30-35, but sometimes it makes sense to go as low as 20. Totally up to you! Feel free to change the output path of the file from **~/Desktop/animated.gif** to whatever you like. Please note that if you make more than one gif, it will automatically override the file that is there unless you rename it to something other than animated.gif.
+The **-delay** flag simply denotes how long each image in the series is displayed for, in milliseconds. I like 30-35, but sometimes it makes sense to go as low as 20. Totally up to you! Feel free to change the output path of the file from **~/Desktop/animated.gif** to whatever you like. Please note that if you make more than one gif, it will automatically override the file that is there unless you rename it to something other than animated.gif.
 
 Once you’re happy with it, go to **File > Save** and name this workflow “Make Animated Gif”.
 
-## 4\. $$Profit!!
+## 4. $$Profit!!
 
 Grab your cheese, grab your crackers. Snap a few photos with Facetime, or just test with whatever you have. Command + click all of the photos you want as part of your GIF, right click and go to **Services > Make Animated Gif**.
 

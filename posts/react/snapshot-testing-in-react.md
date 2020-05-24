@@ -12,7 +12,7 @@ So you're setting up your testing suite and start running into something called 
 
 One of the biggest benefits of using snapshot tests is that you can implement your tests much more quickly. The way that it works is that a snapshot file gets generated whenever you run your test, and that file gets committed along with the rest of your code. As such, **you should always treat your snapshots as code**.
 
-What I sometimes don't like about snapshot testing is that **they're often used to test implementation details**. As a result, refactoring and enhancements going into the future can cause you more technical debt than your future self is willing to deal with. Not to mention, the false negatives (stale failing tests for code that works properly) you can run into is enough to convince anyone contributing to your project that your tests are unreliable.
+What I sometimes don't like about snapshot testing is that **they're often used to test implementation details**. As a result, refactoring and enhancements going into the future can cause you more technical debt than your future self is willing to deal with. Not to mention, the false negatives (stale failing tests for code that works properly) you can run into are enough to convince any contributor of your project that your tests are unreliable.
 
 So, what then? For the most part, you can test the things you are using snapshots for with old-school assertions in unit tests. Sure, they're not as much fun, but they're useful, straightforward, and can be relatively resilient when written with the future in mind.
 
@@ -22,6 +22,7 @@ Alright, so then what should we be using for these snapshot tests? [Jest](https:
 
 Example of a component that renders hyperlinks, borrowed directly from the docs:
 
+```
 // Link.react.js
 import React from 'react';
 
@@ -34,19 +35,19 @@ export default class Link extends React.Component {
   constructor(props) {
     super(props);
 
-    this.\_onMouseEnter = this.\_onMouseEnter.bind(this);
-    this.\_onMouseLeave = this.\_onMouseLeave.bind(this);
+    this._onMouseEnter = this._onMouseEnter.bind(this);
+    this._onMouseLeave = this._onMouseLeave.bind(this);
 
     this.state = {
       class: STATUS.NORMAL,
     };
   }
 
-  \_onMouseEnter() {
+  _onMouseEnter() {
     this.setState({class: STATUS.HOVERED});
   }
 
-  \_onMouseLeave() {
+  _onMouseLeave() {
     this.setState({class: STATUS.NORMAL});
   }
 
@@ -55,17 +56,19 @@ export default class Link extends React.Component {
       <a
         className={this.state.class}
         href={this.props.page || '#'}
-        onMouseEnter={this.\_onMouseEnter}
-        onMouseLeave={this.\_onMouseLeave}
+        onMouseEnter={this._onMouseEnter}
+        onMouseLeave={this._onMouseLeave}
       >
         {this.props.children}
       </a>
     );
   }
 }
+```
 
 Snapshot test:
 
+```
 // Link.react.test.js
 import React from 'react';
 import Link from '../Link.react';
@@ -90,6 +93,7 @@ test('Link changes the class when hovered', () => {
   tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
+```
 
 When the test is run with `yarn test` or `jest`, a file gets created. Oh, snap! You just created your snapshot file. :) In this case, it'd be named something like `__tests__/__snapshots__/Link.react.test.js.snap`.
 
