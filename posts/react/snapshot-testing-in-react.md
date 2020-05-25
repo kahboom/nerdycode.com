@@ -2,6 +2,11 @@
 title: "Snapshot Testing in React"
 date: "2019-06-29"
 layout: layouts/post.njk
+permalink: "/snapshot-testing-in-react/"
+dynamicPermalink: false
+tags:
+  - react
+  - testing
 ---
 
 So you're setting up your testing suite and start running into something called "snapshot tests," not knowing exactly what they are and whether or not you should be using them. So, what exactly are snapshot tests? Straight from the Jest docs:

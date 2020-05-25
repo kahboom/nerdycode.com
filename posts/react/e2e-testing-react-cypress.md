@@ -1,6 +1,8 @@
 ---
 title: "E2E Testing React with Cypress"
 date: "2019-07-11"
+permalink: "/e2e-testing-react-cypress/"
+dynamicPermalink: false
 layout: layouts/post.njk
 ---
 

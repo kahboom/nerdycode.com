@@ -2,6 +2,10 @@
 title: "Angular Check if Form is Valid from Controller"
 date: "2016-02-26"
 layout: layouts/post.njk
+permalink: "/angular-form-valid-from-controller/"
+dynamicPermalink: false
+tags:
+  - angular
 ---
 
 The other day I was asked how you could check whether a form in Angular is valid from within the controller that corresponds to the form. Traditionally, this is how you would check the validity of your Angular form in the view, or your HTML:

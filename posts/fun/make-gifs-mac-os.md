@@ -1,7 +1,11 @@
 ---
 title: "Make Your Own GIFs on macOS or OS X using Automator & Homebrew"
 date: "2016-11-01"
+permalink: "/make-your-own-gifs-on-mac-os-x-using-automator-homebrew-imagemagick/"
+dynamicPermalink: false
 layout: layouts/post.njk
+tags:
+  - mac
 ---
 
 In this brief tutorial I’ll be teaching you how to make a service on macOS (or OS X) that allows you to quickly select multiple images and make them into a GIF file with a single click. There are many ways to generate your own animated GIFs, but I personally prefer to use a shell script and create my own reusable service instead of, for instance, using a web-based service like Giphy (of course, nothing wrong with that either) where you have to upload photos to a remote server. For my own personal amusement I’ll be using the following photos I randomly snapped of myself eating cheese and crackers:

@@ -2,6 +2,10 @@
 title: "Upgrade from TSD to Typings"
 date: "2016-02-26"
 layout: layouts/post.njk
+permalink: "/upgrade-from-tsd-to-typings/"
+tags:
+  - typescript
+dynamicPermalink: false
 ---
 
 As you may or may not know, **TSD** was recently deprecated, and the author has recommended that users switch to **Typings** instead. Luckily for us, it's something that can be done in just a few easy steps. I've outlined them below:

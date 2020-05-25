@@ -2,6 +2,8 @@
 title: "Willkommen"
 date: "2015-10-11"
 layout: layouts/post.njk
+permalink: "/hello-world/"
+dynamicPermalink: false
 ---
 
 ![](images/272194_2191421115282_7595245_o-02-1024x754.jpg)

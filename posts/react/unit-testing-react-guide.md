@@ -2,6 +2,11 @@
 title: "A Guide to Unit Testing in React"
 date: "2019-06-27"
 layout: layouts/post.njk
+permalink: "/unit-testing-react-guide/"
+dynamicPermalink: false
+tags:
+  - react
+  - testing
 ---
 
 We know that unit tests are important, but when it comes to writing them we often draw a blank. Which library or testing framework should I use? What should we test? How may of these am I supposed to write?
@@ -48,6 +53,7 @@ You can run Jest directly from the command line like this: `jest my-test --noti
 
 Here is an example taken from [examples/react-testing-library](https://github.com/facebook/jest/tree/master/examples/react-testing-library) of a component for a simple checkbox that swaps between two labels:
 
+```
 // CheckboxWithLabel.js
 import React from 'react';
 
@@ -75,9 +81,11 @@ export default class CheckboxWithLabel extends React.Component {
     );
   }
 }
+```
 
 And the test:
 
+```
 // tests/CheckboxWithLabel-test.js
 import React from 'react';
 import {render, fireEvent, cleanup} from 'react-testing-library';
@@ -96,6 +104,7 @@ it('CheckboxWithLabel changes the text after click', () => {
 
   expect(queryByLabelText(/on/i)).toBeTruthy();
 });
+```
 
 The test function is quite similar to other testing libraries, and accepts two parameters:
 

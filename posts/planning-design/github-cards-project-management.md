@@ -4,6 +4,8 @@ date: "2016-09-16"
 layout: layouts/post.njk
 permalink: "/using-github-projects-cards-project-management/"
 dynamicPermalink: false
+tags:
+  - github
 ---
 
 ## It’s a whole new GitHub universe with these simple project management-like features..

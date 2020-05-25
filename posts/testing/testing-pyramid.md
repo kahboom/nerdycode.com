@@ -4,6 +4,8 @@ date: 2019-06-26
 permalink: "/testing-pyramid/"
 dynamicPermalink: false
 layout: layouts/post.njk
+tags:
+  - testing
 ---
 
 [](https://github.com/kahboom/dev-notes/blob/master/topics/react-testing.md#testing-pyramid)
@@ -21,7 +23,7 @@ The Testing Pyramid is a visual aid used to find the right balance of test types
 Photo credit: [Google Testing Blog](https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html)
 
 - From easiest to most difficult to write: snapshot, unit, integration, E2E
-- From least to most important\*: snapshot, unit, integration, E2E
+- From least to most important*: snapshot, unit, integration, E2E
 
 _* where the level of importance is directly proportional to the confidence you have that your tests are reflective of your app working as intended_
 

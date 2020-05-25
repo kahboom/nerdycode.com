@@ -2,6 +2,10 @@
 title: "Squashing Git Commits the Easy Way"
 date: "2016-03-16"
 layout: layouts/post.njk
+permalink: "/squashing-git-commits-the-easy-way/"
+dynamicPermalink: false
+tags:
+  - git
 ---
 
 We hear it all the time, "Keep your git history clean." This mantra used to annoy me beyond belief, but it's one of those things you _know_ you need to do. I vowed to become better at committing going into the future, because, as it

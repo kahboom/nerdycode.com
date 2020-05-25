@@ -2,6 +2,10 @@
 title: "NPM Hangs on Network Step"
 date: "2016-03-28"
 layout: layouts/post.njk
+permalink: "/debugging-npm-hangs-network/"
+tags:
+  - npm
+dynamicPermalink: false
 ---
 
 If you've been the victim of NPM hanging during inopportune moments at work, you're not alone. Up until a few weeks ago, NPM had an issue where it would run multiple concurrent connections and overwhelm the network. Eventually it just stops responding. While there is retry functionality in the code, it hangs before ever reaching it. With SSL involving more communication, it increases the likelihood of reaching that saturation point.

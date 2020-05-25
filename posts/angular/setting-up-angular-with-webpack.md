@@ -2,6 +2,11 @@
 title: "Setting up Angular with Webpack"
 date: "2016-09-08"
 layout: layouts/post.njk
+permalink: "/setting-up-angular-with-webpack/"
+dynamicPermalink: false
+tags:
+  - angular
+  - webpack
 ---
 
 For the purposes of this post, we'll be using the popular angular-webpack-starter project and going over the details of how it works.
