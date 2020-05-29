@@ -1,0 +1,568 @@
+/**
+ * All admin css go here
+ *
+ * @since 2.0
+ * @author PenciDesign
+ */
+tr.type-penci_slider:hover {
+	cursor: move;
+}
+.penci-metabox-table tr {
+    border-top: 1px solid #EEEEEE;
+}
+.penci-metabox-table th {
+    width: 25%;
+}
+.penci-metabox-table label span {
+    color: #999999;
+    font-size: 12px;
+    display: block;
+    line-height: 20px;
+    margin: 0px 0 0;
+    font-weight: normal;
+}
+.penci-metabox-table input, .penci-metabox-table textarea {
+    float: left;
+    margin-right: 20px;
+    width: 100%;
+    transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+}
+.penci-metabox-table textarea#_penci_slider_caption, .penci-metabox-table input#_penci_slider_heading {
+  	transition: border-color 0.2s linear;
+  	-webkit-transition: border-color 0.2s linear;
+}
+.penci-metabox-table input[type=checkbox] {
+	width: 20px;
+}
+.penci-metabox-table .button-secondary.has-margin {
+	margin-top: 20px;
+	transition: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+}
+.penci-metabox-table input.file {
+    width: 85%;
+}
+.penci-metabox-table input.button {
+    margin-right: 0;
+    width: auto;
+}
+.penci-metabox-table input.radio {
+    float: none;
+    margin-right: 3px;
+    width: auto;
+}
+.penci-metabox-table .radio-label {
+    margin-right: 10px;
+}
+.penci-opts-screenshot[src=""] {
+	height:1px;
+	width: 1px;
+	opacity: 0;
+}
+.penci-metabox-table img {
+	width: 50%;
+	display: block;
+}
+.slider-thumb {
+	width: 85%;
+	margin-right: 15%;
+}
+td.caption.column-caption,
+td.actions.column-actions,
+.type-penci_slider td.column-title,
+.type-penci_slider td.column-date,
+.type-penci_slider th.check-column {
+	vertical-align: middle;
+}
+.type-penci_slider a,
+.type-penci_slider a:focus {
+	outline: none;
+}
+.type-penci_slider td.column-title strong {
+	display: none;
+}
+.type-penci_slider td.column-title .row-actions {
+	visibility: visible;
+}
+td.caption.column-caption, .manage-column.column-caption {
+	width: 42%;
+}
+td.thumbnail.column-thumbnail, .manage-column.column-thumbnail {
+	width: 18%;
+	padding: 10px;
+}
+td.menu_order.column-menu_order {
+	font-size: 34px;
+	line-height: 34px;
+}
+td.caption.column-caption {
+	font-size: 24px;
+	padding-right: 20px;
+	line-height: 28px;
+}
+.post-type-penci_slider td.caption.column-caption img,
+.penci_slider_page_nectar-slide-order td.caption.column-caption img {
+	max-width: 35%;
+	display: block;
+	background-color: #F9F9F9;
+}
+
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+	src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+#toplevel_page_soledad_dashboard_welcome .wp-menu-image:before {
+	content: '';
+	background-image: url(../images/icon.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	top: -2px;
+	position: relative;
+}
+
+body[class*="fa-"]:before {
+	content: none !important;
+}
+
+body[class*="fa-"] #toplevel_page_soledad_dashboard_welcome .wp-menu-image {
+	display: inline-block;
+}
+body[class*="fa-"] #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{
+	background-image: none;
+	top: 2px;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	font-size: 16px;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body.fa-glass #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f000"}body.fa-music #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f001"}body.fa-search #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f002"}body.fa-envelope-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f003"}body.fa-heart #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f004"}body.fa-star #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f005"}body.fa-star-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f006"}body.fa-user #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f007"}body.fa-film #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f008"}body.fa-th-large #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f009"}body.fa-th #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f00a"}body.fa-th-list #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f00b"}body.fa-check #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f00c"}body.fa-remove #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-close #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-times #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f00d"}body.fa-search-plus #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f00e"}body.fa-search-minus #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f010"}body.fa-power-off #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f011"}body.fa-signal #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f012"}body.fa-gear #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-cog #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f013"}body.fa-trash-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f014"}body.fa-home #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f015"}body.fa-file-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f016"}body.fa-clock-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f017"}body.fa-road #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f018"}body.fa-download #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f019"}body.fa-arrow-circle-o-down #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f01a"}body.fa-arrow-circle-o-up #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f01b"}body.fa-inbox #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f01c"}body.fa-play-circle-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f01d"}body.fa-rotate-right #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-repeat #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f01e"}body.fa-refresh #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f021"}body.fa-list-alt #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f022"}body.fa-lock #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f023"}body.fa-flag #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f024"}body.fa-headphones #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f025"}body.fa-volume-off #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f026"}body.fa-volume-down #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f027"}body.fa-volume-up #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f028"}body.fa-qrcode #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f029"}body.fa-barcode #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f02a"}body.fa-tag #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f02b"}body.fa-tags #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f02c"}body.fa-book #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f02d"}body.fa-bookmark #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f02e"}body.fa-print #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f02f"}body.fa-camera #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f030"}body.fa-font #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f031"}body.fa-bold #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f032"}body.fa-italic #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f033"}body.fa-text-height #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f034"}body.fa-text-width #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f035"}body.fa-align-left #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f036"}body.fa-align-center #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f037"}body.fa-align-right #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f038"}body.fa-align-justify #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f039"}body.fa-list #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f03a"}body.fa-dedent #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-outdent #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f03b"}body.fa-indent #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f03c"}body.fa-video-camera #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f03d"}body.fa-photo #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-image #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-picture-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f03e"}body.fa-pencil #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f040"}body.fa-map-marker #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f041"}body.fa-adjust #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f042"}body.fa-tint #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f043"}body.fa-edit #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-pencil-square-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f044"}body.fa-share-square-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f045"}body.fa-check-square-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f046"}body.fa-arrows #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f047"}body.fa-step-backward #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f048"}body.fa-fast-backward #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f049"}body.fa-backward #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f04a"}body.fa-play #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f04b"}body.fa-pause #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f04c"}body.fa-stop #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f04d"}body.fa-forward #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f04e"}body.fa-fast-forward #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f050"}body.fa-step-forward #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f051"}body.fa-eject #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f052"}body.fa-chevron-left #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f053"}body.fa-chevron-right #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f054"}body.fa-plus-circle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f055"}body.fa-minus-circle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f056"}body.fa-times-circle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f057"}body.fa-check-circle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f058"}body.fa-question-circle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f059"}body.fa-info-circle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f05a"}body.fa-crosshairs #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f05b"}body.fa-times-circle-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f05c"}body.fa-check-circle-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f05d"}body.fa-ban #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f05e"}body.fa-arrow-left #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f060"}body.fa-arrow-right #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f061"}body.fa-arrow-up #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f062"}body.fa-arrow-down #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f063"}body.fa-mail-forward #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-share #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f064"}body.fa-expand #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f065"}body.fa-compress #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f066"}body.fa-plus #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f067"}body.fa-minus #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f068"}body.fa-asterisk #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f069"}body.fa-exclamation-circle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f06a"}body.fa-gift #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f06b"}body.fa-leaf #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f06c"}body.fa-fire #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f06d"}body.fa-eye #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f06e"}body.fa-eye-slash #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f070"}body.fa-warning #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-exclamation-triangle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f071"}body.fa-plane #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f072"}body.fa-calendar #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f073"}body.fa-random #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f074"}body.fa-comment #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f075"}body.fa-magnet #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f076"}body.fa-chevron-up #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f077"}body.fa-chevron-down #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f078"}body.fa-retweet #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f079"}body.fa-shopping-cart #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f07a"}body.fa-folder #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f07b"}body.fa-folder-open #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f07c"}body.fa-arrows-v #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f07d"}body.fa-arrows-h #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f07e"}body.fa-bar-chart-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-bar-chart #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f080"}body.fa-twitter-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f081"}body.fa-facebook-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f082"}body.fa-camera-retro #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f083"}body.fa-key #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f084"}body.fa-gears #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-cogs #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f085"}body.fa-comments #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f086"}body.fa-thumbs-o-up #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f087"}body.fa-thumbs-o-down #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f088"}body.fa-star-half #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f089"}body.fa-heart-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f08a"}body.fa-sign-out #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f08b"}body.fa-linkedin-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f08c"}body.fa-thumb-tack #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f08d"}body.fa-external-link #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f08e"}body.fa-sign-in #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f090"}body.fa-trophy #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f091"}body.fa-github-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f092"}body.fa-upload #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f093"}body.fa-lemon-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f094"}body.fa-phone #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f095"}body.fa-square-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f096"}body.fa-bookmark-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f097"}body.fa-phone-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f098"}body.fa-twitter #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f099"}body.fa-facebook-f #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-facebook #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f09a"}body.fa-github #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f09b"}body.fa-unlock #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f09c"}body.fa-credit-card #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f09d"}body.fa-feed #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-rss #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f09e"}body.fa-hdd-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0a0"}body.fa-bullhorn #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0a1"}body.fa-bell #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0f3"}body.fa-certificate #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0a3"}body.fa-hand-o-right #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0a4"}body.fa-hand-o-left #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0a5"}body.fa-hand-o-up #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0a6"}body.fa-hand-o-down #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0a7"}body.fa-arrow-circle-left #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0a8"}body.fa-arrow-circle-right #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0a9"}body.fa-arrow-circle-up #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0aa"}body.fa-arrow-circle-down #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0ab"}body.fa-globe #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0ac"}body.fa-wrench #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0ad"}body.fa-tasks #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0ae"}body.fa-filter #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0b0"}body.fa-briefcase #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0b1"}body.fa-arrows-alt #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0b2"}body.fa-group #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-users #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0c0"}body.fa-chain #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-link #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0c1"}body.fa-cloud #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0c2"}body.fa-flask #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0c3"}body.fa-cut #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-scissors #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0c4"}body.fa-copy #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-files-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0c5"}body.fa-paperclip #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0c6"}body.fa-save #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-floppy-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0c7"}body.fa-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0c8"}body.fa-navicon #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-reorder #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-bars #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0c9"}body.fa-list-ul #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0ca"}body.fa-list-ol #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0cb"}body.fa-strikethrough #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0cc"}body.fa-underline #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0cd"}body.fa-table #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0ce"}body.fa-magic #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0d0"}body.fa-truck #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0d1"}body.fa-pinterest #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0d2"}body.fa-pinterest-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0d3"}body.fa-google-plus-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0d4"}body.fa-google-plus #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0d5"}body.fa-money #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0d6"}body.fa-caret-down #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0d7"}body.fa-caret-up #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0d8"}body.fa-caret-left #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0d9"}body.fa-caret-right #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0da"}body.fa-columns #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0db"}body.fa-unsorted #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-sort #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0dc"}body.fa-sort-down #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-sort-desc #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0dd"}body.fa-sort-up #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-sort-asc #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0de"}body.fa-envelope #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0e0"}body.fa-linkedin #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0e1"}body.fa-rotate-left #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-undo #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0e2"}body.fa-legal #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-gavel #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0e3"}body.fa-dashboard #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-tachometer #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0e4"}body.fa-comment-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0e5"}body.fa-comments-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0e6"}body.fa-flash #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-bolt #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0e7"}body.fa-sitemap #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0e8"}body.fa-umbrella #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0e9"}body.fa-paste #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-clipboard #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0ea"}body.fa-lightbulb-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0eb"}body.fa-exchange #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0ec"}body.fa-cloud-download #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0ed"}body.fa-cloud-upload #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0ee"}body.fa-user-md #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0f0"}body.fa-stethoscope #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0f1"}body.fa-suitcase #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0f2"}body.fa-bell-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0a2"}body.fa-coffee #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0f4"}body.fa-cutlery #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0f5"}body.fa-file-text-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0f6"}body.fa-building-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0f7"}body.fa-hospital-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0f8"}body.fa-ambulance #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0f9"}body.fa-medkit #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0fa"}body.fa-fighter-jet #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0fb"}body.fa-beer #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0fc"}body.fa-h-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0fd"}body.fa-plus-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f0fe"}body.fa-angle-double-left #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f100"}body.fa-angle-double-right #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f101"}body.fa-angle-double-up #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f102"}body.fa-angle-double-down #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f103"}body.fa-angle-left #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f104"}body.fa-angle-right #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f105"}body.fa-angle-up #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f106"}body.fa-angle-down #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f107"}body.fa-desktop #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f108"}body.fa-laptop #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f109"}body.fa-tablet #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f10a"}body.fa-mobile-phone #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-mobile #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f10b"}body.fa-circle-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f10c"}body.fa-quote-left #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f10d"}body.fa-quote-right #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f10e"}body.fa-spinner #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f110"}body.fa-circle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f111"}body.fa-mail-reply #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-reply #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f112"}body.fa-github-alt #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f113"}body.fa-folder-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f114"}body.fa-folder-open-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f115"}body.fa-smile-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f118"}body.fa-frown-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f119"}body.fa-meh-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f11a"}body.fa-gamepad #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f11b"}body.fa-keyboard-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f11c"}body.fa-flag-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f11d"}body.fa-flag-checkered #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f11e"}body.fa-terminal #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f120"}body.fa-code #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f121"}body.fa-mail-reply-all #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-reply-all #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f122"}body.fa-star-half-empty #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-star-half-full #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-star-half-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f123"}body.fa-location-arrow #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f124"}body.fa-crop #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f125"}body.fa-code-fork #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f126"}body.fa-unlink #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-chain-broken #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f127"}body.fa-question #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f128"}body.fa-info #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f129"}body.fa-exclamation #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f12a"}body.fa-superscript #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f12b"}body.fa-subscript #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f12c"}body.fa-eraser #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f12d"}body.fa-puzzle-piece #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f12e"}body.fa-microphone #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f130"}body.fa-microphone-slash #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f131"}body.fa-shield #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f132"}body.fa-calendar-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f133"}body.fa-fire-extinguisher #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f134"}body.fa-rocket #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f135"}body.fa-maxcdn #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f136"}body.fa-chevron-circle-left #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f137"}body.fa-chevron-circle-right #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f138"}body.fa-chevron-circle-up #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f139"}body.fa-chevron-circle-down #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f13a"}body.fa-html5 #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f13b"}body.fa-css3 #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f13c"}body.fa-anchor #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f13d"}body.fa-unlock-alt #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f13e"}body.fa-bullseye #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f140"}body.fa-ellipsis-h #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f141"}body.fa-ellipsis-v #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f142"}body.fa-rss-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f143"}body.fa-play-circle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f144"}body.fa-ticket #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f145"}body.fa-minus-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f146"}body.fa-minus-square-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f147"}body.fa-level-up #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f148"}body.fa-level-down #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f149"}body.fa-check-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f14a"}body.fa-pencil-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f14b"}body.fa-external-link-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f14c"}body.fa-share-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f14d"}body.fa-compass #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f14e"}body.fa-toggle-down #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-caret-square-o-down #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f150"}body.fa-toggle-up #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-caret-square-o-up #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f151"}body.fa-toggle-right #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-caret-square-o-right #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f152"}body.fa-euro #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-eur #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f153"}body.fa-gbp #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f154"}body.fa-dollar #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-usd #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f155"}body.fa-rupee #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-inr #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f156"}body.fa-cny #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-rmb #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-yen #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-jpy #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f157"}body.fa-ruble #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-rouble #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-rub #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f158"}body.fa-won #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-krw #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f159"}body.fa-bitcoin #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-btc #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f15a"}body.fa-file #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f15b"}body.fa-file-text #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f15c"}body.fa-sort-alpha-asc #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f15d"}body.fa-sort-alpha-desc #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f15e"}body.fa-sort-amount-asc #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f160"}body.fa-sort-amount-desc #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f161"}body.fa-sort-numeric-asc #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f162"}body.fa-sort-numeric-desc #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f163"}body.fa-thumbs-up #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f164"}body.fa-thumbs-down #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f165"}body.fa-youtube-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f166"}body.fa-youtube #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f167"}body.fa-xing #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f168"}body.fa-xing-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f169"}body.fa-youtube-play #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f16a"}body.fa-dropbox #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f16b"}body.fa-stack-overflow #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f16c"}body.fa-instagram #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f16d"}body.fa-flickr #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f16e"}body.fa-adn #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f170"}body.fa-bitbucket #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f171"}body.fa-bitbucket-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f172"}body.fa-tumblr #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f173"}body.fa-tumblr-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f174"}body.fa-long-arrow-down #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f175"}body.fa-long-arrow-up #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f176"}body.fa-long-arrow-left #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f177"}body.fa-long-arrow-right #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f178"}body.fa-apple #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f179"}body.fa-windows #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f17a"}body.fa-android #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f17b"}body.fa-linux #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f17c"}body.fa-dribbble #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f17d"}body.fa-skype #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f17e"}body.fa-foursquare #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f180"}body.fa-trello #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f181"}body.fa-female #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f182"}body.fa-male #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f183"}body.fa-gittip #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-gratipay #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f184"}body.fa-sun-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f185"}body.fa-moon-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f186"}body.fa-archive #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f187"}body.fa-bug #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f188"}body.fa-vk #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f189"}body.fa-weibo #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f18a"}body.fa-renren #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f18b"}body.fa-pagelines #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f18c"}body.fa-stack-exchange #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f18d"}body.fa-arrow-circle-o-right #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f18e"}body.fa-arrow-circle-o-left #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f190"}body.fa-toggle-left #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-caret-square-o-left #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f191"}body.fa-dot-circle-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f192"}body.fa-wheelchair #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f193"}body.fa-vimeo-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f194"}body.fa-turkish-lira #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-try #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f195"}body.fa-plus-square-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f196"}body.fa-space-shuttle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f197"}body.fa-slack #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f198"}body.fa-envelope-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f199"}body.fa-wordpress #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f19a"}body.fa-openid #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f19b"}body.fa-institution #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-bank #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-university #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f19c"}body.fa-mortar-board #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-graduation-cap #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f19d"}body.fa-yahoo #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f19e"}body.fa-google #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1a0"}body.fa-reddit #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1a1"}body.fa-reddit-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1a2"}body.fa-stumbleupon-circle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1a3"}body.fa-stumbleupon #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1a4"}body.fa-delicious #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1a5"}body.fa-digg #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1a6"}body.fa-pied-piper-pp #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1a7"}body.fa-pied-piper-alt #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1a8"}body.fa-drupal #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1a9"}body.fa-joomla #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1aa"}body.fa-language #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1ab"}body.fa-fax #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1ac"}body.fa-building #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1ad"}body.fa-child #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1ae"}body.fa-paw #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1b0"}body.fa-spoon #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1b1"}body.fa-cube #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1b2"}body.fa-cubes #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1b3"}body.fa-behance #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1b4"}body.fa-behance-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1b5"}body.fa-steam #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1b6"}body.fa-steam-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1b7"}body.fa-recycle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1b8"}body.fa-automobile #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-car #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1b9"}body.fa-cab #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-taxi #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1ba"}body.fa-tree #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1bb"}body.fa-spotify #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1bc"}body.fa-deviantart #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1bd"}body.fa-soundcloud #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1be"}body.fa-database #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1c0"}body.fa-file-pdf-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1c1"}body.fa-file-word-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1c2"}body.fa-file-excel-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1c3"}body.fa-file-powerpoint-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1c4"}body.fa-file-photo-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-file-picture-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-file-image-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1c5"}body.fa-file-zip-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-file-archive-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1c6"}body.fa-file-sound-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-file-audio-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1c7"}body.fa-file-movie-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-file-video-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1c8"}body.fa-file-code-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1c9"}body.fa-vine #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1ca"}body.fa-codepen #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1cb"}body.fa-jsfiddle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1cc"}body.fa-life-bouy #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-life-buoy #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-life-saver #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-support #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-life-ring #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1cd"}body.fa-circle-o-notch #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1ce"}body.fa-ra #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-resistance #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-rebel #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1d0"}body.fa-ge #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-empire #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1d1"}body.fa-git-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1d2"}body.fa-git #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1d3"}body.fa-y-combinator-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-yc-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-hacker-news #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1d4"}body.fa-tencent-weibo #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1d5"}body.fa-qq #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1d6"}body.fa-wechat #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-weixin #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1d7"}body.fa-send #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-paper-plane #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1d8"}body.fa-send-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-paper-plane-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1d9"}body.fa-history #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1da"}body.fa-circle-thin #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1db"}body.fa-header #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1dc"}body.fa-paragraph #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1dd"}body.fa-sliders #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1de"}body.fa-share-alt #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1e0"}body.fa-share-alt-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1e1"}body.fa-bomb #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1e2"}body.fa-soccer-ball-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-futbol-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1e3"}body.fa-tty #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1e4"}body.fa-binoculars #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1e5"}body.fa-plug #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1e6"}body.fa-slideshare #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1e7"}body.fa-twitch #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1e8"}body.fa-yelp #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1e9"}body.fa-newspaper-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1ea"}body.fa-wifi #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1eb"}body.fa-calculator #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1ec"}body.fa-paypal #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1ed"}body.fa-google-wallet #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1ee"}body.fa-cc-visa #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1f0"}body.fa-cc-mastercard #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1f1"}body.fa-cc-discover #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1f2"}body.fa-cc-amex #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1f3"}body.fa-cc-paypal #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1f4"}body.fa-cc-stripe #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1f5"}body.fa-bell-slash #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1f6"}body.fa-bell-slash-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1f7"}body.fa-trash #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1f8"}body.fa-copyright #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1f9"}body.fa-at #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1fa"}body.fa-eyedropper #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1fb"}body.fa-paint-brush #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1fc"}body.fa-birthday-cake #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1fd"}body.fa-area-chart #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f1fe"}body.fa-pie-chart #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f200"}body.fa-line-chart #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f201"}body.fa-lastfm #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f202"}body.fa-lastfm-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f203"}body.fa-toggle-off #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f204"}body.fa-toggle-on #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f205"}body.fa-bicycle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f206"}body.fa-bus #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f207"}body.fa-ioxhost #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f208"}body.fa-angellist #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f209"}body.fa-cc #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f20a"}body.fa-shekel #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-sheqel #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-ils #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f20b"}body.fa-meanpath #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f20c"}body.fa-buysellads #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f20d"}body.fa-connectdevelop #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f20e"}body.fa-dashcube #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f210"}body.fa-forumbee #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f211"}body.fa-leanpub #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f212"}body.fa-sellsy #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f213"}body.fa-shirtsinbulk #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f214"}body.fa-simplybuilt #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f215"}body.fa-skyatlas #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f216"}body.fa-cart-plus #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f217"}body.fa-cart-arrow-down #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f218"}body.fa-diamond #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f219"}body.fa-ship #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f21a"}body.fa-user-secret #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f21b"}body.fa-motorcycle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f21c"}body.fa-street-view #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f21d"}body.fa-heartbeat #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f21e"}body.fa-venus #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f221"}body.fa-mars #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f222"}body.fa-mercury #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f223"}body.fa-intersex #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-transgender #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f224"}body.fa-transgender-alt #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f225"}body.fa-venus-double #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f226"}body.fa-mars-double #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f227"}body.fa-venus-mars #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f228"}body.fa-mars-stroke #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f229"}body.fa-mars-stroke-v #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f22a"}body.fa-mars-stroke-h #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f22b"}body.fa-neuter #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f22c"}body.fa-genderless #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f22d"}body.fa-facebook-official #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f230"}body.fa-pinterest-p #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f231"}body.fa-whatsapp #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f232"}body.fa-server #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f233"}body.fa-user-plus #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f234"}body.fa-user-times #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f235"}body.fa-hotel #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-bed #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f236"}body.fa-viacoin #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f237"}body.fa-train #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f238"}body.fa-subway #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f239"}body.fa-medium #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f23a"}body.fa-yc #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-y-combinator #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f23b"}body.fa-optin-monster #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f23c"}body.fa-opencart #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f23d"}body.fa-expeditedssl #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f23e"}body.fa-battery-4 #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-battery #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-battery-full #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f240"}body.fa-battery-3 #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-battery-three-quarters #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f241"}body.fa-battery-2 #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-battery-half #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f242"}body.fa-battery-1 #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-battery-quarter #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f243"}body.fa-battery-0 #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-battery-empty #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f244"}body.fa-mouse-pointer #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f245"}body.fa-i-cursor #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f246"}body.fa-object-group #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f247"}body.fa-object-ungroup #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f248"}body.fa-sticky-note #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f249"}body.fa-sticky-note-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f24a"}body.fa-cc-jcb #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f24b"}body.fa-cc-diners-club #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f24c"}body.fa-clone #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f24d"}body.fa-balance-scale #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f24e"}body.fa-hourglass-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f250"}body.fa-hourglass-1 #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-hourglass-start #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f251"}body.fa-hourglass-2 #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-hourglass-half #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f252"}body.fa-hourglass-3 #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-hourglass-end #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f253"}body.fa-hourglass #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f254"}body.fa-hand-grab-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-hand-rock-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f255"}body.fa-hand-stop-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-hand-paper-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f256"}body.fa-hand-scissors-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f257"}body.fa-hand-lizard-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f258"}body.fa-hand-spock-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f259"}body.fa-hand-pointer-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f25a"}body.fa-hand-peace-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f25b"}body.fa-trademark #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f25c"}body.fa-registered #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f25d"}body.fa-creative-commons #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f25e"}body.fa-gg #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f260"}body.fa-gg-circle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f261"}body.fa-tripadvisor #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f262"}body.fa-odnoklassniki #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f263"}body.fa-odnoklassniki-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f264"}body.fa-get-pocket #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f265"}body.fa-wikipedia-w #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f266"}body.fa-safari #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f267"}body.fa-chrome #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f268"}body.fa-firefox #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f269"}body.fa-opera #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f26a"}body.fa-internet-explorer #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f26b"}body.fa-tv #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-television #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f26c"}body.fa-contao #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f26d"}body.fa-500px #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f26e"}body.fa-amazon #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f270"}body.fa-calendar-plus-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f271"}body.fa-calendar-minus-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f272"}body.fa-calendar-times-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f273"}body.fa-calendar-check-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f274"}body.fa-industry #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f275"}body.fa-map-pin #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f276"}body.fa-map-signs #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f277"}body.fa-map-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f278"}body.fa-map #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f279"}body.fa-commenting #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f27a"}body.fa-commenting-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f27b"}body.fa-houzz #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f27c"}body.fa-vimeo #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f27d"}body.fa-black-tie #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f27e"}body.fa-fonticons #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f280"}body.fa-reddit-alien #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f281"}body.fa-edge #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f282"}body.fa-credit-card-alt #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f283"}body.fa-codiepie #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f284"}body.fa-modx #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f285"}body.fa-fort-awesome #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f286"}body.fa-usb #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f287"}body.fa-product-hunt #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f288"}body.fa-mixcloud #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f289"}body.fa-scribd #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f28a"}body.fa-pause-circle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f28b"}body.fa-pause-circle-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f28c"}body.fa-stop-circle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f28d"}body.fa-stop-circle-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f28e"}body.fa-shopping-bag #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f290"}body.fa-shopping-basket #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f291"}body.fa-hashtag #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f292"}body.fa-bluetooth #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f293"}body.fa-bluetooth-b #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f294"}body.fa-percent #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f295"}body.fa-gitlab #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f296"}body.fa-wpbeginner #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f297"}body.fa-wpforms #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f298"}body.fa-envira #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f299"}body.fa-universal-access #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f29a"}body.fa-wheelchair-alt #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f29b"}body.fa-question-circle-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f29c"}body.fa-blind #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f29d"}body.fa-audio-description #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f29e"}body.fa-volume-control-phone #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2a0"}body.fa-braille #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2a1"}body.fa-assistive-listening-systems #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2a2"}body.fa-asl-interpreting #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-american-sign-language-interpreting #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2a3"}body.fa-deafness #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-hard-of-hearing #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-deaf #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2a4"}body.fa-glide #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2a5"}body.fa-glide-g #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2a6"}body.fa-signing #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-sign-language #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2a7"}body.fa-low-vision #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2a8"}body.fa-viadeo #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2a9"}body.fa-viadeo-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2aa"}body.fa-snapchat #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2ab"}body.fa-snapchat-ghost #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2ac"}body.fa-snapchat-square #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2ad"}body.fa-pied-piper #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2ae"}body.fa-first-order #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2b0"}body.fa-yoast #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2b1"}body.fa-themeisle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2b2"}body.fa-google-plus-circle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-google-plus-official #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2b3"}body.fa-fa #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-font-awesome #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2b4"}body.fa-handshake-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2b5"}body.fa-envelope-open #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2b6"}body.fa-envelope-open-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2b7"}body.fa-linode #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2b8"}body.fa-address-book #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2b9"}body.fa-address-book-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2ba"}body.fa-vcard #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-address-card #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2bb"}body.fa-vcard-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-address-card-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2bc"}body.fa-user-circle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2bd"}body.fa-user-circle-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2be"}body.fa-user-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2c0"}body.fa-id-badge #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2c1"}body.fa-drivers-license #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-id-card #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2c2"}body.fa-drivers-license-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-id-card-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2c3"}body.fa-quora #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2c4"}body.fa-free-code-camp #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2c5"}body.fa-telegram #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2c6"}body.fa-thermometer-4 #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-thermometer #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-thermometer-full #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2c7"}body.fa-thermometer-3 #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-thermometer-three-quarters #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2c8"}body.fa-thermometer-2 #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-thermometer-half #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2c9"}body.fa-thermometer-1 #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-thermometer-quarter #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2ca"}body.fa-thermometer-0 #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-thermometer-empty #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2cb"}body.fa-shower #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2cc"}body.fa-bathtub #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-s15 #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-bath #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2cd"}body.fa-podcast #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2ce"}body.fa-window-maximize #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2d0"}body.fa-window-minimize #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2d1"}body.fa-window-restore #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2d2"}body.fa-times-rectangle #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-window-close #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2d3"}body.fa-times-rectangle-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before,body.fa-window-close-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2d4"}body.fa-bandcamp #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2d5"}body.fa-grav #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2d6"}body.fa-etsy #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2d7"}body.fa-imdb #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2d8"}body.fa-ravelry #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2d9"}body.fa-eercast #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2da"}body.fa-microchip #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2db"}body.fa-snowflake-o #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2dc"}body.fa-superpowers #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2dd"}body.fa-wpexplorer #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2de"}body.fa-meetup #toplevel_page_soledad_dashboard_welcome .wp-menu-image:before{content:"\f2e0"}
+
+ul#menu-to-edit li:not(.menu-item-depth-0) .penci-hide-child {
+	display: none;
+}
+/* body:not(.block-editor-page) #penci-gutenberg-format { */
+	/* display: none; */
+/* } */
+.penci-show-social .vc_checkbox-label{
+	display: block;
+	width: 50%;
+	float: left;
+	margin-bottom: 10px;
+}
+.penci-instagram-container .donate { padding: 5px 15px 10px; display: inline-block; position: relative; color: #000; background: #ffd751; -webkit-border-radius: 5px; border-radius: 5px; border: 1px solid #b4b4b4; font-weight: bold; font-size: 14px; text-decoration: none; }
+.penci-instagram-container .donate a { outline: 0; cursor: pointer }
+.penci-instagram-container .donate span:before { color: #ce1f00; font: 400 20px/1 dashicons; font-family: dashicons; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; line-height: 1; content: '\f524'; position: relative; display: inline-block; top: 4px; margin-right: 4px; }
+.penci-instagram-container .pressthis a, .penci-instagram-container .pressthis-bookmarklet a,
+.penci-instagram-container .pressthis a:active, .penci-instagram-container .pressthis-bookmarklet a:active,
+.penci-instagram-container .pressthis a:focus, .penci-instagram-container .pressthis-bookmarklet a:focus,
+.penci-instagram-container .pressthis a:hover, .penci-instagram-container .pressthis-bookmarklet a:hover { cursor: pointer; background: #53b5d9; border: 1px solid #0074a2; color: #ffffff; font-weight: bold }
+.penci-instagram-container .jr_insta_error { border-left: 4px solid #dd3d36; -moz-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1); -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1); box-shadow: 0 1px 1px 0 rgba(0,0,0,.1); padding: 5px 12px; }
+.penci-instagram-container .penci-radio { margin-right: 20px }
+.penci-instagram-container .penci-search-for-container { display: block; margin-bottom: 7px; }
+.penci-instagram-container .penci-seach-for { width: 90px; display: inline-block; vertical-align: middle }
+
+.penci-instagram-container .penci-advanced { text-decoration: none; border: none }
+.penci-instagram-container .penci-advanced:focus { outline: 0; border: none; box-shadow:none }
+
+.penci-instagram-container .penci-advanced-input div { border: 1px solid #cfcfcf; padding: 10px; margin: 25px 0 0; }
+.penci-instagram-container .penci-advanced-input .penci-advanced-title{ margin: -22px 0 0 0; background-color: white; width: 160px; padding: 3px 10px; border: 1px solid #cfcfcf; }
+.penci-instagram-container .penci-description { color: #777; font-size: smaller; clear:both; display:block; margin-top: 5px;}
+.penci-instagram-container .penci-description.hide-media-library, .penci-instagram-container .penci-description.hide-instagram { display: none }
+
+.penci-instagram-container .switch { position: relative; display: inline-block; margin-left: 5px; width: 45px; height: 24px; }
+.penci-instagram-container .switch input {display:none;}
+.penci-instagram-container .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; -webkit-transition: .4s; transition: .4s; }
+.penci-instagram-container .slider:before { position: absolute; content: ""; height: 22px; width: 22px; left: 0px; bottom: 0px;  border: 1px solid #e5e5e5; background-color: white; -webkit-transition: .4s; transition: .4s; }
+.penci-instagram-container input:checked + .slider { background-color: #0085ba; }
+.penci-instagram-container input:focus + .slider { box-shadow: 0 0 1px #0085ba; }
+.penci-instagram-container input:checked + .slider:before { -webkit-transform: translateX(22px); -ms-transform: translateX(22px); transform: translateX(22px); }
+.penci-instagram-container .slider.round { border-radius: 34px; }
+.penci-instagram-container .slider.round:before { border-radius: 50%; }
+.penci-advanced-input {margin-bottom:20px;}
+
+#penci-metabox-single .inside {
+	display: block!important;
+	padding: 0;
+	margin: 0!important;
+	background: #fff;
+}
+.penci-metabox-wrap{
+	position: relative;
+	width: 100%;
+}
+.penci-metabox-wrap:after,
+.penci-metabox-wrap:before {
+	content: '';
+	clear: both;
+	width: 100%;
+	display: block;
+}
+.penci-metabox-tabs {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 180px;
+	position: relative;
+	float: left;
+	z-index: 2;
+	display: block;
+}
+.penci-metabox-tabs li{
+	display: block;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	zoom: 1;
+	-webkit-transition: all 250ms cubic-bezier(.39,.575,.565,1);
+	transition: all 250ms cubic-bezier(.39,.575,.565,1);
+	filter: alpha(opacity=100);
+	opacity: 1;
+	height: 41px;
+}
+.penci-metabox-tabs li.tab-active{
+	margin-right: -1px;
+}
+.penci-metabox-tabs li a {
+	background: #f5f5f5;
+	text-decoration: none;
+	display: block;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	border-bottom: 1px solid #e5e5e5;
+	padding: 0 10px;
+	line-height: 40px;
+	color: #666;
+	outline: 0;
+	box-shadow: none;
+}
+.penci-metabox-tabs li a i {
+	display: inline-block;
+	line-height: 41px;
+	margin-right: 10px;
+	font-size: 15px;
+	color: #4d4d4d;
+}
+
+.penci-metabox-tabs li.tab-active a{
+	background: #fff;
+	font-weight: 700;
+	color: #4d4d4d;
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,.02);
+}
+.penci-metabox-fields .penci-tab-panel:not( :first-child ){
+	display: none;
+}
+.penci-metabox-tabs + .penci-metabox-fields{
+	background: #fff;
+	float: left;
+	width: calc( 100% - 190px );
+	border-left: 1px solid #e5e5e5;
+	position: relative;
+	z-index: 1;
+	min-height: 200px;
+	box-sizing: border-box;
+	display: block;
+	padding: 10px 15px;
+}
+.penci-metabox-fields .penci-metabox-row{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.penci-metabox-fields .penci-metabox-row:not( :last-child ) {
+}
+.penci-metabox-row {
+	position: relative;
+	clear: both;
+	display: flex;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+}
+.penci-metabox-fields .penci-mb-labeldesc {
+	width: 200px;
+
+}
+.penci-metabox-fields .penci-mb-labeldesc + div{
+	flex: 1;
+	margin-left: 20px;
+}
+.penci-metabox-fields .penci-metabox-desc {
+	color: #666;
+	font-style: italic;
+	display: block;
+	font-size: 13px;
+	line-height: 1.5;
+	margin: 10px 0 1em;
+}
+.penci-metabox-fields label {
+	color: #333333;
+	font-size: 14px;
+	line-height: 1.5em;
+	font-weight: bold;
+	padding: 0;
+	margin: 0 0 3px;
+	display: block;
+	vertical-align: text-bottom;
+}
+.penci-metabox-fields img{
+	max-width: 100%;
+}
+.penci-image-select-wrap {
+	overflow: hidden;
+}
+.penci-metabox-fields label.penci-image-select {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	float: left;
+	margin: 0 10px 10px 0;
+	border: 3px solid #d8d8d8;
+	border-radius: 0;
+	padding: 1px;
+}
+
+.penci-metabox-fields #header_style label.penci-image-select {
+	width: 206px;
+	height: 55px;
+	overflow: hidden;
+}
+.penci-metabox-fields #header_style label.penci-image-select img {
+	width: 100%;
+	height: auto;
+}
+
+.penci-metabox-fields label.penci-image-select img {
+	width: 100%;
+	height: 100%;
+}
+.penci-metabox-fields label.penci-image-select:hover,
+.penci-metabox-fields label.penci-image-select.penci-active {
+	border-color: #0085ba
+}
+.penci-metabox-fields label.penci-image-select input{
+	display: none !important;
+}
+
+#penci_single_single_style label.penci-image-select {
+	width: 100px;
+	height: 73px;
+}
+#penci_cat_pstyle label.penci-image-select{
+	width: 45px;
+	height: 36px;
+	border-width: 2px;
+}
+#penci_arch_sidebar_layout label.penci-image-select,
+#penci_page_sidebar_layout label.penci-image-select,
+#penci_single_sidebar_layout label.penci-image-select {
+	width: 60px;
+	height: 44px;
+	border-width: 2px;
+}
+
+.penci-metabox-fields input[type="text"],
+.penci-metabox-fields textarea {
+	width: 100%;
+}
+.penci-metabox-fields textarea {
+	min-height: 150px;
+}
+.penci-metabox-fields select,
+.penci-metabox-fields input[type="number"] {
+	min-width: 100px;
+}
+
+.penci-metabox-fields .media-widget-control {
+	max-width: 300px;
+}
+.media-widget-control .placeholder.hidden{
+	height: 1px;
+	display: block;
+	width: 100%;
+	opacity: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.penci-metabox-fields .media-widget-control button {
+	margin-top: 10px;
+	margin-right: 15px;
+}
+.penci-metabox-row .penci-mb-input {
+	width: 100%;
+}
+
+/** widget **/
+
+.penci-field-item  textarea {
+	min-height: 130px;
+}
+.penci-widget-desc {
+	color: #999;
+	font-size: 12px;
+	display: block;
+	font-style: italic;
+	line-height: 20px;
+	margin-top: 8px;
+	clear: both;
+}
+
+.penci-checkbox {
+	float: left;
+	position: relative;
+	top: 4px;
+}
+
+.penci-picker-container {
+	clear: both;
+	display: block;
+}
+
+.penci-field-item {
+	clear: both;
+}
+.widget-content .penci-param-heading-wrapper {
+	padding: 4px 15px 7px;
+	font-size: 14px;
+	background: #e6e6e6;
+	color: #6C6C6C;
+	margin-bottom: 0;
+	margin-top: 10px;
+}
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.penci-accordion-name {
+	position: relative;
+	height: 40px;
+	padding: 0 55px 0 15px;
+	line-height: 40px;
+	border: 1px solid #E2DDDB;
+	font-weight: bold;
+	background-color: #F5F5F5;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.penci-accordion-name h3{
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+}
+.penci-accordion-name .handle-repeater {
+	float: right;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	position: absolute;
+	right: -1px;
+	top: -1px;
+	font-size: 20px;
+	line-height: 36px;
+	border: 1px solid #E2DDDB;
+}
+
+.penci-accordion-name .handle-repeater:before {
+	content: '\002B';
+}
+.penci-accordion-name.active .handle-repeater:before {
+	content: "\2212";
+}
+
+.penci-panel-accordion {
+	display: none;
+	overflow: hidden;
+	height: 0;
+	transition: max-height 0.2s ease-out;
+	padding: 15px 17px 13px;
+	position: relative;
+	border: 1px solid #E2DDDB;
+	border-top: 0;
+	margin-bottom: 10px;
+}
+
+.widget-content .penci-metabox-fields {
+	margin-bottom: 30px;
+}
+
+.penci-accordion-name.active + .penci-panel-accordion {
+	display: block;
+	height: auto;
+}
+
+.penci-col-1, .penci-col-2, .penci-col-3, .penci-col-4,
+.penci-col-5, .penci-col-6, .penci-col-7, .penci-col-8,
+.penci-col-9, .penci-col-10, .penci-col-11, .penci-col-12 {
+	position: relative;
+	padding-right: 30px;
+	clear: none;
+	margin-left: 0;
+	margin-right: 0;
+	box-sizing: border-box;
+}
+
+
+
+@media (min-width: 992px) {
+	.penci-col-1, .penci-col-2, .penci-col-3, .penci-col-4,
+	.penci-col-5, .penci-col-6, .penci-col-7, .penci-col-8,
+	.penci-col-9, .penci-col-10, .penci-col-11, .penci-col-12 {
+		float: left;
+		margin-bottom: 0;
+	}
+	.penci-col-12 {
+		width: 100%;
+	}
+	.penci-col-11 {
+		width: 91.66666667%;
+	}
+	.penci-col-10 {
+		width: 83.33333333%;
+	}
+	.penci-col-9 {
+		width: 75%;
+	}
+	.penci-col-8 {
+		width: 66.66666667%;
+	}
+	.penci-col-7 {
+		width: 58.33333333%;
+	}
+	.penci-col-6 {
+		width: 50%;
+	}
+	.penci-col-5 {
+		width: 41.66666667%;
+	}
+	.penci-col-4 {
+		width: 33.33333333%;
+	}
+	.penci-col-3 {
+		width: 25%;
+	}
+	.penci-col-2 {
+		width: 16.66666667%;
+	}
+	.penci-col-1 {
+		width: 8.33333333%;
+	}
+
+	.penci-col-6:nth-child( 2n + 1 ) {
+		clear: both;
+	}
+}

@@ -1,0 +1,1499 @@
+/*
+   RTL support for: Soledad theme
+*/
+
+body{
+	direction:rtl;
+	unicode-bidi:embed;
+}
+.container.has-banner .header-banner {
+    text-align: left;
+}
+.container.has-banner #logo {
+    text-align: right;
+}
+#top-search.shoping-cart-icon.clear-right, #navigation.header-4 #top-search.shoping-cart-icon, #navigation.header-5 #top-search.shoping-cart-icon, #navigation.header-6 #top-search.shoping-cart-icon {
+    margin-left: 0;
+	margin-right: 40px;
+}
+#navigation .menu {
+    float: right;
+}
+#top-search {
+    float: left;
+}
+#top-search.shoping-cart-icon {
+    margin-left: 15px;
+    margin-right: 0;
+}
+#navigation ul.menu > li, #navigation .menu > ul > li {
+    float: right;
+    margin-left: 44px;
+    margin-right: 0;
+}
+#navigation ul.menu > li.megamenu > ul.sub-menu {
+    right: 0;
+    left: auto;
+}
+#navigation ul.menu ul a, #navigation .menu ul ul a {
+    text-align: right;
+}
+#navigation .menu .sub-menu, #navigation .menu .children{
+    right: 0;
+    left: auto;
+}
+#navigation ul.menu > li > .sub-menu,
+#navigation .menu > ul > li > .sub-menu {
+	top: 59px;
+}
+#navigation.header-11 ul.menu > li > .sub-menu,
+#navigation.header-11 .menu > ul > li > .sub-menu {
+	top: 58px;
+}
+#navigation-sticky-wrapper:not(.is-sticky) #navigation.header-6 ul.menu > li > .sub-menu, 
+#navigation-sticky-wrapper:not(.is-sticky) #navigation.header-6 .menu > ul > li > .sub-menu,
+#navigation-sticky-wrapper:not(.is-sticky) #navigation.header-10 ul.menu > li > .sub-menu, 
+#navigation-sticky-wrapper:not(.is-sticky) #navigation.header-10 .menu > ul > li > .sub-menu,
+#navigation-sticky-wrapper:not(.is-sticky) #navigation.header-11 ul.menu > li > .sub-menu, 
+#navigation-sticky-wrapper:not(.is-sticky) #navigation.header-11 .menu > ul > li > .sub-menu{
+	top: 81px;
+}
+#navigation .menu .sub-menu ul, #navigation .menu .children ul {
+    right: 100%;
+    left: auto;
+}
+#navigation ul.menu > li.menu-item-has-children > a:after, 
+#navigation .menu > ul > li.menu-item-has-children > a:after, 
+#navigation ul.menu > li.penci-mega-menu > a:after, 
+#navigation .menu > ul > li.penci-mega-menu > a:after { 
+	float: left;
+	margin: 0 5px 0 0;
+}
+.penci-menuhbg-wapper{
+	float: left;
+    margin-right: 0;
+    margin-left: 12px;
+}
+.penci-owl-carousel-slider.penci-headline-posts .owl-nav .owl-prev,
+.penci-headline-posts .slick-prev{
+	left: auto;
+	right: -32px;
+}
+.penci-owl-carousel-slider.penci-headline-posts .owl-nav .owl-next,
+.penci-headline-posts .slick-next {
+	left: auto;
+	right: -54px;
+}
+.featured-area.featured-style-14 .wrapper-item-classess, 
+.featured-area.featured-style-20 .wrapper-item-classess, 
+.featured-area.featured-style-21 .wrapper-item-classess, 
+.featured-area.featured-style-22 .wrapper-item-classess, 
+.featured-area.featured-style-23 .wrapper-item-classess, 
+.featured-area.featured-style-25 .wrapper-item-classess, 
+.featured-area.featured-style-26 .wrapper-item-classess, 
+.featured-area.featured-style-27 .wrapper-item-classess{ 
+	margin-left: 0; 
+	margin-right: -2px;
+}
+.main-nav-social {
+    float: left;
+    text-align: left;
+    margin: 0 0 0 13px;
+}
+#navigation.header-4 .main-nav-social, 
+#navigation.header-5 .main-nav-social,
+#navigation.header-6 .main-nav-social {
+	margin: 0 30px 0 0;
+}
+#navigation.header-11 .penci-header-extra, #navigation.header-10 .penci-header-extra{
+	margin-left: 0;
+	margin-right: 15px;
+}
+.penci-header-signup-form .mc4wp-form input[type="text"],
+.penci-header-signup-form .mc4wp-form input[type="email"] {
+    margin-left: 20px;
+    margin-right: 0;
+}
+.penci-header-signup-form .mc4wp-form-fields > p, .penci-header-signup-form form > p {
+    padding-right: 0;
+    padding-left: 20px;
+    text-align: right;
+}
+.penci-header-signup-form .mc4wp-form-fields > p:last-of-type,
+.penci-header-signup-form form > p:last-of-type {
+    padding-right: 0;
+    padding-left: 0;
+}
+.show-search a.close-search {
+    left: 0;
+    right: auto;
+}
+.show-search #searchform input.search-input {
+    padding: 15px 0 15px 35px;
+	right: 0;
+    left: auto;
+}
+.headline-title {
+    float: right;
+}	
+.penci-topbar-social {
+    float: left;
+}
+body.rtl .penci-headline .slick-slider {
+    direction: rtl;
+}
+.penci-headline-posts {
+    margin: 0 49px 0 15px;
+}	
+.penci-topbar-social a {
+    float: right;
+    margin-right: 13px;
+	margin-left:0;
+}
+.penci-topbar-social a:first-child {
+    margin-right: 0;
+}
+.penci-headline-posts .slick-prev, .penci-headline-posts .slick-next {
+    right: -32px;
+    left: auto;
+}
+.penci-headline-posts .slick-next {
+    right: -54px;
+    left: auto;
+}
+#searchform input.search-input {
+    background-position: 6% 15px;
+    padding: 14px 20px 14px 43px;
+    letter-spacing: 1px;
+}
+
+body *{
+	letter-spacing: 0 !important;
+}
+.featured-style-4 .penci-owl-carousel .penci-image-holder,
+.featured-style-5 .penci-owl-carousel .penci-image-holder{
+    float: left;
+}
+
+.penci-homepage-title.penci-magazine-title {
+    text-align: right;
+}
+.penci-homepage-title.penci-magazine-title:before {
+    right: 30px;
+    left: auto;
+}
+.penci-border-arrow:before {
+    right: 50%;
+    left: auto;
+}
+.home-featured-cat-content .mag-post-box .magcat-thumb {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}	
+.home-featured-cat-content .cat-left, .home-featured-cat-content .cat-right {
+    float: right;
+}	
+.home-featured-cat-content .first-post .magcat-detail .mag-header:after {
+    right: 0;
+    left: auto;
+}	
+.grid-post-box-meta span:after {
+    margin: 0 15px 0 11px;
+}
+.widget.widget_categories ul li, .widget.widget_archive ul li {
+    text-align: right;
+}	
+.widget.widget_archive ul li a {
+    float: right;
+}
+.widget.widget_categories ul li a:before, .widget.widget_archive ul li a:before {
+    content: "\f104";
+    margin-left: 10px;
+    margin-right: 0;
+}
+.cat > a.penci-cat-name:after {
+    margin-right: 11px;
+    margin-left: 0;
+    transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.container .penci-grid li.magazine-layout {
+    text-align: right;
+}
+.cat > a.penci-cat-name {
+    margin: 0 0 0 18px;
+    padding-left: 10px;
+    padding-right: 0;
+}	
+.cat > a.penci-cat-name:first-child {
+    margin-right: 0;
+	margin-left: 18px;
+}
+.cat > a.penci-cat-name:last-child {
+    margin-left: 0;
+}
+.list-post .header-list-style:after {
+    right: 0;
+    left: auto;
+}
+.penci-layout-boxed-1 .list-boxed-post .header-list-style:after,
+.penci-layout-standard-boxed-1 .list-boxed-post .header-list-style:after,
+.penci-layout-classic-boxed-1 .list-boxed-post .header-list-style:after,
+.list-post.list-boxed-post .header-list-style:after {
+    right: 50%;
+    margin-left: 0;
+    margin-right: -30px;
+}
+.penci-grid li .item .item-content, .penci-masonry .item-masonry .item-content, .penci-grid .mixed-detail .item-content {
+    text-align: right;
+}
+.penci-grid-excerpt-left .penci-grid li .item .item-content,
+.penci-grid-excerpt-left .penci-masonry .item-masonry .item-content,
+.penci-std-excerpt-left .penci-grid .mixed-detail .item-content,
+.penci-std-continue-left .penci-more-link,
+.penci-std-excerpt-left .standard-main-content {
+    text-align: right;
+}
+.penci-grid li.list-post .item > .thumbnail {
+    float: right;
+}	
+
+.penci-featured-cat-sc .penci-grid li.list-post .item .content-list-right,
+.penci-latest-posts-sc .penci-grid li.list-post .item .content-list-right {
+    padding-right: 30px;
+}
+
+.container.two-sidebar .penci-grid li.pclist-layout .item .content-list-right {
+    padding-left: 0;
+    padding-right: 30px;
+}
+
+.home-featured-cat-content.style-14 .magcat-padding {
+    padding-left: 0;
+    padding-right: 17px;
+    position: relative;
+}
+.home-featured-cat-content.style-14 .magcat-padding:before {
+    left: auto;
+    right: 0;
+}
+.home-featured-cat-content.style-7 .grid-header-box{
+	text-align: right;
+}
+.footer-subscribe .mc4wp-form .mdes {
+    margin-left: 0;
+    margin-right: -100px;
+}
+.footer-subscribe .mc4wp-form .memail {
+    float: right;
+}
+.footer-subscribe .mc4wp-form .msubmit {
+    margin-right: 10px;
+    margin-left: 0;
+}
+ul.footer-socials li {
+    margin-left: 36px;
+    margin-right: 0;
+}
+ul.footer-socials li a span{
+    margin-right: 14px;
+    margin-left: 0;
+}
+.container.penci-breadcrumb i {
+    margin: 0 19px 0 15px;
+}
+.penci-breadcrumb .fa-angle-right:before {
+    content: "\f104";
+}
+.inner-post-entry .alignnone {
+    margin: 5px 0px 20px 20px;
+}
+.post-entry ul, .post-entry ol {
+    padding-right: 36px;
+    padding-left: 0;
+}
+.post-entry ol ol, 
+.post-entry ul ul, 
+.post-entry ul ol, 
+.post-entry ol ul {
+	margin: 2px 0;
+    padding-right: 22px;
+	padding-left: 0;
+}
+.wp-block-yoast-how-to-block ol.schema-how-to-steps {
+	padding: 15px 32px 20px 20px;
+}
+#respond p.comment-form-author, #respond p.comment-form-email, #respond p.comment-form-url, .wpcf7 p.name, .wpcf7 p.email, .wpcf7 p.subject {
+    float: right;
+}
+#respond p.comment-form-author {
+	margin-left: 2%;
+}
+#respond p.comment-form-url{
+	margin-left: 0;
+}
+#respond .comment-form-cookies-consent input[type="checkbox"] {
+	margin: 0 0 0 5px;
+}
+div.wpcf7 {
+    direction: rtl;
+}	
+.tags-share-box.hide-tags.page-share .share-title {
+    margin-left: 5px;
+    margin-right: 0;
+}
+.post-share a {
+    margin: 0 10px 0 0;
+}	
+.post-entry blockquote {
+    padding: 0 46px 0 0;
+}	
+.post-entry blockquote, .post-entry blockquote p {
+    text-align: right;
+}
+.post-entry blockquote::before{
+    left: auto;
+    right: 0;
+}
+.post-entry blockquote cite, .post-entry blockquote .author{
+    text-align: right;
+}
+.post-entry blockquote .author span {
+    padding: 0 0 0 10px;
+}
+.post-entry blockquote .author span:after {
+    right: 100%;
+    left: auto;
+}
+.post-entry .penci-portfolio-filter ul li, .penci-portfolio-filter ul li {
+    float: right;
+}	
+.penci-countdown {
+    direction: ltr;
+}
+.penci-column {
+	margin-left: 4%;
+	margin-right:0;
+	float: right;
+}
+.column-last {
+	margin-left: 0 !important
+}
+#navigation .button-menu-mobile {
+    float: right;
+}	
+#sidebar-nav {
+    right: 0;
+	left:auto;
+    transform: translateX(270px);
+    -webkit-transform: translateX(270px);
+    -moz-transform: translateX(270px);
+}
+.open-sidebar-nav #sidebar-nav {
+    right: 270px;
+	left:auto;
+}
+#close-sidebar-nav {
+    left: 0;
+    right: 0;
+}
+.open-sidebar-nav #close-sidebar-nav {
+    right: 270px;
+	left: 0;
+}
+.container.penci-breadcrumb span, .container.penci-breadcrumb span a {
+    display: inline-block;
+}
+.tags-share-box .single-comment-o i {
+    margin-left: 5px;
+    margin-right: 0;
+}
+.tags-share-box .single-comment-o:after, .post-share a.penci-post-like:after {
+    margin: 4px 20px 0 6px;
+}	
+.tags-share-box .single-comment-o:after {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+@media (min-width: 600px){
+	.wp-block-latest-posts.is-grid li {
+		padding-right: 0;
+		padding-left: 8px;
+	}
+}
+.post-share {
+    left: 0;
+    right: auto;
+}	
+.post-share a.penci-post-like {
+    margin-right: 5px;
+    margin-left: 0;
+}
+.author-img {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}
+.post-author .author-content {
+    margin-right: 120px;
+    margin-left: 0;
+}
+.author-content .author-social {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.thecomment .author-img {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}
+.thecomment .comment-text {
+    margin-right: 80px;
+    margin-left: 0;
+}
+.thecomment .comment-text span.reply {
+    left: 0;
+    right: auto;
+}
+.post-comments span.reply a {
+    margin-right: 18px;
+    margin-left: 0;
+}	
+.thecomment .comment-text span.date i {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.comments .children, .comments > .comment > .comment, .comments > .comment > .comment > .comment, .comments > .comment > .comment > .comment > .comment, .comments > .comment > .comment > .comment > .comment > .comment {
+    margin: 0 60px 0 0;
+}
+.post-pagination .prev-post {
+    text-align: left;
+}
+.container-single .post-entry .post-tags a {
+    margin-left: 8px;
+    margin-right: 0;
+}	
+.standard-main-content {
+    text-align: right;
+}
+.penci-post-box-meta .penci-post-share-box {
+    float: left;
+}
+.penci-post-box-meta .penci-post-share-box a {
+    margin-right: 10px;
+    margin-left: 0;
+}	
+.penci-post-box-meta .penci-post-share-box a:first-child {
+    margin-right: 0;
+}
+.penci-post-box-meta .penci-box-meta i.fa {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.penci-post-box-meta .penci-box-meta span:after {
+    margin: 0 20px 0 16px;
+}	
+.penci-viewport {
+    direction: ltr;
+}	
+.penci-viewport *{
+    direction: rtl;
+}	
+.header-social a {
+    float: right;
+    margin-left: 13px;
+    margin-right: 0;
+}
+.header-social a:last-child {
+    margin-left: 0;
+}
+.penci-layout-boxed-1 .list-boxed-post .header-list-style:after, .penci-layout-standard-boxed-1 .list-boxed-post .header-list-style:after, .penci-layout-classic-boxed-1 .list-boxed-post .header-list-style:after {
+    right: 50%;
+    left: auto;
+    margin-right: -30px;
+    margin-left: 0;
+}
+.penci-pagination .newer a i, .penci-pagination .newer .disable-url i {
+    margin: 0 0 0 8px;
+}
+.penci-pagination a i, .penci-pagination .disable-url i {
+    margin-right: 8px;
+    margin-left: 0;
+}
+.penci-pagination .newer .fa-angle-left:before {
+    content: "\f105";
+}
+.penci-pagination .older .fa-angle-right:before {
+    content: "\f104";
+}
+.mfp-title {
+    text-align: right;
+    padding-left: 36px;
+    padding-right: 0;
+}
+.mfp-counter {
+    left: 0;
+    right: auto;
+	direction: ltr;
+}	
+.format-post-box .post-format-icon {
+    margin-right: -36px;
+    margin-left: 0;
+}
+.penci-grid > li {
+    float: right;
+    margin-left: 2.57%;
+    margin-right: 0;
+}
+.penci-grid > li.grid-2-style {
+    margin-left: 2.6%;
+    margin-right: 0;
+}
+.container.penci_sidebar .penci-grid > li {
+    margin-left: 3.9%;
+    margin-right: 0;
+}
+.container.penci_sidebar .penci-grid li:nth-of-type(2n+2), .penci-grid li.grid-2-style:nth-of-type(2n+2) {
+    margin-left: 0;
+    clear: none;
+}
+.penci-grid > li:nth-of-type(3n+3) {
+	margin-left: 0;
+}
+.penci-grid > li.grid-2-style {
+	margin-right: 0;
+	margin-left: 2.6%;
+}
+.container.penci_sidebar .penci-grid li:nth-of-type(3n+3) {
+	margin-left: 3.9%;
+	margin-right: 0;
+}
+.penci-grid li.grid-2-style:nth-of-type(3n+3) {
+	margin-left: 2.6%;
+	margin-right: 0;
+}
+.container.penci_sidebar .penci-grid li:nth-of-type(2n+2),
+.penci-grid li.grid-2-style:nth-of-type(2n+2) {
+	margin-left: 0;
+}
+.penci-grid li .item > .thumbnail .icon-post-format,
+.penci-masonry .item-masonry > .thumbnail .icon-post-format,
+.grid-mixed .thumbnail .icon-post-format {
+	right: 50%;
+	left:auto;
+	margin: -25px -25px 0 0;
+}
+.penci-grid li .item .item-content,
+.penci-masonry .item-masonry .item-content,
+.penci-grid .mixed-detail .item-content {
+	text-align: right;
+}
+.penci-post-box-meta.penci-post-box-grid:before {
+	right: 0;
+	left:auto;
+}
+.grid-header-box:after {
+	margin-right: -30px;
+	margin-left:0;
+	right: 50%;
+	left:auto;
+}
+.penci-readmore-btn,
+.penci-featured-cat-seemore {
+	text-align: right;
+}
+.penci-readmore-btn i,
+.penci-featured-cat-seemore i {
+	margin-right: 5px;
+	margin-left:0;
+}
+.grid-mixed .grid-header-box:after {
+    right: 0;
+    left: auto;
+}
+.woocommerce .page-title {
+    text-align: right;
+}	
+.woocommerce .page-title:before, .woocommerce .page-title:after {
+    right: 0;
+    left: auto;
+}	
+.woocommerce-error, .woocommerce-info, .woocommerce-message {
+    padding: 1em 3.5em 1em 2em!important;
+}	
+.woocommerce-error:before, .woocommerce-info:before, .woocommerce-message:before {
+    right: 1.5em;
+    left: auto;
+}
+.penci-review-score {
+    float: left;
+}
+.container .penci-grid li.magazine-layout .grid-header-box:after {
+    right: 0;
+    left: auto;
+    margin-right: 0;
+}
+#sidebar-nav .menu li.menu-item-has-children a {
+    padding-left: 17px;
+    padding-right: 0;
+}
+#sidebar-nav .menu li a .indicator {
+    left: 0;
+    right: auto;
+    text-align: left;
+    padding: 11px 5px 11px 0;
+}	
+#sidebar-nav ul.sub-menu {
+    padding: 10px 12px 10px 0;
+}
+#sidebar-nav .menu .sub-menu li a .indicator {
+    padding: 8px 5px 8px 0;
+}
+ul.homepage-featured-boxes li {
+	float: right;
+}
+#navigation.header-4 #top-search, #navigation.header-5 #top-search {
+    margin-right: 40px;
+    margin-left: 0;
+}
+.penci-rlt-popup .rtlpopup-heading {
+	text-align: right;
+	padding: 8px 20px 8px 32px;
+}
+.penci-rlt-popup .penci-close-rltpopup {
+	right: auto;
+	left: 9px;
+}
+.overlay-post-box-meta .overlay-share i {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation {
+    float: right;
+}
+.woocommerce-account .woocommerce-MyAccount-content {
+    float: left;
+}
+.wishlist_table tr td.product-thumbnail, .wishlist_table tr td.product-name, .wishlist_table tr td.wishlist-name, .wishlist_table tr td.wishlist-privacy, .woocommerce table.wishlist_table tfoot td {
+    text-align: right;
+}
+.yith-wcwl-share ul {
+    margin: 5px 0;
+    padding: 0;
+}
+caption, th {
+    text-align: right;
+}
+.woocommerce table.shop_table {
+    text-align: right;
+}	
+.woocommerce .woocommerce-result-count, .woocommerce-page .woocommerce-result-count {
+    float: right;
+}
+.woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering {
+    float: left;
+}
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    float: right;
+    margin: 0 0 60px 2.565%;
+}	
+.woocommerce .penci_sidebar ul.products li.product, .woocommerce-page .penci_sidebar ul.products li.product {
+    margin-left: 3.8465%;
+    margin-right: 0;
+}
+.woocommerce .penci_sidebar ul.products > li.product:nth-child( 4n+4 ), .woocommerce-page .penci_sidebar ul.products > li.product:nth-child( 4n+4 ) {
+    margin-left: 3.8465%;
+    margin-right: 0;
+}
+.woocommerce ul.products li.product .onsale {
+    left: 10px;
+    right: auto;
+}
+.woocommerce .penci_sidebar ul.products > li.product:nth-child( 3n+3 ), .woocommerce-page .penci_sidebar ul.products > li.product:nth-child( 3n+3 ) {
+    margin-left: 0;
+}
+.woocommerce ul.products li.last, .woocommerce-page ul.products li.last {
+    margin-left: 0;
+}
+.woocommerce ul.products > li.product:nth-child( 4n+4 ), .woocommerce-page ul.products > li.product:nth-child( 4n+4 ) {
+    margin-left: 0;
+}
+.woocommerce .products .star-rating {
+    right: 10px;
+    left: auto;
+}	
+.woocommerce .star-rating {
+    float: left;
+}	
+.woocommerce .woocommerce-product-rating .star-rating {
+    margin: .5em 0 0 4px;
+    float: right;
+}
+.woocommerce div.product .entry-summary div[itemprop="description"]:before {
+    right: 0;
+    left: auto;
+}	
+.woocommerce div.product form.cart div.quantity {
+    float: right;
+    margin: 0 0 0 4px;
+}
+.woocommerce div.product form.cart div.quantity {
+    margin-left: 20px;
+    margin-right: 0;
+}
+.woocommerce div.product form.cart .button {
+    float: right;
+}
+.woocommerce #content div.product div.thumbnails a, .woocommerce div.product div.thumbnails a, .woocommerce-page #content div.product div.thumbnails a, .woocommerce-page div.product div.thumbnails a {
+    float: right;
+    margin-left: 3.8%;
+    margin-right: 0;
+}
+.woocommerce #content div.product div.thumbnails a.last, .woocommerce div.product div.thumbnails a.last, .woocommerce-page #content div.product div.thumbnails a.last, .woocommerce-page div.product div.thumbnails a.last {
+    margin-left: 0;
+}
+.woocommerce #content div.product div.thumbnails a, .woocommerce div.product div.thumbnails a, .woocommerce-page #content div.product div.thumbnails a, .woocommerce-page div.product div.thumbnails a, .woocommerce #content div.product div.thumbnails a.last, .woocommerce div.product div.thumbnails a.last, .woocommerce-page #content div.product div.thumbnails a.last, .woocommerce-page div.product div.thumbnails a.last {
+    margin-left: 5.25%;
+    margin-right: 0;
+}
+.woocommerce #content div.product div.thumbnails a:nth-child(4n+4), .woocommerce div.product div.thumbnails a:nth-child(4n+4), .woocommerce-page #content div.product div.thumbnails a:nth-child(4n+4), .woocommerce-page div.product div.thumbnails a:nth-child(4n+4) {
+    margin-left: 0;
+}
+.woocommerce div.product .woocommerce-tabs .panel > h2:first-child, .woocommerce div.product .woocommerce-tabs .panel #reviews #comments h2, .woocommerce div.product .woocommerce-tabs .panel #respond h3.comment-reply-title {
+    text-align: right;
+}
+.woocommerce #content div.product #reviews .comment img, .woocommerce div.product #reviews .comment img, .woocommerce-page #content div.product #reviews .comment img, .woocommerce-page div.product #reviews .comment img {
+    float: left;
+}
+.woocommerce #reviews #comments ol.commentlist li img.avatar {
+    float: right;
+    right: 0;
+    left: auto;
+}
+.woocommerce #reviews #comments ol.commentlist li .comment-text {
+    margin: 0 50px 0 0;
+}	
+.woocommerce #reviews #comments ol.commentlist li .comment-text {
+    margin-right: 80px;
+    margin-left: 0;
+}
+.woocommerce #review_form #respond p.form-submit {
+    text-align: right;
+}
+.woocommerce-error .button, .woocommerce-info .button, .woocommerce-message .button {
+    float: left;
+}
+.woocommerce #respond input#submit.added:after, .woocommerce a.button.added:after, .woocommerce button.button.added:after, .woocommerce input.button.added:after {
+    margin-right: .53em;
+    margin-left: 0;
+}	
+.woocommerce #respond input#submit.loading:after,
+.woocommerce a.button.loading:after,
+.woocommerce button.button.loading:after,
+.woocommerce input.button.loading:after {
+	margin-left: 0;
+	margin-right: 5px;
+}
+.woocommerce #content table.cart td.actions .coupon, .woocommerce table.cart td.actions .coupon, .woocommerce-page #content table.cart td.actions .coupon, .woocommerce-page table.cart td.actions .coupon {
+    float: right;
+}
+#add_payment_method table.cart td.actions .coupon .input-text, .woocommerce-cart table.cart td.actions .coupon .input-text, .woocommerce-checkout table.cart td.actions .coupon .input-text {
+    float: right;
+    margin: 0 0 0 4px;
+}
+.woocommerce-cart table.cart td.actions .coupon .input-text {
+    margin-left: 20px;
+    margin-right: 0;
+}
+.woocommerce #content table.cart td.actions, .woocommerce table.cart td.actions, .woocommerce-page #content table.cart td.actions, .woocommerce-page table.cart td.actions {
+    text-align: left;
+}
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
+    text-align: right;
+}	
+#add_payment_method #payment ul.payment_methods li input, .woocommerce-cart #payment ul.payment_methods li input, .woocommerce-checkout #payment ul.payment_methods li input {
+    margin: 0 0 0 1em;
+}
+#add_payment_method #payment ul.payment_methods, .woocommerce-cart #payment ul.payment_methods, .woocommerce-checkout #payment ul.payment_methods {
+    text-align: right;
+}	
+#add_payment_method #payment ul.payment_methods li, .woocommerce-cart #payment ul.payment_methods li, .woocommerce-checkout #payment ul.payment_methods li {
+    text-align: right;
+}	
+.woocommerce form .form-row .input-checkbox {
+    margin: -2px 0 0 8px;
+}
+.woocommerce #payment .terms, .woocommerce #payment .wc-terms-and-conditions, .woocommerce-page #payment .terms, .woocommerce-page #payment .wc-terms-and-conditions {
+    text-align: right;
+    padding: 0 0 0 1em;
+    float: right;
+}
+.woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
+    float: right;
+}
+#add_payment_method .checkout .col-2 h3#ship-to-different-address, .woocommerce-cart .checkout .col-2 h3#ship-to-different-address, .woocommerce-checkout .checkout .col-2 h3#ship-to-different-address {
+    float: right;
+}
+#add_payment_method .checkout .col-2 .form-row-first, #add_payment_method .checkout .col-2 .notes, .woocommerce-cart .checkout .col-2 .form-row-first, .woocommerce-cart .checkout .col-2 .notes, .woocommerce-checkout .checkout .col-2 .form-row-first, .woocommerce-checkout .checkout .col-2 .notes {
+    clear: right;
+}
+.woocommerce .order_details li {
+    float: right;
+    margin-left: 2em;
+    margin-right: 0;
+    border-left: 1px dashed #d3ced2;
+    border-right: none;
+    padding-right: 0;
+    padding-left: 2em;
+}
+.woocommerce table.my_account_orders .order-actions {
+    text-align: left;
+}
+.woocommerce table.my_account_orders .order-actions .button {
+    margin: .125em .25em .125em 0;
+}
+.woocommerce-account .addresses .title h3 {
+    float: right;
+}
+.woocommerce-account .addresses .title .edit, .woocommerce-account ul.digital-downloads li .count {
+    float: left;
+}
+.woocommerce form.login .form-row input[type="submit"] {
+    margin-left: 20px;
+    margin-right: 0;
+}
+.woocommerce div.product p.price del, .woocommerce div.product span.price del {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.woocommerce div.product form.cart .variations select {
+    margin-left: 1em;
+    margin-right: 0;
+}
+.woocommerce div.product form.cart .variations td.label {
+    padding-left: 1em;
+    padding-right: 0;
+}
+#navigation.header-6 #logo {
+    float: right;
+    text-align: right;
+}
+#navigation.header-6 .menu {
+    float: none;
+}
+#navigation.header-6 #top-search {
+    margin-right: 40px;
+    margin-left: 0;
+}
+#navigation.header-6 .container {
+    text-align: left;
+}
+#navigation .menu > li:last-child, #navigation .menu > ul > li:last-child {
+    margin-left: 0;
+}
+#navigation.header-6 #top-search.shoping-cart-icon{
+    margin-right: 40px;
+    margin-left: 0;
+}
+.slick-slider {
+    direction: ltr;
+}
+body.rtl .slick-slider .slick-slide{
+	direction:rtl;
+}
+.post-entry .penci-recipe-heading h2 {
+    float: right;
+}	
+.penci-recipe-heading a.penci-recipe-print {
+    float: left;
+}
+.penci-recipe-heading .penci-recipe-meta span {
+    margin-left: 15px;
+    margin-right: 0;
+	display: inline-block;
+}
+.penci-recipe-heading .penci-recipe-meta span i {
+    margin-left: 4px;
+    margin-right: 0;
+}
+.penci-recipe-heading .penci-recipe-meta span.servings {
+    margin-left: 0;
+}
+.penci-recipe-ingredients ul li:before {
+    right: -18px;
+    left: auto;
+}
+.penci-recipe-ingredients ul {
+    margin: 0;
+    padding-right: 18px;
+    padding-left: 0;
+}
+.wrapper-penci-recipe .penci-recipe-method ul, .wrapper-penci-recipe .penci-recipe-method ol {
+    padding-right: 15px;
+    padding-left: 0;
+}
+ul.penci-topbar-menu > li, div.penci-topbar-menu > ul > li {
+    float: right;
+    margin-left: 25px;
+    margin-right: 0;
+}
+ul.penci-topbar-menu > li:last-child, div.penci-topbar-menu > ul > li:last-child {
+    margin-left: 0;
+}
+ul.penci-topbar-menu ul.sub-menu, div.penci-topbar-menu > ul ul.sub-menu {
+    right: 0;
+    left: auto;
+}	
+ul.penci-topbar-menu li:hover ul.sub-menu ul.sub-menu, div.penci-topbar-menu > ul li:hover ul.sub-menu ul.sub-menu {
+    right: 100%;
+    left: auto;
+}
+.penci-pagination ul.page-numbers li a i {
+    margin-right: 2px;
+    margin-left: 0;
+}
+.penci-piechart {
+    left: 20px;
+    right: auto;
+}
+.penci-piechart.penci-piechart-small {
+    left: 7px;
+    right: auto;
+}
+.penci-review-stuff, .penci-review-average {
+    float: right;
+}
+.penci-review-stuff .penci-review-good {
+    float: right;
+}
+.penci-review .penci-review-good ul li {
+    padding-right: 18px;
+    padding-left: 0;
+}
+.penci-review .penci-review-good ul li:before {
+    right: 0;
+    left: auto;
+}
+.featured-carousel .carousel-meta span {
+    display: inline-block;
+}
+.featured-carousel .carousel-meta > span:after {
+    margin: 0 15px 0 11px;
+    border-right: 1px solid #888;
+    border-left: none;
+}
+.quote-widget > i.fa {
+    right: 0;
+    left: auto;
+}
+.quote-widget > p {
+    padding-right: 40px;
+    padding-left: 0;
+}
+.widget-social.show-text a span {
+    margin-right: 10px;
+    margin-left: 0;
+}
+.widget-social.show-text a {
+    float: right;
+    text-align: right;
+}
+.woocommerce ul.cart_list li img, .woocommerce ul.product_list_widget li img {
+    margin: 0 0 0 20px;
+    float: right;
+}
+.woocommerce .woocommerce-product-search input[type="search"] {
+    background-position: 6% 15px;
+    padding: 14px 20px 14px 43px;
+}
+.widget ul ul {
+    padding-right: 20px;
+    padding-left: 0;
+}
+.widget.widget_categories ul li span.category-item-count {
+    float: left;
+}
+.woocommerce .widget_shopping_cart .cart_list li, .woocommerce.widget_shopping_cart .cart_list li {
+    padding-right: 2em;
+    padding-left: 0;
+}
+.woocommerce .widget_shopping_cart .cart_list li, .woocommerce.widget_shopping_cart .cart_list li {
+    padding-right: 0;
+}
+.woocommerce .widget_shopping_cart
+ .cart_list li a.remove, .woocommerce.widget_shopping_cart
+ .cart_list li a.remove {
+    margin-right: 5px;
+    margin-left: 0;
+}
+.woocommerce .widget_shopping_cart .cart_list li a.remove, .woocommerce.widget_shopping_cart .cart_list li a.remove {
+    right: 0;
+    left: auto;
+}
+.woocommerce .widget_shopping_cart p.buttons a.checkout, .woocommerce.widget_shopping_cart p.buttons a.checkout {
+    margin-right: 16px;
+    margin-left: 0;
+}
+.woocommerce .widget_price_filter .price_slider_amount {
+    text-align: left;
+}
+.woocommerce .widget_price_filter .price_slider_amount .button {
+    float: right;
+}
+.woocommerce .widget_layered_nav ul li span {
+    display: inline-block;
+}
+.footer-widget-wrapper .widget .widget-title {
+    text-align: right;
+}
+.footer-widget-wrapper {
+    margin-left: 3.5%;
+    margin-right: 0;
+    float: right;
+}
+
+.footer-widget-wrapper.footer-widget-style-4{
+    margin-right: 0;
+    width: 22.75%;
+    margin-left: 3%;
+}
+.footer-widget-wrapper.footer-widget-style-10 {
+    margin-right: 0;
+}
+.footer-widget-wrapper.footer-widget-style-4.last,
+.footer-widget-wrapper.last {
+    margin-left: 0;
+}
+#navigation .penci-megamenu .penci-content-megamenu .penci-mega-latest-posts .penci-mega-post {
+    float: right;
+}	
+#navigation .penci-megamenu .penci-mega-thumbnail .mega-cat-name {
+    right: 0;
+    left: auto;
+}
+.penci-featured-cat-seemore i.fa-angle-double-right:before {
+    content: "\f100";
+}
+.penci-mag2-carousel .mag2-item .mag2-item .mag2-header {
+    text-align: right;
+}
+.penci-btn-readmore .fa-angle-double-right:before {
+    content: "\f100";
+}
+.footer-instagram h4.footer-instagram-title > span:before {
+    margin-right: 0;
+    margin-left: 8px;
+}
+#navigation .penci-megamenu .penci-mega-child-categories:after,
+#navigation .penci-megamenu .penci-mega-child-categories a.cat-active:before {
+    left: 0;
+    right: auto;
+}
+#navigation.menu-style-2 .penci-megamenu .penci-mega-child-categories a.cat-active:before{
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+#navigation.menu-style-2 .penci-megamenu .penci-mega-child-categories a:after {
+    right: 20px;
+    left: auto;
+}
+#navigation .menu li a i {
+    margin-right: 0;
+    margin-left: 5px;
+}
+#navigation ul.menu > li.megamenu > ul.sub-menu > li:before {
+    left: auto;
+    right: 0;
+}
+#navigation.menu-style-2 .penci-megamenu .penci-mega-child-categories a {
+    padding: 6px 20px 6px 0;
+    text-align: right;
+}
+#navigation.menu-style-2 .penci-megamenu .penci-mega-child-categories a span {
+    padding-left: 20px;
+    padding-right: 0;
+}
+body.rtl .cat > a.penci-cat-name{
+	margin: 0 0 0 18px;
+	padding-left: 12px;
+	padding-right: 0;
+}
+body.rtl .cat > a.penci-cat-name:first-child{
+	margin-right: 0;
+	margin-left: 18px;
+}
+body.rtl .cat > a.penci-cat-name:last-child{
+	margin-left: 0;
+}
+body.rtl .cat > a.penci-cat-name:after{
+	margin-left: 0;
+	margin-right: 11px;
+}
+
+body.rtl .penci-single-style-10 .header-standard,
+body.rtl .penci-single-style-10 .post-box-meta-single{
+    text-align: right;
+}
+
+.penci_is_nosidebar .wp-block-image.alignfull,
+.penci_is_nosidebar .wp-block-cover-image.alignfull, 
+.penci_is_nosidebar .wp-block-cover.alignfull,
+.penci_is_nosidebar .wp-block-gallery.alignfull,
+.penci_is_nosidebar .alignfull {
+	margin-right: calc(50% - 50vw);
+	margin-left: 0;
+}
+.penci_is_nosidebar .wp-block-cover.alignwide,
+.penci_is_nosidebar .wp-block-cover-image.alignwide,
+.penci_is_nosidebar .wp-block-image.alignwide,
+.penci_is_nosidebar .wp-block-gallery.alignwide,
+.penci_is_nosidebar .alignwide {
+	margin-right: calc(25% - 25vw);
+	margin-left: 0;
+}
+.penci-menu-hbg-inner .header-social.sidebar-nav-social,
+.penci_menu_hbg_ftext {
+	text-align: right;
+}
+@media only screen and (max-width: 767px) {
+	.penci_is_nosidebar .wp-block-cover.alignwide,
+	.penci_is_nosidebar .wp-block-cover-image.alignwide,
+	.penci_is_nosidebar .wp-block-image.alignwide,
+	.penci_is_nosidebar .wp-block-gallery.alignwide,
+	.penci_is_nosidebar .alignwide {
+		margin-right: calc(50% - 50vw);
+		margin-left: 0;
+	}
+}
+.wp-block-latest-posts {
+	padding: 16px 36px 16px 20px !important
+}
+.wp-block-separator.is-style-dots:before {
+	padding-right: 0;
+	padding-left: 2em;
+}
+@media (min-width: 600px){
+	.wp-block-columns .wp-block-column:last-child {
+		margin-right: 32px;
+		margin-left: 0;
+	}
+}
+/** shortcode **/
+.penci-slider_btnwrap .pencislider-btn:not( :last-child ) {
+    margin-right: 0;
+    margin-left: 15px;
+}
+.penci-countdown-section {
+    float: right;
+}
+.penci-working-hours .penci-workingh-lists .penci-listitem-icon{
+    padding-right: 1px;
+    padding-left: 10px;
+}
+.penci-working-hours .penci-workingh-lists .penci-listitem-hours {
+    padding-left: 0;
+    padding-right: 10px;
+}
+.penci-working-hours .penci-workingh-lists .penci-listitem-title:before {
+    right: 100%;
+    margin-left: 0;
+    margin-right: 10px;
+}
+.penci-progress-bar .penci-probar-items .penci-probar-score {
+    float: left;
+    text-align: left;
+}
+.penci-socialCT-s2 .penci-social-button,
+.penci-socialCT-s1 .penci-social-button {
+    float: left;
+}
+.penci-socialCT-s5 .penci-socialCT-item,
+.penci-socialCT-s4 .penci-socialCT-item,
+.penci-socialCT-s3 .penci-socialCT-item,
+.penci-socialCT-s2 .penci-socialCT-item {
+    float: right;
+}
+.penci-socialCT-s1 .penci-social-name {
+    margin-right: 0;
+    margin-left: 15px;
+}
+.penci-socialCT-wrap i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+.penci-socialCT-wrap .penci-social-button span {
+    margin-right: 5px;
+    float: left;
+}
+.penci-weather-now,
+.penci-weather-section {
+    float: right;
+}
+.penci_clouds {
+    text-align: right;
+    padding-left: 0;
+    padding-right: 10px;
+}
+.penci_humidty {
+    text-align: left;
+    padding-right: 0;
+    padding-left: 10px;
+}
+.penci-weather-information i{
+    margin-left: 5px;
+    margin-right: 0;
+}
+.penci-weather-animated-icon {
+    float: right;
+    text-align: left;
+}
+.penci-weather-lo-hi {
+    float: right;
+    text-align: right;
+}
+.penci-weather-lo-hi__content .penci-circle {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.penci-weather-days {
+    float: right;
+}
+.penci-testi-s2 .penci-testimonail {
+    text-align: right;
+}
+.penci-testi-s2 .penci-testi-avatar {
+    margin-left: 0;
+    margin-right: 30px;
+}
+.penci-post-box-meta .penci-box-meta span,
+.penci-post-box-meta .penci-box-meta a {
+    display: inline-block;
+}
+.penci-ibox-float-left .penci-ibox-inner{
+    text-align: right;
+}
+.penci-ibox-float-left .penci-ibox-icon {
+    margin-right: 0;
+    margin-left: 20px;
+}
+.penci-ibox-float-right .penci-ibox-icon {
+    margin-left: 0;
+    margin-right: 20px;
+}
+.penci-ibox-float-right .penci-ibox-inner {
+    text-align: left;
+}
+.penci-ibox-top-right .penci-ibox-inner {
+    text-align: left;
+    float: left;
+}
+.penci-ibox-top-left .penci-ibox-inner {
+    text-align: right;
+    float: right;
+}
+.penci-video_playlist .penci-video-nav {
+    float: left;
+    right: auto;
+    left: 0;
+}
+.penci-video_playlist .penci-media-obj .penci-mobj-img {
+    margin-right: 0;
+    margin-left: 20px;
+}
+.penci-video_playlist .penci-video-nav .playlist-panel-item {
+    float: right;
+    text-align: right;
+}
+.penci-video_playlist .penci-video-playlist-item .penci-video-duration {
+    float: right;
+}
+.pencisc-column-2.penci-video_playlist .penci-video-nav .playlist-panel-item,
+.pencisc-column-1.penci-video_playlist .penci-video-nav .playlist-panel-item {
+    left: auto;
+    right: 0;
+}
+/* Responsive */
+@media only screen and (min-width: 768px) {
+    .home-featured-cat-content.style-6 .mag-post-box.first-post .magcat-detail{
+        width: 51.948%;
+    }
+
+    .home-featured-cat-content.style-6 .mag-post-box.first-post .magcat-detail,
+    .penci-featured-cat-sc .home-featured-cat-content.style-6 .mag-post-box.first-post .magcat-detail {
+        padding-left: 0;
+        padding-right: 30px;
+        float: left;
+    }
+
+    .home-featured-cat-content.style-6 .mag-post-box.first-post .magcat-thumb,
+    .penci-featured-cat-sc .home-featured-cat-content.style-6 .mag-post-box.first-post .magcat-thumb {
+        float: right;
+    }
+
+    .penci-grid li.list-post .item .content-list-right {
+        padding-right: 30px;
+        padding-left: 0;
+        width: 51.948%;
+        float: left;
+    }
+}
+
+@media only screen and (max-width: 1169px) and (min-width: 961px){
+
+    #navigation.header-4 #top-search, #navigation.header-5 #top-search, #navigation.header-6 #top-search {
+        margin-right: 26px;
+        margin-left: 0;
+    }
+    #navigation.header-6 #top-search.shoping-cart-icon {
+        margin-right: 26px;
+        margin-left: 0;
+    }
+    #navigation ul.menu > li, #navigation .menu > ul > li {
+        margin-left: 26px;
+        margin-right: 0;
+    }
+    .container.has-banner #logo {
+        padding-left: 30px;
+        padding-right: 0;
+    }
+}
+
+
+@media only screen and (max-width: 960px){
+    #navigation.header-4 .container #top-search, #navigation.header-5 .container #top-search, #navigation.header-6 .container #top-search {
+        margin-right: 15px;
+        margin-left: 0;
+    }
+    #navigation.header-6 #logo {
+        float: none;
+    }
+    #navigation.header-6 .container {
+        text-align: center;
+    }
+    .footer-widget-wrapper {
+        margin: 0 0 30px 0;
+        float: none;
+    }
+}
+
+
+@media only screen and (max-width: 960px) and (min-width: 768px){
+    .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+        margin-right: 0;
+        margin-left: 3.8465%;
+    }
+    .woocommerce ul.products > li.product:nth-child( 4n+4 ), .woocommerce-page ul.products > li.product:nth-child( 4n+4 ) {
+        margin-left: 3.8465%;
+        margin-right: 0;
+    }
+    .woocommerce ul.products > li.product:nth-child( 3n+3 ), .woocommerce-page ul.products > li.product:nth-child( 3n+3 ) {
+        margin-left: 0;
+    }
+    .penci-grid > li:nth-of-type(3n+3) {
+        margin-left: 3.9%;
+        margin-right: 0;
+    }
+    .penci-grid > li {
+        width: 48.05%;
+        margin-left: 3.9%;
+        margin-right: 0;
+    }
+    .penci-grid li:nth-of-type(2n+2) {
+        margin-left: 0;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .woocommerce table.shop_table_responsive tr td, .woocommerce-page table.shop_table_responsive tr td {
+        text-align: left !important;
+    }
+    .woocommerce table.shop_table_responsive tr td:before, .woocommerce-page table.shop_table_responsive tr td:before {
+        float: right;
+    }
+    .woocommerce #content table.cart td.actions .coupon .button.alt, .woocommerce #content table.cart td.actions .coupon .input-text+.button, .woocommerce table.cart td.actions .coupon .button.alt, .woocommerce table.cart td.actions .coupon .input-text+.button, .woocommerce-page #content table.cart td.actions .coupon .button.alt, .woocommerce-page #content table.cart td.actions .coupon .input-text+.button, .woocommerce-page table.cart td.actions .coupon .button.alt, .woocommerce-page table.cart td.actions .coupon .input-text+.button {
+        float: left;
+    }
+    .woocommerce #content table.cart td.actions .coupon, .woocommerce table.cart td.actions .coupon, .woocommerce-page #content table.cart td.actions .coupon, .woocommerce-page table.cart td.actions .coupon {
+        float: none;
+    }
+    .woocommerce .cart-collaterals .cart_totals, .woocommerce .cart-collaterals .cross-sells, .woocommerce .cart-collaterals .shipping_calculator, .woocommerce-page .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cross-sells, .woocommerce-page .cart-collaterals .shipping_calculator {
+        float: none;
+        text-align: right;
+    }
+}
+
+
+@media only screen and (max-width: 767px){
+
+    .woocommerce ul.products li.product, .woocommerce-page ul.products li.product, .woocommerce .penci_sidebar ul.products li.product, .woocommerce-page .penci_sidebar ul.products li.product {
+        margin-left: 4%;
+        margin-right: 0;
+    }
+    .woocommerce .penci_sidebar ul.products > li.product:nth-child( 3n+3 ), .woocommerce-page .penci_sidebar ul.products > li.product:nth-child( 3n+3 ) {
+        margin-left: 4%;
+        margin-right: 0;
+    }
+    .woocommerce ul.products li.product:nth-child(2n+2), .woocommerce-page ul.products li.product:nth-child(2n+2), .woocommerce .penci_sidebar ul.products > li.product:nth-child( 2n+2 ), .woocommerce-page .penci_sidebar ul.products > li.product:nth-child( 2n+2 ) {
+        margin-left: 0;
+    }
+    .woocommerce #reviews #comments ol.commentlist li .comment-text {
+        margin-right: 0;
+    }
+    .woocommerce-account .woocommerce-MyAccount-content, .woocommerce-account .woocommerce-MyAccount-navigation {
+        float: none;
+    }
+    .thecomment .comment-text {
+        margin-right: 0;
+    }
+    .penci-grid li {
+        margin-left: 0 !important;
+    }
+    .footer-subscribe .mc4wp-form .mdes {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+	.penci-grid li.list-post .item .content-list-right {
+		clear: both;
+	}
+}
+
+
+@media only screen and (max-width: 960px){
+    .column-1-2, .column-1-3, .column-2-3, .column-1-4, .column-3-4 {
+        margin: 0 0 30px 0;
+    }
+    .container.has-banner #logo {
+        text-align: center;
+    }
+    .penci-topbar-social {
+        float: none;
+    }
+    ul.penci-topbar-menu > li, div.penci-topbar-menu > ul > li {
+        float: none;
+        margin-left: 10px;
+        margin-right: 0;
+    }
+}
+
+
+@media only screen and (max-width: 479px) {
+    .penci-post-box-meta .penci-post-share-box {
+        float: none;
+    }
+    .woocommerce-cart table.cart td.actions .coupon .input-text {
+        margin-left: 0;
+    }
+    .comments .children, .comments > .comment > .comment, .comments > .comment > .comment > .comment, .comments > .comment > .comment > .comment > .comment, .comments > .comment > .comment > .comment > .comment > .comment {
+        margin: 0 30px 0 0;
+    }
+    .footer-subscribe .mc4wp-form .msubmit {
+        margin-right: 0;
+    }
+	.penci-rlt-popup .rtlpopup-heading{
+		padding-right: 12px;
+	}
+}

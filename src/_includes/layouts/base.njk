@@ -1,41 +1,1872 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ renderData.title or title or metadata.title }}</title>
-    <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
-    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
-    <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
-    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
-  </head>
-  <body>
-    <header>
-      <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+<!DOCTYPE html>
+<html lang="en-US" style="transform: none;">
+<head>
+    <title>NerdyCode | Web Development and Software</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-      {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-      <ul class="nav">
-      {%- for entry in collections.all | eleventyNavigation %}
-        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-      {%- endfor %}
-      </ul>
-    </header>
+    <meta name="description" content="Web Development and Software">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-      <div class="warning">
-        <ol>
-          <li>Edit the <code>_data/metadata.json</code> with your blog’s information.</li>
-          <li>(Optional) Edit <code>.eleventy.js</code> with your <a href="https://www.11ty.dev/docs/config/">configuration preferences</a>.</li>
-          <li>Delete this message from <code>_includes/layouts/base.njk</code>.</li>
-        </ol>
-        <p><em>This is an <a href="https://www.11ty.io/">Eleventy project</a> created from the <a href="https://github.com/11ty/eleventy-base-blog"><code>eleventy-base-blog</code> repo</a>.</em></p>
-      </div>
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="NerdyCode | Web Development and Software">
+    <meta property="og:description" content="Web Development and Software">
+    <meta property="og:url" content="https://www.nerdycode.com/">
+    <meta property="og:site_name" content="NerdyCode">
 
-      {{ content | safe }}
-    </main>
+    <link rel="canonical" href="https://www.nerdycode.com/">
+    <link rel="next" href="https://www.nerdycode.com/page/2/">
 
-    <footer></footer>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@nerdycode">
 
-    <!-- Current page: {{ page.url | url }} -->
-  </body>
-</html>
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="shortcut icon"
+          href="https://www.nerdycode.com/wp-content/uploads/2019/07/pink-floyd-dark-side-of-the-moon.ico"
+          type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180"
+          href="https://www.nerdycode.com/wp-content/uploads/2019/07/pink-floyd-dark-side-of-the-moon.ico">
+
+    <link rel="alternate" type="application/rss+xml" title="NerdyCode RSS Feed" href="https://www.nerdycode.com/feed/">
+    <link rel="alternate" type="application/atom+xml" title="NerdyCode Atom Feed"
+          href="https://www.nerdycode.com/feed/atom/">
+
+    <link rel="pingback" href="https://www.nerdycode.com/xmlrpc.php">
+    <!--[if lt IE 9]>
+    <script src="http://max.soledad.pencidesign.com/soledad-dark-version/wp-content/themes/soledad/js/html5.js"></script>
+    <![endif]-->
+    <link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+    <link rel="dns-prefetch" href="http://s.w.org/">
+    <script type="text/javascript">
+      window._wpemojiSettings = {
+        "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/",
+        "ext": ".png",
+        "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/",
+        "svgExt": ".svg",
+        "source": { "concatemoji": "http:\/\/soledad.pencidesign.com\/soledad-dark-version\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.14" }
+      };
+      !function (a, b, c) {
+        function d(a, b) {
+          var c = String.fromCharCode;
+          l.clearRect(0, 0, k.width, k.height), l.fillText(c.apply(this, a), 0, 0);
+          var d = k.toDataURL();
+          l.clearRect(0, 0, k.width, k.height), l.fillText(c.apply(this, b), 0, 0);
+          var e = k.toDataURL();
+          return d === e
+        }
+
+        function e(a) {
+          var b;
+          if (!l || !l.fillText) return !1;
+          switch (l.textBaseline = "top", l.font = "600 32px Arial", a) {
+            case"flag":
+              return !(b = d([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819])) && (b = d([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]), !b);
+            case"emoji":
+              return b = d([55358, 56760, 9792, 65039], [55358, 56760, 8203, 9792, 65039]), !b
+          }
+          return !1
+        }
+
+        function f(a) {
+          var c = b.createElement("script");
+          c.src = a, c.defer = c.type = "text/javascript", b.getElementsByTagName("head")[0].appendChild(c)
+        }
+
+        var g, h, i, j, k = b.createElement("canvas"), l = k.getContext && k.getContext("2d");
+        for (j = Array("flag", "emoji"), c.supports = {
+          everything: !0,
+          everythingExceptFlag: !0
+        }, i = 0; i < j.length; i++) c.supports[j[i]] = e(j[i]), c.supports.everything = c.supports.everything && c.supports[j[i]], "flag" !== j[i] && (c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && c.supports[j[i]]);
+        c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && !c.supports.flag, c.DOMReady = !1, c.readyCallback = function () {
+          c.DOMReady = !0
+        }, c.supports.everything || (h = function () {
+          c.readyCallback()
+        }, b.addEventListener ? (b.addEventListener("DOMContentLoaded", h, !1), a.addEventListener("load", h, !1)) : (a.attachEvent("onload", h), b.attachEvent("onreadystatechange", function () {
+          "complete" === b.readyState && c.readyCallback()
+        })), g = c.source || {}, g.concatemoji ? f(g.concatemoji) : g.wpemoji && g.twemoji && (f(g.twemoji), f(g.wpemoji)))
+      }(window, document, window._wpemojiSettings);
+    </script>
+    <script src="js/imported/wp-emoji-release.min.js" type="text/javascript" defer=""></script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel="stylesheet" id="penci-demobar-style-css" href="css/imported/demobar.css" type="text/css" media="all">
+    <link rel="stylesheet" id="penci-fonts-css" href="css/imported/css" type="text/css" media="all">
+    <link rel="stylesheet" id="penci_style-css" href="css/imported/style.css" type="text/css" media="all">
+    <link rel="stylesheet" id="penci-instag-slider-css" href="css/imported/instag-slider.css" type="text/css"
+          media="all">
+    <link rel="stylesheet" id="nerdycode" href="css/imported/nerdycode.css" type="text/css" media="all">
+    <script type="text/javascript" src="js/imported/jquery.js"></script>
+    <script type="text/javascript" src="js/imported/jquery-migrate.min.js"></script>
+    <style>.theiaStickySidebar:after {
+        content: "";
+        display: table;
+        clear: both;
+    }</style>
+</head>
+
+<body class="home blog" style="transform: none;">
+<a id="close-sidebar-nav" class="header-1"><i class="fa fa-close"></i></a>
+<nav id="sidebar-nav" class="header-1" role="navigation" itemscope=""
+     itemtype="http://schema.org/SiteNavigationElement">
+
+    <div id="sidebar-nav-logo">
+        <a href="https://www.nerdycode.com/" data-wpel-link="internal"><img class="penci-lazy"
+                                                                            src="../../../../nerdycode_files/logo-02-lg.png"
+                                                                            alt="NerdyCode"
+                                                                            style="display: inline;"></a>
+    </div>
+
+    <div class="header-social sidebar-nav-social">
+        <div class="inner-header-social">
+            <a href="https://www.facebook.com/nerdycode" rel="nofollow external noopener noreferrer" target="_blank"
+               data-wpel-link="external"><i class="penci-faicon fa fa-facebook"></i></a>
+            <a href="https://www.twitter.com/NerdyCode" rel="nofollow external noopener noreferrer" target="_blank"
+               data-wpel-link="external"><i class="penci-faicon fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/kahboom" rel="nofollow external noopener noreferrer" target="_blank"
+               data-wpel-link="external"><i class="penci-faicon fa fa-instagram"></i></a>
+            <a href="https://www.pinterest.com/nerdycode/" rel="nofollow external noopener noreferrer" target="_blank"
+               data-wpel-link="external"><i class="penci-faicon fa fa-pinterest"></i></a>
+            <a href="https://nerdycode.tumblr.com/" rel="nofollow external noopener noreferrer" target="_blank"
+               data-wpel-link="external"><i class="penci-faicon fa fa-tumblr"></i></a>
+            <a href="https://www.github.com/kahboom" rel="nofollow external noopener noreferrer" target="_blank"
+               data-wpel-link="external"><i class="penci-faicon fa fa-github"></i></a>
+        </div>
+    </div>
+
+    <ul id="menu-main-menu" class="menu">
+        <li id="menu-item-34062"
+            class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-34062">
+            <a href="https://www.nerdycode.com/" data-wpel-link="internal">Home</a></li>
+        <li id="menu-item-34155"
+            class="menu-item menu-item-type-taxonomy menu-item-object-category penci-mega-menu menu-item-34155">
+            <a
+                href="https://www.nerdycode.com/category/developers/" data-wpel-link="internal">Developers<u
+                class="indicator"><i class="fa fa-angle-down"></i></u></a>
+            <ul class="sub-menu">
+                <li id="menu-item-0" class="menu-item-0">
+                    <div class="penci-megamenu">
+                        <div class="penci-mega-child-categories">
+                            <a class="mega-cat-child cat-active all-style"
+                               href="https://www.nerdycode.com/category/developers/" data-id="penci-mega-8"
+                               data-wpel-link="internal"><span>All</span></a>
+                            <a class="mega-cat-child" href="https://www.nerdycode.com/category/developers/design/"
+                               data-id="penci-mega-550" data-wpel-link="internal"><span>Design</span></a>
+                            <a class="mega-cat-child" href="https://www.nerdycode.com/category/developers/maintain/"
+                               data-id="penci-mega-549" data-wpel-link="internal"><span>Maintain</span></a>
+                            <a class="mega-cat-child" href="https://www.nerdycode.com/category/developers/test/"
+                               data-id="penci-mega-547" data-wpel-link="internal"><span>Test</span></a>
+                            <a class="mega-cat-child" href="https://www.nerdycode.com/category/developers/write/"
+                               data-id="penci-mega-548" data-wpel-link="internal"><span>Write</span></a>
+                        </div>
+
+                        <div class="penci-content-megamenu">
+                            <div class="penci-mega-latest-posts col-mn-4 mega-row-1">
+                                <div class="penci-mega-row penci-mega-8 row-active">
+                                    <div class="penci-mega-post">
+                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/"
+                                                                               data-wpel-link="internal">Developers</a>																	</span>
+                                            <a class="penci-image-holder penci-lazy"
+                                               href="https://www.nerdycode.com/e2e-testing-react-cypress/"
+                                               title="E2E Testing React with Cypress" data-wpel-link="internal"
+                                               style="display: block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2017/04/tumblr_no00vyZaNM1r1arpmo1_500.png&quot;);">
+                                            </a>
+                                        </div>
+                                        <div class="penci-mega-meta">
+                                            <h3 class="post-mega-title">
+                                                <a href="https://www.nerdycode.com/e2e-testing-react-cypress/"
+                                                   title="E2E Testing React with Cypress" data-wpel-link="internal">E2E
+                                                    Testing React with Cypress</a>
+                                            </h3>
+                                            <p class="penci-mega-date">
+                                                <time class="entry-date published" datetime="2019-07-11T13:09:43+01:00">
+                                                    July 11, 2019
+                                                </time>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="penci-mega-post">
+                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/"
+                                                                               data-wpel-link="internal">Developers</a>																	</span>
+                                            <a class="penci-image-holder penci-lazy"
+                                               href="https://www.nerdycode.com/snapshot-testing-in-react/"
+                                               title="Snapshot Testing in React" data-wpel-link="internal"
+                                               style="display: block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2015/12/tumblr_nywwcnOJhA1sq3g2zo1_1280-585x390.png&quot;);">
+                                            </a>
+                                        </div>
+                                        <div class="penci-mega-meta">
+                                            <h3 class="post-mega-title">
+                                                <a href="https://www.nerdycode.com/snapshot-testing-in-react/"
+                                                   title="Snapshot Testing in React" data-wpel-link="internal">Snapshot
+                                                    Testing in React</a>
+                                            </h3>
+                                            <p class="penci-mega-date">
+                                                <time class="entry-date published" datetime="2019-06-29T06:48:57+01:00">
+                                                    June 29, 2019
+                                                </time>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="penci-mega-post">
+                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/"
+                                                                               data-wpel-link="internal">Developers</a>																	</span>
+                                            <a class="penci-image-holder penci-lazy"
+                                               href="https://www.nerdycode.com/unit-testing-react-guide/"
+                                               title="A Guide to Unit Testing in React" data-wpel-link="internal"
+                                               style="display: block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2017/01/14504936_1129104770499040_2987922891430952960_n-e1483720796899-585x390.jpg&quot;);">
+                                            </a>
+                                        </div>
+                                        <div class="penci-mega-meta">
+                                            <h3 class="post-mega-title">
+                                                <a href="https://www.nerdycode.com/unit-testing-react-guide/"
+                                                   title="A Guide to Unit Testing in React" data-wpel-link="internal">A
+                                                    Guide to Unit Testing in React</a>
+                                            </h3>
+                                            <p class="penci-mega-date">
+                                                <time class="entry-date published" datetime="2019-06-27T20:49:12+01:00">
+                                                    June 27, 2019
+                                                </time>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="penci-mega-post">
+                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/"
+                                                                               data-wpel-link="internal">Developers</a>																	</span>
+                                            <a class="penci-image-holder penci-lazy"
+                                               href="https://www.nerdycode.com/testing-pyramid/"
+                                               title="The Testing Pyramid" data-wpel-link="internal"
+                                               style="display: block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2015/12/tumblr_n04l50vHGg1s27wxco1_1280-585x390.jpg&quot;);">
+                                            </a>
+                                        </div>
+                                        <div class="penci-mega-meta">
+                                            <h3 class="post-mega-title">
+                                                <a href="https://www.nerdycode.com/testing-pyramid/"
+                                                   title="The Testing Pyramid" data-wpel-link="internal">The Testing
+                                                    Pyramid</a>
+                                            </h3>
+                                            <p class="penci-mega-date">
+                                                <time class="entry-date published" datetime="2019-06-26T10:53:06+01:00">
+                                                    June 26, 2019
+                                                </time>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="penci-mega-row penci-mega-550">
+                                    <div class="penci-mega-post">
+                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/design/"
+                                                                               data-wpel-link="internal">Design</a>																	</span>
+                                            <a class="penci-image-holder penci-lazy"
+                                               href="https://www.nerdycode.com/using-github-projects-cards-project-management/"
+                                               title="Using GitHub Projects and Cards for Project Management"
+                                               data-wpel-link="internal"
+                                               style="display: block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2015/12/tumblr_nriw851BLO1u7h6iqo1_500.jpg&quot;);">
+                                            </a>
+                                        </div>
+                                        <div class="penci-mega-meta">
+                                            <h3 class="post-mega-title">
+                                                <a href="https://www.nerdycode.com/using-github-projects-cards-project-management/"
+                                                   title="Using GitHub Projects and Cards for Project Management"
+                                                   data-wpel-link="internal">Using GitHub Projects and Cards for Project
+                                                    Management</a>
+                                            </h3>
+                                            <p class="penci-mega-date">
+                                                <time class="entry-date published" datetime="2016-09-16T13:23:57+01:00">
+                                                    September 16, 2016
+                                                </time>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="penci-mega-row penci-mega-549">
+                                    <div class="penci-mega-post">
+                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/maintain/"
+                                                                               data-wpel-link="internal">Maintain</a>																	</span>
+                                            <a class="penci-image-holder penci-lazy"
+                                               href="https://www.nerdycode.com/upgrade-from-tsd-to-typings/"
+                                               title="Upgrade from TSD to Typings" data-wpel-link="internal"
+                                               style="display: block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2015/11/tumblr_nygg7tQ6LV1t0uq7uo1_1280-585x390.jpg&quot;);">
+                                            </a>
+                                        </div>
+                                        <div class="penci-mega-meta">
+                                            <h3 class="post-mega-title">
+                                                <a href="https://www.nerdycode.com/upgrade-from-tsd-to-typings/"
+                                                   title="Upgrade from TSD to Typings" data-wpel-link="internal">Upgrade
+                                                    from TSD to Typings</a>
+                                            </h3>
+                                            <p class="penci-mega-date">
+                                                <time class="entry-date published" datetime="2016-02-26T20:22:44+01:00">
+                                                    February 26, 2016
+                                                </time>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="penci-mega-row penci-mega-547">
+                                    <div class="penci-mega-post">
+                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/test/"
+                                                                               data-wpel-link="internal">Test</a>																	</span>
+                                            <a class="penci-image-holder penci-lazy"
+                                               href="https://www.nerdycode.com/e2e-testing-react-cypress/"
+                                               title="E2E Testing React with Cypress" data-wpel-link="internal"
+                                               style="display: block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2017/04/tumblr_no00vyZaNM1r1arpmo1_500.png&quot;);">
+                                            </a>
+                                        </div>
+                                        <div class="penci-mega-meta">
+                                            <h3 class="post-mega-title">
+                                                <a href="https://www.nerdycode.com/e2e-testing-react-cypress/"
+                                                   title="E2E Testing React with Cypress" data-wpel-link="internal">E2E
+                                                    Testing React with Cypress</a>
+                                            </h3>
+                                            <p class="penci-mega-date">
+                                                <time class="entry-date published" datetime="2019-07-11T13:09:43+01:00">
+                                                    July 11, 2019
+                                                </time>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="penci-mega-post">
+                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/test/"
+                                                                               data-wpel-link="internal">Test</a>																	</span>
+                                            <a class="penci-image-holder penci-lazy"
+                                               href="https://www.nerdycode.com/snapshot-testing-in-react/"
+                                               title="Snapshot Testing in React" data-wpel-link="internal"
+                                               style="display: block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2015/12/tumblr_nywwcnOJhA1sq3g2zo1_1280-585x390.png&quot;);">
+                                            </a>
+                                        </div>
+                                        <div class="penci-mega-meta">
+                                            <h3 class="post-mega-title">
+                                                <a href="https://www.nerdycode.com/snapshot-testing-in-react/"
+                                                   title="Snapshot Testing in React" data-wpel-link="internal">Snapshot
+                                                    Testing in React</a>
+                                            </h3>
+                                            <p class="penci-mega-date">
+                                                <time class="entry-date published" datetime="2019-06-29T06:48:57+01:00">
+                                                    June 29, 2019
+                                                </time>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="penci-mega-post">
+                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/test/"
+                                                                               data-wpel-link="internal">Test</a>																	</span>
+                                            <a class="penci-image-holder penci-lazy"
+                                               href="https://www.nerdycode.com/unit-testing-react-guide/"
+                                               title="A Guide to Unit Testing in React" data-wpel-link="internal"
+                                               style="display: block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2017/01/14504936_1129104770499040_2987922891430952960_n-e1483720796899-585x390.jpg&quot;);">
+                                            </a>
+                                        </div>
+                                        <div class="penci-mega-meta">
+                                            <h3 class="post-mega-title">
+                                                <a href="https://www.nerdycode.com/unit-testing-react-guide/"
+                                                   title="A Guide to Unit Testing in React" data-wpel-link="internal">A
+                                                    Guide to Unit Testing in React</a>
+                                            </h3>
+                                            <p class="penci-mega-date">
+                                                <time class="entry-date published" datetime="2019-06-27T20:49:12+01:00">
+                                                    June 27, 2019
+                                                </time>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="penci-mega-post">
+                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/test/"
+                                                                               data-wpel-link="internal">Test</a>																	</span>
+                                            <a class="penci-image-holder penci-lazy"
+                                               href="https://www.nerdycode.com/testing-pyramid/"
+                                               title="The Testing Pyramid" data-wpel-link="internal"
+                                               style="display: block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2015/12/tumblr_n04l50vHGg1s27wxco1_1280-585x390.jpg&quot;);">
+                                            </a>
+                                        </div>
+                                        <div class="penci-mega-meta">
+                                            <h3 class="post-mega-title">
+                                                <a href="https://www.nerdycode.com/testing-pyramid/"
+                                                   title="The Testing Pyramid" data-wpel-link="internal">The Testing
+                                                    Pyramid</a>
+                                            </h3>
+                                            <p class="penci-mega-date">
+                                                <time class="entry-date published" datetime="2019-06-26T10:53:06+01:00">
+                                                    June 26, 2019
+                                                </time>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="penci-mega-row penci-mega-548">
+                                    <div class="penci-mega-post">
+                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/write/"
+                                                                               data-wpel-link="internal">Write</a>																	</span>
+                                            <a class="penci-image-holder penci-lazy"
+                                               href="https://www.nerdycode.com/setting-up-angular-with-webpack/"
+                                               title="Setting up Angular with Webpack" data-wpel-link="internal"
+                                               style="display: block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2012/12/tumblr_m9wqm0V1tG1qder5oo1_500-467x390.jpg&quot;);">
+                                            </a>
+                                        </div>
+                                        <div class="penci-mega-meta">
+                                            <h3 class="post-mega-title">
+                                                <a href="https://www.nerdycode.com/setting-up-angular-with-webpack/"
+                                                   title="Setting up Angular with Webpack" data-wpel-link="internal">Setting
+                                                    up Angular with Webpack</a>
+                                            </h3>
+                                            <p class="penci-mega-date">
+                                                <time class="entry-date published" datetime="2016-09-08T12:08:10+01:00">
+                                                    September 8, 2016
+                                                </time>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="penci-mega-post">
+                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/write/"
+                                                                               data-wpel-link="internal">Write</a>																	</span>
+                                            <a class="penci-image-holder penci-lazy"
+                                               href="https://www.nerdycode.com/debugging-npm-hangs-network/"
+                                               title="NPM Hangs on Network Step" data-wpel-link="internal"
+                                               style="display: block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2017/10/new-585x390.jpg&quot;);">
+                                            </a>
+                                        </div>
+                                        <div class="penci-mega-meta">
+                                            <h3 class="post-mega-title">
+                                                <a href="https://www.nerdycode.com/debugging-npm-hangs-network/"
+                                                   title="NPM Hangs on Network Step" data-wpel-link="internal">NPM Hangs
+                                                    on Network Step</a>
+                                            </h3>
+                                            <p class="penci-mega-date">
+                                                <time class="entry-date published" datetime="2016-03-28T15:48:23+01:00">
+                                                    March 28, 2016
+                                                </time>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="penci-mega-post">
+                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/write/"
+                                                                               data-wpel-link="internal">Write</a>																	</span>
+                                            <a class="penci-image-holder penci-lazy"
+                                               href="https://www.nerdycode.com/squashing-git-commits-the-easy-way/"
+                                               title="Squashing Git Commits the Easy Way" data-wpel-link="internal"
+                                               style="display: block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2017/04/9041371830_82f6528818_b-585x390.jpg&quot;);">
+                                            </a>
+                                        </div>
+                                        <div class="penci-mega-meta">
+                                            <h3 class="post-mega-title">
+                                                <a href="https://www.nerdycode.com/squashing-git-commits-the-easy-way/"
+                                                   title="Squashing Git Commits the Easy Way" data-wpel-link="internal">Squashing
+                                                    Git Commits the Easy Way</a>
+                                            </h3>
+                                            <p class="penci-mega-date">
+                                                <time class="entry-date published" datetime="2016-03-16T11:29:11+01:00">
+                                                    March 16, 2016
+                                                </time>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="penci-mega-post">
+                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/write/"
+                                                                               data-wpel-link="internal">Write</a>																	</span>
+                                            <a class="penci-image-holder penci-lazy"
+                                               href="https://www.nerdycode.com/upgrade-from-tsd-to-typings/"
+                                               title="Upgrade from TSD to Typings" data-wpel-link="internal"
+                                               style="display: block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2015/11/tumblr_nygg7tQ6LV1t0uq7uo1_1280-585x390.jpg&quot;);">
+                                            </a>
+                                        </div>
+                                        <div class="penci-mega-meta">
+                                            <h3 class="post-mega-title">
+                                                <a href="https://www.nerdycode.com/upgrade-from-tsd-to-typings/"
+                                                   title="Upgrade from TSD to Typings" data-wpel-link="internal">Upgrade
+                                                    from TSD to Typings</a>
+                                            </h3>
+                                            <p class="penci-mega-date">
+                                                <time class="entry-date published" datetime="2016-02-26T20:22:44+01:00">
+                                                    February 26, 2016
+                                                </time>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li id="menu-item-34156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34156"><a
+                href="https://www.nerdycode.com/developer-resources/" data-wpel-link="internal">Developer Resources</a>
+        </li>
+        <li id="menu-item-34077" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34077"><a
+                href="https://www.nerdycode.com/daydreams/" data-wpel-link="internal">Daydreams</a></li>
+        <li id="menu-item-34158"
+            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-34158"><a
+                href="https://www.nerdycode.com/#">About<u class="indicator"><i class="fa fa-angle-down"></i></u></a>
+            <ul class="sub-menu">
+                <li id="menu-item-34064"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34064"><a
+                        href="https://www.nerdycode.com/about/" data-wpel-link="internal">About Me</a></li>
+                <li id="menu-item-34063"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34063"><a
+                        href="https://www.nerdycode.com/contact/" data-wpel-link="internal">Contact Me</a></li>
+                <li id="menu-item-34369"
+                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-34369"><a
+                        href="https://www.nerdycode.com/category/updates/" data-wpel-link="internal">Updates</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<!-- .wrapper-boxed -->
+<div class="wrapper-boxed header-style-header-1 dark-layout-enabled" style="transform: none;">
+    <div class="penci-header-wrap">
+        <div id="navigation-sticky-wrapper" class="sticky-wrapper" style="height: 60px;">
+            <nav id="navigation" class="header-layout-top header-1 menu-style-1" role="navigation" itemscope=""
+                 itemtype="https://schema.org/SiteNavigationElement" style="">
+                <div class="container">
+                    <div class="button-menu-mobile header-1"><i class="penci-faicon fa fa-bars"></i></div>
+                    <ul id="menu-main-menu-1" class="menu">
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-34062">
+                            <a href="https://www.nerdycode.com/" data-wpel-link="internal">Home</a></li>
+                        <li class="menu-item menu-item-type-taxonomy menu-item-object-category penci-mega-menu menu-item-34155">
+                            <a href="https://www.nerdycode.com/category/developers/" data-wpel-link="internal">Developers</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item-0">
+                                    <div class="penci-megamenu">
+                                        <div class="penci-mega-child-categories">
+                                            <a class="mega-cat-child all-style"
+                                               href="https://www.nerdycode.com/category/developers/"
+                                               data-id="penci-mega-8" data-wpel-link="internal"><span>All</span></a>
+                                            <a class="mega-cat-child"
+                                               href="https://www.nerdycode.com/category/developers/design/"
+                                               data-id="penci-mega-550"
+                                               data-wpel-link="internal"><span>Design</span></a>
+                                            <a class="mega-cat-child"
+                                               href="https://www.nerdycode.com/category/developers/maintain/"
+                                               data-id="penci-mega-549" data-wpel-link="internal"><span>Maintain</span></a>
+                                            <a class="mega-cat-child"
+                                               href="https://www.nerdycode.com/category/developers/test/"
+                                               data-id="penci-mega-547" data-wpel-link="internal"><span>Test</span></a>
+                                            <a class="mega-cat-child cat-active"
+                                               href="https://www.nerdycode.com/category/developers/write/"
+                                               data-id="penci-mega-548" data-wpel-link="internal"><span>Write</span></a>
+                                        </div>
+
+                                        <div class="penci-content-megamenu">
+                                            <div class="penci-mega-latest-posts col-mn-4 mega-row-1">
+                                                <div class="penci-mega-row penci-mega-8 row-active"
+                                                     style="display: none;">
+                                                    <div class="penci-mega-post">
+                                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/"
+                                                                               data-wpel-link="internal">Developers</a>																	</span>
+                                                            <a class="penci-image-holder penci-lazy"
+                                                               href="https://www.nerdycode.com/e2e-testing-react-cypress/"
+                                                               title="E2E Testing React with Cypress"
+                                                               data-wpel-link="internal"
+                                                               style="display: inline-block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2017/04/tumblr_no00vyZaNM1r1arpmo1_500.png&quot;);">
+                                                            </a>
+                                                        </div>
+                                                        <div class="penci-mega-meta">
+                                                            <h3 class="post-mega-title">
+                                                                <a href="https://www.nerdycode.com/e2e-testing-react-cypress/"
+                                                                   title="E2E Testing React with Cypress"
+                                                                   data-wpel-link="internal">E2E Testing React with
+                                                                    Cypress</a>
+                                                            </h3>
+                                                            <p class="penci-mega-date">
+                                                                <time class="entry-date published"
+                                                                      datetime="2019-07-11T13:09:43+01:00">July 11, 2019
+                                                                </time>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="penci-mega-post">
+                                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/"
+                                                                               data-wpel-link="internal">Developers</a>																	</span>
+                                                            <a class="penci-image-holder penci-lazy"
+                                                               href="https://www.nerdycode.com/snapshot-testing-in-react/"
+                                                               title="Snapshot Testing in React"
+                                                               data-wpel-link="internal"
+                                                               style="display: inline-block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2015/12/tumblr_nywwcnOJhA1sq3g2zo1_1280-585x390.png&quot;);">
+                                                            </a>
+                                                        </div>
+                                                        <div class="penci-mega-meta">
+                                                            <h3 class="post-mega-title">
+                                                                <a href="https://www.nerdycode.com/snapshot-testing-in-react/"
+                                                                   title="Snapshot Testing in React"
+                                                                   data-wpel-link="internal">Snapshot Testing in
+                                                                    React</a>
+                                                            </h3>
+                                                            <p class="penci-mega-date">
+                                                                <time class="entry-date published"
+                                                                      datetime="2019-06-29T06:48:57+01:00">June 29, 2019
+                                                                </time>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="penci-mega-post">
+                                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/"
+                                                                               data-wpel-link="internal">Developers</a>																	</span>
+                                                            <a class="penci-image-holder penci-lazy"
+                                                               href="https://www.nerdycode.com/unit-testing-react-guide/"
+                                                               title="A Guide to Unit Testing in React"
+                                                               data-wpel-link="internal"
+                                                               style="display: inline-block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2017/01/14504936_1129104770499040_2987922891430952960_n-e1483720796899-585x390.jpg&quot;);">
+                                                            </a>
+                                                        </div>
+                                                        <div class="penci-mega-meta">
+                                                            <h3 class="post-mega-title">
+                                                                <a href="https://www.nerdycode.com/unit-testing-react-guide/"
+                                                                   title="A Guide to Unit Testing in React"
+                                                                   data-wpel-link="internal">A Guide to Unit Testing in
+                                                                    React</a>
+                                                            </h3>
+                                                            <p class="penci-mega-date">
+                                                                <time class="entry-date published"
+                                                                      datetime="2019-06-27T20:49:12+01:00">June 27, 2019
+                                                                </time>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="penci-mega-post">
+                                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/"
+                                                                               data-wpel-link="internal">Developers</a>																	</span>
+                                                            <a class="penci-image-holder penci-lazy"
+                                                               href="https://www.nerdycode.com/testing-pyramid/"
+                                                               title="The Testing Pyramid" data-wpel-link="internal"
+                                                               style="display: inline-block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2015/12/tumblr_n04l50vHGg1s27wxco1_1280-585x390.jpg&quot;);">
+                                                            </a>
+                                                        </div>
+                                                        <div class="penci-mega-meta">
+                                                            <h3 class="post-mega-title">
+                                                                <a href="https://www.nerdycode.com/testing-pyramid/"
+                                                                   title="The Testing Pyramid"
+                                                                   data-wpel-link="internal">The Testing Pyramid</a>
+                                                            </h3>
+                                                            <p class="penci-mega-date">
+                                                                <time class="entry-date published"
+                                                                      datetime="2019-06-26T10:53:06+01:00">June 26, 2019
+                                                                </time>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="penci-mega-row penci-mega-550" style="display: none;">
+                                                    <div class="penci-mega-post">
+                                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/design/"
+                                                                               data-wpel-link="internal">Design</a>																	</span>
+                                                            <a class="penci-image-holder penci-lazy"
+                                                               href="https://www.nerdycode.com/using-github-projects-cards-project-management/"
+                                                               title="Using GitHub Projects and Cards for Project Management"
+                                                               data-wpel-link="internal"
+                                                               style="display: inline-block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2015/12/tumblr_nriw851BLO1u7h6iqo1_500.jpg&quot;);">
+                                                            </a>
+                                                        </div>
+                                                        <div class="penci-mega-meta">
+                                                            <h3 class="post-mega-title">
+                                                                <a href="https://www.nerdycode.com/using-github-projects-cards-project-management/"
+                                                                   title="Using GitHub Projects and Cards for Project Management"
+                                                                   data-wpel-link="internal">Using GitHub Projects and
+                                                                    Cards for Project Management</a>
+                                                            </h3>
+                                                            <p class="penci-mega-date">
+                                                                <time class="entry-date published"
+                                                                      datetime="2016-09-16T13:23:57+01:00">September 16,
+                                                                    2016
+                                                                </time>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="penci-mega-row penci-mega-549" style="display: none;">
+                                                    <div class="penci-mega-post">
+                                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/maintain/"
+                                                                               data-wpel-link="internal">Maintain</a>																	</span>
+                                                            <a class="penci-image-holder penci-lazy"
+                                                               href="https://www.nerdycode.com/upgrade-from-tsd-to-typings/"
+                                                               title="Upgrade from TSD to Typings"
+                                                               data-wpel-link="internal"
+                                                               style="display: inline-block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2015/11/tumblr_nygg7tQ6LV1t0uq7uo1_1280-585x390.jpg&quot;);">
+                                                            </a>
+                                                        </div>
+                                                        <div class="penci-mega-meta">
+                                                            <h3 class="post-mega-title">
+                                                                <a href="https://www.nerdycode.com/upgrade-from-tsd-to-typings/"
+                                                                   title="Upgrade from TSD to Typings"
+                                                                   data-wpel-link="internal">Upgrade from TSD to
+                                                                    Typings</a>
+                                                            </h3>
+                                                            <p class="penci-mega-date">
+                                                                <time class="entry-date published"
+                                                                      datetime="2016-02-26T20:22:44+01:00">February 26,
+                                                                    2016
+                                                                </time>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="penci-mega-row penci-mega-547" style="display: none;">
+                                                    <div class="penci-mega-post">
+                                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/test/"
+                                                                               data-wpel-link="internal">Test</a>																	</span>
+                                                            <a class="penci-image-holder penci-lazy"
+                                                               href="https://www.nerdycode.com/e2e-testing-react-cypress/"
+                                                               title="E2E Testing React with Cypress"
+                                                               data-wpel-link="internal"
+                                                               style="display: inline-block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2017/04/tumblr_no00vyZaNM1r1arpmo1_500.png&quot;);">
+                                                            </a>
+                                                        </div>
+                                                        <div class="penci-mega-meta">
+                                                            <h3 class="post-mega-title">
+                                                                <a href="https://www.nerdycode.com/e2e-testing-react-cypress/"
+                                                                   title="E2E Testing React with Cypress"
+                                                                   data-wpel-link="internal">E2E Testing React with
+                                                                    Cypress</a>
+                                                            </h3>
+                                                            <p class="penci-mega-date">
+                                                                <time class="entry-date published"
+                                                                      datetime="2019-07-11T13:09:43+01:00">July 11, 2019
+                                                                </time>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="penci-mega-post">
+                                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/test/"
+                                                                               data-wpel-link="internal">Test</a>																	</span>
+                                                            <a class="penci-image-holder penci-lazy"
+                                                               href="https://www.nerdycode.com/snapshot-testing-in-react/"
+                                                               title="Snapshot Testing in React"
+                                                               data-wpel-link="internal"
+                                                               style="display: inline-block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2015/12/tumblr_nywwcnOJhA1sq3g2zo1_1280-585x390.png&quot;);">
+                                                            </a>
+                                                        </div>
+                                                        <div class="penci-mega-meta">
+                                                            <h3 class="post-mega-title">
+                                                                <a href="https://www.nerdycode.com/snapshot-testing-in-react/"
+                                                                   title="Snapshot Testing in React"
+                                                                   data-wpel-link="internal">Snapshot Testing in
+                                                                    React</a>
+                                                            </h3>
+                                                            <p class="penci-mega-date">
+                                                                <time class="entry-date published"
+                                                                      datetime="2019-06-29T06:48:57+01:00">June 29, 2019
+                                                                </time>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="penci-mega-post">
+                                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/test/"
+                                                                               data-wpel-link="internal">Test</a>																	</span>
+                                                            <a class="penci-image-holder penci-lazy"
+                                                               href="https://www.nerdycode.com/unit-testing-react-guide/"
+                                                               title="A Guide to Unit Testing in React"
+                                                               data-wpel-link="internal"
+                                                               style="display: inline-block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2017/01/14504936_1129104770499040_2987922891430952960_n-e1483720796899-585x390.jpg&quot;);">
+                                                            </a>
+                                                        </div>
+                                                        <div class="penci-mega-meta">
+                                                            <h3 class="post-mega-title">
+                                                                <a href="https://www.nerdycode.com/unit-testing-react-guide/"
+                                                                   title="A Guide to Unit Testing in React"
+                                                                   data-wpel-link="internal">A Guide to Unit Testing in
+                                                                    React</a>
+                                                            </h3>
+                                                            <p class="penci-mega-date">
+                                                                <time class="entry-date published"
+                                                                      datetime="2019-06-27T20:49:12+01:00">June 27, 2019
+                                                                </time>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="penci-mega-post">
+                                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/test/"
+                                                                               data-wpel-link="internal">Test</a>																	</span>
+                                                            <a class="penci-image-holder penci-lazy"
+                                                               href="https://www.nerdycode.com/testing-pyramid/"
+                                                               title="The Testing Pyramid" data-wpel-link="internal"
+                                                               style="display: inline-block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2015/12/tumblr_n04l50vHGg1s27wxco1_1280-585x390.jpg&quot;);">
+                                                            </a>
+                                                        </div>
+                                                        <div class="penci-mega-meta">
+                                                            <h3 class="post-mega-title">
+                                                                <a href="https://www.nerdycode.com/testing-pyramid/"
+                                                                   title="The Testing Pyramid"
+                                                                   data-wpel-link="internal">The Testing Pyramid</a>
+                                                            </h3>
+                                                            <p class="penci-mega-date">
+                                                                <time class="entry-date published"
+                                                                      datetime="2019-06-26T10:53:06+01:00">June 26, 2019
+                                                                </time>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="penci-mega-row penci-mega-548"
+                                                     style="display: inline-block;">
+                                                    <div class="penci-mega-post">
+                                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/write/"
+                                                                               data-wpel-link="internal">Write</a>																	</span>
+                                                            <a class="penci-image-holder penci-lazy"
+                                                               href="https://www.nerdycode.com/setting-up-angular-with-webpack/"
+                                                               title="Setting up Angular with Webpack"
+                                                               data-wpel-link="internal"
+                                                               style="display: inline-block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2012/12/tumblr_m9wqm0V1tG1qder5oo1_500-467x390.jpg&quot;);">
+                                                            </a>
+                                                        </div>
+                                                        <div class="penci-mega-meta">
+                                                            <h3 class="post-mega-title">
+                                                                <a href="https://www.nerdycode.com/setting-up-angular-with-webpack/"
+                                                                   title="Setting up Angular with Webpack"
+                                                                   data-wpel-link="internal">Setting up Angular with
+                                                                    Webpack</a>
+                                                            </h3>
+                                                            <p class="penci-mega-date">
+                                                                <time class="entry-date published"
+                                                                      datetime="2016-09-08T12:08:10+01:00">September 8,
+                                                                    2016
+                                                                </time>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="penci-mega-post">
+                                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/write/"
+                                                                               data-wpel-link="internal">Write</a>																	</span>
+                                                            <a class="penci-image-holder penci-lazy"
+                                                               href="https://www.nerdycode.com/debugging-npm-hangs-network/"
+                                                               title="NPM Hangs on Network Step"
+                                                               data-wpel-link="internal"
+                                                               style="display: inline-block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2017/10/new-585x390.jpg&quot;);">
+                                                            </a>
+                                                        </div>
+                                                        <div class="penci-mega-meta">
+                                                            <h3 class="post-mega-title">
+                                                                <a href="https://www.nerdycode.com/debugging-npm-hangs-network/"
+                                                                   title="NPM Hangs on Network Step"
+                                                                   data-wpel-link="internal">NPM Hangs on Network
+                                                                    Step</a>
+                                                            </h3>
+                                                            <p class="penci-mega-date">
+                                                                <time class="entry-date published"
+                                                                      datetime="2016-03-28T15:48:23+01:00">March 28,
+                                                                    2016
+                                                                </time>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="penci-mega-post">
+                                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/write/"
+                                                                               data-wpel-link="internal">Write</a>																	</span>
+                                                            <a class="penci-image-holder penci-lazy"
+                                                               href="https://www.nerdycode.com/squashing-git-commits-the-easy-way/"
+                                                               title="Squashing Git Commits the Easy Way"
+                                                               data-wpel-link="internal"
+                                                               style="display: inline-block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2017/04/9041371830_82f6528818_b-585x390.jpg&quot;);">
+                                                            </a>
+                                                        </div>
+                                                        <div class="penci-mega-meta">
+                                                            <h3 class="post-mega-title">
+                                                                <a href="https://www.nerdycode.com/squashing-git-commits-the-easy-way/"
+                                                                   title="Squashing Git Commits the Easy Way"
+                                                                   data-wpel-link="internal">Squashing Git Commits the
+                                                                    Easy Way</a>
+                                                            </h3>
+                                                            <p class="penci-mega-date">
+                                                                <time class="entry-date published"
+                                                                      datetime="2016-03-16T11:29:11+01:00">March 16,
+                                                                    2016
+                                                                </time>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="penci-mega-post">
+                                                        <div class="penci-mega-thumbnail">
+																								<span class="mega-cat-name">
+																			<a href="https://www.nerdycode.com/category/developers/write/"
+                                                                               data-wpel-link="internal">Write</a>																	</span>
+                                                            <a class="penci-image-holder penci-lazy"
+                                                               href="https://www.nerdycode.com/upgrade-from-tsd-to-typings/"
+                                                               title="Upgrade from TSD to Typings"
+                                                               data-wpel-link="internal"
+                                                               style="display: inline-block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2015/11/tumblr_nygg7tQ6LV1t0uq7uo1_1280-585x390.jpg&quot;);">
+                                                            </a>
+                                                        </div>
+                                                        <div class="penci-mega-meta">
+                                                            <h3 class="post-mega-title">
+                                                                <a href="https://www.nerdycode.com/upgrade-from-tsd-to-typings/"
+                                                                   title="Upgrade from TSD to Typings"
+                                                                   data-wpel-link="internal">Upgrade from TSD to
+                                                                    Typings</a>
+                                                            </h3>
+                                                            <p class="penci-mega-date">
+                                                                <time class="entry-date published"
+                                                                      datetime="2016-02-26T20:22:44+01:00">February 26,
+                                                                    2016
+                                                                </time>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34156"><a
+                                href="https://www.nerdycode.com/developer-resources/" data-wpel-link="internal">Developer
+                            Resources</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34077"><a
+                                href="https://www.nerdycode.com/daydreams/" data-wpel-link="internal">Daydreams</a></li>
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-34158">
+                            <a href="https://www.nerdycode.com/#">About</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34064"><a
+                                        href="https://www.nerdycode.com/about/" data-wpel-link="internal">About Me</a>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34063"><a
+                                        href="https://www.nerdycode.com/contact/" data-wpel-link="internal">Contact
+                                    Me</a></li>
+                                <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-34369">
+                                    <a href="https://www.nerdycode.com/category/updates/" data-wpel-link="internal">Updates</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div id="top-search" class="dfdf">
+                        <a class="search-click"><i class="penci-faicon fa fa-search"></i></a>
+                        <div class="show-search">
+                            <form role="search" method="get" id="searchform" action="https://www.nerdycode.com/">
+                                <div>
+                                    <input type="text" class="search-input" placeholder="Type and hit enter..." name="s"
+                                           id="s">
+                                </div>
+                            </form>
+                            <a class="search-click close-search"><i class="penci-faicon fa fa-close"></i></a>
+                        </div>
+                    </div>
+                    <div class="main-nav-social ">
+                        <div class="inner-header-social">
+                            <a href="https://www.facebook.com/nerdycode" rel="nofollow external noopener noreferrer"
+                               target="_blank" data-wpel-link="external"><i class="penci-faicon fa fa-facebook"></i></a>
+                            <a href="https://www.twitter.com/NerdyCode" rel="nofollow external noopener noreferrer"
+                               target="_blank" data-wpel-link="external"><i class="penci-faicon fa fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/kahboom" rel="nofollow external noopener noreferrer"
+                               target="_blank" data-wpel-link="external"><i
+                                    class="penci-faicon fa fa-instagram"></i></a>
+                            <a href="https://www.pinterest.com/nerdycode/" rel="nofollow external noopener noreferrer"
+                               target="_blank" data-wpel-link="external"><i
+                                    class="penci-faicon fa fa-pinterest"></i></a>
+                            <a href="https://nerdycode.tumblr.com/" rel="nofollow external noopener noreferrer"
+                               target="_blank" data-wpel-link="external"><i class="penci-faicon fa fa-tumblr"></i></a>
+                            <a href="https://www.github.com/kahboom" rel="nofollow external noopener noreferrer"
+                               target="_blank" data-wpel-link="external"><i class="penci-faicon fa fa-github"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+        </div><!-- End Navigation -->
+        <header id="header" class="penci-header-second header-header-1" itemscope="itemscope"
+                itemtype="https://schema.org/WPHeader">
+            <div class="inner-header">
+                <div class="container">
+                    <div id="logo">
+                        <a href="https://www.nerdycode.com/" data-wpel-link="internal"><img
+                                src="img/imported/logo-02-lg.png" alt="NerdyCode"></a>
+                    </div>
+
+                    <div class="header-slogan">
+                        <h2 class="header-slogan-text">&lt; thoughts and notes on software /&gt;</h2>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <!-- end #header -->
+    </div>
+    <div class="featured-area featured-style-33">
+        <div class="forcefullwidth_wrapper_tp_banner" id="rev_slider_74_1_forcefullwidth"
+             style="position:relative;width:100%;height:auto;margin-top:0px;margin-bottom:0px">
+            <div id="rev_slider_74_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="home"
+                 data-source="gallery"
+                 style="margin: 0px auto; background: transparent; padding: 0px; height: 400px; position: absolute; overflow: visible; width: 1679px; left: 0px;">
+                <!-- START REVOLUTION SLIDER 5.4.8.3 fullwidth mode -->
+                <div id="rev_slider_74_1"
+                     class="rev_slider fullwidthabanner revslider-initialised tp-simpleresponsive rev_redraw_on_blurfocus"
+                     style="max-height: 400px; margin-top: 0px; margin-bottom: 0px; height: 400px;"
+                     data-version="5.4.8.3" data-slideactive="rs-167">
+                    <ul class="tp-revslider-mainul"
+                        style="visibility: visible; display: block; overflow: hidden; width: 100%; height: 100%; max-height: none;">
+                        <!-- SLIDE  -->
+                        <li data-index="rs-167" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
+                            data-hideslideonmobile="off" data-easein="default" data-easeout="default"
+                            data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide"
+                            data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6=""
+                            data-param7="" data-param8="" data-param9="" data-param10="" data-description=""
+                            class="tp-revslider-slidesli active-revslide"
+                            style="width: 100%; height: 100%; overflow: hidden; z-index: 20; visibility: inherit; opacity: 1; background-color: rgba(255, 255, 255, 0);">
+                            <!-- MAIN IMAGE -->
+                            <div class="slotholder"
+                                 style="position: absolute; top: 0px; left: 0px; z-index: 0; width: 100%; height: 100%; backface-visibility: hidden; transform: translate3d(0px, 0px, 0px); visibility: inherit; opacity: 1;">
+                                <!--Runtime Modification - Img tag is Still Available for SEO Goals in Source - <img src="https://www.nerdycode.com/wp-content/uploads/2016/09/orion_nebula_3_943-2.jpg" alt="" width="1920" height="1080" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg defaultimg" data-no-retina="">-->
+                                <div class="tp-bgimg defaultimg " data-bgcolor="undefined"
+                                     style="background-repeat: no-repeat; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2016/09/orion_nebula_3_943-2.jpg&quot;); background-size: cover; background-position: center center; width: 100%; height: 100%; opacity: 1; visibility: inherit; z-index: 20;"
+                                     src="https://www.nerdycode.com/wp-content/uploads/2016/09/orion_nebula_3_943-2.jpg"></div>
+                            </div>
+                            <!-- LAYERS -->
+                        </li>
+                    </ul>
+                    <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important; width: 0%;"></div>
+                    <div class="tp-loader spinner0" style="display: none;">
+                        <div class="dot1"></div>
+                        <div class="dot2"></div>
+                        <div class="bounce1"></div>
+                        <div class="bounce2"></div>
+                        <div class="bounce3"></div>
+                    </div>
+                </div>
+                <script>var htmlDiv = document.getElementById("rs-plugin-settings-inline-css");
+                var htmlDivCss = "";
+                if (htmlDiv) {
+                  htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+                } else {
+                  var htmlDiv = document.createElement("div");
+                  htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
+                  document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
+                }
+                </script>
+                <script type="text/javascript">
+                  if (setREVStartSize !== undefined) setREVStartSize(
+                    { c: '#rev_slider_74_1', gridwidth: [1240], gridheight: [400], sliderLayout: 'fullwidth' });
+
+                  var revapi74,
+                    tpj;
+                  (function () {
+                    if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded", onLoad); else onLoad();
+
+                    function onLoad() {
+                      if (tpj === undefined) {
+                        tpj = jQuery;
+                        if ("off" == "on") tpj.noConflict();
+                      }
+                      if (tpj("#rev_slider_74_1").revolution == undefined) {
+                        revslider_showDoubleJqueryError("#rev_slider_74_1");
+                      } else {
+                        revapi74 = tpj("#rev_slider_74_1").show().revolution({
+                          sliderType: "hero",
+                          jsFileLocation: "//www.nerdycode.com/wp-content/plugins/revslider/public/assets/js/",
+                          sliderLayout: "fullwidth",
+                          dottedOverlay: "none",
+                          delay: 9000,
+                          visibilityLevels: [1240, 1024, 778, 480],
+                          gridwidth: 1240,
+                          gridheight: 400,
+                          lazyType: "none",
+                          parallax: {
+                            type: "mouse",
+                            origo: "enterpoint",
+                            speed: 400,
+                            speedbg: 0,
+                            speedls: 0,
+                            levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 46, 47, 48, 49, 50, 51, 55],
+                          },
+                          shadow: 0,
+                          spinner: "spinner0",
+                          autoHeight: "off",
+                          disableProgressBar: "on",
+                          hideThumbsOnMobile: "off",
+                          hideSliderAtLimit: 0,
+                          hideCaptionAtLimit: 0,
+                          hideAllCaptionAtLilmit: 0,
+                          debugMode: false,
+                          fallbacks: {
+                            simplifyAll: "off",
+                            disableFocusListener: false,
+                          }
+                        });
+                      }
+                      ; /* END OF revapi call */
+
+                    }; /* END OF ON LOAD FUNCTION */
+                  }()); /* END OF WRAPPING FUNCTION */
+                </script>
+            </div>
+            <div class="tp-fullwidth-forcer" style="width: 100%; height: 400px;"></div>
+        </div><!-- END REVOLUTION SLIDER --></div>
+
+
+    <div class="container penci_sidebar right-sidebar" style="transform: none;">
+        <div id="main" class="penci-layout-magazine-1 penci-main-sticky-sidebar"
+             style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
+            <div class="theiaStickySidebar" style="padding-top: 0px; padding-bottom: 1px; position: static;">
+
+
+                <div class="penci-wrapper-posts-content">
+
+                    <ul class="penci-wrapper-data penci-grid">
+                        <li class="list-post magazine-layout magazine-1">
+                            <article id="post-34452" class="item hentry">
+
+                                <div class="thumbnail">
+
+                                    <a class="penci-image-holder penci-lazy"
+                                       href="https://www.nerdycode.com/e2e-testing-react-cypress/"
+                                       title="E2E Testing React with Cypress" data-wpel-link="internal"
+                                       style="display: inline-block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2017/04/tumblr_no00vyZaNM1r1arpmo1_500.png&quot;);">
+                                    </a>
+
+                                </div>
+
+                                <div class="content-list-right">
+                                    <div class="header-list-style">
+                                        <span class="cat"><a class="penci-cat-name"
+                                                             href="https://www.nerdycode.com/category/developers/"
+                                                             rel="category tag" data-wpel-link="internal">Developers</a><a
+                                                class="penci-cat-name"
+                                                href="https://www.nerdycode.com/category/developers/test/"
+                                                rel="category tag" data-wpel-link="internal">Test</a></span>
+
+                                        <h2 class="penci-entry-title entry-title grid-title"><a
+                                                href="https://www.nerdycode.com/e2e-testing-react-cypress/"
+                                                data-wpel-link="internal">E2E Testing React with Cypress</a></h2>
+                                        <div class="penci-hide-tagupdated">
+                                            <span class="author-italic author vcard">by <a class="url fn n"
+                                                                                           href="https://www.nerdycode.com/author/llalexi7/"
+                                                                                           data-wpel-link="internal">Rachel Yordán</a></span>
+                                            <time class="entry-date published" datetime="2019-07-11T13:09:43+01:00">July
+                                                11, 2019
+                                            </time>
+                                        </div>
+                                        <div class="grid-post-box-meta">
+                                            <span><time class="entry-date published"
+                                                        datetime="2019-07-11T13:09:43+01:00">July 11, 2019</time></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="item-content entry-content">
+                                        <p>A tutorial on setting up a React app with Cypress, an end-to-end (E2E)
+                                            testing suite.</p>
+                                    </div>
+
+                                    <div class="penci-readmore-btn">
+                                        <a class="penci-btn-readmore"
+                                           href="https://www.nerdycode.com/e2e-testing-react-cypress/"
+                                           data-wpel-link="internal">Read more<i
+                                                class="penci-faicon fa fa-angle-double-right"></i></a>
+                                    </div>
+                                </div>
+
+                            </article>
+                        </li>
+                        <li class="list-post magazine-layout magazine-1">
+                            <article id="post-34462" class="item hentry">
+
+                                <div class="thumbnail">
+
+                                    <a class="penci-image-holder penci-lazy"
+                                       href="https://www.nerdycode.com/snapshot-testing-in-react/"
+                                       title="Snapshot Testing in React" data-wpel-link="internal"
+                                       style="display: inline-block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2015/12/tumblr_nywwcnOJhA1sq3g2zo1_1280-585x390.png&quot;);">
+                                    </a>
+
+                                </div>
+
+                                <div class="content-list-right">
+                                    <div class="header-list-style">
+                                        <span class="cat"><a class="penci-cat-name"
+                                                             href="https://www.nerdycode.com/category/developers/"
+                                                             rel="category tag" data-wpel-link="internal">Developers</a><a
+                                                class="penci-cat-name"
+                                                href="https://www.nerdycode.com/category/developers/test/"
+                                                rel="category tag" data-wpel-link="internal">Test</a></span>
+
+                                        <h2 class="penci-entry-title entry-title grid-title"><a
+                                                href="https://www.nerdycode.com/snapshot-testing-in-react/"
+                                                data-wpel-link="internal">Snapshot Testing in React</a></h2>
+                                        <div class="penci-hide-tagupdated">
+                                            <span class="author-italic author vcard">by <a class="url fn n"
+                                                                                           href="https://www.nerdycode.com/author/llalexi7/"
+                                                                                           data-wpel-link="internal">Rachel Yordán</a></span>
+                                            <time class="entry-date published" datetime="2019-06-29T06:48:57+01:00">June
+                                                29, 2019
+                                            </time>
+                                        </div>
+                                        <div class="grid-post-box-meta">
+                                            <span><time class="entry-date published"
+                                                        datetime="2019-06-29T06:48:57+01:00">June 29, 2019</time></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="item-content entry-content">
+                                        <p>So you’re setting up your testing suite and start running into something
+                                            called “snapshot tests,” not knowing exactly what they are…</p>
+                                    </div>
+
+                                    <div class="penci-readmore-btn">
+                                        <a class="penci-btn-readmore"
+                                           href="https://www.nerdycode.com/snapshot-testing-in-react/"
+                                           data-wpel-link="internal">Read more<i
+                                                class="penci-faicon fa fa-angle-double-right"></i></a>
+                                    </div>
+                                </div>
+
+                            </article>
+                        </li>
+                        <li class="list-post magazine-layout magazine-1">
+                            <article id="post-34367" class="item hentry">
+
+                                <div class="thumbnail">
+
+                                    <a class="penci-image-holder penci-lazy"
+                                       href="https://www.nerdycode.com/unit-testing-react-guide/"
+                                       title="A Guide to Unit Testing in React" data-wpel-link="internal"
+                                       style="display: inline-block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2017/01/14504936_1129104770499040_2987922891430952960_n-e1483720796899-585x390.jpg&quot;);">
+                                    </a>
+
+                                </div>
+
+                                <div class="content-list-right">
+                                    <div class="header-list-style">
+                                        <span class="cat"><a class="penci-cat-name"
+                                                             href="https://www.nerdycode.com/category/developers/"
+                                                             rel="category tag" data-wpel-link="internal">Developers</a><a
+                                                class="penci-cat-name"
+                                                href="https://www.nerdycode.com/category/developers/test/"
+                                                rel="category tag" data-wpel-link="internal">Test</a></span>
+
+                                        <h2 class="penci-entry-title entry-title grid-title"><a
+                                                href="https://www.nerdycode.com/unit-testing-react-guide/"
+                                                data-wpel-link="internal">A Guide to Unit Testing in React</a></h2>
+                                        <div class="penci-hide-tagupdated">
+                                            <span class="author-italic author vcard">by <a class="url fn n"
+                                                                                           href="https://www.nerdycode.com/author/llalexi7/"
+                                                                                           data-wpel-link="internal">Rachel Yordán</a></span>
+                                            <time class="entry-date published" datetime="2019-06-27T20:49:12+01:00">June
+                                                27, 2019
+                                            </time>
+                                        </div>
+                                        <div class="grid-post-box-meta">
+                                            <span><time class="entry-date published"
+                                                        datetime="2019-06-27T20:49:12+01:00">June 27, 2019</time></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="item-content entry-content">
+                                        <p>We know that unit tests are important, but when it comes to writing them we
+                                            often draw a blank. Which library…</p>
+                                    </div>
+
+                                    <div class="penci-readmore-btn">
+                                        <a class="penci-btn-readmore"
+                                           href="https://www.nerdycode.com/unit-testing-react-guide/"
+                                           data-wpel-link="internal">Read more<i
+                                                class="penci-faicon fa fa-angle-double-right"></i></a>
+                                    </div>
+                                </div>
+
+                            </article>
+                        </li>
+                        <li class="list-post magazine-layout magazine-1">
+                            <article id="post-34068" class="item hentry">
+
+                                <div class="thumbnail">
+
+                                    <a class="penci-image-holder penci-lazy"
+                                       href="https://www.nerdycode.com/testing-pyramid/" title="The Testing Pyramid"
+                                       data-wpel-link="internal"
+                                       style="display: inline-block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2015/12/tumblr_n04l50vHGg1s27wxco1_1280-585x390.jpg&quot;);">
+                                    </a>
+
+                                </div>
+
+                                <div class="content-list-right">
+                                    <div class="header-list-style">
+                                        <span class="cat"><a class="penci-cat-name"
+                                                             href="https://www.nerdycode.com/category/developers/"
+                                                             rel="category tag" data-wpel-link="internal">Developers</a><a
+                                                class="penci-cat-name"
+                                                href="https://www.nerdycode.com/category/developers/test/"
+                                                rel="category tag" data-wpel-link="internal">Test</a></span>
+
+                                        <h2 class="penci-entry-title entry-title grid-title"><a
+                                                href="https://www.nerdycode.com/testing-pyramid/"
+                                                data-wpel-link="internal">The Testing Pyramid</a></h2>
+                                        <div class="penci-hide-tagupdated">
+                                            <span class="author-italic author vcard">by <a class="url fn n"
+                                                                                           href="https://www.nerdycode.com/author/llalexi7/"
+                                                                                           data-wpel-link="internal">Rachel Yordán</a></span>
+                                            <time class="entry-date published" datetime="2019-06-26T10:53:06+01:00">June
+                                                26, 2019
+                                            </time>
+                                        </div>
+                                        <div class="grid-post-box-meta">
+                                            <span><time class="entry-date published"
+                                                        datetime="2019-06-26T10:53:06+01:00">June 26, 2019</time></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="item-content entry-content">
+                                        <p>The Testing Pyramid The Testing Pyramid is a visual aid used to find the
+                                            right balance of test types. Here are…</p>
+                                    </div>
+
+                                    <div class="penci-readmore-btn">
+                                        <a class="penci-btn-readmore" href="https://www.nerdycode.com/testing-pyramid/"
+                                           data-wpel-link="internal">Read more<i
+                                                class="penci-faicon fa fa-angle-double-right"></i></a>
+                                    </div>
+                                </div>
+
+                            </article>
+                        </li>
+                        <li class="list-post magazine-layout magazine-1">
+                            <article id="post-7" class="item hentry">
+
+                                <div class="thumbnail">
+
+                                    <a class="penci-image-holder penci-lazy"
+                                       href="https://www.nerdycode.com/server-migration-update/"
+                                       title="Server Migration &amp; Revamp" data-wpel-link="internal"
+                                       style="display: inline-block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2017/10/view-585x390.jpg&quot;);">
+                                    </a>
+
+                                </div>
+
+                                <div class="content-list-right">
+                                    <div class="header-list-style">
+                                        <span class="cat"><a class="penci-cat-name"
+                                                             href="https://www.nerdycode.com/category/updates/"
+                                                             rel="category tag"
+                                                             data-wpel-link="internal">Updates</a></span>
+
+                                        <h2 class="penci-entry-title entry-title grid-title"><a
+                                                href="https://www.nerdycode.com/server-migration-update/"
+                                                data-wpel-link="internal">Server Migration &amp; Revamp</a></h2>
+                                        <div class="penci-hide-tagupdated">
+                                            <span class="author-italic author vcard">by <a class="url fn n"
+                                                                                           href="https://www.nerdycode.com/author/llalexi7/"
+                                                                                           data-wpel-link="internal">Rachel Yordán</a></span>
+                                            <time class="entry-date published" datetime="2018-01-05T14:55:22+01:00">
+                                                January 5, 2018
+                                            </time>
+                                        </div>
+                                        <div class="grid-post-box-meta">
+                                            <span><time class="entry-date published"
+                                                        datetime="2018-01-05T14:55:22+01:00">January 5, 2018</time></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="item-content entry-content">
+                                        <p>Will be doing a server migration and possible revamp sometime this week to
+                                            reduce lagginess, (finally) add more content, and improve…</p>
+                                    </div>
+
+                                    <div class="penci-readmore-btn">
+                                        <a class="penci-btn-readmore"
+                                           href="https://www.nerdycode.com/server-migration-update/"
+                                           data-wpel-link="internal">Read more<i
+                                                class="penci-faicon fa fa-angle-double-right"></i></a>
+                                    </div>
+                                </div>
+
+                            </article>
+                        </li>
+                    </ul>
+                    <div class="penci-pagination penci-ajax-more penci-ajax-home penci-ajax-more-click">
+                        <a class="penci-ajax-more-button" data-mes="Sorry, No more posts" data-layout="magazine-1"
+                           data-number="6" data-offset="5" data-from="customize" data-template="sidebar">
+                            <span class="ajax-more-text">Load More Posts</span><span class="ajaxdot"></span><i
+                                class="penci-faicon fa fa-refresh"></i> </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div id="sidebar" class="penci-sidebar-right penci-sidebar-content style-4 pcalign-left penci-sticky-sidebar"
+             style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
+            <div class="theiaStickySidebar"
+                 style="padding-top: 0px; padding-bottom: 1px; position: static; top: 122px; left: 1084.5px;">
+                <aside id="search-3" class="widget widget_search">
+                    <form role="search" method="get" id="searchform" action="https://www.nerdycode.com/">
+                        <div>
+                            <input type="text" class="search-input" placeholder="Type and hit enter..." name="s" id="s">
+                        </div>
+                    </form>
+                </aside>
+                <aside id="penci_about_widget-1" class="widget penci_about_widget"><h4
+                        class="widget-title penci-border-arrow"><span class="inner-arrow">About Me</span></h4>
+                    <div class="about-widget pc_alignleft">
+
+
+                        <p>Hello, world. My name is Rachel and I wear my sunglasses at night. I’m also a software
+                            engineer at <a href="https://www.redhat.com/" rel="noreferrer noopener nofollow external"
+                                           target="_blank" data-wpel-link="external">Red Hat</a>. I sometimes blog about
+                            technology from the perspective of a pragmatic developer, other times I blog about rainbows
+                            and unicorns. <a href="https://www.nerdycode.com/about"
+                                             data-wpel-link="internal">&gt;&gt;</a></p>
+
+                    </div>
+
+                </aside>
+                <aside id="quotescollection-2" class="widget widget_quotescollection"><h4
+                        class="widget-title penci-border-arrow"><span class="inner-arrow">Quotes</span></h4>
+                    <div class="quotescollection-quote-wrapper" id="w_quotescollection_2"><p>The best way out is always
+                        through.</p>
+                        <div class="attribution">—&nbsp;<cite class="author">Robert Frost</cite></div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+        <!-- END CONTAINER -->
+    </div>
+
+    <div class="clear-footer"></div>
+
+
+    <div id="widget-area" class="penci-lazy"
+         data-src="https://www.nerdycode.com/wp-content/uploads/2019/07/footer-bg.jpg">
+        <div class="container">
+            <div class="footer-widget-wrapper footer-widget-style-1">
+                <aside id="penci_popular_news_widget-1" class="widget penci_popular_news_widget"><h4
+                        class="widget-title penci-border-arrow"><span class="inner-arrow">Popular Posts</span></h4>
+                    <ul id="penci-popularwg-3319" class="side-newsfeed display-order-numbers">
+
+
+                        <li class="penci-feed">
+															<span class="order-border-number">
+								<span class="number-post">1</span>
+							</span>
+                            <div class="side-item">
+                                <div class="side-image">
+                                    <a class="penci-image-holder penci-lazy small-fix-size" rel="bookmark"
+                                       href="https://www.nerdycode.com/e2e-testing-react-cypress/"
+                                       title="E2E Testing React with Cypress" data-wpel-link="internal"
+                                       style="display: inline-block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2017/04/tumblr_no00vyZaNM1r1arpmo1_500-263x175.png&quot;);"></a>
+
+                                </div>
+                                <div class="side-item-text">
+                                    <h4 class="side-title-post">
+                                        <a href="https://www.nerdycode.com/e2e-testing-react-cypress/" rel="bookmark"
+                                           title="E2E Testing React with Cypress" data-wpel-link="internal">
+                                            E2E Testing React with Cypress </a>
+                                    </h4>
+                                    <span class="side-item-meta"><time class="entry-date published"
+                                                                       datetime="2019-07-11T13:09:43+01:00">July 11, 2019</time></span>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li class="penci-feed">
+															<span class="order-border-number">
+								<span class="number-post">2</span>
+							</span>
+                            <div class="side-item">
+                                <div class="side-image">
+                                    <a class="penci-image-holder penci-lazy small-fix-size" rel="bookmark"
+                                       href="https://www.nerdycode.com/make-your-own-gifs-on-mac-os-x-using-automator-homebrew-imagemagick/"
+                                       title="Make Your Own GIFs on macOS or OS X using Automator &amp; Homebrew"
+                                       data-wpel-link="internal"
+                                       style="display: inline-block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2016/10/2016-10-21-04-263x175.jpg&quot;);"></a>
+
+                                </div>
+                                <div class="side-item-text">
+                                    <h4 class="side-title-post">
+                                        <a href="https://www.nerdycode.com/make-your-own-gifs-on-mac-os-x-using-automator-homebrew-imagemagick/"
+                                           rel="bookmark"
+                                           title="Make Your Own GIFs on macOS or OS X using Automator &amp; Homebrew"
+                                           data-wpel-link="internal">
+                                            Make Your Own GIFs on macOS or OS X using Automator &amp; Homebrew </a>
+                                    </h4>
+                                    <span class="side-item-meta"><time class="entry-date published"
+                                                                       datetime="2016-11-01T13:25:59+01:00">November 1, 2016</time></span>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li class="penci-feed">
+															<span class="order-border-number">
+								<span class="number-post">3</span>
+							</span>
+                            <div class="side-item">
+                                <div class="side-image">
+                                    <a class="penci-image-holder penci-lazy small-fix-size" rel="bookmark"
+                                       href="https://www.nerdycode.com/unit-testing-react-guide/"
+                                       title="A Guide to Unit Testing in React" data-wpel-link="internal"
+                                       style="display: inline-block; background-image: url(&quot;https://www.nerdycode.com/wp-content/uploads/2017/01/14504936_1129104770499040_2987922891430952960_n-e1483720796899-263x175.jpg&quot;);"></a>
+
+                                </div>
+                                <div class="side-item-text">
+                                    <h4 class="side-title-post">
+                                        <a href="https://www.nerdycode.com/unit-testing-react-guide/" rel="bookmark"
+                                           title="A Guide to Unit Testing in React" data-wpel-link="internal">
+                                            A Guide to Unit Testing in React </a>
+                                    </h4>
+                                    <span class="side-item-meta"><time class="entry-date published"
+                                                                       datetime="2019-06-27T20:49:12+01:00">June 27, 2019</time></span>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+
+                </aside>
+            </div>
+            <div class="footer-widget-wrapper footer-widget-style-1">
+                <aside id="media_video-2" class="widget widget_media_video"><h4 class="widget-title penci-border-arrow">
+                    <span class="inner-arrow">Currently Watching</span></h4>
+                    <div style="width:100%;" class="wp-video"><!--[if lt IE 9]>
+                        <script>document.createElement('video');</script><![endif]-->
+                        <span class="mejs-offscreen">Video Player</span>
+                        <div id="mep_0"
+                             class="mejs-container mejs-container-keyboard-inactive wp-video-shortcode mejs-video"
+                             tabindex="0" role="application" aria-label="Video Player"
+                             style="width: 362.688px; height: 204.012px; min-width: 217px;">
+                            <div class="mejs-inner">
+                                <div class="mejs-mediaelement">
+                                    <mediaelementwrapper id="video-34452-1">
+                                        <div id="video-34452-1-iframe-overlay" class="mejs-iframe-overlay"></div>
+                                        <iframe id="video-34452-1_youtube_iframe" frameborder="0" allowfullscreen="1"
+                                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                title="YouTube video player" src="./nerdycode_files/BC2dRkm8ATU.html"
+                                                width="362.688" height="204.012"></iframe>
+                                        <video class="wp-video-shortcode" id="video-34452-1_from_mejs"
+                                               preload="metadata" src="https://youtu.be/BC2dRkm8ATU?_=1"
+                                               style="width: 100%; height: 100%; display: none;">
+                                            <source type="video/youtube" src="https://youtu.be/BC2dRkm8ATU?_=1">
+                                            <a href="https://youtu.be/BC2dRkm8ATU" data-wpel-link="external"
+                                               target="_blank" rel="nofollow external noopener noreferrer"
+                                               savefrom_lm_index="0"
+                                               savefrom_lm="1">https://youtu.be/BC2dRkm8ATU</a><span
+                                                style="padding: 0; margin: 0; margin-left: 5px;"><a
+                                                href="http://savefrom.net/?url=https%3A%2F%2Fyoutu.be%2FBC2dRkm8ATU&amp;utm_source=userjs-chrome&amp;utm_medium=extensions&amp;utm_campaign=link_modifier"
+                                                target="_blank" title="Get a direct link" savefrom_lm="1"
+                                                savefrom_lm_is_link="1"
+                                                style="background-image: url(&quot;data:image/gif;base64,R0lGODlhEAAQAOZ3APf39+Xl5fT09OPj4/Hx8evr6/3+/u7u7uDh4OPi497e3t7e3/z8/P79/X3GbuXl5ubl5eHg4WzFUfb39+Pj4lzGOV7LOPz7+/n6+vn5+ZTLj9/e387Ozt7f3/7+/vv7/ISbePn5+m/JV1nRKXmVbkCnKVrSLDqsCuDh4d/e3uDn3/z7/H6TdVeaV1uSW+bn5v39/eXm5eXm5kyHP/f39pzGmVy7J3yRd9/f3mLEKkXCHJbka2TVM5vaZn6Wdfn6+YG/c/r5+ZO/jeLi41aHTIeageLn4f39/vr6+kzNG2PVM5i+lomdf2CXYKHVmtzo2YXNeDqsBebl5uHh4HDKWN3g3kKqEH6WeZHTXIPKdnSPbv79/pfmbE7PHpe1l4O8dTO5DODg4VDLIlKUUtzo2J7SmEWsLlG4NJbFjkrJHP7+/VK5Nfz8+zmnC3KKa+Hg4OHh4Y63j/3+/eDg4Ojo6P///8DAwP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAHcALAAAAAAQABAAAAfWgHd2g4SFhYJzdYqLjIpzgx5bBgYwHg1Hk2oNDXKDFwwfDF5NLmMtcStsn4MhGT8YS04aGmU1QRhIGYMTADQAQlAODlloAMYTgwICRmRfVBISIkBPKsqDBAREZmcVFhYVayUz2IMHB1dWOmImI2lgUVrmgwUFLzdtXTxKSSduMfSD6Aik48MGlx05SAykM0gKhAAPAhTB0oNFABkPHg5KMIBCxzlMQFQZMGBIggSDpsCJgGDOmzkIUCAIM2dOhEEcNijQuQDHgg4KOqRYwMGOIENIB90JBAA7&quot;); background-repeat: no-repeat; width: 16px; height: 16px; display: inline-block; border: none; text-decoration: none; padding: 0px; position: relative;"></a></span>
+                                        </video>
+                                    </mediaelementwrapper>
+                                </div>
+                                <div class="mejs-layers">
+                                    <div class="mejs-poster mejs-layer"
+                                         style="display: none; width: 100%; height: 100%;"></div>
+                                    <div class="mejs-overlay mejs-layer"
+                                         style="width: 100%; height: 100%; display: none;">
+                                        <div class="mejs-overlay-loading"><span
+                                                class="mejs-overlay-loading-bg-img"></span></div>
+                                    </div>
+                                    <div class="mejs-overlay mejs-layer"
+                                         style="display: none; width: 100%; height: 100%;">
+                                        <div class="mejs-overlay-error"></div>
+                                    </div>
+                                    <div class="mejs-overlay mejs-layer mejs-overlay-play"
+                                         style="display: none; width: 100%; height: 100%;">
+                                        <div class="mejs-overlay-button" role="button" tabindex="0" aria-label="Play"
+                                             aria-pressed="false"></div>
+                                    </div>
+                                </div>
+                                <div class="mejs-controls">
+                                    <div class="mejs-button mejs-playpause-button mejs-play">
+                                        <button type="button" aria-controls="mep_0" title="Play" aria-label="Play"
+                                                tabindex="0"></button>
+                                    </div>
+                                    <div class="mejs-time mejs-currenttime-container" role="timer" aria-live="off"><span
+                                            class="mejs-currenttime">00:00</span></div>
+                                    <div class="mejs-time-rail"><span class="mejs-time-total mejs-time-slider"><span
+                                            class="mejs-time-buffering" style="display: none;"></span><span
+                                            class="mejs-time-loaded"></span><span class="mejs-time-current"
+                                                                                  style="transform: scaleX(0);"></span><span
+                                            class="mejs-time-hovered no-hover"></span><span class="mejs-time-handle"
+                                                                                            style="transform: translateX(0px);"><span
+                                            class="mejs-time-handle-content"></span></span><span
+                                            class="mejs-time-float"><span
+                                            class="mejs-time-float-current">00:00</span><span
+                                            class="mejs-time-float-corner"></span></span></span></div>
+                                    <div class="mejs-time mejs-duration-container"><span
+                                            class="mejs-duration">05:32</span></div>
+                                    <div class="mejs-button mejs-volume-button mejs-mute">
+                                        <button type="button" aria-controls="mep_0" title="Mute" aria-label="Mute"
+                                                tabindex="0"></button>
+                                        <a href="javascript:void(0);" class="mejs-volume-slider"
+                                           aria-label="Volume Slider" aria-valuemin="0" aria-valuemax="100"
+                                           role="slider" aria-orientation="vertical" aria-valuenow="80"
+                                           aria-valuetext="80%"><span class="mejs-offscreen">Use Up/Down Arrow keys to increase or decrease volume.</span>
+                                            <div class="mejs-volume-total">
+                                                <div class="mejs-volume-current"
+                                                     style="bottom: 0px; height: 80%;"></div>
+                                                <div class="mejs-volume-handle"
+                                                     style="bottom: 80%; margin-bottom: -3px;"></div>
+                                            </div>
+                                        </a></div>
+                                    <div class="mejs-button mejs-fullscreen-button">
+                                        <button type="button" aria-controls="mep_0" title="Fullscreen"
+                                                aria-label="Fullscreen" tabindex="0"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <aside id="custom_html-3" class="widget_text widget widget_custom_html">
+                    <div class="textwidget custom-html-widget"><small>
+                        <i>Disclaimer: Nothing on this website is reflective of the probably more sound and politically
+                            correct views of my employer. Thank you.</i>
+                    </small></div>
+                </aside>
+            </div>
+            <div class="footer-widget-wrapper footer-widget-style-1 last">
+                <aside id="custom_html-2" class="widget_text widget widget_custom_html"><h4
+                        class="widget-title penci-border-arrow"><span class="inner-arrow">Currently Listening</span>
+                </h4>
+                    <div class="textwidget custom-html-widget">
+                        <iframe src="./nerdycode_files/57bvVXJSdT0qo3yklg0CEV.html" width="300" height="380"
+                                frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+
+    <footer id="footer-section" class="penci-footer-social-media penci-lazy footer-social-remove-circle" itemscope=""
+            itemtype="https://schema.org/WPFooter">
+        <div class="container">
+            <div class="footer-socials-section">
+                <ul class="footer-socials">
+                    <li><a href="https://www.facebook.com/nerdycode" rel="nofollow external noopener noreferrer"
+                           target="_blank" data-wpel-link="external"><i class="penci-faicon fa fa-facebook"></i><span>Facebook</span></a>
+                    </li>
+                    <li><a href="https://www.twitter.com/NerdyCode" rel="nofollow external noopener noreferrer"
+                           target="_blank" data-wpel-link="external"><i class="penci-faicon fa fa-twitter"></i><span>Twitter</span></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/kahboom" rel="nofollow external noopener noreferrer"
+                           target="_blank" data-wpel-link="external"><i class="penci-faicon fa fa-instagram"></i><span>Instagram</span></a>
+                    </li>
+                    <li><a href="https://www.pinterest.com/nerdycode/" rel="nofollow external noopener noreferrer"
+                           target="_blank" data-wpel-link="external"><i class="penci-faicon fa fa-pinterest"></i><span>Pinterest</span></a>
+                    </li>
+                    <li><a href="https://nerdycode.tumblr.com/" rel="nofollow external noopener noreferrer"
+                           target="_blank" data-wpel-link="external"><i class="penci-faicon fa fa-tumblr"></i><span>Tumblr</span></a>
+                    </li>
+                    <li><a href="https://www.github.com/kahboom" rel="nofollow external noopener noreferrer"
+                           target="_blank" data-wpel-link="external"><i class="penci-faicon fa fa-github"></i><span>Github</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-logo-copyright footer-not-logo footer-not-gotop">
+
+
+                <div id="footer-copyright">
+                    <p>© 2015 - ∞ NerdyCode. All Right Reserved.</p>
+                </div>
+            </div>
+            <div class="penci-go-to-top-floating"><i class="penci-faicon fa fa-angle-up"></i></div>
+        </div>
+    </footer>
+
+</div><!-- End .wrapper-boxed -->
+
+<div id="fb-root"></div>
+<div class="penci-wrap-gprd-law">
+    <div class="penci-gprd-law">
+        <p>
+            This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out
+            if you wish. <a class="penci-gprd-accept" href="https://www.nerdycode.com/#">Accept</a> <a
+                class="penci-gprd-more" href="https://www.nerdycode.com/privacy" data-wpel-link="internal">Read More</a>
+        </p>
+    </div>
+</div>
+<style>
+    .penci-demo-buttons {
+        text-align: right;
+        position: fixed;
+        top: 110px;
+        right: 0;
+        z-index: 10000;
+        display: block;
+        width: 80px;
+    }
+
+    .penci-demo-buttons a {
+        width: 70px;
+        height: 40px;
+        cursor: pointer;
+        opacity: 1;
+        background: #fff;
+        -webkit-box-shadow: -1px 1.8px 4px 0 rgba(0, 0, 0, .1);
+        -moz-box-shadow: -1px 1.8px 4px 0 rgba(0, 0, 0, .1);
+        box-shadow: -1px 1.8px 4px 0 rgba(0, 0, 0, .1);
+        line-height: 40px;
+        font-size: 13px;
+        text-align: center;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-top: 1px solid #f5f5f5;
+        display: inline-block;
+        color: #313131;
+        font-family: 'Lato', sans-serif;
+        clear: both;
+    }
+
+    .penci-demo-buttons a.penci-demo-btn2 {
+        margin-top: 10px;
+    }
+</style>
+<script type="text/javascript">(function () {
+  function addEventListener(element, event, handler) {
+    if (element.addEventListener) {
+      element.addEventListener(event, handler, false);
+    } else if (element.attachEvent) {
+      element.attachEvent('on' + event, handler);
+    }
+  }
+
+  function maybePrefixUrlField() {
+    if (this.value.trim() !== '' && this.value.indexOf('http') !== 0) {
+      this.value = "http://" + this.value;
+    }
+  }
+
+  var urlFields = document.querySelectorAll('.mc4wp-form input[type="url"]');
+  if (urlFields && urlFields.length > 0) {
+    for (var j = 0; j < urlFields.length; j++) {
+      addEventListener(urlFields[j], 'blur', maybePrefixUrlField);
+    }
+  }/* test if browser supports date fields */
+  var testInput = document.createElement('input');
+  testInput.setAttribute('type', 'date');
+  if (testInput.type !== 'date') {
+
+    /* add placeholder & pattern to all date fields */
+    var dateFields = document.querySelectorAll('.mc4wp-form input[type="date"]');
+    for (var i = 0; i < dateFields.length; i++) {
+      if (!dateFields[i].placeholder) {
+        dateFields[i].placeholder = 'YYYY-MM-DD';
+      }
+      if (!dateFields[i].pattern) {
+        dateFields[i].pattern = '[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])';
+      }
+    }
+  }
+
+})();</script>
+<script type="text/javascript">
+  /* <![CDATA[ */
+  var wpcf7 = {
+    "apiSettings": {
+      "root": "http:\/\/soledad.pencidesign.com\/soledad-dark-version\/wp-json\/contact-form-7\/v1",
+      "namespace": "contact-form-7\/v1"
+    }, "recaptcha": { "messages": { "empty": "Please verify that you are not a robot." } }, "cached": "1"
+  };
+  /* ]]> */
+</script>
+<script type="text/javascript" src="js/imported/scripts.js"></script>
+<script type="text/javascript" src="js/imported/demobar.js"></script>
+<script type="text/javascript" src="js/imported/libs-script.min.js"></script>
+<script type="text/javascript">
+  /* <![CDATA[ */
+  var ajax_var_more = {
+    "url": "http:\/\/soledad.pencidesign.com\/soledad-dark-version\/wp-admin\/admin-ajax.php",
+    "nonce": "ba263d01dc"
+  };
+  /* ]]> */
+</script>
+<script type="text/javascript" src="js/imported/main.js"></script>
+<script type="text/javascript">
+  /* <![CDATA[ */
+  var ajax_var = {
+    "url": "http:\/\/soledad.pencidesign.com\/soledad-dark-version\/wp-admin\/admin-ajax.php",
+    "nonce": "ba263d01dc"
+  };
+  /* ]]> */
+</script>
+<script type="text/javascript" src="js/imported/post-like.js"></script>
+<script type="text/javascript">
+  /* <![CDATA[ */
+  var ajax_var_more = {
+    "url": "http:\/\/soledad.pencidesign.com\/soledad-dark-version\/wp-admin\/admin-ajax.php",
+    "nonce": "ba263d01dc"
+  };
+  /* ]]> */
+</script>
+<script type="text/javascript" src="js/imported/more-post.js"></script>
+<script type="text/javascript" src="js/imported/wp-embed.min.js"></script>
+<script type="text/javascript">
+  /* <![CDATA[ */
+  var mc4wp_forms_config = [];
+  /* ]]> */
+</script>
+<script type="text/javascript" src="js/imported/forms-api.min.js"></script>
+<!--[if lte IE 9]>
+<script type='text/javascript'
+        src='http://max.soledad.pencidesign.com/soledad-dark-version/wp-content/plugins/mailchimp-for-wp/assets/js/third-party/placeholders.min.js?ver=4.1.6'></script>
+<![endif]-->
