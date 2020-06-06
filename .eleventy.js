@@ -36,7 +36,15 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("tagList", require("./src/_11ty/getTagList"));
 
   eleventyConfig.addPassthroughCopy("img");
+  eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("robots.txt")
+
+  // Disabling dynamic permalinks for now
+  // Enabled by default
+  // eleventyConfig.setDynamicPermalinks(false);
+
+  eleventyConfig.setUseGitIgnore(false);
 
   /* Markdown Overrides */
   let markdownLibrary = markdownIt({

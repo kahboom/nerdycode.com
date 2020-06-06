@@ -2,14 +2,12 @@
   "name": "nerdycode",
   "version": "2.0.0",
   "description": "A website about software and sometimes non-software things.",
-
   "repository": {
     "type": "git",
     "url": "git://github.com/kahboom/nerdycode.com.git"
   },
   "author": "Rachel Yordán <nerdycodeblog@gmail.com> (https://www.nerdycode.com/)",
   "license": "MIT",
-
   "homepage": "https://www.github.com/kahboom/nerdycode.com#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
@@ -18,16 +16,25 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "luxon": "^1.21.3",
     "markdown-it": "^8.4.2",
-    "markdown-it-anchor": "^5.2.5"
+    "markdown-it-anchor": "^5.2.5",
+    "npm-run-all": "^4.1.5"
   },
   "scripts": {
-    "build": "eleventy",
+    "build:bu": "eleventy",
+    "build": "yarn run sass && eleventy",
     "debug": "DEBUG=* eleventy",
-    "start": "eleventy --serve",
-    "watch": "eleventy --watch"
+    "start": "npm-run-all sass --parallel watch:*",
+    "start:bu": "eleventy --serve",
+    "watch": "eleventy --watch",
+    "watch:eleventy": "eleventy --serve",
+    "watch:sass": "yarn run sass --watch",
+    "sass": "sass --style=compressed src/scss/styles.scss src/_includes/css/styles.css"
   },
   "bugs": {
     "url": "https://www.github.com/kahboom/nerdycode.com/issues"
   },
-  "main": "index.js"
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^1.26.8"
+  }
 }
