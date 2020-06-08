@@ -35,9 +35,9 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addCollection("tagList", require("./src/_11ty/getTagList"));
 
-  eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("js");
-  eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("favicon.ico");
+  eleventyConfig.addPassthroughCopy("static/img");
+  eleventyConfig.addPassthroughCopy("src/_includes/assets/")
   eleventyConfig.addPassthroughCopy("robots.txt")
 
   // Disabling dynamic permalinks for now
@@ -77,10 +77,10 @@ module.exports = function(eleventyConfig) {
 
   return {
     templateFormats: [
-      "md",
-      "njk",
       "html",
-      "liquid"
+      "liquid",
+      "md",
+      "njk"
     ],
 
     // If your site lives in a different subdirectory, change this.
@@ -91,7 +91,7 @@ module.exports = function(eleventyConfig) {
     // Best paired with the `url` filter: https://www.11ty.io/docs/filters/url/
 
     // You can also pass this in on the command line using `--pathprefix`
-    // pathPrefix: "/",
+    pathPrefix: "/",
 
     markdownTemplateEngine: "liquid",
     htmlTemplateEngine: "njk",
