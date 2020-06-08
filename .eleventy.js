@@ -37,7 +37,10 @@ module.exports = function(eleventyConfig) {
 
   // eleventyConfig.addPassthroughCopy("favicon.ico");
   // eleventyConfig.addPassthroughCopy("static/img");
-  eleventyConfig.addPassthroughCopy("src/_includes/assets/css");
+  // eleventyConfig.addPassthroughCopy("src/_includes/assets/css");
+  eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/img");
+  eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("robots.txt");
 
   // Disabling dynamic permalinks for now

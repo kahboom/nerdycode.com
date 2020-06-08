@@ -28,7 +28,7 @@
     "watch": "eleventy --watch",
     "watch:eleventy": "eleventy --serve",
     "watch:sass": "yarn run sass --watch",
-    "sass": "sass --style=compressed src/_includes/assets/scss/styles.scss src/_includes/assets/css/styles.css"
+    "sass": "sass --style=compressed src/scss/styles.scss src/css/styles.css"
   },
   "bugs": {
     "url": "https://www.github.com/kahboom/nerdycode.com/issues"
