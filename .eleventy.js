@@ -35,10 +35,10 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addCollection("tagList", require("./src/_11ty/getTagList"));
 
-  eleventyConfig.addPassthroughCopy("favicon.ico");
-  eleventyConfig.addPassthroughCopy("static/img");
-  eleventyConfig.addPassthroughCopy("src/_includes/assets/")
-  eleventyConfig.addPassthroughCopy("robots.txt")
+  // eleventyConfig.addPassthroughCopy("favicon.ico");
+  // eleventyConfig.addPassthroughCopy("static/img");
+  eleventyConfig.addPassthroughCopy("src/_includes/assets/css");
+  eleventyConfig.addPassthroughCopy("robots.txt");
 
   // Disabling dynamic permalinks for now
   // Enabled by default
