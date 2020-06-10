@@ -10,13 +10,13 @@ tags:
 
 In this brief tutorial I’ll be teaching you how to make a service on macOS (or OS X) that allows you to quickly select multiple images and make them into a GIF file with a single click. There are many ways to generate your own animated GIFs, but I personally prefer to use a shell script and create my own reusable service instead of, for instance, using a web-based service like Giphy (of course, nothing wrong with that either) where you have to upload photos to a remote server. For my own personal amusement I’ll be using the following photos I randomly snapped of myself eating cheese and crackers:
 
-![Gif Tutorial Image 1](https://i0.wp.com/www.nerdycode.com/wp-content/uploads/2016/10/2016-10-21-01-3-1024x683.jpg?fit=686%2C458)
+![Gif Tutorial Image 1](/img/2016-10-21-01.jpg)
 
-![Gif Tutorial Image 2](https://i1.wp.com/www.nerdycode.com/wp-content/uploads/2016/10/2016-10-21-02-1024x683.jpg?fit=686%2C458)
+![Gif Tutorial Image 2](/img/2016-10-21-02.jpg)
 
-![Gif Tutorial Image 3](https://i2.wp.com/www.nerdycode.com/wp-content/uploads/2016/10/2016-10-21-03-1024x683.jpg?fit=686%2C458)
+![Gif Tutorial Image 3](/img/2016-10-21-03.jpg)
 
-![Gif Tutorial Image 4](https://i2.wp.com/www.nerdycode.com/wp-content/uploads/2016/10/2016-10-21-04-1024x683.jpg?fit=686%2C458)
+![Gif Tutorial Image 4](/img/2016-10-21-04.jpg)
 
 Okay, let’s get this party started.
 
@@ -49,25 +49,25 @@ brew install imagemagick
 
 Open up Automator by going to **Applications > Automator.app**. If a window pops up asking you to select a file, just press “Done”. Then go to the top menu bar where it reads **File** and click on “New”. Then select “Service” and press the “Choose” button on the bottom right-hand corner.
 
-![Screenshot 2016-11-01 15.40.49](https://i1.wp.com/www.nerdycode.com/wp-content/uploads/2016/11/Screenshot-2016-11-01-15.40.49-1024x838.png?fit=686%2C561)
+![Screenshot 2016-11-01 15.40.49](/img/2016-11-01-15.40.49.png)
 
 A new dialog appears that reads “**Service receives selected {text} in {any application}.**” where {**text**} and {**any application**} are dropdown menus. In the {**text**} dropdown, select “**files or folders**“, and in the {**any application**} dropdown select “**Finder.app**“.
 
-![Screenshot 2016-11-01 15.41.22](https://i0.wp.com/www.nerdycode.com/wp-content/uploads/2016/11/Screenshot-2016-11-01-15.41.22-1024x756.png?fit=686%2C506)
+![Screenshot 2016-11-01 15.41.22](/img/2016-11-01-15.41.22.png)
 
-![screenshot-2016-11-01-15-41-38](https://i2.wp.com/www.nerdycode.com/wp-content/uploads/2016/11/Screenshot-2016-11-01-15.41.38-1024x336.png?fit=686%2C225)
+![screenshot-2016-11-01-15-41-38](/img/2016-11-01-15.41.38.png)
 
 Next, on the left hand side there is a _really_ long menu of **Actions** available in the **Library**. Scroll down to, or search for, “**Run Shell Script**“. Drag it and drop it into the right pane.
 
-![](https://i0.wp.com/www.nerdycode.com/wp-content/uploads/2016/11/Screenshot-2016-11-01-15.42.52-1024x841.png?fit=686%2C563)
+![](/img/2016-11-01-15.42.52.png)
 
 Bam! A new huge text area has just appeared in the right pane. If at first you don’t see a list of **Actions** to select from, toggle the **Library** button on the top left hand corner to make it appear.
 
-![screenshot-2016-11-01-15-42-30](https://i2.wp.com/www.nerdycode.com/wp-content/uploads/2016/11/Screenshot-2016-11-01-15.42.30-1024x843.png?fit=686%2C565)
+![screenshot-2016-11-01-15-42-30](/img/2016-11-01-15.42.30.png)
 
 You should now see a **“pass input”** option that defaults to {**to stdin**}. Select the {**to stdin**} dropdown menu and instead choose “**as arguments**“.
 
-![screenshot-2016-11-01-15-42-52](https://i0.wp.com/www.nerdycode.com/wp-content/uploads/2016/11/Screenshot-2016-11-01-15.42.52-1024x841.png?fit=686%2C563)
+![screenshot-2016-11-01-15-42-52](/img/2016-11-01-15.42.52.png)
 
 Copy and paste the following command in the text area:
 
@@ -75,7 +75,7 @@ Copy and paste the following command in the text area:
 /usr/local/bin/convert -delay 35 -loop 0 "$@" ~/Desktop/animated.gif
 ```
 
-![screenshot-2016-11-01-15-43-40](https://i2.wp.com/www.nerdycode.com/wp-content/uploads/2016/11/Screenshot-2016-11-01-15.43.40-1024x539.png?fit=686%2C361)
+![screenshot-2016-11-01-15-43-40](/img/2016-11-01-15.43.40.png)
 
 The **-delay** flag simply denotes how long each image in the series is displayed for, in milliseconds. I like 30-35, but sometimes it makes sense to go as low as 20. Totally up to you! Feel free to change the output path of the file from **~/Desktop/animated.gif** to whatever you like. Please note that if you make more than one gif, it will automatically override the file that is there unless you rename it to something other than animated.gif.
 
@@ -85,12 +85,12 @@ Once you’re happy with it, go to **File > Save** and name this workflow “M
 
 Grab your cheese, grab your crackers. Snap a few photos with Facetime, or just test with whatever you have. Command + click all of the photos you want as part of your GIF, right click and go to **Services > Make Animated Gif**.
 
-![Screenshot 2016-10-21 15.34.21](https://i1.wp.com/www.nerdycode.com/wp-content/uploads/2016/11/Screenshot-2016-10-21-15.34.21-897x1024.png?fit=686%2C783)
+![Screenshot 2016-10-21 15.34.21](/img/2016-10-21-15.34.21.png)
 
 Here is the final result:
 
-![Gif Tutorial: Rachel eating cheese](https://i0.wp.com/www.nerdycode.com/wp-content/uploads/2016/10/animated-01-5.gif?resize=686%2C457)
+![Gif Tutorial: Rachel eating cheese](/img/animated-01-5.gif)
 
 ![🙂](images/1f642.png)
 
-This post is based on Jacob Samela’s post [here](http://jacobsalmela.com/make-animated-gifs-in-os-x-with-a-right-click/). The script presented there works fine, but evidently duplicates the photos included in the GIF, which resulted in a much larger GIF file. As always, feel free to leave any questions or comments below.
+This post is based on Jacob Samela’s post [here](http://jacobsalmela.com/make-animated-gifs-in-os-x-with-a-right-click/). The script presented there works fine, but evidently duplicates the photos included in the GIF, which resulted in a much larger GIF file.
