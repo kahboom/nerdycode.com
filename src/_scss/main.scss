@@ -5,9 +5,62 @@
 // You can easily customize Bulma with your own variables.
 // Just uncomment the following block to see the result.
 
-/*
+
 // 1. Import the initial variables
-@import "../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
+
+// Dracula Pallete
+$dracula-bg: #282a36;
+$dracula-fg: #f8f8f2;
+$dracula-selected: #44475a;
+$dracula-comment: #6272a4;
+$dracula-cyan: #8be9fd;
+$dracula-green: #50fa7b;
+$dracula-orange: #ffb86c;
+$dracula-pink: #ff79c6;
+$dracula-purple: #bd93f9;
+$dracula-red: #ff5555;
+$dracula-yellow: #f1fa8c;
+
+$primary: $dracula-purple;
+
+$link: $dracula-pink;
+$link-hover: lighten($dracula-pink, 5%);
+$link-hover-border: lighten($dracula-pink, 5%);
+$link-focus: darken($dracula-pink, 5%);
+$link-focus-border: darken($dracula-pink, 5%);
+$link-active: lighten($dracula-pink, 5%);
+$link-active-border: lighten($dracula-pink, 5%);
+
+$info: $dracula-cyan;
+$success: $dracula-green;
+$warning: $dracula-yellow;
+$danger: $dracula-red;
+$dark: $dracula-selected;
+$grey: $dracula-fg;
+
+$text: $dracula-fg;
+$text-light: lighten($dracula-fg, 5%);
+$text-strong: darken($dracula-fg, 5%);
+
+$background: $dracula-bg;
+
+$green-invert: $dracula-bg;
+$success-invert: $dracula-bg;
+
+// Update some of Bulma's component variables
+$title-color: $dracula-fg;
+$subtitle-color: $dracula-fg;
+$subtitle-strong-color: darken($dracula-fg, 5%);
+
+$body-background-color: $dracula-bg;
+$footer-background-color: $dracula-bg;
+
+$code-background: $dracula-selected;
+$label-color: $dracula-fg;
+$card-color: $dracula-bg;
+
+/*
 // 2. Set your own initial variables
 // Update the blue shade, used for links
 $blue: #06bcef;
@@ -20,8 +73,9 @@ $family-sans-serif: "Helvetica", "Arial", sans-serif;
 // Use the new pink as the primary color
 $primary: $pink;
 $primary-invert: $pink-invert;
-// 4. Import the rest of Bulma
 */
+
+// 4. Import the rest of Bulma
 
 @import "../../node_modules/bulma/bulma";
 

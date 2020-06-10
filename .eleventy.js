@@ -35,7 +35,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addCollection("tagList", require("./src/_11ty/getTagList"));
 
-  // eleventyConfig.addPassthroughCopy("favicon.ico");
+  eleventyConfig.addPassthroughCopy("src/img/favicon.ico");
   // eleventyConfig.addPassthroughCopy("static/img");
   // eleventyConfig.addPassthroughCopy("src/_includes/assets/css");
   eleventyConfig.addPassthroughCopy("src/css");
