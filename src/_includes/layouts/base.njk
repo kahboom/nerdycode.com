@@ -33,7 +33,12 @@
 
             <!-- Brand -->
             <div class="navbar-brand">
+                <!--
                 <h1 class="title"><a href="{{ '/' | url }}" class="navbar-item">{{ metadata.title }}</a></h1>
+                -->
+                <a href="{{ '/' | url }}" class="navbar-item">
+                    <img src="/img/logo/logo-02.png" alt="NerdyCode"/>
+                </a>
 
                 <!-- Responsive toggle -->
                 <span class="navbar-burger burger" data-target="navbarMenu">
@@ -48,8 +53,9 @@
                 <div class="navbar-end">
                 {%- for entry in collections.all | eleventyNavigation %}
                     <li class="navbar-item is-nav-link {% if entry.url == page.url %} is-active{% endif
-                    %}"><a
-                                href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+                    %}">
+                        <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+                    </li>
                 {%- endfor %}
                 </div>
             </div>
@@ -68,6 +74,8 @@
 <footer></footer>
 
 <!-- Current page: {{ page.url | url }} -->
+<!--
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+-->
 </body>
 </html>
