@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ renderData.title or title or metadata.title }}</title>
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
-    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
-    <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
-    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+    <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
+
+    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml"
+          title="{{ metadata.title }}">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41791588-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
       gtag('js', new Date());
 
       gtag('config', 'UA-41791588-1');
@@ -22,19 +27,43 @@
 
 </head>
 <body class="nerdycode">
-<header>
-    <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+<section class="section">
+    <nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="dropdown navigation">
+        <div class="container">
 
-    <nav class="navbar is-primary">
-        {%- for entry in collections.all | eleventyNavigation %}
-            <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-        {%- endfor %}
+            <!-- Brand -->
+            <div class="navbar-brand">
+                <h1 class="title"><a href="{{ '/' | url }}" class="navbar-item">{{ metadata.title }}</a></h1>
+
+                <!-- Responsive toggle -->
+                <span class="navbar-burger burger" data-target="navbarMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+            </div>
+
+            <!-- Menu -->
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-end">
+                {%- for entry in collections.all | eleventyNavigation %}
+                    <li class="navbar-item is-nav-link {% if entry.url == page.url %} is-active{% endif
+                    %}"><a
+                                href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+                {%- endfor %}
+                </div>
+            </div>
+        </div>
     </nav>
-</header>
+</section>
 
-<main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+<section{% if templateClass %} class="section {{ templateClass }}"{% endif %}>
+    <div class="container">
+        <div class="content">
     {{ content | safe }}
-</main>
+        </div>
+    </div>
+</section>
 
 <footer></footer>
 
