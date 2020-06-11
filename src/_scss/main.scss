@@ -3,6 +3,15 @@
 // Import initial Bulma variables
 @import "../../node_modules/bulma/sass/utilities/initial-variables";
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+
+//$family-sans-serif: 'Open Sans', serif;
+$family-sans-serif: 'Quicksand', sans-serif;
+
+$body-font-size: 1.4em;
+
 $nerdy-bg: #16161d;
 $nerdy-fg: #f8f8f2;
 $nerdy-selected: #44475a;
