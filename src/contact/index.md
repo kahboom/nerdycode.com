@@ -4,7 +4,7 @@ title: Contact
 templateClass: tmpl-post
 eleventyNavigation:
   key: Contact
-  order: 3
+  order: 10
 ---
 
 Currently under construction, be right back. :)

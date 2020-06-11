@@ -1,10 +1,10 @@
 ---
 layout: layouts/post.njk
-title: About Rachel
+title: About Me
 templateClass: tmpl-post
 eleventyNavigation:
-  key: About Rachel
-  order: 3
+  key: About
+  order: 6
 ---
 
 Oh, hallow there!

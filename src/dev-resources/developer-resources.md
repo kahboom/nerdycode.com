@@ -2,6 +2,8 @@
 layout: layouts/post.njk
 title: Developer Resources
 templateClass: tmpl-post
+permalink: "/developer-resources/"
+dynamicPermalink: false
 eleventyNavigation:
   key: Developer Resources
   order: 3
