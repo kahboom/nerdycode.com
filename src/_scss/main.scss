@@ -14,42 +14,36 @@ $body-font-size: 1.4em;
 
 $nerdy-bg: #16161d;
 $nerdy-fg: #f8f8f2;
-$nerdy-selected: #44475a;
-$nerdy-comment: #6272a4;
-$nerdy-cyan: #8be9fd;
+$nerdy-cyan: #29ced2;
 $nerdy-green: #50fa7b;
 $nerdy-orange: #ffb86c;
-$nerdy-pink: #ff79c6;
-$nerdy-purple: #bd93f9;
-$nerdy-red: #ff5555;
+$nerdy-pink: #db2e90;
+$nerdy-purple: #5a3da5;
 $nerdy-yellow: #f1fa8c;
 
 $primary: $nerdy-purple;
 $scheme-main: #16161d;
 
-$link: $nerdy-pink;
-$link-hover: lighten($nerdy-pink, 5%);
-$link-hover-border: lighten($nerdy-pink, 5%);
-$link-focus: darken($nerdy-pink, 5%);
-$link-focus-border: darken($nerdy-pink, 5%);
+//$link: $nerdy-pink;
+$link: lighten($nerdy-pink, 5%);
+//$link-hover: lighten($nerdy-pink, 5%);
+//$link-hover-border: lighten($nerdy-pink, 5%);
+//$link-focus: darken($nerdy-pink, 5%);
+//$link-focus-border: darken($nerdy-pink, 5%);
+//$link-hover: $turquoise;
+$link-hover: darken($nerdy-cyan, 5%);
 $link-active: lighten($nerdy-pink, 5%);
 $link-active-border: lighten($nerdy-pink, 5%);
 
-$info: $nerdy-cyan;
-$success: $nerdy-green;
-$warning: $nerdy-yellow;
-$danger: $nerdy-red;
-$dark: $nerdy-selected;
-$grey: $nerdy-fg;
+a.tag:hover {
+  text-decoration: none !important;
+}
 
 $text: $nerdy-fg;
 $text-light: lighten($nerdy-fg, 5%);
 $text-strong: darken($nerdy-fg, 5%);
 
 $background: $nerdy-bg;
-
-$green-invert: $nerdy-bg;
-$success-invert: $nerdy-bg;
 
 // Update some of Bulma's component variables
 $title-color: $nerdy-fg;
@@ -58,10 +52,6 @@ $subtitle-strong-color: darken($nerdy-fg, 5%);
 
 $body-background-color: $nerdy-bg;
 $footer-background-color: $nerdy-bg;
-
-$code-background: $nerdy-selected;
-$label-color: $nerdy-fg;
-$card-color: $nerdy-bg;
 
 // Import the rest of Bulma
 
