@@ -8,16 +8,17 @@ eleventyNavigation:
 ---
 
 <form name="contact" method="POST" netlify-honeypot="dummy-field" data-netlify-recaptcha="true">
+
+<p class="hidden">
+  <label>Don’t fill this out if you're human: <input name="dummy-field" /></label>
+</p>
+
 <div class="field">
   <label class="label">Name</label>
   <div class="control">
     <input class="input" type="text" name="name" placeholder="Alan Turing">
   </div>
 </div>
-
-<p class="hidden">
-  <label>Don’t fill this out if you're human: <input name="dummy-field" /></label>
-</p>
 
 <div class="field">
   <label class="label">Email</label>
