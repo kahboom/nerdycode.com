@@ -11,7 +11,7 @@ eleventyNavigation:
 <div class="field">
   <label class="label">Name</label>
   <div class="control">
-    <input class="input" type="text" placeholder="Text input">
+    <input class="input" type="text" name="name" placeholder="Alan Turing">
   </div>
 </div>
 
@@ -22,7 +22,7 @@ eleventyNavigation:
 <div class="field">
   <label class="label">Email</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input" type="email" placeholder="Email input">
+    <input class="input" type="email" name="email" placeholder="alan@turing.com">
     <span class="icon is-small is-left">
       <i class="fas fa-envelope"></i>
     </span>
@@ -36,7 +36,7 @@ eleventyNavigation:
   <label class="label">Subject</label>
   <div class="control">
     <div class="select">
-      <select>
+      <select name="subject">
         <option>Select dropdown</option>
         <option>Feedback/Question</option>
         <option>Business Inquiry</option>
@@ -48,7 +48,7 @@ eleventyNavigation:
 <div class="field">
   <label class="label">Message</label>
   <div class="control">
-    <textarea class="textarea" placeholder="Textarea"></textarea>
+    <textarea class="textarea" name="message" placeholder="Hello world"></textarea>
   </div>
 </div>
 
