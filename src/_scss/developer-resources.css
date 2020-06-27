@@ -1,0 +1,1 @@
+body{background-color:red}input[name=shape]:checked~.items div:not([data-type=shape]),input[name=color]:checked~.items div:not([data-type=color]){display:none}/*# sourceMappingURL=developer-resources.css.map */

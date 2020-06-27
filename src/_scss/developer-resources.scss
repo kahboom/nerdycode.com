@@ -1,0 +1,46 @@
+
+
+/* RESET RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  --black: #3a3a3a;
+  --white: #fff;
+  --green: #49b293;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+
+
+/* FILTERING RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+[value="All"]:checked ~ .filters [for="All"],
+[value="CSS"]:checked ~ .filters [for="CSS"],
+[value="JavaScript"]:checked ~ .filters [for="JavaScript"],
+[value="jQuery"]:checked ~ .filters [for="jQuery"],
+[value="WordPress"]:checked ~ .filters [for="WordPress"],
+[value="Slider"]:checked ~ .filters [for="Slider"],
+[value="fullPage.js"]:checked ~ .filters [for="fullPage.js"] {
+  background: var(--green);
+  color: var(--white);
+}
+
+[value="All"]:checked ~ .links [data-category] {
+  display: block;
+}
+
+[value="CSS"]:checked ~ .links .link:not([data-category~="CSS"]),
+[value="JavaScript"]:checked ~ .links .link:not([data-category~="JavaScript"]),
+[value="jQuery"]:checked ~ .links .link:not([data-category~="jQuery"]),
+[value="WordPress"]:checked ~ .links .link:not([data-category~="WordPress"]),
+[value="Slider"]:checked ~ .links .link:not([data-category~="Slider"]),
+[value="fullPage.js"]:checked ~ .links .link:not([data-category~="fullPage.js"]) {
+  display: none;
+}
