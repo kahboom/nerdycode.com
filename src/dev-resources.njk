@@ -19,28 +19,30 @@ eleventyNavigation:
     <div class="tile is-ancestor">
       <div class="tile box is-parent is-horizontal">
 
-          <!-- Filter Labels -->
+          <!-- Tag Labels -->
         <div class="tile is-child is-2">
-          <nav class="panel datanav">
-            <label for="All"><a class="panel-block">All</a></label>
+          <nav class="datanav">
+              <aside class="menu">
+                  <label for="All" class="menu-label"><a class="panel-block">All</a></label>
 
-            {% for cat in devLinkCategories %}
-              <label for="{{ cat.value }}"><a class="panel-block">{{ cat.label }}</a></label>
-            {% endfor %}
+                  {% for tag in devLinkTags %}
+                      <label for="{{ tag.value }}" class="menu-label"><a class="panel-block">{{ tag.label }}</a></label>
+                  {% endfor %}
+              </aside>
           </nav>
         </div>
 
-        <!-- Hidden Input Values for Filter Labels -->
-        <input type="radio" id="All" name="categories" value="All" checked>
+        <!-- Hidden Input Values for Tag Labels -->
+        <input type="radio" id="All" name="tags" value="All" checked>
 
-        {% for cat in devLinkCategories %}
-          <input type="radio" id="{{ cat.value }}" name="categories" value="{{ cat.label }}">
+        {% for tag in devLinkTags %}
+          <input type="radio" id="{{ tag.value }}" name="tags" value="{{ tag.label }}">
         {% endfor %}
 
           <!-- Links -->
         <div class="tile is-child links">
             {% for link in devLinks %}
-                <div class="tile link is-ancestor" data-category="{{ link.categories }}">
+                <div class="tile link is-ancestor" data-tag="{{ link.tags }}">
                     <div class="tile is-4">
                         <a href="{{ link.url }}" rel="nofollow noopener noreferrer" target="_blank">{{ link.title }}</a>
                     </div>

@@ -24,7 +24,7 @@
     "value": "Data"
   },
   {
-    "label": "Data Viz",
+    "label": "Data+Viz",
     "value": "DataViz"
   },
   {
@@ -56,8 +56,8 @@
     "value": "Productivity"
   },
   {
-    "label": "Tech News",
-    "value": "TechNews"
+    "label": "Tech+News",
+    "value": "Tech+News"
   },
   {
     "label": "Utilities",
@@ -68,11 +68,15 @@
     "value": "UXD"
   },
   {
-    "label": "WebDev",
+    "label": "Web+Dev",
     "value": "WebDev"
   },
   {
     "label": "Workflow",
     "value": "Workflow"
+  },
+  {
+    "label": "Etc",
+    "value": "Etc"
   }
 ]
