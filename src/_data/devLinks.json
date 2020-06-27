@@ -59,6 +59,13 @@
     "url": "http://beesbeesbees.com/"
   },
   {
+    "title": "BitBar",
+    "created": "2020-06-27 13:40:32",
+    "url": "https://getbitbar.com/",
+    "description": "Put anything in your Mac OS X menu bar",
+    "platforms": ["macOS"]
+  },
+  {
     "title": "BitDegree",
     "created": "2019-07-12 17:32:27",
     "url": "https://www.bitdegree.org/",
@@ -77,7 +84,8 @@
   {
     "title": "BrowserStack",
     "created": "2019-07-10 19:25:41",
-    "url": "https://www.browserstack.com/"
+    "url": "https://www.browserstack.com/",
+    "description": "Cross browser testing"
   },
   {
     "title": "Browsersync",
@@ -94,7 +102,8 @@
   {
     "title": "Camtasia",
     "created": "2019-07-10 19:38:38",
-    "url": "https://www.techsmith.com/camtasia.html"
+    "url": "https://www.techsmith.com/camtasia.html",
+    "description": "Screen recording & video editing application."
   },
   {
     "title": "Can I use...",
@@ -209,12 +218,14 @@
   {
     "title": "DZone",
     "created": "2019-07-12 17:24:02",
-    "url": "https://www.dzone.com/"
+    "url": "https://www.dzone.com/",
+    "categories": "Communities"
   },
   {
     "title": "DZone Jobs",
     "created": "2019-07-10 19:19:35",
-    "url": "https://jobs.dzone.com/"
+    "url": "https://jobs.dzone.com/",
+    "categories": "Career"
   },
   {
     "title": "DaFont",
@@ -224,54 +235,64 @@
   {
     "title": "DepositPhotos",
     "created": "2019-07-12 16:43:31",
-    "url": "https://depositphotos.com/"
+    "url": "https://depositphotos.com/",
+    "categories": "Multimedia"
   },
   {
     "title": "dev.to",
     "created": "2019-07-12 17:33:14",
-    "url": "https://dev.to/"
+    "url": "https://dev.to/",
+    "categories": "Communities"
   },
 
   {
     "title": "DevDocs",
     "created": "2019-07-14 16:26:34",
-    "url": "http://devdocs.io/"
+    "url": "http://devdocs.io/",
+    "categories": "WebDev"
   },
   {
     "title": "devRant",
     "created": "2019-07-12 17:33:57",
-    "url": "https://devrant.com/"
+    "url": "https://devrant.com/",
+    "categories": "Communities"
   },
   {
     "title": "Diff Checker",
     "created": "2019-07-10 18:57:43",
-    "url": "https://www.diffchecker.com/"
+    "url": "https://www.diffchecker.com/",
+    "categories": "Utilities Workflow"
   },
   {
     "title": "Digital Attack Map",
     "created": "2019-07-12 16:37:16",
     "url": "https://www.digitalattackmap.com/",
-    "description": "DDoS attacks around the globe"
+    "description": "DDoS attacks around the globe",
+    "categories": "InfoSec"
   },
   {
     "title": "Down for Everyone or Just Me?",
     "created": "2019-07-10 18:57:18",
-    "url": "http://www.downforeveryoneorjustme.com/"
+    "url": "http://www.downforeveryoneorjustme.com/",
+    "categories": "Workflow"
   },
   {
     "title": "DriveMeInsane.com",
     "created": "2019-07-12 17:04:16",
-    "url": "http://drivemeinsane.com/"
+    "url": "http://drivemeinsane.com/",
+    "categories": ""
   },
   {
     "title": "Egghead.io",
     "created": "2019-07-12 19:11:12",
-    "url": "https://egghead.io/"
+    "url": "https://egghead.io/",
+    "categories": ""
   },
   {
     "title": "Favicon.cc",
     "created": "2019-07-12 16:43:56",
-    "url": "https://www.favicon.cc/"
+    "url": "https://www.favicon.cc/",
+    "categories": ""
   },
   {
     "title": "Fill Database",
@@ -543,19 +564,19 @@
   },
   {
     "title": "Lucidchart",
-    "created": "2019-07-12 19:25:47"
+    "created": "2019-07-12 19:25:47",
+    "url": "https://www.lucidchart.com/pages/",
+    "description": "Diagramming and visualization tool"
   },
   {
     "title": "MFG Labs Icon Set",
-    "created": "2019-07-14 16:06:58"
+    "created": "2019-07-14 16:06:58",
+    "url": "https://mfglabs.github.io/mfglabs-iconset/"
   },
   {
-    "title": "MIT Open Courseware",
-    "created": "2019-07-12 17:26:03"
-  },
-  {
-    "title": "Macaw",
-    "created": "2019-07-12 16:46:19"
+    "title": "MIT OpenCourseWare",
+    "created": "2019-07-12 17:26:03",
+    "url": "https://ocw.mit.edu/index.htm"
   },
   {
     "title": "Mapbox",
@@ -981,7 +1002,8 @@
   {
     "title": "TinyPNG",
     "created": "2019-07-10 19:41:36",
-    "url": "https://tinypng.com/"
+    "url": "https://tinypng.com/",
+    "description": "PNG compressor"
   },
   {
     "title": "tmate",

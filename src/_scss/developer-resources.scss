@@ -21,26 +21,49 @@ input[type="radio"] {
 
 /* FILTERING RULES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 [value="All"]:checked ~ .filters [for="All"],
+[value="Amusing"]:checked ~ .filters [for="Amusing"],
+[value="API"]:checked ~ .filters [for="API"],
+[value="Career"]:checked ~ .filters [for="Career"],
+[value="Communities"]:checked ~ .filters [for="Communities"],
 [value="CSS"]:checked ~ .filters [for="CSS"],
+[value="Data"]:checked ~ .filters [for="Data"],
+[value="DataViz"]:checked ~ .filters [for="DataViz"],
+[value="Hardware"]:checked ~ .filters [for="Hardware"],
+[value="InfoSec"]:checked ~ .filters [for="InfoSec"],
 [value="JavaScript"]:checked ~ .filters [for="JavaScript"],
-[value="jQuery"]:checked ~ .filters [for="jQuery"],
-[value="WordPress"]:checked ~ .filters [for="WordPress"],
-[value="Slider"]:checked ~ .filters [for="Slider"],
-[value="fullPage.js"]:checked ~ .filters [for="fullPage.js"] {
+[value="Learning"]:checked ~ .filters [for="Learning"],
+[value="Multimedia"]:checked ~ .filters [for="Multimedia"],
+[value="Networking"]:checked ~ .filters [for="Networking"],
+[value="Productivity"]:checked ~ .filters [for="Productivity"],
+[value="TechNews"]:checked ~ .filters [for="TechNews"],
+[value="Utilities"]:checked ~ .filters [for="Utilities"],
+[value="UXD"]:checked ~ .filters [for="UXD"],
+[value="WebDev"]:checked ~ .filters [for="WebDev"],
+[value="Workflow"]:checked ~ .filters [for="Workflow"] {
   background: var(--green);
   color: var(--white);
 }
 
-[value="All"]:checked ~ .links [data-category] {
-  display: block;
-}
-
+[value="Amusing"]:checked ~ .links .link:not([data-category~="Amusing"]),
+[value="API"]:checked ~ .links .link:not([data-category~="API"]),
+[value="Career"]:checked ~ .links .link:not([data-category~="Career"]),
+[value="Communities"]:checked ~ .links .link:not([data-category~="Communities"]),
 [value="CSS"]:checked ~ .links .link:not([data-category~="CSS"]),
+[value="Data"]:checked ~ .links .link:not([data-category~="Data"]),
+[value="DataViz"]:checked ~ .links .link:not([data-category~="DataViz"]),
+[value="Hardware"]:checked ~ .links .link:not([data-category~="Hardware"]),
+[value="InfoSec"]:checked ~ .links .link:not([data-category~="InfoSec"]),
 [value="JavaScript"]:checked ~ .links .link:not([data-category~="JavaScript"]),
-[value="jQuery"]:checked ~ .links .link:not([data-category~="jQuery"]),
-[value="WordPress"]:checked ~ .links .link:not([data-category~="WordPress"]),
-[value="Slider"]:checked ~ .links .link:not([data-category~="Slider"]),
-[value="fullPage.js"]:checked ~ .links .link:not([data-category~="fullPage.js"]) {
+[value="Learning"]:checked ~ .links .link:not([data-category~="Learning"]),
+[value="Multimedia"]:checked ~ .links .link:not([data-category~="Multimedia"]),
+[value="Networking"]:checked ~ .links .link:not([data-category~="Networking"]),
+[value="Productivity"]:checked ~ .links .link:not([data-category~="Productivity"]),
+[value="TechNews"]:checked ~ .links .link:not([data-category~="TechNews"]),
+[value="Utilities"]:checked ~ .links .link:not([data-category~="Utilities"]),
+[value="UXD"]:checked ~ .links .link:not([data-category~="UXD"]),
+[value="WebDev"]:checked ~ .links .link:not([data-category~="WebDev"]),
+[value="Workflow"]:checked ~ .links .link:not([data-category~="Workflow"]) {
   display: none;
 }

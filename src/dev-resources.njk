@@ -1,0 +1,61 @@
+---
+layout: layouts/home.njk
+permalink: /developer-resources/
+css_include: /css/developer-resources.css
+eleventyNavigation:
+  key: Developer Resources
+  order: 3
+---
+
+<h1>Developer Resources</h1>
+
+<p>A random, possibly useless list of <strong>resources</strong> aimed primarily at <strong>developers</strong> or<strong> software engineers</strong>, but with many for <strong>designers</strong>, <strong>UI and UX engineers</strong> as well. I try to make this list applicable to <i>anyone</i> in IT, including entrepreneurs, but know that it's not as comprehensive in each area of focus as I'd like it to be.</p>
+<p>I try to stick with open source as much as possible, but note that sometimes there are proprietary tools on here (listed with a $ sign). As of this moment I do not have any affiliate links on here and am only sharing what I find may genuinely be useful to some.</p>
+<p>Eventually, I'd love for this to be community-driven. Please <a href="https://www.nerdycode.com/contact/" target="_blank" rel="noopener noreferrer">let me know</a> if you have any resources you'd like to share. :)</p>
+<p class="is-size-6"><i>Last updated 2020/06/26</i></p>
+
+<section class="section is-size-5">
+  <div class="container">
+    <div class="tile is-ancestor">
+      <div class="tile box is-parent is-horizontal">
+
+          <!-- Filter Labels -->
+        <div class="tile is-child is-2">
+          <nav class="panel datanav">
+            <label for="All"><a class="panel-block">All</a></label>
+
+            {% for cat in devLinkCategories %}
+              <label for="{{ cat.value }}"><a class="panel-block">{{ cat.label }}</a></label>
+            {% endfor %}
+          </nav>
+        </div>
+
+        <!-- Hidden Input Values for Filter Labels -->
+        <input type="radio" id="All" name="categories" value="All" checked>
+
+        {% for cat in devLinkCategories %}
+          <input type="radio" id="{{ cat.value }}" name="categories" value="{{ cat.label }}">
+        {% endfor %}
+
+          <!-- Links -->
+        <div class="tile is-child links">
+            {% for link in devLinks %}
+                <div class="tile link is-ancestor" data-category="{{ link.categories }}">
+                    <div class="tile is-4">
+                        <a href="{{ link.url }}" rel="nofollow noopener noreferrer" target="_blank">{{ link.title }}</a>
+                    </div>
+                    <div class="tile">
+                        {{ link.description }}
+                    </div>
+                </div>
+            {%  endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
