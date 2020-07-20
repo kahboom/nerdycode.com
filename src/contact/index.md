@@ -7,7 +7,7 @@ eleventyNavigation:
   order: 10
 ---
 
-<form name="contact" method="POST" netlify-honeypot="dummy-field" data-netlify-recaptcha="true">
+<form name="contact" method="POST" netlify-honeypot="dummy-field" data-netlify="true" data-netlify-recaptcha="true">
 
 <p class="hidden">
   <label>Don’t fill this out if you're human: <input name="dummy-field" /></label>
