@@ -61,6 +61,7 @@ $footer-background-color: $nerdy-bg;
 // you can import the rest of the overrides.
 
 @import "home";
+@import "elements/main";
 @import "overrides";
 
 .hidden {
