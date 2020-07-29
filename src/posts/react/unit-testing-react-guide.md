@@ -115,7 +115,7 @@ Your test files should have one of the following extensions in order for Jest to
 
 ### Tips for Writing Unit Tests
 
-\[blockquote align="none" author="Kent C. Dodds 👋"\]The more your tests resemble the way your software is used, the more confidence they can give you.  \[/blockquote\]
+>The more your tests resemble the way your software is used, the more confidence they can give you. - Kent C. Dodds 👋
 
 These famous words by Kent C. Dodds are the number one tip I can give if you are using React Testing Library. Though I try my best to be impartial, I will say that React Testing Library makes you look at unit testing differently than most developers tend to. I think it's very common for developers to want to test the functionality of their code as opposed to testing from the perspective of the user.
 
