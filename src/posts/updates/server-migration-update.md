@@ -1,7 +1,7 @@
 ---
 title: "Server Migration & Revamp"
 date: "2018-01-05"
-layout: layouts/post.njk
+layout: post.njk
 permalink: "/server-migration-update/"
 dynamicPermalink: false
 ---

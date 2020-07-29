@@ -3,7 +3,7 @@ title: The Testing Pyramid
 date: 2019-06-26
 permalink: "/testing-pyramid/"
 dynamicPermalink: false
-layout: layouts/post.njk
+layout: post.njk
 tags:
   - testing
 ---

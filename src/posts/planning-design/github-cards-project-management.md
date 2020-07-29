@@ -1,7 +1,7 @@
 ---
 title: "Using GitHub Projects and Cards for Project Management"
 date: "2016-09-16"
-layout: layouts/post.njk
+layout: post.njk
 permalink: "/using-github-projects-cards-project-management/"
 dynamicPermalink: false
 tags:

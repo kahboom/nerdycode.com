@@ -1,7 +1,7 @@
 ---
 title: "Angular Check if Form is Valid from Controller"
 date: "2016-02-26"
-layout: layouts/post.njk
+layout: post.njk
 permalink: "/angular-form-valid-from-controller/"
 dynamicPermalink: false
 tags:

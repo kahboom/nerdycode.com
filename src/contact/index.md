@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Contact
 templateClass: tmpl-post
 eleventyNavigation:

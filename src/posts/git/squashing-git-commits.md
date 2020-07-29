@@ -1,7 +1,7 @@
 ---
 title: "Squashing Git Commits the Easy Way"
 date: "2016-03-16"
-layout: layouts/post.njk
+layout: post.njk
 permalink: "/squashing-git-commits-the-easy-way/"
 dynamicPermalink: false
 tags:

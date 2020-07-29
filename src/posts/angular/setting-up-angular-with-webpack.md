@@ -1,7 +1,7 @@
 ---
 title: "Setting up Angular with Webpack"
 date: "2016-09-08"
-layout: layouts/post.njk
+layout: post.njk
 permalink: "/setting-up-angular-with-webpack/"
 dynamicPermalink: false
 tags:

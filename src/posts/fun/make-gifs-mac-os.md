@@ -3,7 +3,7 @@ title: "Make Your Own GIFs on macOS or OS X using Automator & Homebrew"
 date: "2016-11-01"
 permalink: "/make-your-own-gifs-on-mac-os-x-using-automator-homebrew-imagemagick/"
 dynamicPermalink: false
-layout: layouts/post.njk
+layout: post.njk
 tags:
   - mac
 ---

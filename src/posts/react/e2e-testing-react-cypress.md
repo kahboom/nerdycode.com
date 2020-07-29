@@ -3,7 +3,7 @@ title: "E2E Testing React with Cypress"
 date: "2019-07-11"
 permalink: "/e2e-testing-react-cypress/"
 dynamicPermalink: false
-layout: layouts/post.njk
+layout: post.njk
 ---
 
 In this tutorial, we'll be setting up our React app with Cypress. Though not exclusive to React, [Cypress](https://www.cypress.io/) is a comprehensive, but lightweight E2E testing suite.

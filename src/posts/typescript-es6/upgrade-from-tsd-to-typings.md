@@ -1,7 +1,7 @@
 ---
 title: "Upgrade from TSD to Typings"
 date: "2016-02-26"
-layout: layouts/post.njk
+layout: post.njk
 permalink: "/upgrade-from-tsd-to-typings/"
 tags:
   - typescript

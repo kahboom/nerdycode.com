@@ -1,7 +1,7 @@
 ---
 title: "NPM Hangs on Network Step"
 date: "2016-03-28"
-layout: layouts/post.njk
+layout: post.njk
 permalink: "/debugging-npm-hangs-network/"
 tags:
   - npm

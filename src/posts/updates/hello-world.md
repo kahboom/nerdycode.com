@@ -1,7 +1,7 @@
 ---
 title: "Willkommen"
 date: "2015-10-11"
-layout: layouts/post.njk
+layout: post.njk
 permalink: "/hello-world/"
 dynamicPermalink: false
 ---

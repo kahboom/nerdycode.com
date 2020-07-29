@@ -1,7 +1,7 @@
 ---
 title: "The Chemical Brothers: Wide Open"
 date: "2016-06-02"
-layout: layouts/post.njk
+layout: post.njk
 permalink: "/chemical-brothers-wide-open/"
 dynamicPermalink: false
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Snapshot Testing in React"
 date: "2019-06-29"
-layout: layouts/post.njk
+layout: post.njk
 permalink: "/snapshot-testing-in-react/"
 dynamicPermalink: false
 tags:
