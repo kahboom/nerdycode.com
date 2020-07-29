@@ -57,6 +57,12 @@ $footer-background-color: $nerdy-bg;
 
 @import "../../node_modules/bulma/bulma";
 
+// Now that Bulma has been imported,
+// you can import the rest of the overrides.
+
+@import "home";
+@import "overrides";
+
 .hidden {
   display: none;
 }
@@ -68,4 +74,3 @@ $footer-background-color: $nerdy-bg;
 }
 
 
-@import "home";

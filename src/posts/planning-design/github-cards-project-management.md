@@ -8,7 +8,7 @@ tags:
   - github
 ---
 
-## It’s a whole new GitHub universe with these simple project management-like features..
+### It’s a whole new GitHub universe with these simple project management-like features..
 
 GitHub has released a set of features that I’ve found very helpful for making the development cycle easier and more efficient. My friend [@MarcSavy](http://www.rhymewithgravy.com/) kindly sent me a link to [this](https://www.github.com/universe-2016) and pointed out the latest post on the [GitHub Blog](https://www.github.com/blog), which summarizes these amazing features. I’ve been using them ever since and have found them incredibly useful, so I wanted to share how I was using them for a project I’m currently working on.
 
