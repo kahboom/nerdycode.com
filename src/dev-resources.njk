@@ -41,16 +41,18 @@ eleventyNavigation:
 
           <!-- Links -->
         <div class="tile is-child links">
-            {% for link in devLinks %}
-                <div class="tile link is-ancestor" data-tag="{{ link.tags }}">
-                    <div class="tile is-4">
-                        <a href="{{ link.url }}" rel="nofollow noopener noreferrer" target="_blank">{{ link.title }}</a>
-                    </div>
-                    <div class="tile">
-                        {{ link.description }}
-                    </div>
-                </div>
-            {%  endfor %}
+            <table class="table is-size-6">
+                <tbody>
+                {% for link in devLinks %}
+                    <tr class="link" data-tag="{{ link.tags }}">
+                        <td>
+                            <a href="{{ link.url }}" rel="nofollow noopener noreferrer" target="_blank">{{ link.title }}</a>
+                        </td>
+                        <td>{{ link.description }}</td>
+                    </tr>
+                {%  endfor %}
+                </tbody>
+            </table>
         </div>
       </div>
     </div>
