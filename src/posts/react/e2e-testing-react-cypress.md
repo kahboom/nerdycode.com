@@ -14,11 +14,15 @@ Cypress is a pleasure to work with, but if it's not for you, you can also use [S
 
 ## The Happy Path
 
-First things first. We need to write down our application requirements. If you work with a QE team in your company (or are part of it), you may have heard the phrase "happy path" once or twice. According to Wikipedia:
+First things first. We need to write down our application requirements. If you work with a QE team in your company
+ (or are part of it), you may have heard the phrase "happy path" once or twice. According to [Wikipedia](https://en.wikipedia.org/wiki/Happy_path):
 
-> \[..\] a **happy path** is a default [scenario](https://en.wikipedia.org/wiki/Scenario_(computing)) featuring no [exceptional or error conditions](https://en.wikipedia.org/wiki/Exception_handling). For example, the happy path for a function validating credit card numbers would be where none of the [validation rules](https://en.wikipedia.org/wiki/Validation_rule) raise an error, thus letting execution continue successfully to the end, generating a positive response.
-> 
-> [https://en.wikipedia.org/wiki/Happy\_path](https://en.wikipedia.org/wiki/Happy_path)
+<article class="message is-info">
+  <div class="message-body">
+    [..] a <b>happy path</b> is a default scenario featuring no exceptional or error conditions. For example, the happy
+     path for a function validating credit card numbers would be where none of the validation rules raise an error, thus letting execution continue successfully to the end, generating a positive response.
+  </div>
+</article>
 
 In addition to the happy path, you also need to consider the complete use case scenario, such that the user does not run into unexpected behavior as it stands. It's not about areas that you personally think could be improved, it's about both the functionality and appearance. It's about the _expectations_ of the user.
 

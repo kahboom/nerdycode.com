@@ -35,5 +35,7 @@
     "url": "https://www.github.com/kahboom/nerdycode.com/issues"
   },
   "main": "index.js",
-  "dependencies": {}
+  "dependencies": {
+    "global": "^4.4.0"
+  }
 }
