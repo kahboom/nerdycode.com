@@ -7,7 +7,7 @@ eleventyNavigation:
   order: 6
 ---
 
-Oh, hallow there!
+<img src="/img/photos/rachel-cropped.jpg" alt="Hello!" style="width: 20em; float: right; padding: 0 0 20px 20px;">Oh, hallow there!
 
 Hello, world. My name is Rachel and I wear my sunglasses at night. I'm also a software engineer at Red Hat.
 
