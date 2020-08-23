@@ -851,7 +851,7 @@
     "created": "2019-07-10 19:32:33",
     "url": "http://www.airsquirrels.com/reflector/",
     "description": "Wireless mirroring",
-    "tags": "WebDev"
+    "tags": "Web+Dev"
   },
   {
     "title": "Regex101",
@@ -913,7 +913,7 @@
     "title": "SaaS Pages",
     "created": "2019-07-30 19:04:48",
     "url": "https://saaspages.xyz/",
-    "tags": ""
+    "tags": "Web+Dev"
   },
   {
     "title": "Scotch.io",
@@ -1153,7 +1153,7 @@
     "title": "Thoughts on RESTful API Design",
     "created": "2019-07-12 19:36:13",
     "url": "https://restful-api-design.readthedocs.io/en/latest/",
-    "tags": ""
+    "tags": "API"
   },
   {
     "title": "TinyGrab",

@@ -1,0 +1,10 @@
+ol {
+  &.postlist {
+    margin-left: 0em;
+    margin-top: 1em;
+
+    &:not([type]) {
+      list-style-type: none;
+    }
+  }
+}
