@@ -1016,6 +1016,13 @@
     "tags": "Tech+News"
   },
   {
+    "title": "snippit",
+    "created": "2020-09-05 18:41:17",
+    "url": "https://snipit.io/",
+    "description": "Save and organize your code snippets in the cloud.",
+    "tags": "Utilities Web+Dev"
+  },
+  {
     "title": "snippet generator",
     "created": "2020-09-05 18:37:42",
     "url": "https://snippet-generator.app/",
@@ -1296,7 +1303,7 @@
     "title": "World Time Buddy",
     "created": "2019-07-15 11:25:23",
     "url": "https://www.worldtimebuddy.com/",
-    "tags": ""
+    "tags": "Utilities"
   },
   {
     "title": "xkcd",
