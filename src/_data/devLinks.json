@@ -3,7 +3,7 @@
     "title": "2 Kinds of People",
     "created": "2019-07-12 17:12:19",
     "url": "https://2kindsofpeople.tumblr.com/",
-    "tags": "Etc"
+    "tags": ""
   },
   {
     "title": "A List Apart",
@@ -41,13 +41,13 @@
     "title": "AnyAPI",
     "created": "2019-07-10 18:55:57",
     "url": "https://any-api.com/",
-    "tags": ""
+    "tags": "API"
   },
   {
     "title": "Ars Technica",
     "created": "2019-07-12 17:31:14",
     "url": "https://arstechnica.com/",
-    "tags": ""
+    "tags": "Tech+News"
   },
   {
     "title": "ASCII World",
@@ -64,7 +64,7 @@
     "title": "Bees Bees Bees",
     "created": "2019-07-12 17:00:49",
     "url": "http://beesbeesbees.com/",
-    "tags": ""
+    "tags": "Amusing"
   },
   {
     "title": "BitBar",
@@ -79,19 +79,20 @@
     "created": "2019-07-12 17:32:27",
     "url": "https://www.bitdegree.org/",
     "description": "Gamified online education",
-    "tags": ""
+    "tags": "Learning"
   },
   {
     "title": "Bl.ocks",
     "created": "2019-10-11 10:17:33",
     "url": "https://bl.ocks.org/",
-    "tags": ""
+    "description": "Viewer for sharing code examples hosted on GitHub Gist, aimed at data viz.",
+    "tags": "Data+Viz"
   },
   {
     "title": "Boostnote",
     "created": "2019-07-12 19:13:30",
     "url": "https://boostnote.io/",
-    "tags": ""
+    "tags": "Productivity"
   },
   {
     "title": "BrowserStack",
@@ -125,6 +126,13 @@
     "title": "Can I use...",
     "created": "2019-07-10 19:26:06",
     "url": "https://caniuse.com/",
+    "tags": ""
+  },
+  {
+    "title": "Carbon",
+    "created": "2020-09-05 18:09:21",
+    "url": "https://carbon.now.sh/",
+    "description": "Create and share images of your source code.",
     "tags": ""
   },
   {
@@ -690,7 +698,7 @@
     "title": "MockFlow",
     "created": "2019-07-12 16:46:46",
     "url": "https://www.mockflow.com/",
-    "tags": ""
+    "tags": "UXD"
   },
   {
     "title": "Morguefile.com",
@@ -771,18 +779,21 @@
     "title": "Path Finder",
     "created": "2019-07-10 19:39:31",
     "url": "http://cocoatech.com/pathfinder/",
+    "description": "File manager for macOS",
     "tags": ""
   },
   {
     "title": "Phabricator",
     "created": "2019-07-10 19:30:45",
     "url": "http://phacility.com/phabricator/",
+    "description": "Project management for open source projects.",
     "tags": ""
   },
   {
     "title": "Phaser",
     "created": "2019-07-29 09:52:18",
     "url": "https://phaser.io/",
+    "description": "Desktop and mobile game framework.",
     "tags": ""
   },
   {
@@ -870,7 +881,8 @@
     "title": "Repl.it",
     "created": "2019-07-15 11:11:39",
     "url": "https://repl.it/",
-    "tags": ""
+    "description": "Collaborative, in-browser IDE",
+    "tags": "Productivity Utilities Web+Dev"
   },
   {
     "title": "RepoTraffic",
@@ -943,7 +955,8 @@
     "title": "Shady URL",
     "created": "2019-07-12 17:01:06",
     "url": "http://www.shadyurl.com/",
-    "tags": ""
+    "description": "Don't just shorten your URL, make it suspicious and frightening.",
+    "tags": "Amusing"
   },
   {
     "title": "Share Code Generator",
@@ -1044,19 +1057,20 @@
     "title": "StackShare",
     "created": "2019-07-14 16:17:53",
     "url": "https://stackshare.io/",
-    "tags": ""
+    "description": "Reviews of popular open source and SaaS tools",
+    "tags": "Web+Dev"
   },
   {
     "title": "Staggering Beauty",
     "created": "2019-07-12 17:00:03",
     "url": "http://www.staggeringbeauty.com/",
-    "tags": ""
+    "tags": "Amusing"
   },
   {
     "title": "Statuspage",
     "created": "2019-07-14 16:18:33",
     "url": "https://status.io/",
-    "tags": ""
+    "tags": "Web+Dev"
   },
   {
     "title": "Stock Free Images",
@@ -1080,7 +1094,8 @@
     "title": "TLDR This",
     "created": "2019-07-30 19:44:58",
     "url": "https://tldrthis.com/",
-    "tags": ""
+    "description": "Take a painfully long piece of text and sum it up into five key bullet points.",
+    "tags": "Learning"
   },
   {
     "title": "Tech Books for Free Download",
@@ -1098,13 +1113,14 @@
     "title": "TextExpander",
     "created": "2019-07-14 16:19:38",
     "url": "https://textexpander.com/",
-    "tags": ""
+    "tags": "Productivity Utilities"
   },
   {
     "title": "The Freelancer's Journey",
     "created": "2019-07-30 20:28:48",
     "url": "https://university.webflow.com/freelancer",
-    "tags": ""
+    "description": "Free, comprehensive course to help you build a freelance career in web design.",
+    "tags": "Learning"
   },
   {
     "title": "the innovation station",
@@ -1116,13 +1132,13 @@
     "title": "The Next Web",
     "created": "2019-07-12 17:31:36",
     "url": "https://thenextweb.com/",
-    "tags": ""
+    "tags": "Tech+News"
   },
   {
     "title": "The Passive-Aggressive Password Machine",
     "created": "2019-07-12 17:16:49",
     "url": "https://trypap.com/",
-    "tags": ""
+    "tags": "Amusing"
   },
   {
     "title": "The Symphony of Blockchain",
@@ -1135,19 +1151,19 @@
     "title": "The Useless Web",
     "created": "2019-07-12 16:57:34",
     "url": "https://theuselessweb.com/",
-    "tags": ""
+    "tags": "Amusing"
   },
   {
     "title": "The Web Platform",
     "created": "2019-07-10 19:35:24",
     "url": "https://platform.html5.org/",
-    "tags": ""
+    "tags": "Web+Dev"
   },
   {
     "title": "ThemeForest",
     "created": "2019-07-10 19:40:56",
     "url": "http://themeforest.net/",
-    "tags": ""
+    "tags": "UXD Web+Dev"
   },
   {
     "title": "Thoughts on RESTful API Design",
@@ -1159,7 +1175,7 @@
     "title": "TinyGrab",
     "created": "2019-07-10 19:42:16",
     "url": "http://tinygrab.com/",
-    "tags": ""
+    "tags": "Web+Dev"
   },
   {
     "title": "TinyPNG",
