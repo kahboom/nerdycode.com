@@ -458,6 +458,13 @@
     "tags": "Amusing"
   },
   {
+    "title": "Gifski",
+    "created": "2020-09-05 18:58:59",
+    "description": "macOS app for the gifski encoder, which converts videos to GIF animations",
+    "url": "https://github.com/sindresorhus/Gifski",
+    "platforms": ["macOS"]
+  },
+  {
     "title": "Git and GitHub Learning Resources",
     "created": "2019-07-12 19:47:16",
     "url": "https://help.github.com/en/github/getting-started-with-github/git-and-github-learning-resources",
