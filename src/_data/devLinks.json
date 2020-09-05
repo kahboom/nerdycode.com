@@ -12,6 +12,13 @@
     "tags": "Blogs"
   },
   {
+    "title": "asciinema",
+    "created": "2020-09-05 18:49:56",
+    "url": "https://asciinema.org/",
+    "description": "Record and share your terminal sessions, the right way.",
+    "tags": "Etc Web+Dev"
+  },
+  {
     "title": "ASCII Art",
     "created": "2019-07-10 19:37:45",
     "url": "https://www.asciiart.eu/",
@@ -632,8 +639,8 @@
   {
     "title": "Lipsum Generator",
     "created": "2019-07-14 16:00:58",
-    "url": "",
-    "tags": ""
+    "url": "https://www.lipsum.com/",
+    "tags": "Etc UXD"
   },
   {
     "title": "LittleIpsum",
@@ -673,7 +680,7 @@
     "created": "2019-07-14 16:05:57",
     "url": "https://www.mapbox.com/",
     "description": "Maps and location for developers",
-    "tags": ""
+    "tags": "Etc"
   },
   {
     "title": "Marvel",
@@ -780,14 +787,15 @@
     "created": "2019-07-10 19:39:31",
     "url": "http://cocoatech.com/pathfinder/",
     "description": "File manager for macOS",
-    "tags": ""
+    "platforms": ["macOS"],
+    "tags": "Utilities"
   },
   {
     "title": "Phabricator",
     "created": "2019-07-10 19:30:45",
     "url": "http://phacility.com/phabricator/",
     "description": "Project management for open source projects.",
-    "tags": ""
+    "tags": "Etc"
   },
   {
     "title": "Phaser",
@@ -831,7 +839,7 @@
     "created": "2019-07-29 09:49:30",
     "url": "https://projecteuler.net/",
     "description": "Challenging mathematical/computer programming problems",
-    "tags": "Etc"
+    "tags": "Etc Learning"
   },
   {
     "title": "Public APIs",
@@ -862,6 +870,7 @@
     "created": "2019-07-10 19:32:33",
     "url": "http://www.airsquirrels.com/reflector/",
     "description": "Wireless mirroring",
+    "platforms": ["macOS"],
     "tags": "Web+Dev"
   },
   {
@@ -1007,6 +1016,7 @@
     "title": "Sketch App for Mac",
     "created": "2019-07-12 16:47:36",
     "url": "https://www.sketch.com/",
+    "platforms": ["macOS"],
     "tags": "UXD"
   },
   {
@@ -1019,7 +1029,14 @@
     "title": "snippit",
     "created": "2020-09-05 18:41:17",
     "url": "https://snipit.io/",
-    "description": "Save and organize your code snippets in the cloud.",
+    "description": "Save and organize your code snippets in the cloud",
+    "tags": "Utilities Web+Dev"
+  },
+  {
+    "title": "Snippler",
+    "created": "2020-09-05 18:43:17",
+    "url": "https://snipplr.com/",
+    "description": "Snippet search engine",
     "tags": "Utilities Web+Dev"
   },
   {
@@ -1105,10 +1122,17 @@
     "tags": "UXD"
   },
   {
+    "title": "svg-term-cli",
+    "created": "2020-09-05 18:52:45",
+    "description": "Share terminal sessions as animated SVG",
+    "url": "https://github.com/marionebl/svg-term-cli",
+    "tags": "Utilities Web+Dev"
+  },
+  {
     "title": "TLDR This",
     "created": "2019-07-30 19:44:58",
     "url": "https://tldrthis.com/",
-    "description": "Take a painfully long piece of text and sum it up into five key bullet points.",
+    "description": "Take a painfully long piece of text and sum it up into five key bullet points",
     "tags": "Learning"
   },
   {
