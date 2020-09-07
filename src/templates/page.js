@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import SEO from '../components/seo'
-import Layout from '../components/layout'
-import Post from '../components/post'
+import SEO from '../components/SEO'
+import Layout from '../components/Layout'
+import Post from '../components/Post'
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const {

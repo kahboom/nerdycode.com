@@ -26,12 +26,8 @@ module.exports = {
         path: '/about',
       },
       {
-        title: 'Showcase',
-        path: '/showcase',
-      },
-      {
-        title: 'Example',
-        path: '/example',
+        title: 'Contact',
+        path: '/contact',
       },
     ],
   },

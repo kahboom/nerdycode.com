@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
-import Menu from './menu'
+import Menu from './Menu'
 
 import style from '../styles/header.module.css'
 

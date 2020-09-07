@@ -12,10 +12,10 @@ const Footer = ({ copyrights }) => (
     ) : (
       <>
         <span className="footerCopyrights">
-          © 2020 Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+          Copyright © 2020
         </span>
         <span className="footerCopyrights">
-          Copyright <a href="https://www.nerdycode.com/">NerdyCode</a>
+          <a href="https://www.nerdycode.com/">NerdyCode</a>
         </span>
       </>
     )}
