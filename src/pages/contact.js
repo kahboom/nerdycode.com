@@ -6,7 +6,7 @@ import SEO from '../components/SEO';
 const ContactPage = () => {
   return (
     <Layout>
-      <SEO title="404: Not found"/>
+      <SEO title="Contact"/>
       <form name="contact" method="POST" netlify-honeypot="dummy-field" data-netlify="true" data-netlify-recaptcha="true">
 
         <p className="hidden">

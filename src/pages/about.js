@@ -22,7 +22,7 @@ export const query = graphql`
 const AboutPage = ({ data }) => {
   return (
     <Layout>
-      <SEO title="404: Not found"/>
+      <SEO title="About Rachel Yordán"/>
       <div className="picture">
         <div className="picture__border">
           <Img fluid={data.file.childImageSharp.fluid} />
