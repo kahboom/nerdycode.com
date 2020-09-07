@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import '../styles/elements/marquee.css';
+import '../styles/elements/picture.css';
 
 import Img from "gatsby-image"
 
