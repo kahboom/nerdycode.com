@@ -1,38 +1,27 @@
 @font-face {
-  font-family: 'Inter UI';
+  font-family: 'Quicksand', sans-serif;
   font-style:  normal;
   font-weight: 400;
-  src: url("../../static/fonts/Inter-UI-Regular.woff") format("woff");
-}
-@font-face {
-  font-family: 'Inter UI';
-  font-style:  italic;
-  font-weight: 400;
-  src: url("../../static/fonts/Inter-UI-Italic.woff") format("woff");
+  src: url("../../static/fonts/Quicksand-Regular.ttf") format("ttf");
 }
 
 @font-face {
-  font-family: 'Inter UI';
+  font-family: 'Quicksand', sans-serif;
   font-style:  normal;
   font-weight: 600;
-  src: url("../../static/fonts/Inter-UI-Medium.woff") format("woff");
-}
-@font-face {
-  font-family: 'Inter UI';
-  font-style:  italic;
-  font-weight: 600;
-  src: url("../../static/fonts/Inter-UI-MediumItalic.woff") format("woff");
+  src: url("../../static/fonts/Quicksand-Medium.ttf") format("ttf");
 }
 
 @font-face {
-  font-family: 'Inter UI';
+  font-family: 'Quicksand', sans-serif;
+  font-style:  normal;
+  font-weight: 700;
+  src: url("../../static/fonts/Quicksand-SemiBold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: 'Quicksand', sans-serif;
   font-style:  normal;
   font-weight: 800;
-  src: url("../../static/fonts/Inter-UI-Bold.woff") format("woff");
-}
-@font-face {
-  font-family: 'Inter UI';
-  font-style:  italic;
-  font-weight: 800;
-  src: url("../../static/fonts/Inter-UI-BoldItalic.woff") format("woff");
+  src: url("../../static/fonts/Quicksand-Bold.ttf") format("ttf");
 }
