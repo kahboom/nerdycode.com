@@ -9,11 +9,11 @@ module.exports = {
   siteMetadata: {
     title: `NerdyCode`,
     description: `A website about software and sometimes non-software things.`,
-    copyrights: '',
+    copyrights: 'NerdyCode',
     author: `@kahboom`,
     logo: {
       src: '',
-      alt: '',
+      alt: 'NerdyCode',
     },
     logoText: 'NerdyCode',
     defaultTheme: 'dark',

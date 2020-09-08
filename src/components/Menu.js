@@ -15,7 +15,7 @@ const MainMenu = ({ mainMenu, mainMenuItems, isMobileMenu }) => {
       <Link to={menuItem.path}>{menuItem.title}</Link>
     </li>
   ))
-}
+};
 
 const SubMenu = ({ mainMenu, mainMenuItems, onToggleSubMenu }) => {
   const menu = mainMenu.slice(0);
@@ -39,7 +39,7 @@ const SubMenu = ({ mainMenu, mainMenuItems, onToggleSubMenu }) => {
       />
     </>
   )
-}
+};
 
 const menuIcon = `M4 34H40V30H4V34ZM4 24H40V20H4V24ZM4 10V14H40V10H4Z`;
 const toggleIcon = `M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
@@ -123,7 +123,7 @@ const Menu = ({
       </button>
     </>
   )
-}
+};
 
 Menu.propTypes = {
   mainMenu: PropTypes.arrayOf(

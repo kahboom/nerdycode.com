@@ -32,12 +32,12 @@ const Post = ({
           {excerpt ? <Link to={path}>{title}</Link> : title}
         </h1>
         <div className={style.meta}>
-          {date} {author && <>— Written by {author}</>}
+          {date}
           {tags ? (
             <div className={style.tags}>
               {tags.map(tag => (
                 <Link to={`/tag/${toKebabCase(tag)}/`} key={toKebabCase(tag)}>
-                  <span className={style.tag}>#{tag}</span>
+                  <span className={`${style.tag} tag is-primary is-medium`}>#{tag}</span>
                 </Link>
               ))}
             </div>
