@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 import Post from '../components/Post'
 import Navigation from '../components/Navigation'
 
-import '../styles/layout.css'
+import '../styles/layout.scss'
 
 const Tags = ({
   data,

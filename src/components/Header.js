@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet'
 
 import Menu from './Menu'
 
-import style from '../styles/header.module.css'
+import style from '../styles/header.module.scss'
 
 const Header = props => {
   const {

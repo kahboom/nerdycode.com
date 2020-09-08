@@ -69,7 +69,7 @@ exports.createPages = ({ actions, graphql, getNodes }) => {
       pathPrefix: '/',
     })
 
-    // Create each markdown page and post
+    // Create each markdown page and posts
     forEach(({ node }, index) => {
       const previous = index === 0 ? null : sortedPages[index - 1].node
       const next =

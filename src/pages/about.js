@@ -2,8 +2,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import '../styles/elements/marquee.css';
-import '../styles/elements/picture.css';
+import '../styles/elements/marquee.scss';
+import '../styles/elements/picture.scss';
 
 import Img from "gatsby-image"
 

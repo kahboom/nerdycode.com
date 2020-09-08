@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 import Navigation from './Navigation'
 import { toKebabCase } from '../helpers'
 
-import style from '../styles/post.module.css'
+import style from '../styles/post.module.scss'
 
 const Post = ({
   title,
