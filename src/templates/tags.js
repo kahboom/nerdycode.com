@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import SEO from '../components/SEO'
-import Layout from '../components/Layout'
-import Post from '../components/Post'
-import Navigation from '../components/Navigation'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import SEO from '../components/SEO';
+import Layout from '../components/Layout';
+import Post from '../components/Post';
+import Navigation from '../components/Navigation';
 
-import '../styles/layout.scss'
+import '../styles/layout.scss';
 
 const Tags = ({
   data,
@@ -105,4 +105,4 @@ export const postsQuery = graphql`
   }
 `
 
-export default Tags
+export default Tags;

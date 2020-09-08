@@ -1,36 +1,88 @@
-
-@import "../../node_modules/bulma/sass/utilities/_all.sass";
-@import "../../node_modules/bulma/sass/base/_all.sass";
-@import "../../node_modules/bulma/sass/grid/_all.sass";
-@import "../../node_modules/bulma/sass/layout/_all.sass";
 @import "fonts.scss";
 @import "variables.scss";
 @import "prism.scss";
 
-html {
-  box-sizing: border-box;
+$family-sans-serif: 'Quicksand', sans-serif;
+
+$body-font-size: 1.3em;
+
+$nerdy-bg: #16161d;
+$nerdy-fg: #f8f8f2;
+$nerdy-cyan: #29ced2;
+$nerdy-green: #50fa7b;
+$nerdy-orange: #ffb86c;
+$nerdy-pink: #db2e90;
+$nerdy-purple: #5a3da5;
+$nerdy-yellow: #f1fa8c;
+
+$primary: $nerdy-purple;
+$scheme-main: #16161d;
+
+//$link: $nerdy-pink;
+$link: lighten($nerdy-pink, 5%);
+//$link-hover: lighten($nerdy-pink, 5%);
+//$link-hover-border: lighten($nerdy-pink, 5%);
+//$link-focus: darken($nerdy-pink, 5%);
+//$link-focus-border: darken($nerdy-pink, 5%);
+//$link-hover: $turquoise;
+$link-hover: darken($nerdy-cyan, 5%);
+$link-active: lighten($nerdy-pink, 5%);
+$link-active-border: lighten($nerdy-pink, 5%);
+
+a.tag:hover {
+  text-decoration: none !important;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+$text: $nerdy-fg;
+$text-light: lighten($nerdy-fg, 5%);
+$text-strong: darken($nerdy-fg, 5%);
+
+$background: $nerdy-bg;
+
+// Update some of Bulma's component variables
+$title-color: $nerdy-fg;
+$subtitle-color: $nerdy-fg;
+$subtitle-strong-color: darken($nerdy-fg, 5%);
+
+$body-background-color: $nerdy-bg;
+$footer-background-color: $nerdy-bg;
+
+// Import the rest of Bulma
+
+//@import "../../node_modules/bulma/bulma";
+
+@import "../../node_modules/bulma/sass/utilities/_all.sass";
+@import "../../node_modules/bulma/sass/base/_all.sass";
+@import "../../node_modules/bulma/sass/elements/content.sass";
+@import "../../node_modules/bulma/sass/elements/container.sass";
+@import "../../node_modules/bulma/sass/grid/_all.sass";
+@import "../../node_modules/bulma/sass/layout/_all.sass";
+
+
+
+
+/**
+This overrides the default font sizes
+Bulma puts on header tags
+ */
+
+.content h1 {
+  font-size: 2rem;
 }
 
+.content h2 {
+  font-size: 1.2em;
+}
+
+.content h3 {
+  font-size: 1em;
+}
+
+/*
 body {
-  margin: 0;
-  padding: 0;
   font-family: 'Quicksand', sans-serif;
-  font-size: 1.3rem;
-  font-weight: 400;
-  line-height: 1.5;
   background-color: var(--light-background);
   color: var(--light-color);
-  text-rendering: optimizeLegibility;
-  font-feature-settings: "liga", "tnum", "case", "calt", "zero", "ss01", "locl";
-  -webkit-font-smoothing: antialiased;
-  -webkit-overflow-scrolling: touch;
-  -webkit-text-size-adjust: 100%;
 
   @media (--phone) {
     font-size: 1rem;
@@ -336,3 +388,6 @@ footer {
     }
   }
 }
+
+
+ */

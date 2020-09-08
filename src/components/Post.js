@@ -1,11 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
-import Img from 'gatsby-image'
-import Navigation from './Navigation'
-import { toKebabCase } from '../helpers'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
+import Img from 'gatsby-image';
+import Navigation from './Navigation';
+import { toKebabCase } from '../helpers';
 
-import style from '../styles/post.module.scss'
+import style from '../styles/post.module.scss';
+import '../styles/post.scss';
 
 const Post = ({
   title,
@@ -27,7 +28,7 @@ const Post = ({
   return (
     <div className={style.post}>
       <div className={style.postContent}>
-        <h1 className={style.title}>
+        <h1 className={`title ${style.title}`}>
           {excerpt ? <Link to={path}>{title}</Link> : title}
         </h1>
         <div className={style.meta}>

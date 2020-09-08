@@ -6,7 +6,10 @@ path: "/e2e-testing-react-cypress"
 
 In this tutorial, we'll be setting up our React app with Cypress. Though not exclusive to React, [Cypress](https://www.cypress.io/) is a comprehensive, but lightweight E2E testing suite.
 
-I like Cypress because it runs in the browser, isn't bloat-y, and is easy to get started with. Since it runs in the browser, you can use browser dev tools to debug alongside your tests. It comes with a pretty cool UI, but if you wanted to run it in your terminal, that's possible too! The best part is that Cypress will create snapshots so that you can view these at a later time, should you choose to.
+<p>I like Cypress because it runs in the browser, isn't bloat-y, and is easy to get started with. Since it runs in the
+ browser, you can use browser dev tools to debug alongside your tests. It comes with a pretty cool UI, but if you
+  wanted to run it in your terminal, that's possible too! The best part is that Cypress will create snapshots so that
+   you can view these at a later time, should you choose to.</p>
 
 Cypress is a pleasure to work with, but if it's not for you, you can also use [Selenium](https://www.seleniumhq.org/) and [Selenium WebDriver](https://www.seleniumhq.org/projects/webdriver/). Every project's requirements are different, so you should look into the role that E2E testing will play for you and your team. Don't forget to consider CD/CI and whether or not it is important for you to be able to integrate your E2E testing suite with it as well.
 
@@ -100,7 +103,7 @@ It's common that you'll need to interact with a server to determine some type of
 
 If you need to load data and seed the application, it's likely you will probably want to use [fixtures](https://docs.cypress.io/api/commands/fixture.html#Notes) to accomplish that. You can set this up in the `beforeEach`, which runs before each test, as it implies:
 
-```ts
+```js
 beforeEach(function () {
     // This will reset and seed the database before each test
     cy.exec('yarn db:reset && yarn db:seed')
@@ -121,7 +124,7 @@ If there is one thing I want for you to take away from this article, it's that *
 
 Back to our app, here is a very basic example of a test:
 
-```ts
+```js
 describe('DessertApp', () => {
   beforeEach(() => {
     cy.visit('/')
