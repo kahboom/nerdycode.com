@@ -41,15 +41,16 @@ The React team actually _[recommends](https://reactjs.org/docs/test-utils.html)_
 
 ### ReactTestUtils
 
-[ReactTestUtils](https://reactjs.org/docs/test-utils.html) is a set of convenience utilities that are provided out-of-the-box by React, and they are meant to be used in combination with your testing framework. It is recommended that you use ReactTestUtils alongside jest-dom, which is a companion library for React Testing Library. jest-dom provides  custom DOM element matches for Jest (e.g. toBeVisible).
+[ReactTestUtils](https://reactjs.org/docs/test-utils.html) is a set of convenience utilities that are provided out-of-the-box by React, and they are meant to be used in combination with your testing framework. It is recommended that you use ReactTestUtils alongside jest-dom, which is a companion library for React Testing Library. jest-dom provides custom DOM element matches for Jest (e.g. toBeVisible).
 
 ## Jest & react-testing-library
 
-You can run Jest directly from the command line like this: `jest my-test --notify --config=config.json`
+You can run Jest directly from the command line like this: `jest my-test --notify --config=config.json`
 
-Here is an example taken from [examples/react-testing-library](https://github.com/facebook/jest/tree/master/examples/react-testing-library) of a component for a simple checkbox that swaps between two labels:
+Here is an example taken from [examples/react-testing-library](https://github.com/facebook/jest/tree/master/examples
+/react-testing-library) of a component for a simple checkbox that swaps between two labels:
 
-```
+```js
 // CheckboxWithLabel.js
 import React from 'react';
 
@@ -81,7 +82,7 @@ export default class CheckboxWithLabel extends React.Component {
 
 And the test:
 
-```
+```js
 // tests/CheckboxWithLabel-test.js
 import React from 'react';
 import {render, fireEvent, cleanup} from 'react-testing-library';
@@ -107,11 +108,12 @@ The test function is quite similar to other testing libraries, and accepts two p
 1. A message we define that describes the purpose of the test, and ultimately defines whether or not it passes.
 2. The second parameter is an arrow function that will contain our test
 
-Your test files should have one of the following extensions in order for Jest to find them: `test.tsx` or `test.js`. If they don't contain any JSX, it's also possible to use a `test.ts` extension.
+Your test files should have one of the following extensions in order for Jest to find them: `test.tsx` or `test.js
+`. If they don't contain any JSX, it's also possible to use a `test.ts` extension.
 
 ### Tips for Writing Unit Tests
 
->The more your tests resemble the way your software is used, the more confidence they can give you. - Kent C. Dodds 👋
+>The more your tests resemble the way your software is used, the more confidence they can give you. - Kent C. Dodds 👋
 
 These famous words by Kent C. Dodds are the number one tip I can give if you are using React Testing Library. Though I try my best to be impartial, I will say that React Testing Library makes you look at unit testing differently than most developers tend to. I think it's very common for developers to want to test the functionality of their code as opposed to testing from the perspective of the user.
 
@@ -126,7 +128,7 @@ Unit tests don't involve a happy path or focus on integrations, rather, just vis
 
 It may help to have these written on a post-it note when writing tests, as sometimes it's easy to lose sight of what to test as you jump from component to component.
 
-Similarly, when you're using things like `instance()` or `state()` in your tests, it might be an indication that you're going about things the wrong way. These are things that the user has no idea about, nor should they. This brings us to the very important point that **you should not test implementation details**.
+Similarly, when you're using things like `instance()` or `state()` in your tests, it might be an indication that you're going about things the wrong way. These are things that the user has no idea about, nor should they. This brings us to the very important point that **you should not test implementation details**.
 
 While I love writing unit tests, if I'm being frank, good unit test writing is seen as a bit boring by many developers. In a way, I feel like it's the inherent nature of testing. It's more about taking pride in the fact that you have confidence in the code you are writing, and quality control is often associated with thorough, repetitive work. It's a beautiful thing in its own right. :)
 

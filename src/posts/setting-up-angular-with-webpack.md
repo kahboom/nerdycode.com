@@ -29,9 +29,11 @@ Webpack is the most important technology being utilized in this project, since i
 
 Typically, Webpack has two different ways of being given configuration options -- via the Node.js API or the Webpack CLI. This project uses the CLI. You can see that the main configuration file located in `[/config/webpack.common.js]('../config/webpack.common.js')`, which, in its most basic form, looks something like this:
 
+```js
 module.exports = {
 // configuration
 };
+```
 
 It's basically a Node.js module that accepts a bunch of configuration options. For more information on each of those options, you can refer to the Webpack Config docs [here](http://webpack.github.io/docs/configuration.html).
 
@@ -41,13 +43,13 @@ In our case, we use the `entry` option to pass in a polyfill, then some third-pa
 
 You'll enter Angular world from the `./src/main.browser.ts` file. You'll notice that a file is imported at the top --
 
-```
+```js
 import {AppModule} from './app';
 ```
 
 -- and that some bootstrapping is done, just as with Angular 1, even though it may look a little different. If you open up that file, you'll see that it is quite a simple file, just importing our main Angular application like so:
 
-```
+```js
 export * from './app.module';
 ```
 

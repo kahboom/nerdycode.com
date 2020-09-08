@@ -5,8 +5,6 @@ path: "/testing-pyramid"
 tags: ["testing"]
 ---
 
-[](https://github.com/kahboom/dev-notes/blob/master/topics/react-testing.md#testing-pyramid)
-
 The Testing Pyramid is a visual aid used to find the right balance of test types. Here are some notes about how it works and suggestions I've collected over time:
 
 - The bulk of your tests are unit tests at the bottom of the pyramid. As you move up the pyramid, your tests gets larger, but at the same time the number of tests (the width of your pyramid) gets smaller.

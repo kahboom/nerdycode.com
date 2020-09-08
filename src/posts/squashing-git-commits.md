@@ -8,7 +8,7 @@ tags: ["git"]
 We hear it all the time, "Keep your git history clean." This mantra used to annoy me beyond belief, but it's one of those things you _know_ you need to do. I vowed to become better at committing going into the future, because, as it
   turns out, the following is not considered a very professional or _useful_ commit:
 
-```
+```bash
 🍕  $ git commit -m "Please work this time"
 ```
 
@@ -20,7 +20,7 @@ Naturally, being the lazy developer I am, I wanted to keep my git history clean 
 
 This is what I do, and it seems to keep me out of trouble:
 
-```
+```bash
 🍕  $ git rev-list --count HEAD ^upstream/master
 7
 🍕  $ git rebase -i HEAD~7 # where 7 is how many commits you want to squash via a rebase
@@ -39,7 +39,8 @@ The second command just tells git to rewrite the current branch's history with r
 When you run this command, you'll then go into interactive rebase mode. Please note that I'm fully assuming you are familiar with vim, emacs, or whatever you use and will not freak out when this happens. If you do, you can always just exit with `$ q!` and it shouldn't save any changes. PS: I use vim and, no, I do not need to justify why. ;P
 
 Here's an example of me working on my `dev-notes` repo, where I'm comparing my own remote repo's master branch with my local copy, and see that it's ahead by three commits:
-```
+
+```bash
  🍕  » dev-notes $ git status
 On branch master
 Your branch is ahead of 'origin/master' by 3 commits.
@@ -53,14 +54,14 @@ nothing to commit, working tree clean
 
 Let's see what these commits are and if I can squash them:
 
-```
+```bash
  🍕  » dev-notes $ git rebase -i HEAD~3
  # Enter interactive rebase mode
 ```
 
 Once in interactive mode, you'll see a list of commits at the top (more specifically, a list the length of the number you specified above). At the far left of each commit you'll see the word "pick". This means this commit will be included in your git history. Your goal now is to go through each of these and decide which to keep (or "pick"), "squash", or "fixup" (same as "squash" except you remove the commit message).
 
-```
+```bash
 pick 3251ccd Add some notes on React testing
 pick a797af0 Add reusable checklist
 pick 95525f9 Minor changes
@@ -94,7 +95,7 @@ pick 95525f9 Minor changes
 
 The very first commit is the one I want, and even though I want the changes for the second and third commits, I don't want that dumb message for the second on there (fixup, please).. Why is this such a common placeholder message for us devs?! Anyway, let's get rid of that stupid message, continue to follow the instructions and save our changes with good 'ol `:wq!`:
 
-```
+```bash
 pick 3251ccd Add some notes on React testing
 s a797af0 Add reusable checklist
 f 95525f9 Minor changes
@@ -102,7 +103,7 @@ f 95525f9 Minor changes
 
 And, finally, when you're done you should see something like the following:
 
-```
+```bash
  🍕  » dev-notes $ git rebase -i HEAD~3
 Successfully rebased and updated refs/heads/master.
 ```

@@ -23,7 +23,7 @@ Alright, so then what should we be using for these snapshot tests? [Jest](https:
 
 Example of a component that renders hyperlinks, borrowed directly from the docs:
 
-```
+```js
 // Link.react.js
 import React from 'react';
 
@@ -69,7 +69,7 @@ export default class Link extends React.Component {
 
 Snapshot test:
 
-```
+```js
 // Link.react.test.js
 import React from 'react';
 import Link from '../Link.react';
@@ -96,7 +96,7 @@ test('Link changes the class when hovered', () => {
 });
 ```
 
-When the test is run with `yarn test` or `jest`, a file gets created. Oh, snap! You just created your snapshot file. :) In this case, it'd be named something like `__tests__/__snapshots__/Link.react.test.js.snap`.
+When the test is run with `yarn test` or `jest`, a file gets created. Oh, snap! You just created your snapshot file. :) In this case, it'd be named something like `__tests__/__snapshots__/Link.react.test.js.snap`.
 
 So, in sum, snapshots can be both useful and fun to work with when you want fast, easy test coverage. As with anything else, just don't use them as a crutch. One of the biggest challenges in web development is knowing when to pick the right tool for the right job.
 

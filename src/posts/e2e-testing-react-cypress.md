@@ -8,17 +8,16 @@ In this tutorial, we'll be setting up our React app with Cypress. Though not exc
 
 I like Cypress because it runs in the browser, isn't bloat-y, and is easy to get started with. Since it runs in the browser, you can use browser dev tools to debug alongside your tests. It comes with a pretty cool UI, but if you wanted to run it in your terminal, that's possible too! The best part is that Cypress will create snapshots so that you can view these at a later time, should you choose to.
 
-Cypress is a pleasure to work with, but if it's not for you, you can also use [Selenium](https://www.seleniumhq.org/) and [Selenium WebDriver](https://www.seleniumhq.org/projects/webdriver/). Every project's requirements are different, so you should look into the role that E2E testing will play for you and your team. Don't forget to consider CD/CI and whether or not it is important for you to be able to integrate your E2E testing suite with it as well.
+Cypress is a pleasure to work with, but if it's not for you, you can also use [Selenium](https://www.seleniumhq.org/) and [Selenium WebDriver](https://www.seleniumhq.org/projects/webdriver/). Every project's requirements are different, so you should look into the role that E2E testing will play for you and your team. Don't forget to consider CD/CI and whether or not it is important for you to be able to integrate your E2E testing suite with it as well.
 
 ## The Happy Path
 
-First things first. We need to write down our application requirements. If you work with a QE team in your company
- (or are part of it), you may have heard the phrase "happy path" once or twice. According to [Wikipedia](https://en.wikipedia.org/wiki/Happy_path):
+First things first. We need to write down our application requirements. If you work with a QE team in your company (or are part of it), you may have heard the phrase "happy path" once or twice. According to [Wikipedia](https://en.wikipedia.org/wiki/Happy_path):
 
 <article class="message is-info">
   <div class="message-body">
-    [..] a <b>happy path</b> is a default scenario featuring no exceptional or error conditions. For example, the happy
-     path for a function validating credit card numbers would be where none of the validation rules raise an error, thus letting execution continue successfully to the end, generating a positive response.
+    [..] a <b>happy path</b> is a default scenario featuring no exceptional or error conditions. For example, the
+     happy path for a function validating credit card numbers would be where none of the validation rules raise an error, thus letting execution continue successfully to the end, generating a positive response.
   </div>
 </article>
 
@@ -54,16 +53,19 @@ A brief overview of some key things to keep in mind as we write our tests:
 
 - Write and consistently review the requirements of your React app.
 - Realize that these tests are meant to simulate real user scenarios. Testing the visual aspects is often as important as the functionality the user expects.
-- Create [custom commands](https://docs.cypress.io/api/cypress-api/custom-commands.html#Syntax) to avoid code duplication and to keep tests clean. A good use case is for things like logging in.
+- Create [custom commands](https://docs.cypress.io/api/cypress-api/custom-commands.html#Syntax) to avoid code
+ duplication and to keep tests clean. A good use case is for things like logging in.
 - Generally speaking, you should have less tests, but those tests should be relatively long, depending on the needs of your app.
 
 ### [](https://github.com/kahboom/dev-notes/blob/master/topics/react-testing.md#end-to-end-testing-with-cypress)Setting up Our React App with Cypress
 
 Let's go ahead and add Cypress to our app with `yarn add cypress --dev`.
 
-The command `node_modules/.bin/cypress open` will open the Cypress CLI (or dashboard) on your system, create a `cypress.json` file, and create a `cypress` directory in your app’s root directory, which is where your E2E tests will live.
+The command `node_modules/.bin/cypress open` will open the Cypress CLI (or dashboard) on your system, create a
+ `cypress.json` file, and create a `cypress` directory in your app’s root directory, which is where your E2E tests
+ will live.
 
-You can also add the following script to your `package.json` to make it easier to run Cypress:
+You can also add the following script to your `package.json` to make it easier to run Cypress:
 
 `"cypress": "cypress open"`
 
@@ -73,7 +75,7 @@ It's possible to run Cypress tests without the UI or dashboard by adding this sc
 
 Make sure your `baseUrl` is correctly defined in the `cypress.json` file in the root of your project. You'll need to make sure your app is running when you run Cypress, and that the `baseUrl` corresponds to the server and port your app runs on:
 
-```
+```json
 {
   "baseUrl": "http://localhost:3000"
 }
@@ -91,13 +93,14 @@ It's common that you'll need to interact with a server to determine some type of
 
 1. **You could continue to seed a database** using one of the following methods:
 
-- [`cy.exec()`](https://docs.cypress.io/api/commands/exec.html) - to run system commands
-- [`cy.task()`](https://docs.cypress.io/api/commands/task.html) - to run code in Node via the [`pluginsFile`](https://docs.cypress.io/guides/references/configuration.html#Folders-Files)
-- [`cy.request()`](https://docs.cypress.io/api/commands/request.html) - to make HTTP requests
+- [`cy.exec()`](https://docs.cypress.io/api/commands/exec.html) - to run system commands
+- [`cy.task()`](https://docs.cypress.io/api/commands/task.html) - to run code in Node via the [`pluginsFile`](https
+://docs.cypress.io/guides/references/configuration.html#Folders-Files)
+- [`cy.request()`](https://docs.cypress.io/api/commands/request.html) - to make HTTP requests
 
 If you need to load data and seed the application, it's likely you will probably want to use [fixtures](https://docs.cypress.io/api/commands/fixture.html#Notes) to accomplish that. You can set this up in the `beforeEach`, which runs before each test, as it implies:
 
-```
+```ts
 beforeEach(function () {
     // This will reset and seed the database before each test
     cy.exec('yarn db:reset && yarn db:seed')
@@ -110,7 +113,7 @@ Purists might argue that true E2E testing should use _real_ data. I'm not convin
 
 To circumvent the issue of not having the contract of the server when you stub it, Cypress recommends either having the server stub out the data ahead of time, or writing a single test that uses "real data" (no stubs), and the rest with stubs.
 
-If you need to stub calls to the API (for instance, for form submission), you can use `cy.server()` and `cy.route()`.
+If you need to stub calls to the API (for instance, for form submission), you can use `cy.server()` and `cy.route()`.
 
 ## Writing Our Tests
 
@@ -118,7 +121,7 @@ If there is one thing I want for you to take away from this article, it's that *
 
 Back to our app, here is a very basic example of a test:
 
-```
+```ts
 describe('DessertApp', () => {
   beforeEach(() => {
     cy.visit('/')
@@ -141,7 +144,7 @@ You may notice a lot of `it` s and `should` s. Cypress is built on top of Mocha 
 The general approach is as follows:
 
 1. Query for an element.
-2. Make assertion on that element with something like `should()`.
+2. Make assertion on that element with something like `should()`.
 
 Everything else can vary, such as whether or not you need to seed data, login, cleanup, etc.
 
@@ -149,7 +152,7 @@ Everything else can vary, such as whether or not you need to seed data, login, c
 
 E2E tests are most useful when they become part of the developer's workflow. If you use CircleCI, it's easy to integration Cypress using the [Cypress CircleCI Orb](https://docs.cypress.io/guides/guides/continuous-integration.html#CircleCI) configuration set. For more info, visit the repo [here](https://github.com/cypress-io/circleci-orb). A brief example provided by Cypress shows a simple `circle.yml` file with the following settings:
 
-```
+```yaml
 version: 2.1
 orbs:
   # "cypress-io/cypress@1" installs the latest published
