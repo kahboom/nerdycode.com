@@ -34,8 +34,5 @@
   "bugs": {
     "url": "https://www.github.com/kahboom/nerdycode.com/issues"
   },
-  "main": "index.js",
-  "dependencies": {
-    "global": "^4.4.0"
-  }
+  "main": "index.js"
 }

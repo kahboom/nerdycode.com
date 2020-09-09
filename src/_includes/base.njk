@@ -58,9 +58,6 @@
 
             <!-- Brand -->
             <div class="navbar-brand">
-                <!--
-                <h1 class="title"><a href="{{ '/' | url }}" class="navbar-item">{{ metadata.title }}</a></h1>
-                -->
                 <a href="{{ '/' | url }}" class="navbar-item">
                     <img src="/img/logo/logo-02.png" alt="NerdyCode"/>
                 </a>
@@ -97,10 +94,7 @@
 </section>
 
 {% include '_footer.njk' %}
+<script type="module" src="/js/theme-toggle.js" async defer></script>
 
-<!-- Current page: {{ page.url | url }} -->
-<!--
-<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
--->
 </body>
 </html>
