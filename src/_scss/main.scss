@@ -3,10 +3,10 @@
 // Import initial Bulma variables
 @import "../../node_modules/bulma/sass/utilities/initial-variables";
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-//@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
 
+// Here we set CSS variables to be used by our Bulma overrides
 
 :root {
   --color-mode: 'light';
@@ -15,13 +15,20 @@
   --color-light: #efefef;
   --color-light-alpha: rgba(255, 255, 255, 0.9);
 
-  /* https://twitter.com/Una/status/1129401554732277760 */
+  --color-cyan: #29ced2;
+  --color-green: #50fa7b;
+  --color-orange: #ffb86c;
+  --color-pink: #db2e90;
+  --color-purple: #5a3da5;
+  --color-yellow: #f1fa8c;
+
+  // https://twitter.com/Una/status/1129401554732277760
   --icon-sun: url('data:image/svg+xml,\
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">\
     <path d="M18 12c0-0.811-0.161-1.587-0.455-2.295-0.304-0.735-0.75-1.395-1.303-1.948-0.552-0.552-1.213-0.998-1.948-1.303-0.707-0.293-1.483-0.454-2.294-0.454s-1.587 0.161-2.295 0.455c-0.735 0.304-1.395 0.75-1.948 1.302s-0.998 1.213-1.302 1.948c-0.294 0.708-0.455 1.484-0.455 2.295s0.161 1.587 0.455 2.295c0.304 0.735 0.75 1.395 1.303 1.948 0.552 0.552 1.213 0.998 1.948 1.303 0.707 0.293 1.483 0.454 2.294 0.454s1.587-0.161 2.295-0.455c0.735-0.304 1.395-0.75 1.948-1.303s0.998-1.213 1.303-1.948c0.293-0.707 0.454-1.483 0.454-2.294zM16 12c0 0.544-0.108 1.060-0.303 1.529-0.202 0.489-0.5 0.929-0.869 1.299s-0.81 0.667-1.299 0.869c-0.469 0.195-0.985 0.303-1.529 0.303s-1.060-0.108-1.529-0.303c-0.489-0.202-0.929-0.5-1.299-0.869s-0.667-0.81-0.869-1.299c-0.195-0.469-0.303-0.985-0.303-1.529s0.108-1.060 0.303-1.529c0.202-0.489 0.5-0.929 0.869-1.299s0.81-0.667 1.299-0.869c0.469-0.195 0.985-0.303 1.529-0.303s1.060 0.108 1.529 0.303c0.489 0.202 0.929 0.5 1.299 0.869s0.667 0.81 0.869 1.299c0.195 0.469 0.303 0.985 0.303 1.529zM11 1v2c0 0.552 0.448 1 1 1s1-0.448 1-1v-2c0-0.552-0.448-1-1-1s-1 0.448-1 1zM11 21v2c0 0.552 0.448 1 1 1s1-0.448 1-1v-2c0-0.552-0.448-1-1-1s-1 0.448-1 1zM3.513 4.927l1.42 1.42c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-1.42-1.42c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414zM17.653 19.067l1.42 1.42c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-1.42-1.42c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414zM1 13h2c0.552 0 1-0.448 1-1s-0.448-1-1-1h-2c-0.552 0-1 0.448-1 1s0.448 1 1 1zM21 13h2c0.552 0 1-0.448 1-1s-0.448-1-1-1h-2c-0.552 0-1 0.448-1 1s0.448 1 1 1zM4.927 20.487l1.42-1.42c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-1.42 1.42c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0zM19.067 6.347l1.42-1.42c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-1.42 1.42c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0z"></path>\
   </svg>');
 
-  /* https://css-tricks.com/the-many-ways-to-change-an-svg-fill-on-hover-and-when-to-use-them/ */
+  // https://css-tricks.com/the-many-ways-to-change-an-svg-fill-on-hover-and-when-to-use-them/
   --icon-sun-filter: invert(0.61) sepia(0.8) saturate(5) hue-rotate(0deg) brightness(0.92);
 
   --icon-moon: url('data:image/svg+xml,\
@@ -40,84 +47,8 @@
 }
 
 
-//$family-sans-serif: 'Open Sans', serif;
-$family-sans-serif: 'Quicksand', sans-serif;
 
-$body-font-size: 1.3em;
-
-$nerdy-bg: #16161d;
-$nerdy-fg: #f8f8f2;
-$nerdy-cyan: #29ced2;
-$nerdy-green: #50fa7b;
-$nerdy-orange: #ffb86c;
-$nerdy-pink: #db2e90;
-$nerdy-purple: #5a3da5;
-$nerdy-yellow: #f1fa8c;
-
-$primary: $nerdy-purple;
-$scheme-main: #16161d;
-
-//$link: $nerdy-pink;
-$link: lighten($nerdy-pink, 5%);
-//$link-hover: lighten($nerdy-pink, 5%);
-//$link-hover-border: lighten($nerdy-pink, 5%);
-//$link-focus: darken($nerdy-pink, 5%);
-//$link-focus-border: darken($nerdy-pink, 5%);
-//$link-hover: $turquoise;
-$link-hover: darken($nerdy-cyan, 5%);
-$link-active: lighten($nerdy-pink, 5%);
-$link-active-border: lighten($nerdy-pink, 5%);
-
-a.tag:hover {
-  text-decoration: none !important;
-}
-
-$text: $nerdy-fg;
-$text-light: lighten($nerdy-fg, 5%);
-$text-strong: darken($nerdy-fg, 5%);
-
-// $background: $nerdy-bg;
-
-// Update some of Bulma's component variables
-$title-color: $nerdy-fg;
-$subtitle-color: $nerdy-fg;
-$subtitle-strong-color: darken($nerdy-fg, 5%);
-
-$body-background-color: var(--background);
-$footer-background-color: var(--background);
-
-// Import the rest of Bulma
-
-@import "../../node_modules/bulma/bulma";
-
-// Now that Bulma has been imported,
-// you can import the rest of the overrides.
-
-@import "home";
-@import "elements/main";
-@import "list";
-@import "overrides";
-
-.hidden {
-  display: none;
-}
-
-.section {
-  padding: 2rem 1.5rem !important;
-}
-
-.rc-anchor-light {
-  background: none;
-  color: #FFF;
-  font-family: inherit;
-}
-
-
-body {
-  background: var(--background);
-  color: var(--text-color);
-  //transition: background 500ms ease-in-out, color 200ms ease;
-}
+// Media-defined color scheme;
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -145,7 +76,7 @@ body {
   --border-color: var(--color-light-alpha);
 }
 
-/* Remove _all_ animations and transitions for people that prefer not to see them */
+// Removes all animations and transitions for people that prefer not to see them
 @media (prefers-reduced-motion: reduce) {
   body {
     scroll-behavior: auto;
@@ -158,7 +89,55 @@ body {
   }
 }
 
-/* If there’s no JS, there’s no need for the user toggle component to show */
+
+$nerdy-cyan: #29ced2;
+$nerdy-green: #50fa7b;
+$nerdy-orange: #ffb86c;
+$nerdy-pink: #db2e90;
+$nerdy-purple: #5a3da5;
+$nerdy-yellow: #f1fa8c;
+
+
+// BULMA OVERRIDES, in alphabetical order
+
+$primary: $nerdy-purple;
+//$scheme-main: #16161d;
+
+$body-color: var(--text-color);
+$body-font-size: 1.3em;
+
+$code: inherit;
+$code-background: inherit;
+$pre: inherit;
+$pre-background: inherit;
+
+$family-sans-serif: 'Quicksand', sans-serif;
+$footer-background-color: var(--background);
+
+$link: lighten($nerdy-pink, 5%);
+$link-hover: darken($nerdy-cyan, 5%);
+$link-active: lighten($nerdy-pink, 5%);
+$link-active-border: lighten($nerdy-pink, 5%);
+
+$text: var(--text-color);
+
+$title-color: var(--text-color);
+
+
+// Import the rest of Bulma
+
+@import "../../node_modules/bulma/bulma";
+
+// Now that Bulma has been imported,
+// you can import the rest of the overrides.
+
+@import "home";
+@import "elements/main";
+@import "list";
+@import "overrides";
+
+
+// If there’s no JS, there’s no need for the user toggle component to show
 .no-js .user-toggle {
   display: none;
 }
@@ -171,38 +150,25 @@ body {
   text-align: center;
 }
 
-.toggle-button {
-  display: inline-flex;
-  background: var(--button-background);
-  color: var(--button-color);
-  border: none;
-  font: inherit;
-  font-size: 1.5rem;
-  padding: 0.5rem 1rem;
-  transition: background 500ms ease-in-out, color 200ms ease;
-}
 
 .toggle-button__icon {
-  background: var(--button-icon);
+  //background: var(--button-icon);
   width: 1.2em;
   height: 1.2em;
   margin: 0 0 0 0.5em;
   filter: var(--button-icon-filter);
-  transform: translateY(1px); /* Optical adjustment */
+  transform: translateY(1px); // Optical adjustment
   transition: filter 500ms ease-in-out;
 }
 
 .toggle-button:focus {
-  outline: 1px solid var(--button-background);
-  outline-offset: 0.5rem;
+  //outline: 1px solid var(--button-background);
+  //outline-offset: 0.5rem;
 }
 
 
 
-
-
-
-/* Presentational demo styles */
+// Presentational demo styles
 
 article {
   max-width: 75ch;
@@ -224,6 +190,44 @@ article > * + * {
   white-space: nowrap;
   position: absolute;
 }
+
+
+// Other CSS overrides
+
+
+html, body, .navbar {
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+.button {
+  background-color: var(--background);
+  color: inherit;
+}
+
+a.tag:hover {
+  text-decoration: none !important;
+}
+
+.footer {
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+.hidden {
+  display: none;
+}
+
+.rc-anchor-light {
+  background: none;
+  color: var(--text-color);
+  font-family: inherit;
+}
+
+.section {
+  padding: 2rem 1.5rem !important;
+}
+
 
 
 
