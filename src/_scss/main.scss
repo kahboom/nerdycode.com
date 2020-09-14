@@ -3,16 +3,7 @@
 // Import initial Bulma variables
 @import "../../node_modules/bulma/sass/utilities/initial-variables";
 
-//@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
-
-// Originals
-//$nerdy-cyan: #29ced2;
-//$nerdy-green: #50fa7b;
-//$nerdy-orange: #ffb86c;
-//$nerdy-pink: #db2e90;
-//$nerdy-purple: #5a3da5;
-//$nerdy-yellow: #f1fa8c;
 
 $nerdy-blue: #329ebb;
 $nerdy-green: #b1bf52;
@@ -102,8 +93,6 @@ $nerdy-yellow: #ebdf41;
     transition: none !important;
   }
 }
-
-
 
 // BULMA OVERRIDES, in alphabetical order
 
@@ -216,9 +205,18 @@ a.tag:hover {
   text-decoration: none !important;
 }
 
-.footer {
+strong {
+  color: inherit;
+}
+
+.box, .table, .footer {
   background-color: var(--background);
   color: var(--text-color);
+}
+
+a.panel-block:hover, label.panel-block:hover {
+  background-color: inherit;
+  color: inherit;
 }
 
 .hidden {
