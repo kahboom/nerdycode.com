@@ -240,7 +240,7 @@ Bulma puts on header tags
  */
 
 .content h1 {
-  color: var(--color-pink);
+  color: darken($nerdy-pink, 5%);
   font-size: 2rem;
 }
 .content h2 {
