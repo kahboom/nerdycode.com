@@ -75,7 +75,7 @@ It's possible to run Cypress tests without the UI or dashboard by adding this sc
 
 Make sure your `baseUrl` is correctly defined in the `cypress.json` file in the root of your project. You'll need to make sure your app is running when you run Cypress, and that the `baseUrl` corresponds to the server and port your app runs on:
 
-```
+```json
 {
   "baseUrl": "http://localhost:3000"
 }
@@ -99,7 +99,7 @@ It's common that you'll need to interact with a server to determine some type of
 
 If you need to load data and seed the application, it's likely you will probably want to use [fixtures](https://docs.cypress.io/api/commands/fixture.html#Notes) to accomplish that. You can set this up in the `beforeEach`, which runs before each test, as it implies:
 
-```
+```js
 beforeEach(function () {
     // This will reset and seed the database before each test
     cy.exec('yarn db:reset && yarn db:seed')
@@ -120,7 +120,7 @@ If there is one thing I want for you to take away from this article, it's that *
 
 Back to our app, here is a very basic example of a test:
 
-```
+```js
 describe('DessertApp', () => {
   beforeEach(() => {
     cy.visit('/')
@@ -151,7 +151,7 @@ Everything else can vary, such as whether or not you need to seed data, login, c
 
 E2E tests are most useful when they become part of the developer's workflow. If you use CircleCI, it's easy to integration Cypress using the [Cypress CircleCI Orb](https://docs.cypress.io/guides/guides/continuous-integration.html#CircleCI) configuration set. For more info, visit the repo [here](https://github.com/cypress-io/circleci-orb). A brief example provided by Cypress shows a simple `circle.yml` file with the following settings:
 
-```
+```yml
 version: 2.1
 orbs:
   # "cypress-io/cypress@1" installs the latest published

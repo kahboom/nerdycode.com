@@ -30,7 +30,7 @@ If you normally use MacPorts, Fink, or are just compiling things manually, feel
 
 So, if you don’t already have Homebrew installed, let’s do that first. Open up Terminal by going to **Applications > Utilities > Terminal.app**. Execute the following command to get Homebrew installed:
 
-```
+```bash
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
@@ -41,7 +41,8 @@ If your system is ready to brew, continue to step #2.
 **What is [Imagemagick](http://www.imagemagick.org/script/index.php)?**
 
 Imagemagick is a very powerful tool for working with images, but it also comes with a convenient tool called **convert**. That is what we need in order to create the GIF service:
-```
+
+```bash
 brew install imagemagick
 ```
 
@@ -71,7 +72,7 @@ You should now see a **“pass input”** option that defaults to {**to stdin*
 
 Copy and paste the following command in the text area:
 
-```
+```bash
 /usr/local/bin/convert -delay 35 -loop 0 "$@" ~/Desktop/animated.gif
 ```
 

@@ -16,7 +16,7 @@ You may be happy to hear that this issue has just been resolved in NPM maybe two
 
 2 - Run the following to use the http registry for NPM:
 
-```
+```bash
 $ npm config set registry http://registry.npmjs.org/
 $ npm config set strict-ssl false
 $ npm install -dd
@@ -26,7 +26,7 @@ The `-dd` is for debugging mode
 
 Every time before you run '`npm install`' remember to do the following to start with a "clean" slate:
 
-```
+```bash
 $ rm -rf node\_modules
 $ npm cache clean
 $ npm install -dd

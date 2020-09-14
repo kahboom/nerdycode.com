@@ -53,7 +53,7 @@ You can run Jest directly from the command line like this: `jest my-test --noti
 
 Here is an example taken from [examples/react-testing-library](https://github.com/facebook/jest/tree/master/examples/react-testing-library) of a component for a simple checkbox that swaps between two labels:
 
-```
+```js
 // CheckboxWithLabel.js
 import React from 'react';
 
@@ -85,7 +85,7 @@ export default class CheckboxWithLabel extends React.Component {
 
 And the test:
 
-```
+```js
 // tests/CheckboxWithLabel-test.js
 import React from 'react';
 import {render, fireEvent, cleanup} from 'react-testing-library';

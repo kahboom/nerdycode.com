@@ -27,7 +27,7 @@ Alright, so then what should we be using for these snapshot tests? [Jest](https:
 
 Example of a component that renders hyperlinks, borrowed directly from the docs:
 
-```
+```js
 // Link.react.js
 import React from 'react';
 
@@ -73,7 +73,7 @@ export default class Link extends React.Component {
 
 Snapshot test:
 
-```
+```js
 // Link.react.test.js
 import React from 'react';
 import Link from '../Link.react';

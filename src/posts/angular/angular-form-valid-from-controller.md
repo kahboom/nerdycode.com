@@ -10,7 +10,7 @@ tags:
 
 The other day I was asked how you could check whether a form in Angular is valid from within the controller that corresponds to the form. Traditionally, this is how you would check the validity of your Angular form in the view, or your HTML:
 
-```
+```html
 <form name="superForm" ng-submit="submit(superForm)">
 <!-- Add input fields here -->
 </form>
@@ -18,7 +18,7 @@ The other day I was asked how you could check whether a form in Angular is valid
 
 To check form validity from within your controller, you can also do the following:
 
-```
+```js
 $scope.submit = function(form) {
 if (form.$valid) {
 // Do this or that if valid
