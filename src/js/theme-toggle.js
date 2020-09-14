@@ -65,20 +65,23 @@ class ThemeToggle extends HTMLElement {
       currentSetting === 'dark' ? 'Light' : 'Dark'
     } theme`;
      */
+
+   /*
     this.modeToggleText.innerText = `${
       currentSetting === 'dark' ? 'Light' : 'Dark'
     } theme`;
+    */
 
     // Not visible to the user
     this.modeStatusElement.innerText = `Color mode is now "${currentSetting}"`;
   }
 
   render() {
+    //<span class="[ toggle-button__text ] [ js-mode-toggle-text ]">Enable dark mode</span>
     this.innerHTML = html`
       <div class="[ theme-toggle ] [ md:ta-right gap-top-500 ]">
         <div role="status" class="[ visually-hidden ][ js-mode-status ]"></div>
         <button class="[ button ] [ font-base text-base weight-bold ] [ js-mode-toggle ]">
-          <span class="[ toggle-button__text ] [ js-mode-toggle-text ]">Enable dark mode</span>
           <span class="toggle-button__icon" aria-hidden="true"></span>
         </button>
       </div>
