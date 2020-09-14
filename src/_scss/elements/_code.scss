@@ -15,9 +15,13 @@
   vertical-align: inherit;
 }
 
+code {
+  background-color: var(--background);
+  color: var(--color-orange);
+}
 
+/*
 :not(pre)>code[class*=language-], pre[class*=language-] {
-  --code-background-color: #353535;
   background-color: var(--code-background-color);
 }
 
@@ -39,3 +43,5 @@ code[class*=language-], pre[class*=language-] {
   tab-size: 2;
   hyphens: none;
 }
+
+ */

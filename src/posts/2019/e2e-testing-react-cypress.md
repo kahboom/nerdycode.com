@@ -96,8 +96,7 @@ It's common that you'll need to interact with a server to determine some type of
 1. **You could continue to seed a database** using one of the following methods:
 
 - [`cy.exec()`](https://docs.cypress.io/api/commands/exec.html) - to run system commands
-- [`cy.task()`](https://docs.cypress.io/api/commands/task.html) - to run code in Node via the [`pluginsFile`](https
-://docs.cypress.io/guides/references/configuration.html#Folders-Files)
+- [`cy.task()`](https://docs.cypress.io/api/commands/task.html) - to run code in Node via the [`pluginsFile`](https://docs.cypress.io/guides/references/configuration.html#Folders-Files)
 - [`cy.request()`](https://docs.cypress.io/api/commands/request.html) - to make HTTP requests
 
 If you need to load data and seed the application, it's likely you will probably want to use [fixtures](https://docs.cypress.io/api/commands/fixture.html#Notes) to accomplish that. You can set this up in the `beforeEach`, which runs before each test, as it implies:
