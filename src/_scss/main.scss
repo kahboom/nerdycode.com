@@ -130,7 +130,6 @@ $title-color: var(--text-color);
 @import "home";
 @import "elements/main";
 @import "list";
-@import "overrides";
 
 
 // If there’s no JS, there’s no need for the user toggle component to show
@@ -157,10 +156,10 @@ $title-color: var(--text-color);
   transition: filter 500ms ease-in-out;
 }
 
-.toggle-button:focus {
+//.toggle-button:focus {
   //outline: 1px solid var(--button-background);
   //outline-offset: 0.5rem;
-}
+//}
 
 
 
