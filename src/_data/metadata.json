@@ -1,15 +1,25 @@
 {
-  "title": "NerdyCode | Web Development and Software",
-  "url": "https://www.nerdycode.com/",
-  "description": "A website about software and sometimes non-software things.",
+  "title": "Title of the website. Update me.",
+  "url": "https://update-me.com",
+  "domain": "update-me.com",
+  "description": "Description of the website. Update me.",
+  "genre": "Insert a schema.org genre",
+  "googleAnalyticsId": "GA ID. Update me",
   "feed": {
-    "subtitle": "A website about software and sometimes non-software things.",
+    "subtitle": "Subtitle. Update me.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "id": "https://www.nerdycode.com/"
+    "id": "https://update-me.com"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://update-me.com/feed/feed.json"
   },
   "author": {
-    "name": "Rachel Yordán",
-    "email": "nerdycodeblog@gmail.com"
+    "name": "Author Name. Update me.",
+    "twitterHandle": "update_me"
+  },
+  "publisher": {
+    "name": "Publisher name. Update me."
   }
 }
