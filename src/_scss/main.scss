@@ -257,4 +257,12 @@ Bulma puts on header tags
   color: var(--color-orange);
 }
 
+.panel-block {
+  color: inherit;
+}
+
+a.panel-block:hover, label.panel-block:hover {
+  color: var(--color-blue);
+}
+
 
