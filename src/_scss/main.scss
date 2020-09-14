@@ -6,6 +6,21 @@
 //@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
 
+// Originals
+//$nerdy-cyan: #29ced2;
+//$nerdy-green: #50fa7b;
+//$nerdy-orange: #ffb86c;
+//$nerdy-pink: #db2e90;
+//$nerdy-purple: #5a3da5;
+//$nerdy-yellow: #f1fa8c;
+
+$nerdy-blue: #329ebb;
+$nerdy-green: #b1bf52;
+$nerdy-orange: #e48c5c;
+$nerdy-pink: #d53492;
+$nerdy-purple: #5a3da5;
+$nerdy-yellow: #ebdf41;
+
 // Here we set CSS variables to be used by our Bulma overrides
 
 :root {
@@ -15,12 +30,12 @@
   --color-light: #efefef;
   --color-light-alpha: rgba(255, 255, 255, 0.9);
 
-  --color-cyan: #29ced2;
-  --color-green: #50fa7b;
-  --color-orange: #ffb86c;
-  --color-pink: #db2e90;
+  --color-blue: #329ebb;
+  --color-green: #b1bf52;
+  --color-orange: #e48c5c;
+  --color-pink: #d53492;
   --color-purple: #5a3da5;
-  --color-yellow: #f1fa8c;
+  --color-yellow: #ebdf41;
 
   // https://twitter.com/Una/status/1129401554732277760
   --icon-sun: url('data:image/svg+xml,\
@@ -45,7 +60,6 @@
   --button-color: var(--color-light);
   --border-color: var(--color-dark-alpha);
 }
-
 
 
 // Media-defined color scheme;
@@ -90,13 +104,6 @@
 }
 
 
-$nerdy-cyan: #29ced2;
-$nerdy-green: #50fa7b;
-$nerdy-orange: #ffb86c;
-$nerdy-pink: #db2e90;
-$nerdy-purple: #5a3da5;
-$nerdy-yellow: #f1fa8c;
-
 
 // BULMA OVERRIDES, in alphabetical order
 
@@ -115,7 +122,7 @@ $family-sans-serif: 'Quicksand', sans-serif;
 $footer-background-color: var(--background);
 
 $link: lighten($nerdy-pink, 5%);
-$link-hover: darken($nerdy-cyan, 5%);
+$link-hover: darken($nerdy-blue, 5%);
 $link-active: lighten($nerdy-pink, 5%);
 $link-active-border: lighten($nerdy-pink, 5%);
 
@@ -229,6 +236,36 @@ a.tag:hover {
 }
 
 
+/**
+This overrides the default font sizes
+Bulma puts on header tags
+ */
 
+.content h1 {
+  font-size: 2rem;
+}
+
+.content h2 {
+  font-size: 1.2em;
+}
+
+.content h3 {
+  font-size: 1em;
+}
+
+.content h1 {
+  color: var(--color-pink);
+}
+.content h2 {
+  color: var(--color-blue);
+}
+
+.content h3 {
+  color: var(--color-green);
+}
+
+.content h4, .content h5, .content h6 {
+  color: var(--color-orange);
+}
 
 
