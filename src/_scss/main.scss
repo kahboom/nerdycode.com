@@ -147,7 +147,7 @@ $title-color: var(--text-color);
 
 
 .toggle-button__icon {
-  //background: var(--button-icon);
+  background: var(--button-icon);
   width: 1.2em;
   height: 1.2em;
   margin: 0 0 0 0.5em;
@@ -156,10 +156,14 @@ $title-color: var(--text-color);
   transition: filter 500ms ease-in-out;
 }
 
-//.toggle-button:focus {
-  //outline: 1px solid var(--button-background);
-  //outline-offset: 0.5rem;
-//}
+.toggle-button:focus {
+  outline: 1px solid var(--button-background);
+  outline-offset: 0.5rem;
+}
+
+.theme-toggle {
+  list-style-type: none;
+}
 
 
 

@@ -36,6 +36,7 @@ class ThemeToggle extends HTMLElement {
     }
   }
 
+  // Setting is invisible to the user
   toggleSetting() {
     let currentSetting = localStorage.getItem(this.STORAGE_KEY);
 
@@ -58,9 +59,17 @@ class ThemeToggle extends HTMLElement {
   }
 
   setButtonLabelAndStatus(currentSetting) {
+    // Visible to the user
+    /*
     this.modeToggleButton.innerText = `${
       currentSetting === 'dark' ? 'Light' : 'Dark'
     } theme`;
+     */
+    this.modeToggleText.innerText = `${
+      currentSetting === 'dark' ? 'Light' : 'Dark'
+    } theme`;
+
+    // Not visible to the user
     this.modeStatusElement.innerText = `Color mode is now "${currentSetting}"`;
   }
 
@@ -69,7 +78,8 @@ class ThemeToggle extends HTMLElement {
       <div class="[ theme-toggle ] [ md:ta-right gap-top-500 ]">
         <div role="status" class="[ visually-hidden ][ js-mode-status ]"></div>
         <button class="[ button ] [ font-base text-base weight-bold ] [ js-mode-toggle ]">
-          Dark theme
+          <span class="[ toggle-button__text ] [ js-mode-toggle-text ]">Enable dark mode</span>
+          <span class="toggle-button__icon" aria-hidden="true"></span>
         </button>
       </div>
     `;
@@ -79,6 +89,7 @@ class ThemeToggle extends HTMLElement {
 
   afterRender() {
     this.modeToggleButton = document.querySelector('.js-mode-toggle');
+    this.modeToggleText = document.querySelector('.js-mode-toggle-text');
     this.modeStatusElement = document.querySelector('.js-mode-status');
 
     this.modeToggleButton.addEventListener('click', evt => {
