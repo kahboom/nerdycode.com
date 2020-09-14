@@ -102,10 +102,10 @@ $primary: $nerdy-purple;
 $body-color: var(--text-color);
 $body-font-size: 1.3em;
 
-$code: inherit;
-$code-background: inherit;
-$pre: inherit;
-$pre-background: inherit;
+//$code: inherit;
+//$code-background: inherit;
+//$pre: inherit;
+//$pre-background: inherit;
 
 $family-sans-serif: 'Quicksand', sans-serif;
 $footer-background-color: var(--background);
@@ -279,20 +279,10 @@ a.panel-block:hover, label.panel-block:hover {
   color: var(--color-blue);
 }
 
-// Prevent Bulma from overriding numbers in code
-.number {
-  align-items: inherit;
-  background-color: inherit;
-  border-radius: inherit;
-  display: inherit;
-  font-size: inherit;
-  height: inherit;
-  justify-content: inherit;
-  margin-right: inherit;
-  min-width: inherit;
-  padding: inherit;
-  text-align: inherit;
-  vertical-align: inherit;
+// Fills "Nerdy" to be the text color,
+// which changes depending on light/dark mode
+.navbar-item {
+  tspan.nerdy {
+    fill: var(--text-color);
+  }
 }
-
-

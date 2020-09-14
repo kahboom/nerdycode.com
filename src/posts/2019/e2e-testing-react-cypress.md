@@ -10,14 +10,11 @@ In this tutorial, we'll be setting up our React app with Cypress. Though not exc
 
 I like Cypress because it runs in the browser, isn't bloat-y, and is easy to get started with. Since it runs in the browser, you can use browser dev tools to debug alongside your tests. It comes with a pretty cool UI, but if you wanted to run it in your terminal, that's possible too! The best part is that Cypress will create snapshots so that you can view these at a later time, should you choose to.
 
-Cypress is a pleasure to work with, but if it's not for you, you can also use [Selenium](https://www.seleniumhq.org
-/) and [Selenium WebDriver](https://www.seleniumhq.org/projects/webdriver/). Every project's requirements are
- different, so you should look into the role that E2E testing will play for you and your team. Don't forget to consider CD/CI and whether or not it is important for you to be able to integrate your E2E testing suite with it as well.
+Cypress is a pleasure to work with, but if it's not for you, you can also use [Selenium](https://www.seleniumhq.org/) and [Selenium WebDriver](https://www.seleniumhq.org/projects/webdriver/). Every project's requirements are different, so you should look into the role that E2E testing will play for you and your team. Don't forget to consider CD/CI and whether or not it is important for you to be able to integrate your E2E testing suite with it as well.
 
 ## The Happy Path
 
-First things first. We need to write down our application requirements. If you work with a QE team in your company
- (or are part of it), you may have heard the phrase "happy path" once or twice. According to [Wikipedia](https://en.wikipedia.org/wiki/Happy_path):
+First things first. We need to write down our application requirements. If you work with a QE team in your company (or are part of it), you may have heard the phrase "happy path" once or twice. According to [Wikipedia](https://en.wikipedia.org/wiki/Happy_path):
 
 <article class="message is-info">
   <div class="message-body">

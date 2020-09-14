@@ -1,0 +1,41 @@
+
+// Prevent Bulma from overriding numbers in code
+.number {
+  align-items: inherit;
+  background-color: inherit;
+  border-radius: inherit;
+  display: inherit;
+  font-size: inherit;
+  height: inherit;
+  justify-content: inherit;
+  margin-right: inherit;
+  min-width: inherit;
+  padding: inherit;
+  text-align: inherit;
+  vertical-align: inherit;
+}
+
+
+:not(pre)>code[class*=language-], pre[class*=language-] {
+  --code-background-color: #353535;
+  background-color: var(--code-background-color);
+}
+
+code.language-text, pre.language-text {
+  background: #f6f8fb !important; // #f6f8fb
+  color: var(--dark-font-color) !important; // #1b1d25
+  border: 1px solid var(--border); // #d6d9de
+  box-shadow: none;
+}
+
+code[class*=language-], pre[class*=language-] {
+  font-family: var(--code-font-family);
+  text-align: left;
+  white-space: pre-wrap;
+  word-spacing: normal;
+  word-break: normal;
+  font-weight: 400;
+  line-height: 1.7;
+  tab-size: 2;
+  hyphens: none;
+}
