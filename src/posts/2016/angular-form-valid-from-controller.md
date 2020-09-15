@@ -12,7 +12,7 @@ The other day I was asked how you could check whether a form in Angular is valid
 
 ```html
 <form name="superForm" ng-submit="submit(superForm)">
-<!-- Add input fields here -->
+<!-- Add input fields here -->
 </form>
 ```
 
@@ -21,7 +21,7 @@ To check form validity from within your controller, you can also do the followin
 ```js
 $scope.submit = function(form) {
 if (form.$valid) {
-// Do this or that if valid
+// Do this or that if valid
 }
 };
 ```

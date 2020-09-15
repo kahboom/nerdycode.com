@@ -29,9 +29,11 @@ _* where the level of importance is directly proportional to the confidence you 
 
 In the next few blog posts I'll be discussing each type of testing and recommended best practices, specifically for React applications.
 
+<div class="references-block">
 References:
 
 - [No To More E2E Tests](https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html) by Mike Wacker, Google Testing Blog
 - [TestPyramid](https://martinfowler.com/bliki/TestPyramid.html) by Martin Fowler
 - [The Testing Trophy](https://twitter.com/kentcdodds/status/960723172591992832/photo/1?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E960723172591992832&ref_url=https%3A%2F%2Fkentcdodds.com%2Fblog%2Fwrite-tests) by Kent C. Dodds
 - My [notes](https://github.com/kahboom/dev-notes/blob/master/topics/react-testing.md) on GitHub
+</div>
