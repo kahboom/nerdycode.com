@@ -279,10 +279,17 @@ a.panel-block:hover, label.panel-block:hover {
   color: var(--color-blue);
 }
 
+// LOGO
 // Fills "Nerdy" to be the text color,
 // which changes depending on light/dark mode
 .navbar-item {
   tspan.nerdy {
     fill: var(--text-color);
   }
+}
+
+
+// HOME LINK
+.home-link {
+  margin-top: 3em;
 }
