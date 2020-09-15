@@ -54,6 +54,13 @@ Next step: Write your integration flow using the Camel DSL (Routes) using your c
 
 Final step, start Camel. You can do this programmatically (through written code), or if you're using a specific framework such as Spring Boot, then you probably already know that there is code that will do that for you.
 
-Good luck and thanks for reading.
+Good luck and thanks for reading. In an upcoming post we'll be discussing how to use Camel with Kubernetes and OpenShift.
 
- 
+<div class="further-reading">
+
+Further Reading
+
+- <a href="https://camel.apache.org/docs/" target="_blank" rel="nofollow">Apache Camel Docs</a>
+- <a href="https://kb.tomd.xyz/camel.html" target="_blank" rel="nofollow">Tom's Knowledge Base: Apache Camel</a>
+
+</div>
