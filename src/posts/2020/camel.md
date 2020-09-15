@@ -35,9 +35,9 @@ The basic premise of these patterns is that we should structure our system to be
 
 At the core of Camel is its engine, which you communicate with using its own specialized language, or Domain Specific Language (DSL). The instructions you provide to Camel are known as Routes. Using a Route, you tell Camel where the message containing the data is coming from, what you want it to do with the data, and where the data needs to go.
 
-Out of the box, Camel provides something called Components. These components are almost like templates for each data source. For instance, you might have a Twitter Camel component for when you want to have Twitter as one your data source. Camel provides many different types of components that are not just specific to web services, and in fact, Camel currently has [several hundred components](https://camel.apache.org/components/latest/) available. 😱
+Out of the box, Camel provides something called Components. These components are almost like templates for each data source. For instance, you might use a Twitter Camel component for when you want to specify Twitter as your data source. Camel provides many different types of components that are not just specific to web services, and in fact, Camel currently has [several hundred components](https://camel.apache.org/components/latest/) available. 😱
 
-Remember those patterns we were talking about before? When we tell Camel what to DO with the data, we can use one of its components that follow these patterns. An example might be to split the data into multiple lines. Camel has a Component for this common use case.
+Remember those patterns we were talking about before? When we tell Camel what to DO with the data, we can use one of its components that follow these patterns. An example might be to split the data into multiple lines. Camel has a Component for this very common use case.
 
 Once it gets your Route, Camel uses it to configure routing rules. These rules are then added to something known as a `CamelContext`. `CamelContext` is a collection of Component instances, or we can sometimes think of it as a collection of configured Components (this is not an actual definition, but could help to better understand the concept).
 
