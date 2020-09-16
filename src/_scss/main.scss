@@ -4,6 +4,7 @@
 @import "../../node_modules/bulma/sass/utilities/initial-variables";
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 $nerdy-blue: #329ebb;
 $nerdy-green: #b1bf52;
@@ -255,6 +256,7 @@ Bulma puts on header tags
 
 .content h1 {
   color: darken($nerdy-pink, 5%);
+  //font-family: 'Permanent Marker', cursive;
   font-size: 2rem;
 }
 .content h2 {
