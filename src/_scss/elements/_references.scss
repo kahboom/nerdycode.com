@@ -24,3 +24,54 @@
   border-radius: 1rem;
   border: 1px dotted #24b1d1;
 }
+
+.social-media {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  //flex-direction: column;
+  padding: 3em;
+  text-align: center;
+  z-index: 10;
+
+  svg {
+    height: auto;
+    width: auto;
+    max-height: 100%;
+
+    path {
+      fill: var(--color);
+    }
+  }
+
+  .social-media__item {
+    //cursor: pointer;
+    height: 2rem;
+    //margin: 2em;
+    transform-origin: center;
+    transition-duration: .2s;
+    transition-property: opacity,transform;
+    width: 4rem;
+  }
+
+  .facebook {
+    --color: #3b5998;
+  }
+
+  .instagram {}
+
+  .neopets {}
+
+  .pinterest {}
+
+  .reddit {}
+
+  .twitter {
+    --color: #55acee;
+  }
+
+  .youtube {
+    --color: #FF0000
+  }
+}
