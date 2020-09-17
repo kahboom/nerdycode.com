@@ -123,7 +123,7 @@ $title-color: var(--text-color);
 
 // Import the rest of Bulma
 
-@import "../bulma";
+@import "bulma/bulma";
 
 // Now that Bulma has been imported,
 // you can import the rest of the overrides.

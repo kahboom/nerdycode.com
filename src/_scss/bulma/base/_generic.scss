@@ -11,11 +11,6 @@ $body-font-size: 1em !default;
 $body-weight: $weight-normal !default;
 $body-line-height: 1.5 !default;
 
-$code-family: $family-code !default;
-$code-padding: 0.25em 0.5em 0.25em !default;
-$code-weight: normal !default;
-$code-size: 0.875em !default;
-
 $small-font-size: 0.875em !default;
 
 $hr-background-color: $background !default;
@@ -38,7 +33,6 @@ html {
   overflow-x: $body-overflow-x;
   overflow-y: $body-overflow-y;
   text-rendering: $body-rendering;
-  text-size-adjust: 100%;
 }
 
 article,
@@ -58,13 +52,6 @@ optgroup,
 select,
 textarea {
   font-family: $body-family;
-}
-
-code,
-pre {
-  -moz-osx-font-smoothing: auto;
-  -webkit-font-smoothing: auto;
-  font-family: $code-family;
 }
 
 body {
@@ -88,14 +75,6 @@ a {
   &:hover {
     color: $link-hover;
   }
-}
-
-code {
-  background-color: $code-background;
-  color: $code;
-  font-size: $code-size;
-  font-weight: $code-weight;
-  padding: $code-padding;
 }
 
 hr {
@@ -134,25 +113,6 @@ strong {
 
 fieldset {
   border: none;
-}
-
-pre {
-  @include overflow-touch;
-
-  background-color: $pre-background;
-  color: $pre;
-  font-size: $pre-font-size;
-  overflow-x: auto;
-  padding: $pre-padding;
-  white-space: pre;
-  word-wrap: normal;
-
-  code {
-    background-color: transparent;
-    color: currentColor;
-    font-size: $pre-code-font-size;
-    padding: 0;
-  }
 }
 
 table {
