@@ -4,7 +4,7 @@
 
 .references-block, .further-reading {
   border-radius: 1rem;
-  border: 1px dotted #24b1d1;
+  border: 1px dotted var(--color-blue);
   font-size: 0.7em;
   margin: 3em 0 0;
   padding: 3em;
@@ -22,7 +22,7 @@
 
 .dotted-box {
   border-radius: 1rem;
-  border: 1px dotted #24b1d1;
+  border: 1px dotted var(--color-blue);
 }
 
 .social-media {
@@ -46,9 +46,7 @@
   }
 
   .social-media__item {
-    //cursor: pointer;
     height: 2rem;
-    //margin: 2em;
     transform-origin: center;
     transition-duration: .2s;
     transition-property: opacity,transform;
