@@ -1,6 +1,45 @@
+$references-padding-ltr: 1.25rem 2.5rem 1.25rem 1.5rem !default;
+
 .references-block, .further-reading {
+  border-radius: 4px;
+
   font-size: 0.7em;
-  border-top: 1px solid;
   margin: 3em 0 0;
-  padding: 3em 0 0;
+  padding: $references-padding-ltr;
+
+  a:not(.button):not(.dropdown-item) {
+    color: currentColor;
+    text-decoration: underline;
+  }
+
+  strong {
+    color: currentColor;
+  }
+
+  & > .delete {
+    @include ltr-position(0.5rem);
+
+    position: absolute;
+    top: 0.5rem;
+  }
+
+  .title,
+  .subtitle,
+  .content {
+    color: currentColor;
+  }
+}
+
+.references-block {
+  background-color: var(--background);
+}
+
+.further-reading {
+  background-color: var(--background);
+}
+
+.box-shadow {
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
 }

@@ -177,13 +177,6 @@ E2E testing can be quite valuable in a project, just remember that quantity does
 
 Recently I wrote about [the testing pyramid and how to better balance the types of tests you wrote](https://www.nerdycode.com/testing-pyramid/), but overall you should find that you don't really need as many E2E tests as, say, [unit](https://www.nerdycode.com/unit-testing-react-guide/) or integration tests. There is a lot of material to cover in end-to-end testing that I couldn't touch upon here, but hopefully this was a useful introduction to testing your React app with Cypress. Stay focused on the bigger picture and you'll have a robust system of tests in no time.
 
-<div class="notification">
-  <button class="delete"></button>
-  Lorem ipsum dolor sit amet, consectetur
-  adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
-  consectetur adipiscing elit
-</div>
-
 <div class="references-block">
 References
 
