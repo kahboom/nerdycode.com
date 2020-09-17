@@ -59,13 +59,40 @@
     --color: #3b5998;
   }
 
-  .instagram {}
+  .discord {
+    --color: #7289DA;
+  }
 
-  .neopets {}
+  .github {
+    //--color: #181717;
+    --color: var(--text-color);
+  }
 
-  .pinterest {}
+  /*
+  .gitter {
+    --color: #ED1965;
+  }
+   */
 
-  .reddit {}
+  .instagram {
+    --color: #E4405F;
+  }
+
+  .pinterest {
+    --color: #BD081C;
+  }
+
+  .reddit {
+    --color: #FF4500;
+  }
+
+  .rss {
+    --color: #FFA500;
+  }
+
+  .tumblr {
+    --color: #36465D;
+  }
 
   .twitter {
     --color: #55acee;
