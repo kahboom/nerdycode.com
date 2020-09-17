@@ -103,11 +103,6 @@ $primary: $nerdy-purple;
 $body-color: var(--text-color);
 $body-font-size: 1.3em;
 
-//$code: inherit;
-//$code-background: inherit;
-//$pre: inherit;
-//$pre-background: inherit;
-
 $family-sans-serif: 'Quicksand', sans-serif;
 $footer-background-color: var(--background);
 
@@ -133,6 +128,7 @@ $title-color: var(--text-color);
 @import "list";
 
 
+// LIGHT/DARK TOGGLE
 // If there’s no JS, there’s no need for the user toggle component to show
 .no-js .user-toggle {
   display: none;
@@ -178,8 +174,8 @@ $title-color: var(--text-color);
 }
 
 
-
-// Presentational demo styles
+// LIGHT/DARK TOGGLE
+// Presentation
 
 article {
   max-width: 75ch;
@@ -205,7 +201,6 @@ article > * + * {
 
 // Other CSS overrides
 
-
 html, body, .navbar {
   background-color: var(--background);
   color: var(--text-color);
@@ -213,7 +208,6 @@ html, body, .navbar {
 
 .button {
   background-color: var(--background);
-  //color: inherit;
 }
 
 a.tag:hover {
@@ -291,7 +285,7 @@ a.panel-block:hover, label.panel-block:hover {
 }
 
 
-// HOME LINK
+// HOME LINK at the bottom of most pages
 .home-link {
   margin-top: 3em;
 }
