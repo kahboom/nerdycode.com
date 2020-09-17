@@ -51,6 +51,13 @@ $nerdy-yellow: #ebdf41;
   --button-background: var(--color-dark);
   --button-color: var(--color-light);
   --border-color: var(--color-dark-alpha);
+
+  --background-blue: var(--color-blue);
+  --background-green: var(--color-green);
+  --background-orange: var(--color-orange);
+  --background-pink: var(--color-pink);
+  --background-purple: var(--color-purple);
+  --background-yellow: var(--color-yellow);
 }
 
 
@@ -145,7 +152,6 @@ $title-color: var(--text-color);
   border: none;
   text-align: center;
 }
-
 
 .toggle-button__icon {
   background: var(--button-icon);

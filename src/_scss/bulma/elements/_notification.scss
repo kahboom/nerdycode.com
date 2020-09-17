@@ -1,5 +1,4 @@
 $notification-background-color: $background !default;
-$notification-code-background-color: $scheme-main !default;
 $notification-radius: $radius !default;
 $notification-padding: 1.25rem 2.5rem 1.25rem 1.5rem !default;
 $notification-padding-ltr: 1.25rem 2.5rem 1.25rem 1.5rem !default;
@@ -10,8 +9,9 @@ $notification-colors: $colors !default;
 .notification {
   @extend %block;
 
-  background-color: $notification-background-color;
+  background-color: var(--background-blue);
   border-radius: $notification-radius;
+  color: white;
   position: relative;
 
   @include ltr {
@@ -33,15 +33,6 @@ $notification-colors: $colors !default;
     color: currentColor;
   }
 
-  code,
-  pre {
-    background: $notification-code-background-color;
-  }
-
-  pre code {
-    background: transparent;
-  }
-
   & > .delete {
     @include ltr-position(0.5rem);
 
@@ -53,27 +44,5 @@ $notification-colors: $colors !default;
   .subtitle,
   .content {
     color: currentColor;
-  }
-
-  // Colors
-  @each $name, $pair in $notification-colors {
-    $color: nth($pair, 1);
-    $color-invert: nth($pair, 2);
-
-    &.is-#{$name} {
-      background-color: $color;
-      color: $color-invert;
-
-      // If light and dark colors are provided
-      @if length($pair) >= 4 {
-        $color-light: nth($pair, 3);
-        $color-dark: nth($pair, 4);
-
-        &.is-light {
-          background-color: $color-light;
-          color: $color-dark;
-        }
-      }
-    }
   }
 }
