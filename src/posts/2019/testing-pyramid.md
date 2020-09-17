@@ -30,7 +30,7 @@ _* where the level of importance is directly proportional to the confidence you 
 In the next few blog posts I'll be discussing each type of testing and recommended best practices, specifically for React applications.
 
 <div class="references-block">
-References:
+<span class="references-block__title">Further Reading</span>
 
 - [No To More E2E Tests](https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html) by Mike Wacker, Google Testing Blog
 - [TestPyramid](https://martinfowler.com/bliki/TestPyramid.html) by Martin Fowler

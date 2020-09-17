@@ -1,12 +1,26 @@
-.references-block, .further-reading {
-  font-size: 0.7em;
+.border-top {
   border-top: 1px solid lightgrey;
+}
+
+.references-block, .further-reading {
+  border-radius: 1rem;
+  border: 1px dotted #24b1d1;
+  font-size: 0.7em;
   margin: 3em 0 0;
-  padding: 3em 0 0;
+  padding: 3em;
+}
+
+.references-block__title {
+  font-weight: 600;
 }
 
 .box-shadow {
   -webkit-box-shadow: 0 10px 6px -6px #777;
   -moz-box-shadow: 0 10px 6px -6px #777;
   box-shadow: 0 10px 6px -6px #777;
+}
+
+.dotted-box {
+  border-radius: 1rem;
+  border: 1px dotted #24b1d1;
 }

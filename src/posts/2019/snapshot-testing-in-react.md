@@ -106,7 +106,7 @@ When the test is run with `yarn test` or `jest`, a file gets created. Oh, snap! 
 So, in sum, snapshots can be both useful and fun to work with when you want fast, easy test coverage. As with anything else, just don't use them as a crutch. One of the biggest challenges in web development is knowing when to pick the right tool for the right job.
 
 <div class="references-block">
-References:
+<span class="references-block__title">Further Reading</span>
 
 - [Snapshot Testing with Jest](https://jestjs.io/docs/en/snapshot-testing)
 </div>

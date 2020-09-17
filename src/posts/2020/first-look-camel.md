@@ -56,9 +56,9 @@ Final step, start Camel. You can do this programmatically (through written code)
 
 Good luck and thanks for reading. In an upcoming post we'll be discussing how to use Camel with Kubernetes and OpenShift.
 
-<div class="further-reading">
+<div class="references-block">
 
-Further Reading
+<span class="references-block__title">Further Reading</span>
 
 - <a href="https://camel.apache.org/docs/" target="_blank" rel="nofollow">Apache Camel Docs</a>
 - <a href="https://kb.tomd.xyz/camel.html" target="_blank" rel="nofollow">Tom's Knowledge Base: Apache Camel</a>

@@ -141,7 +141,7 @@ We can make some of that monotonous work a bit less so by using some of Jest's b
 In the following few posts, we'll talk about how to test specific things like React hooks, how integration tests compare to unit and E2E tests, and much more.
 
 <div class="references-block">
-References
+<span class="references-block__title">Further Reading</span>
 
 - [Testing Components with Jest and React Testing Library](https://itnext.io/testing-components-with-jest-and-react-testing-library-d36f5262cde2) by Chris Girard
 - [How to Write Functional Tests in React](https://blog.echobind.com/writing-functional-tests-with-react-testing-library-part-1-470870ee1a6) with Jeffrey Zhen
