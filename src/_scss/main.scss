@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 // Import initial Bulma variables
-@import "../../node_modules/bulma/sass/utilities/initial-variables";
+@import "../bulma/sass/utilities/initial-variables";
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
 //@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
@@ -123,7 +123,7 @@ $title-color: var(--text-color);
 
 // Import the rest of Bulma
 
-@import "../../node_modules/bulma/bulma";
+@import "../bulma";
 
 // Now that Bulma has been imported,
 // you can import the rest of the overrides.

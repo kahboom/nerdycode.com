@@ -11,7 +11,7 @@ tags:
 
 The world is becoming increasingly interconnected through a variety of data sources that often need to communicate with one another. These data sources can be anything from a web service such as Dropbox or Twitter, to a database or message broker like Apache Kafka. Sometimes we need to move data between these services, and sometimes we need to make changes to the data mid-way.
 
-For instance, if the piece of data is a zip file, an action you may want to take on it is to unzip it. Or, if the data is coming from, for example, Twitter, it's likely it will be in the standard JSON format that APIs usually provide, and it might contain something like ten of your most recent tweets.
+For instance, if the piece of data is a zip file, an action you may want to take on it is to unzip it. Or, if the data is coming from a web service such as, for example, Twitter, it's likely it will be in the standard JSON format that APIs usually provide, and it might contain something like ten of your most recent tweets.
 
 If we wanted to take the output from Twitter, and make it do something on another service, like create a post on Facebook, we refer to that as **integration**. You are essentially connecting, or integrating, two applications (or services, or systems, or basically anything that provides some sort of output). You can integrate way more than just two data sources, but we'll keep it simple for now.
 
