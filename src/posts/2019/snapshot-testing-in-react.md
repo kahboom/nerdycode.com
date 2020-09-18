@@ -102,13 +102,6 @@ test('Link changes the class when hovered', () => {
 });
 ```
 
-When the test is run with `yarn test` or `jest`, a file gets created. Oh, snap! You just created your snapshot file
-. :) In this case, it'd be named something like `__tests__/__snapshots__/Link.react.test.js.snap`.
+When the test is run with `yarn test` or `jest`, a file gets created. Oh, snap! You just created your snapshot file. :) In this case, it'd be named something like `__tests__/__snapshots__/Link.react.test.js.snap`.
 
 So, in sum, snapshots can be both useful and fun to work with when you want fast, easy test coverage. As with anything else, just don't use them as a crutch. One of the biggest challenges in web development is knowing when to pick the right tool for the right job.
-
-<div class="references-block">
-<span class="references-block__title">Further Reading</span>
-
-- [Snapshot Testing with Jest](https://jestjs.io/docs/en/snapshot-testing)
-</div>
