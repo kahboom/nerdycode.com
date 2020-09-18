@@ -1,18 +1,14 @@
 ---
-layout: post.njk
+layout: page.njk
 title: About Me
-templateClass: tmpl-post
 eleventyNavigation:
   key: About
   order: 6
 ---
 
-<div class="picture">
-<div class="picture__border">
-<img src="/img/photos/rachel-cropped.jpg">
-<figcaption>I wonder if they do sticky toffee pudding here?</figcaption>
-</div>
-</div>
+<div class="columns">
+<div class="column is-three-quarters">
+
 
 Hello, world. My name is Rachel and I wear my sunglasses at night. I'm also a software engineer at Red Hat.
 
@@ -27,4 +23,18 @@ I was born in the beautiful Dominican Republic. I later went on to study Chemist
    ; mechanical keyboards; pizza
    </span>
  </p>
+
+</div>
+
+
+<div class="column">
+<div class="picture">
+<div class="picture__border">
+<img src="/img/photos/rachel-cropped.jpg">
+<figcaption>I wonder if they do sticky toffee pudding here?</figcaption>
+</div>
+</div>
+</div>
+</div>
+
 

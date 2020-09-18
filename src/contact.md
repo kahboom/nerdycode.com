@@ -1,7 +1,6 @@
 ---
-layout: post.njk
+layout: page.njk
 title: Contact
-templateClass: tmpl-post
 eleventyNavigation:
   key: Contact
   order: 10

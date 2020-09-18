@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Droid+Serif|Permanent+Marker');
 
 .picture {
-  float: right;
   grid-area: picture;
   margin-bottom: 2em;
-  margin-left: 20px;
-  width: 15em;
+  margin-left: 1em;
 
   &__border {
     width: 100%;
