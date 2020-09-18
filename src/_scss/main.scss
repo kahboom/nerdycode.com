@@ -248,6 +248,14 @@ a.panel-block:hover, label.panel-block:hover {
   padding: 2rem 1.5rem !important;
 }
 
+.tag.is-primary {
+  background-color: $nerdy-purple;
+  &:hover {
+    background-color: lighten($nerdy-purple, 20%);
+    //color: darken($nerdy-purple, 25%);
+  }
+}
+
 h4.mini-header {
   width: 100%;
   text-align: left;
