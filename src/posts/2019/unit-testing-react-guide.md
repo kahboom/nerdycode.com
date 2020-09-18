@@ -4,6 +4,9 @@ date: "2019-06-27"
 layout: post.njk
 permalink: "/unit-testing-react-guide/"
 dynamicPermalink: false
+references:
+    - {title: 'Testing Components with Jest and React Testing Library', url: 'https://itnext.io/testing-components-with-jest-and-react-testing-library-d36f5262cde2'}
+    - {title: 'How to Write Functional Tests in React', url: 'https://blog.echobind.com/writing-functional-tests-with-react-testing-library-part-1-470870ee1a6'}
 tags:
   - react
   - testing
@@ -139,10 +142,3 @@ While I love writing unit tests, if I'm being frank, good unit test writing is s
 We can make some of that monotonous work a bit less so by using some of Jest's built-in [setup and teardown](https://jest-bot.github.io/jest/docs/setup-teardown.html) helper functions. A good way to use these, for instance, is for debugging a failing test by logging data, which you could do with `beforeEach`.
 
 In the following few posts, we'll talk about how to test specific things like React hooks, how integration tests compare to unit and E2E tests, and much more.
-
-<div class="references-block">
-<span class="references-block__title">Further Reading</span>
-
-- [Testing Components with Jest and React Testing Library](https://itnext.io/testing-components-with-jest-and-react-testing-library-d36f5262cde2) by Chris Girard
-- [How to Write Functional Tests in React](https://blog.echobind.com/writing-functional-tests-with-react-testing-library-part-1-470870ee1a6) with Jeffrey Zhen
-</div>

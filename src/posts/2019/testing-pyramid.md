@@ -4,6 +4,11 @@ date: 2019-06-26
 permalink: "/testing-pyramid/"
 dynamicPermalink: false
 layout: post.njk
+references:
+    - {title: 'No To More E2E Tests', url: 'https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html', note: 'by Mike Wacker, Google Testing Blog'}
+    - {title: 'TestPyramid', url: 'https://martinfowler.com/bliki/TestPyramid.html', note: 'by Martin Fowler'}
+    - {title: 'The Testing Trophy', url: 'https://twitter.com/kentcdodds/status/960723172591992832/photo/1?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E960723172591992832&ref_url=https%3A%2F%2Fkentcdodds.com%2Fblog%2Fwrite-tests', note: 'by Kent C. Dodds'}
+    - {title: 'My notes on GitHub', url: 'https://github.com/kahboom/dev-notes/blob/master/topics/react-testing.md'}
 tags:
   - testing
 ---
@@ -28,12 +33,3 @@ Photo credit: [Google Testing Blog](https://testing.googleblog.com/2015/04/just-
 _* where the level of importance is directly proportional to the confidence you have that your tests are reflective of your app working as intended_
 
 In the next few blog posts I'll be discussing each type of testing and recommended best practices, specifically for React applications.
-
-<div class="references-block">
-<span class="references-block__title">Further Reading</span>
-
-- [No To More E2E Tests](https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html) by Mike Wacker, Google Testing Blog
-- [TestPyramid](https://martinfowler.com/bliki/TestPyramid.html) by Martin Fowler
-- [The Testing Trophy](https://twitter.com/kentcdodds/status/960723172591992832/photo/1?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E960723172591992832&ref_url=https%3A%2F%2Fkentcdodds.com%2Fblog%2Fwrite-tests) by Kent C. Dodds
-- My [notes](https://github.com/kahboom/dev-notes/blob/master/topics/react-testing.md) on GitHub
-</div>

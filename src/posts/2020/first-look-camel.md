@@ -5,6 +5,9 @@ permalink: "/data-integration-apache-camel/"
 dynamicPermalink: false
 layout: post.njk
 pets: Lex
+references:
+    - {title: 'Apache Camel Docs', url: 'https://camel.apache.org/docs/'}
+    - {title: "Tom's Knowledge Base: Apache Camel", url: 'https://kb.tomd.xyz/camel.html'}
 tags:
   - camel
   - integration
@@ -57,11 +60,4 @@ Final step, start Camel. You can do this programmatically (through written code)
 
 Good luck and thanks for reading. In an upcoming post we'll be discussing how to use Camel with Kubernetes and OpenShift.
 
-<div class="references-block">
 
-<span class="references-block__title">Further Reading</span>
-
-- <a href="https://camel.apache.org/docs/" target="_blank" rel="nofollow">Apache Camel Docs</a>
-- <a href="https://kb.tomd.xyz/camel.html" target="_blank" rel="nofollow">Tom's Knowledge Base: Apache Camel</a>
-
-</div>

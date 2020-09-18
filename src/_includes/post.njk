@@ -8,9 +8,27 @@ templateClass: tmpl-post
 <div class="columns">
     <div class="column is-three-quarters">
         {{ content | safe }}
+
+
+        {% if references %}
+            <div class="references-block">
+                <span class="references-block__title">Further Reading</span>
+                <ul>
+                    {% for ref in references %}
+                        <li>
+                            <a href="{{ ref.url }}" target="_blank" rel="nofollow" title="{{ ref.title }}">
+                                {{ ref.title }}
+                            </a>&nbsp;{{ ref.note }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
     </div>
     <div class="column">
-        {{ %include 'sidebar.njk' if pets }}
+        <aside class="sidebar">
+            Lex!!!!!
+        </aside>
     </div>
 </div>
 

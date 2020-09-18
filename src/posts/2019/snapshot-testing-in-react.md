@@ -4,6 +4,8 @@ date: "2019-06-29"
 layout: post.njk
 permalink: "/snapshot-testing-in-react/"
 dynamicPermalink: false
+references:
+    - {title: 'Snapshot Testing with Jest', url: 'https://jestjs.io/docs/en/snapshot-testing'}
 tags:
   - react
   - testing
