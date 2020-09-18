@@ -60,3 +60,4 @@ Final step, start Camel. You can do this programmatically (through written code)
 Good luck and thanks for reading. In an upcoming post we'll be discussing how to use Camel with Kubernetes and OpenShift.
 
 
+ 
