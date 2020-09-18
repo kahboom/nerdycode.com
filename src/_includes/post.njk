@@ -57,10 +57,12 @@ templateClass: tmpl-post
             </div>
 
             <div class="block pb-5 published">
-                {{ date | readableDate }}
+                {{ page.date | readableDate }}
             </div>
         </aside>
     </div>
 </div>
 
+<!--
 <p class="home-link"><a href="{{ '/' | url }}">← Home</a></p>
+-->
