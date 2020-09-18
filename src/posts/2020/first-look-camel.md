@@ -4,7 +4,6 @@ date: 2020-09-15
 permalink: "/data-integration-apache-camel/"
 dynamicPermalink: false
 layout: post.njk
-pets: Lex
 references:
     - {title: 'Apache Camel Docs', url: 'https://camel.apache.org/docs/'}
     - {title: "Tom's Knowledge Base: Apache Camel", url: 'https://kb.tomd.xyz/camel.html'}

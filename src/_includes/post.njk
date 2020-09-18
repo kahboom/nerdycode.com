@@ -27,7 +27,38 @@ templateClass: tmpl-post
     </div>
     <div class="column">
         <aside class="sidebar">
-            Lex!!!!!
+            <div class="picture pb-6" style="max-width: 75%">
+                <div class="picture__border">
+                    <img src="/img/photos/rachel-cropped.jpg" alt="Rachel Software Engineer"/>
+                    <figcaption>Hello, world.<br/>I'm Rachel, a software engineer at Red Hat.</figcaption>
+                </div>
+            </div>
+
+
+            <div class="block">
+            <h4 class="mini-header">
+                <span>Tags</span>
+            </h4>
+            </div>
+
+            <div class="block pb-5">
+                {% for tag in tags %}
+                    {%- if collections.tagList.indexOf(tag) != -1 -%}
+                        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+                        <a href="{{ tagUrl | url }}" class="tag is-primary">{{ tag }}</a>
+                    {%- endif -%}
+                {% endfor %}
+            </div>
+
+            <div class="block">
+                <h4 class="mini-header">
+                    <span>Published</span>
+                </h4>
+            </div>
+
+            <div class="block pb-5 published">
+                {{ date | readableDate }}
+            </div>
         </aside>
     </div>
 </div>
