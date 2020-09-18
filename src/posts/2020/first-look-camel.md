@@ -4,6 +4,7 @@ date: 2020-09-15
 permalink: "/data-integration-apache-camel/"
 dynamicPermalink: false
 layout: post.njk
+pets: Lex
 tags:
   - camel
   - integration

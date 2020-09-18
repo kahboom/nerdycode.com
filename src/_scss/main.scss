@@ -290,6 +290,13 @@ a.panel-block:hover, label.panel-block:hover {
   }
 }
 
+// Logo sizing
+.navbar-brand {
+  .navbar-item {
+    max-width: 230px;
+  }
+}
+
 
 // HOME LINK at the bottom of most pages
 .home-link {

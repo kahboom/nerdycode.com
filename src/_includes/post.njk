@@ -5,6 +5,13 @@ templateClass: tmpl-post
 
 <h1 class="title is-3">{{ title }}</h1>
 
-{{ content | safe }}
+<div class="columns">
+    <div class="column is-three-quarters">
+        {{ content | safe }}
+    </div>
+    <div class="column">
+        {{ %include 'sidebar.njk' if pets }}
+    </div>
+</div>
 
 <p class="home-link"><a href="{{ '/' | url }}">← Home</a></p>
