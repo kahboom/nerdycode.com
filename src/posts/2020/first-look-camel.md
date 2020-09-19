@@ -31,7 +31,7 @@ The concept of Enterprise Integration Patterns was coined by The Gang of Four in
 
 Enterprise integration patterns, or EIPs, are accepted solutions to problems commonly encountered by architects. They are abstract enough to apply to most integration solutions, and, by design, it means they are not hard and fast solutions, but rather, approaches and ways to better organize our code. Well, you know, they're patterns.
 
-![Splitter Pattern](/img/post/2020-09-15-SplitterComponentCamel.gif)
+<img src="/img/post/2020-09-15-SplitterComponentCamel.gif" alt="Splitter Pattern" style="background-color: white"/>
 
 An example of a pattern is the **Splitter Pattern**. This pattern is used to break up an element within a message into smaller pieces. For example, let's say that a message shows an order that a customer placed, and that order consists of individual items. With this pattern, we would split this order into those separate items. We can think of receiving the output, or our customer's order, as a **message**.
 

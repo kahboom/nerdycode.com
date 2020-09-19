@@ -253,6 +253,12 @@ a.panel-block:hover, label.panel-block:hover {
   }
 }
 
+// PRISM.JS
+
+.tag:not(body) {
+  background-color: inherit;
+}
+
 // CONTACT FORM
 
 .label {
