@@ -15,7 +15,7 @@
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml"
           title="{{ metadata.title }}">
 
-    <title>{{ renderData.title or title or metadata.title }}</title>
+    <title>{{ renderData.title or title or metadata.title }}{% if title %}&nbsp;|&nbsp;NerdyCode{% endif %}</title>
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
@@ -99,7 +99,7 @@
 <section{% if templateClass %} class="section {{ templateClass }}"{% endif %}>
     <div class="container">
         <div class="content">
-    {{ content | safe }}
+            {{ content | safe }}
         </div>
     </div>
 </section>
