@@ -253,6 +253,7 @@ a.panel-block:hover, label.panel-block:hover {
   text-align: center;
 }
 
+// I cannot for the life of me remember wth this is for..
 .rc-anchor-light {
   background: none;
   color: var(--text-color);
@@ -271,6 +272,8 @@ a.panel-block:hover, label.panel-block:hover {
   }
 }
 
+// SIDEBAR
+// Used for things like the sidebar
 h4.mini-header {
   width: 100%;
   text-align: left;
@@ -286,6 +289,7 @@ h4.mini-header span {
   text-transform: uppercase;
 }
 
+// Sidebar Stuff
 .published {
   font-size: 0.8em;
 }
