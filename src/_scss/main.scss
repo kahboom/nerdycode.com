@@ -238,6 +238,21 @@ a.panel-block:hover, label.panel-block:hover {
   display: none;
 }
 
+
+// MOBILE NAVBAR
+
+.navbar-menu {
+  //background-color: var(--background-color);
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar-menu {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-bottom: solid pink;
+  }
+}
+
 // CONTACT FORM
 
 .label {

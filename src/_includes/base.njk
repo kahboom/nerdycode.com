@@ -38,6 +38,7 @@
 
       gtag('config', 'UA-41791588-1');
     </script>
+    <script src="/js/mobile-nav.js"></script>
 
     <!-- Meta Stuff -->
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
@@ -53,7 +54,7 @@
 </head>
 <body>
 <section class="section">
-    <nav class="navbar is-fixed-top is-size-6" role="navigation" aria-label="dropdown navigation">
+    <nav class="navbar is-fixed-top is-size-6" role="navigation" aria-label="navigation">
         <div class="container">
 
             <!-- Brand -->
@@ -73,11 +74,11 @@
                 </a>
 
                 <!-- Responsive toggle -->
-                <span class="navbar-burger burger" data-target="navbarMenu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </span>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
             </div>
 
             <!-- Menu -->
