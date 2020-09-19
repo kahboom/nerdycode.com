@@ -1,11 +1,14 @@
 ---
 layout: page.njk
-title: Contact
+title: Contact Me
+templateClass: contact-page
 eleventyNavigation:
   key: Contact
   order: 10
 ---
 
+<section class="columns is-mobile is-centered">
+<div class="column is-half">
 <form name="contact" method="POST" netlify-honeypot="dummy-field" data-netlify="true" data-netlify-recaptcha="true">
 
 <p class="hidden">
@@ -21,14 +24,8 @@ eleventyNavigation:
 
 <div class="field">
   <label class="label">Email</label>
-  <div class="control has-icons-left has-icons-right">
+  <div class="control">
     <input class="input" type="email" name="email" placeholder="alan@turing.com">
-    <span class="icon is-small is-left">
-      <i class="fas fa-envelope"></i>
-    </span>
-    <span class="icon is-small is-right">
-      <i class="fas fa-exclamation-triangle"></i>
-    </span>
   </div>
 </div>
 
@@ -69,3 +66,5 @@ eleventyNavigation:
   </div>
 </div>
 </form>
+</div>
+</section>

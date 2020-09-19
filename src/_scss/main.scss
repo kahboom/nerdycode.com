@@ -238,6 +238,21 @@ a.panel-block:hover, label.panel-block:hover {
   display: none;
 }
 
+// CONTACT FORM
+
+.label {
+  color: var(--text-color);
+}
+
+.input, .textarea, .select select {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.contact-page .title {
+  text-align: center;
+}
+
 .rc-anchor-light {
   background: none;
   color: var(--text-color);
