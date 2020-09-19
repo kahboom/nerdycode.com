@@ -22,6 +22,7 @@ $message-colors: $colors !default;
 .message {
   @extend %block;
 
+  //background-color: darken($message-background-color, 10%);
   background-color: $message-background-color;
   border-radius: $message-radius;
   font-size: $size-normal;
@@ -74,7 +75,9 @@ $message-colors: $colors !default;
     }
 
     &.is-#{$name} {
-      background-color: $color-light;
+      //background-color: $color-light;
+      background-color: darken($color-light, 10%);
+
 
       .message-header {
         background-color: $color;
