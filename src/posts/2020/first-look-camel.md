@@ -6,7 +6,7 @@ dynamicPermalink: false
 layout: post.njk
 references:
     - {title: 'Apache Camel Docs', url: 'https://camel.apache.org/docs/'}
-    - {title: 'Camel in Action', url: 'https://www.manning.com/books/camel-in-action', notes: 'by Claus Ibsen and Jonathan Anstey'}
+    - {title: 'Camel in Action', url: 'https://www.manning.com/books/camel-in-action', note: 'by Claus Ibsen and Jonathan Anstey'}
     - {title: "Tom's Knowledge Base: Apache Camel", url: 'https://kb.tomd.xyz/camel.html'}
 tags:
   - camel
