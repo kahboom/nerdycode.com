@@ -34,7 +34,5 @@
     "url": "https://www.github.com/kahboom/nerdycode.com/issues"
   },
   "main": "index.js",
-  "dependencies": {
-    "clipboard": "^2.0.6"
-  }
+  "dependencies": {}
 }
