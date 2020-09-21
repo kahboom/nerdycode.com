@@ -74,7 +74,7 @@ And in the XML DSL:
 
 ## How Do I Get Started?
 
-To get started with Camel, we first need to add the library. We can do that by navigating to [Maven Repositories](https://mvnrepository.com/search?q=camel) and searching for "camel".
+To get started with Camel, we first need to add the library. We can do that by navigating to [Maven Repository](https://mvnrepository.com/search?q=camel) and searching for "camel".
 
 ![Maven Repository Apache Camel](/img/post/2020-09-15-maven.png)
 
