@@ -57,7 +57,8 @@ templateClass: tmpl-post
             </div>
 
             <div class="block pb-5 published">
-                {{ page.date | readableDate }}
+                <p>{{ page.date | readableDate }}</p>
+                <p><i>Updated {{ updated | readableDate }}</i></p>
             </div>
         </aside>
     </div>

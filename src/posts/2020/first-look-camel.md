@@ -1,6 +1,7 @@
 ---
 title: First Look at Integrating Data with Apache Camel
 date: 2020-09-15
+updated: 2020-09-18
 permalink: "/data-integration-apache-camel/"
 dynamicPermalink: false
 layout: post.njk
