@@ -16,7 +16,7 @@ tags:
 
 In 2016, npm disclosed the discovery of a vulnerability that essentially allows npm packages to execute potentially malicious code on your machine. This vulnerability is potentially more harmful than running something like a bash script on your machine, because while a bash script will execute arbitrary code on your machine, npm executes arbitrary code on your machine from hundreds, if not thousands, of packages.
 
-One example of this attack is an incident that occurred with the popular [eslint-scope](https://www.npmjs.com/package/eslint-scope) package. A new version of the package was published that contained malicious code via a `postinstall` lifecycle hook. The same applies for `preinstall`, `preuninstall`, and `postuninstall` hooks.
+One example of this attack is an incident that occurred with the popular <a href="https://www.npmjs.com/package/eslint-scope" rel="nofollow" target="_blank">eslint-scope</a> package. A new version of the package was published that contained malicious code via a `postinstall` lifecycle hook. The same applies for `preinstall`, `preuninstall`, and `postuninstall` hooks.
 
 Unfortunately, there is no straightforward way to fix this issue, as it's an inherent part of the lifecycle hook, an important feature of npm. As such, that vulnerability is still there and will likely continue to be into the foreseeable future. The only thing you can do, should you wish to continue to use npm, is to disable running scripts by default, but this doesn't come without its own issues, as we'll see.
 
