@@ -1,12 +1,13 @@
 ---
-title: Browser Basics
+title: Micro-Frontends
 eleventyExcludeFromCollections: true
 date: 2020-09-22
-permalink: "/browser-basics/"
+permalink: "/micro-frontends/"
 dynamicPermalink: false
 layout: post.njk
 tags:
-  - browser
+  - micro-frontends
+  - web-dev
 ---
 
 Under construction.

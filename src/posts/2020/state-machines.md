@@ -1,13 +1,10 @@
 ---
-title: Browser Basics
+title: State Machines
 eleventyExcludeFromCollections: true
-date: 2020-09-22
-permalink: "/browser-basics/"
+date: 2020-09-23
+permalink: "/state-machines/"
 dynamicPermalink: false
 layout: post.njk
-tags:
-  - browser
 ---
 
 Under construction.
-

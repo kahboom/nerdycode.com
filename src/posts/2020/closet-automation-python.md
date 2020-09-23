@@ -1,13 +1,12 @@
 ---
-title: Browser Basics
+title: Closet Automation with Python
 eleventyExcludeFromCollections: true
 date: 2020-09-22
-permalink: "/browser-basics/"
+permalink: "/closet-automation-python/"
 dynamicPermalink: false
 layout: post.njk
 tags:
-  - browser
+  - python
 ---
 
 Under construction.
-
