@@ -41,7 +41,9 @@ $ yarn config set ignore-scripts true
 
 You can verify the changes with `yarn config list`, or see the changes on `~/.yarnrc`. 
 
-The problem with disabling scripts is, well, you're disabling scripts. That means this setting completely prevents npm from running even the scripts you've defined in your `package.json`. Moreover, if your dependencies need to install binaries, then changing this setting could completely break your build. This is, in fact, one reason why npm does not disable this setting by default, as they consider it to be a trade-off of the convenience of using npm scripts and lifecycle hooks. The worst part about this is that npm will fail silently without even giving you a warning.
+The problem with disabling scripts is, well, you're disabling scripts. That means this setting completely prevents npm from running even the scripts you've defined in your `package.json`. Moreover, if your dependencies need to install binaries, then changing this setting could completely break your build.
+
+This is, in fact, one reason why npm does not disable this setting by default, as they consider it to be a trade-off of the convenience of using npm scripts and lifecycle hooks. The worst part about this is that npm will fail silently without even giving you a warning.
 
 Instead of disabling it globally, you also could run this command when you are installing dependencies, like this:
 
@@ -94,7 +96,9 @@ $ rm -rf node_modules
 $ npm install --only=prod
 ```
 
-These are the vulnerabilities that would be more relevant, because they're from packages that your users will more likely be using. Depending on how many vulnerabilities are left over (most will probably be from dev mode), it may just be a case of npm making a couple of changes to `package.json` that are non-breaking. This is probably a good time for me to remind you of the importance of [writing E2E](https://www.nerdycode.com/e2e-testing-react-cypress/) and [unit tests](https://www.nerdycode.com/unit-testing-react-guide/), specifically for a production environment. Better yet, check out a new branch and do the upgrades there, so that if there are any issues, or if any of your tests fail, you can easily downgrade them back and sort them out individually. 
+These are the vulnerabilities that would be more relevant, because they're from packages that your users will more likely be using. Depending on how many vulnerabilities are left over (most will probably be from dev mode), it may just be a case of npm making a couple of changes to `package.json` that are non-breaking.
+
+This is probably a good time for me to remind you of the importance of [writing E2E](https://www.nerdycode.com/e2e-testing-react-cypress/) and [unit tests](https://www.nerdycode.com/unit-testing-react-guide/), specifically for a production environment. Better yet, check out a new branch and do the upgrades there, so that if there are any issues, or if any of your tests fail, you can easily downgrade them back and sort them out individually. 
 
 If npm kindly resolved some of those dependencies for you, you may be able to submit a quick PR for it so others don't run into the same issue. If many vulnerabilities are coming from the same package, this is more of a sign of neglect from the maintainers, and it may not be the worst idea to look for an alternative library, or roll out your own if you're up for it.
 
