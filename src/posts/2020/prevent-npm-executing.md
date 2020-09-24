@@ -1,6 +1,7 @@
 ---
 title: Preventing npm from Executing Arbitrary Scripts
 date: 2020-09-22
+updated: 2020-09-24
 dynamicPermalink: false
 permalink: "/prevent-npm-executing-scripts-security/"
 layout: post.njk
