@@ -89,7 +89,7 @@ When we run `npm install`, npm also runs a security audit on dependencies under 
 $ npm audit --dry-run
 ```
 
-This can actually result several hundred, if not thousands, of vulnerabilities, depending on how big the dependency graph is. A better idea might be to first _only_ install packages that your actual code is using, as opposed to at build time:
+This can actually result in several hundred, if not thousands, of vulnerabilities, depending on how big the dependency graph is. A better idea might be to first _only_ install packages that your actual code is loading at runtime, as opposed to at build time:
 
 ```bash
 $ rm -rf node_modules
