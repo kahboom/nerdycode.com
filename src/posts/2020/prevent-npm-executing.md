@@ -41,7 +41,7 @@ $ yarn config set ignore-scripts true
 
 You can verify the changes with `yarn config list`, or see the changes on `~/.yarnrc`. 
 
-The problem with the above solution is that, well, it prevents npm from running scripts, including those defined in your `package.json`. Moreover, if your dependencies need to run scripts, such as to install binaries, then changing this setting could completely break your build. This is, in fact, one reason why npm does not disable this setting by default, as they consider it to be a trade-off of the convenience of using npm scripts and lifecycle hooks. The worst part about this is that npm will fail silently without even giving you a warning.
+The problem with the above solution of disabling scripts is, well, it disables scripts. That means it completely prevents npm from running even the ones you've defined in your `package.json`. Moreover, if your dependencies need to install binaries, then changing this setting could completely break your build. This is, in fact, one reason why npm does not disable this setting by default, as they consider it to be a trade-off of the convenience of using npm scripts and lifecycle hooks. The worst part about this is that npm will fail silently without even giving you a warning.
 
 Instead of disabling it globally, you also could run this command when you are installing dependencies, like this:
 
