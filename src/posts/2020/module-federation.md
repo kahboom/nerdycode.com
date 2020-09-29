@@ -11,3 +11,6 @@ tags:
 
 Under construction.
 
+## Problems with this approach
+
+The main problem I have with module federation, and with designing components to be highly reusable in general, is that web applications and their data sources should really be designed as one. Otherwise, the application will never really have a chance at performance.
