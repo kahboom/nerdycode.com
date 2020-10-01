@@ -150,7 +150,7 @@ class MyCounter extends HTMLElement {
 }
 ```
 
-We'll add create these functions outside of the constructor, but still inside of the class, because we need to be able to access the scope:
+We'll create these functions outside of the constructor, but still inside of the class, because we need to be able to access the scope:
 
 ```js
 class MyCounter extends HTMLElement {
@@ -188,7 +188,7 @@ class MyCounter extends HTMLElement {
 }
 ```
 
-Looks good! And it seems to be working. But I also would like to add an effect of filling an SVG and emptying it based on the clicks. Let's add an SVG to the HTML, just below our custom element:
+Looks good! But I also would like to add an effect of filling an SVG and emptying it based on the clicks. Let's add a fun little SVG to the HTML, just below our custom element:
 
 ```html
 <my-counter></my-counter>
@@ -245,29 +245,12 @@ Now we have a fully functioning counter web component with a cool SVG animation.
 
 HTML templates allow for you to write markup templates for your custom element that you can later reuse with the `<template>` and `<slot>` elements. They do not get displayed in the rendered page.
 
-We didn't need to use templates in our example, because it's not really a component that is meant to be reused in multiple parts of the application, but we just as easily could have by defining the template within the HTML:
+We didn't use templates in our example, but we just as easily could have by defining the template within the HTML:
 
 ```html
 <template id="my-counter">
   <style>
-    * {
-      font-size: 150%;
-      text-align: center;
-    }
-
-    span {
-      width: 4rem;
-      display: inline-block;
-    }
-
-    button {
-      width: 4rem;
-      height: 4rem;
-      border: none;
-      border-radius: 10px;
-      background-color: royalblue;
-      color: white;
-    }
+    [..]
   </style>
   <button id="dec">-</button>
   <span id="count"></span>
@@ -283,10 +266,62 @@ let templateContent = template.content;
 const shadowRoot = this.attachShadow({mode: 'open'}).appendChild(templateContent.cloneNode(true));
 ```
 
+### Slots
 
-### Lifecycle Methods
+Although there is less browser support for slots than templates, I still think they are valuable enough that you should understand the basics.
 
-Something we haven't discussed yet 
+This is a slot: `<slot></slot>`
+
+Slots are meant to be used with templates, though technically it's possible to use it without them. The purpose of slots is to provide an actual slot for consumers, or application developers that are using the component, to replace content within it. The consumer adds slottable elements they specify inside of the provided slots. Elements can vary anywhere from `<p>` to `<h2>`.
+
+When the browser renders the document, it composes the template and the slottable elements that the consumer has provided.
+
+Slots can have names. We'll want to use this name attribute to make it easier to reference our slots when someone wants to consume them. These names will not be rendered in the DOM, but provide a kind of internal reference.
+
+Drawing on our previous template example, here's what it would look like if we provided slots that could be overridden:
+
+```html
+<template id="my-counter">
+  <style>
+    [..]
+  </style>
+  <h1>Some Counter</h1>
+  <slot name="decrease">-</slot>
+  <slot name="count"></slot>
+  <slot name="increase">+</slot>
+</template>
+```
+
+Then, the consumer application would provide slottable elements for it like this (removing any `id` for the sake of clarity):
+
+```html
+<my-counter>
+  <button slot="decrease">Subtract</button>
+  <span slot="count"></span>
+  <button slot="increase">Add</button>
+</my-counter>
+```
+
+This would compose the following:
+
+```html
+<my-counter>
+  <style>
+    [..]
+  </style>
+  <h1>Some Counter</h1>
+  <button>Subtract</button>
+  <span></span>
+  <button>Add</button>
+</my-counter>
+```
+
+Slots also allow you to specify default values to be used when the consumer does not provide a slottable element with a matching name. Our template had provided the text inside of the buttons as "+" and "-", and we had provided the text "Subtract" and "Add" in our consumer application. If we had not done that, it would have defaulted to the strings ("+" and "-") provided in the template.
+
+
+## Lifecycle Methods
+
+Something we haven't discussed yet are the lifecycle methods that you get with web components.
 
 ## What About TypeScript?
 
