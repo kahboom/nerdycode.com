@@ -1,34 +1,36 @@
 ---
-title: Web Components
-date: 2020-09-26
-permalink: "/web-components/"
+title: Understanding Web Components
+date: 2020-10-01
+permalink: "/understanding-web-components/"
 dynamicPermalink: false
 layout: post.njk
+references:
+  - {title: 'Web Components', url: 'https://developer.mozilla.org/en-US/docs/Web/Web_Components', note: 'MDN Docs'}
 tags:
   - web-components
 ---
 
 ## What Are Web Components
 
-You may have heard of web components in passing, maybe seen an example of one or two, and wondered if it's a solution you could actually use at scale. I'm here to tell you that you can. While today's example of a web component will be a small one (for the sake of brevity), I'll also be discussing how web components have evolved over time and where we stand today.
+You have likely heard of web components in passing, maybe seen an example of one or two, and wondered if it's a solution you could actually use at scale. I'm here to tell you that you can. While today's examples will be simple for the sake of clarity, I'll also be discussing how web components have evolved over time and where we stand today.
 
- The goal of web components are to make code as reusable as possible. Web components allow you to create your own custom HTML templates with encapsulated functionality, and it does this all natively.
+ The goal of web components are to make code reusable. Web components allow you to create your own custom HTML templates with encapsulated functionality, and it does this natively.
 
 ## Building a Simple Web Component
 
 If you were to create a web component right now, the steps would look something like this:
 
 - Create a class.
-- Register your new custom element. This is done with `CustomElementRegistry.define()`, and this is where you create the name of your element.
-- Attach a shadow DOM to that custom element (optional). This is where you'd add event listeners and maybe some child elements.
-- Define an HTML template with `<template>` or `<slot>` (optional). Using regular DOM methods, you'd clone the template and attach it to the shadow DOM.
-- Place your custom element wherever you want in your HTML!
+- Register a new custom element. This is where you create the name of your element.
+- Attach a shadow DOM to that custom element. This is where you'd add event listeners and maybe some child elements.
+- Optionally, define an HTML template with `<template>` or `<slot>`, to prepare it to be reused somewhere else.
+- Place your custom element in your HTML.
 
 Today we'll be creating a quick counter as a web component. To add some visual effect I've also added an SVG that slowly fills to the top as the counter approaches 10 and, empties as the counter decreases to 0. I also want the maximum range to be 0 to 10.
 
 ## Main Building Blocks
 
-There are three core blocks of web components: custom elements, shadow DOM, and HTML templates. The first we'll be discussing are custom elements.
+There are three core blocks of web components: custom elements, shadow DOM, and HTML templates.
 
 ### Custom Elements
 
@@ -106,7 +108,7 @@ customElements.define("my-counter", MyCounter);
 
 Shadow DOM is a set of JavaScript APIs that allow you to encapsulate your code. It's rendered separately from the main document DOM, so you never have to worry about collision with other parts of the document.
 
-What we're doing is we are attaching shadow root to our element, and we do this from inside the constructor. While we're at it, we'll also set our initial count to 0:
+What we're doing is attaching the shadow root to our element, and we do this from inside the constructor. While we're at it, we'll also set our initial count to 0:
 
 ```js
 class MyCounter extends HTMLElement {
@@ -239,7 +241,7 @@ class MyCounter extends HTMLElement {
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-Now we have a fully functioning counter web component with a cool SVG animation. It doesn't do anything particularly special, but it helps to better understand the basics of web components.
+Now we have a fully functioning counter web component with a cool SVG animation. It doesn't do anything particularly special, but at least we've got some of the basics down.
 
 ### HTML Templates
 
@@ -258,7 +260,7 @@ We didn't use templates in our example, but we just as easily could have by defi
 </template>
 ```
 
-It will not appear in the rendered page until we select it with JS and append it to the DOM, or shadow root:
+It will not appear in the rendered page until we select it with JS and append it to the DOM, or shadow root, during runtime:
 
 ```js
 let template = document.getElementById('my-counter');
@@ -272,9 +274,9 @@ Although there is less browser support for slots than templates, I still think t
 
 This is a slot: `<slot></slot>`
 
-Slots are meant to be used with templates, though technically it's possible to use it without them. The purpose of slots is to provide an actual slot for consumers, or application developers that are using the component, to replace content within it. The consumer adds slottable elements they specify inside of the provided slots. Elements can vary anywhere from `<p>` to `<h2>`.
+Slots are meant to be used with templates, though technically it's possible to use it without them. The purpose of slots is to provide a placeholder for consumers, or application developers, that are using the component, to replace content within it. The consumer adds slottable elements they specify inside of the provided slots. Elements can vary anywhere from `<p>` to `<h2>`.
 
-When the browser renders the document, it composes the template and the slottable elements that the consumer has provided.
+When the browser renders the document, it composes the template and the slottable elements that the consumer has provided. In other words, two different DOM trees will be composed together.
 
 Slots can have names. We'll want to use this name attribute to make it easier to reference our slots when someone wants to consume them. These names will not be rendered in the DOM, but provide a kind of internal reference.
 
@@ -316,35 +318,128 @@ This would compose the following:
 </my-counter>
 ```
 
-Slots also allow you to specify default values to be used when the consumer does not provide a slottable element with a matching name. Our template had provided the text inside of the buttons as "+" and "-", and we had provided the text "Subtract" and "Add" in our consumer application. If we had not done that, it would have defaulted to the strings ("+" and "-") provided in the template.
+Slots also allow you to specify default values to be used when the consumer does not provide a slottable element with a matching name. Our template had provided the text inside of the buttons as "+" and "-", and we had provided the text "Subtract" and "Add" in our consumer application. If we had not done that, it would have defaulted to the strings ("+" and "-") originally provided in the template.
 
+## Lifecycle Callbacks of Web Components
 
-## Lifecycle Methods
+Something we haven't discussed yet are the lifecycle methods that you get within a custom element's class definition. Each of these fire at different points in the element's lifecycle:
 
-Something we haven't discussed yet are the lifecycle methods that you get with web components.
+- `connectedCallback` - Gets invoked when the custom element is attached to the DOM.
+- `disconnectedCallback` - Invoked when the custom element is removed from the DOM.
+- `adoptedCallback` - Invoked when the custom element is moved to a new document.
+- `attributeChangedCallback` - Invoked when the custom element's attributes change (e.g. added, removed).
 
-## What About TypeScript?
+We can test this my adding a simple log to our custom element example:
 
-Using TypeScript is possible with web components.
+```js
+class MyCounter extends HTMLElement {
+  constructor() {
+    super();
+    this.count = 0;
+    this.attachShadow({ mode: "open" });
+  }
 
-## Build Tools
+  connectedCallback() {
+    console.log('Custom element has been attached to the DOM!');
+  }
 
-Parcel, Rollup. If you were to use TypeScript, you may need to take some additional steps.
+  disconnectedCallback() {
+    console.log('Custom element has been removed from the DOM!');
+  }
+}
+```
+
+`attributeChangedCallback` can be quite useful since we can act on attributes individually.
+
+## Build Tools and Preparing for Production
+
+The question of whether or not you will need a transpiler or bundler is subjective. You have some options, like Parcel, Rollup, Webpack, etc. but also consider just using ES6's `import`/`export`.
+
+In your HTML, make sure to set `type` to `'module'`:
+
+```html
+<script src='/my-counter.js' type='module'></script>
+```
+
+By adding a `package.json` you could publish the module to npm, even if it's not a Node.js library. Just make sure to list the files that pertain to your component:
+
+```json
+{
+  "name": "my-counter",
+  "version": "1.0.0",
+  "description": "My custom counter web component",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/example/my-counter.git"
+  },
+  "files": [
+    "my-counter.css",
+    "my-counter.html",
+    "my-counter.js"
+  ]
+}
+```
+
+## What About TypeScript + Web Components?
+
+Using TypeScript is possible with web components, but the implementation varies depending on what build tool you are using, if you're using one at all. Typically, this isn't very different than if you were using TypeScript for any other project, so I recommend you check the documentation for your specific build tool.
 
 ## Polymer, AMP, and Other Libraries
 
-Many people associated web components with Polymer, and there are a few reasons for that I won't get into. The important thing to note is that you can absolutely use a library like Polymer or AMP to manage your web components, but the truth is, it's not really necessary. Web components come down to how you decide to structure your application and what you decide to use for templating. Sometimes, it's easier not to have to make that decision.
+You can absolutely use a library like Polymer or AMP to manage your web components, but it's not really necessary. Web components come down to how you decide to structure your application and what you decide to use for templating. Sometimes, it's easier not to have to make that decision.
 
-## Template Rendering
+## Template Rendering for Web Components
 
-When it comes to template rendering, the options are endless. My advice is that you go with what you are most comfortable with, so long as you understand the tradeoffs. It's entirely possible to leave template rendering to a framework like React, Angular, or Vue, or to use a library that is specifically for template rendering like lit-html.
+When it comes to template rendering, the options are endless. My advice is that you go with what you are most comfortable with, so long as you understand the tradeoffs. It's possible to leave template rendering to a framework like React, Angular, or Vue. Of course, you can also use a library that is specifically for template rendering like lit-html, Slim.js, or Pencil.
 
+## Browser Compatibility of Web Components
 
-## Browser Compatibility
+As recently as Fall 2018, the only browsers that had full support for web components were Chrome and Safari. Although custom elements were a quick and easy polyfill, shadow DOM was far more complicated and difficult to use without native support. It really wasn't until late 2019 that all major browsers adopted support for Web Components. Today, with the release of Chromium-based Edge 76, web components are supported by most modern browsers.
 
-Polyfills. By the fall of 2018, the only browsers that had full support for web components were Chrome and Safari. Although custom elements were a quick and easy polyfill, shadow DOM was far more complicated and difficult to use without native support. It really wasn't until late 2019 that all major browsers adopted support for Web Components.
+If you do need to support older browsers, you'll need to include polyfills. They add a little bit of overhead, but they're a small cost to pay for the flexibility that web components provide us.
 
-## Testing
+## Styling Web Components
+
+One of the benefits of using shadow DOM is that our elements are isolated. As such, we won't need to use prefixed CSS variable names like `--my-counter-background`. Instead, we can simply use `--background()`.
+
+Probably the easiest way to make our host components easy for a consumer to use their own styles is by creating CSS variables and assigning them a default value through the `:host` selector:
+
+```css
+:host {
+  --background-color: royalblue;
+}
+#my-counter {
+  background-color: var(--background-color);
+}
+``` 
+
+It then becomes easy to override these CSS variables from the consumer side, because all they would need to use is select the custom element name:
+
+```css
+my-counter {
+  --background-color: purple;
+}
+```
+
+When creating components, we can also style our slots using the `::slotted()` selector:
+
+```html
+<template id="my-counter">
+  <style>
+    ::slotted(button) {
+      background-color: orange;
+    }
+  </style>
+  <h1>Some Counter</h1>
+  <slot name="decrease">-</slot>
+  <slot name="count"></slot>
+  <slot name="increase">+</slot>
+</template>
+```
+
+The argument of the `::slotted()` function should be the element that the consuming application is providing. In our case from before, that was a `<button>`. We need to use a top-level element, because a nested one will not work with `::slotted()`.
+
+## Testing Web Components
 
 Especially specific to the frameworks you're using and if they are having trouble rendering custom HTML.
 
@@ -358,5 +453,5 @@ In any case, all of this is slowly changing. Browser compatibility is less of a 
 
 ## In Conclusion
 
-Web components have been around for a long time now, and they don't seem to have taken off as quickly as one would hope. But we're only just getting started. Polyfills are a small cost to pay for the flexibility that web components provide us, and I don't think they'll be going anywhere anytime soon.
+Web components have been around for a long time now, and they don't seem to have taken off as quickly as one would hope. But we're only just getting started. 
 
