@@ -6,6 +6,7 @@ dynamicPermalink: false
 layout: post.njk
 references:
   - {title: 'Web Components', url: 'https://developer.mozilla.org/en-US/docs/Web/Web_Components', note: 'MDN Docs'}
+  - {title: 'Native Web Components come to Microsoft Edge', url: 'https://www.polymer-project.org/blog/2020-01-15-edge-79-release'}
 tags:
   - web-components
 ---
@@ -329,7 +330,7 @@ Something we haven't discussed yet are the lifecycle methods that you get within
 - `adoptedCallback` - Invoked when the custom element is moved to a new document.
 - `attributeChangedCallback` - Invoked when the custom element's attributes change (e.g. added, removed).
 
-We can test this my adding a simple log to our custom element example:
+We can test some of these callbacks by adding a simple log to our custom element example:
 
 ```js
 class MyCounter extends HTMLElement {
@@ -394,9 +395,9 @@ When it comes to template rendering, the options are endless. My advice is that 
 
 ## Browser Compatibility of Web Components
 
-As recently as Fall 2018, the only browsers that had full support for web components were Chrome and Safari. Although custom elements were a quick and easy polyfill, shadow DOM was far more complicated and difficult to use without native support. It really wasn't until late 2019 that all major browsers adopted support for Web Components. Today, with the release of Chromium-based Edge 76, web components are supported by most modern browsers.
+As recently as Fall 2018, the only browsers that had full support for web components were Chrome and Safari. Although custom elements were a quick and easy polyfill, shadow DOM was far more complicated and difficult to use without native support. It really wasn't until late 2019 / early 2020 that all major browsers adopted support for Web Components. With the release of Chromium-based Edge 76, web components are now supported by most modern browsers.
 
-If you do need to support older browsers, you'll need to include polyfills. They add a little bit of overhead, but they're a small cost to pay for the flexibility that web components provide us.
+If you do need to support older browsers, you'll need to include polyfills. They add a little bit of overhead, but it's still a small cost to pay for the flexibility that web components provide us.
 
 ## Styling Web Components
 
@@ -439,19 +440,40 @@ When creating components, we can also style our slots using the `::slotted()` se
 
 The argument of the `::slotted()` function should be the element that the consuming application is providing. In our case from before, that was a `<button>`. We need to use a top-level element, because a nested one will not work with `::slotted()`.
 
+Though this component probably isn't the best example for it, we can also use `::part` to reference any specified element within the shadow tree:
+
+```css
+my-counter::part(action) {
+  color: navy;
+}
+```
+
+```html
+<template id="my-counter">
+  <style>
+  :host {
+    display: flex;
+  }
+  </style>
+  <button id="dec" part="action">-</button>
+  <span id="count"></span>
+  <button id="inc" part="action">+</button>
+</template>
+```
+
 ## Testing Web Components
 
-Especially specific to the frameworks you're using and if they are having trouble rendering custom HTML.
+It's always a good idea to [unit test your components](https://www.nerdycode.com/unit-testing-react-guide/). Polymer has a TDD testing tool called [web-component-tester](https://github.com/Polymer/tools/tree/master/packages/web-component-tester) that works with Mocha and Chai out of the box, but you can also use [Karma](https://karma-runner.github.io/latest/index.html) as well. Depending on your setup, it might also be a good idea to write some integration tests to ensure there is no issue rendering custom HTML, especially if you're using a SPA framework.
 
 ## When To Use Web Components
 
-So, why isn't everyone using web components already? Those that have been working with web components for a long time now are familiar with some of the shortcomings, one of which was lack of compatibility with modern web browsers.
+So, why isn't everyone using web components already? Those that have been working with web components for a long time now are all too familiar with some of the shortcomings of the past, one of which was lack of compatibility with modern web browsers.
 
-There may have also been some loss of momentum to frameworks like Angular and React, maybe in part because web components didn't seem to be as easy to implement, or maybe because those that had tried them felt let down by the lack of examples, documentation, or browser support. I even found that people often associated web components with other frameworks or libraries like Polymer or OpenComponents, not really having a strong understanding of how to use them without introducing some kind of framework. In my opinion, the lack of marketing is another factor.
+There may have also been some loss of momentum to frameworks like Angular and React, maybe in part because web components didn't seem to be as easy to implement, or maybe because those that had tried them felt let down by the lack of examples, documentation, or browser support. Digging through comments and tweets I've even found that sometimes people associate web components with Polymer and the like, not really understanding how to use them without introducing a third party dependency. In my opinion, there have been some inconsistencies with marketing web components as well.
 
-In any case, all of this is slowly changing. Browser compatibility is less of a concern, and people seem to be getting a bit fed up with SPA one-size-fits-all solutions. Still, changing common misperceptions of web components is a bit of an uphill battle. My advice is to give web components another go, this time with a fresh mind.
+In any case, all of this is slowly changing. Browser compatibility is less of a concern, and developers around the world are getting a bit fed up with one-size-fits-all solutions that don't scale or age well. Still, changing common misperceptions of web components is a bit of an uphill battle. My advice is to give web components another go, this time with a fresh mind.
 
 ## In Conclusion
 
-Web components have been around for a long time now, and they don't seem to have taken off as quickly as one would hope. But we're only just getting started. 
+Web components have been around for a long time now, and they don't seem to have taken off as quickly as one would hope. But we're just getting started.
 
