@@ -7,15 +7,16 @@ layout: post.njk
 references:
   - {title: 'Web Components', url: 'https://developer.mozilla.org/en-US/docs/Web/Web_Components', note: 'MDN Docs'}
   - {title: 'Native Web Components come to Microsoft Edge', url: 'https://www.polymer-project.org/blog/2020-01-15-edge-79-release'}
+  - {title: 'Guidelines for creating web platform compatible components', url: 'https://w3ctag.github.io/webcomponents-design-guidelines/', note: 'W3C'}
 tags:
   - web-components
 ---
 
 ## What Are Web Components
 
-You have likely heard of web components in passing, maybe seen an example of one or two, and wondered if it's a solution you could actually use at scale. I'm here to tell you that you can. While today's examples will be simple for the sake of clarity, I'll also be discussing how web components have evolved over time and where we stand today.
+You have likely heard of web components in passing, maybe seen an example of one or two, and wondered if it's a solution you could actually use at scale. I'm here to tell you that you can, but not without some caveats. While today's examples will be simple for the sake of clarity, I'll also be discussing how web components have evolved over time and where we stand today.
 
- The goal of web components are to make code reusable. Web components allow you to create your own custom HTML templates with encapsulated functionality, and it does this natively.
+ "Web components" is an umbrella term for a set of technologies, mainly APIs, that allow you to create custom elements, which you can then use within your web applications. The goal is to make reusable code with encapsulated functionality, all while using standards.
 
 ## Building a Simple Web Component
 
@@ -109,7 +110,7 @@ customElements.define("my-counter", MyCounter);
 
 Shadow DOM is a set of JavaScript APIs that allow you to encapsulate your code. It's rendered separately from the main document DOM, so you never have to worry about collision with other parts of the document.
 
-What we're doing is attaching the shadow root to our element, and we do this from inside the constructor. While we're at it, we'll also set our initial count to 0:
+Here we are attaching the shadow root to our element, and we do this from inside the constructor. While we're at it, we'll also set our initial count to 0:
 
 ```js
 class MyCounter extends HTMLElement {
@@ -121,7 +122,7 @@ class MyCounter extends HTMLElement {
 }
 ```
 
-To recap, we previously defined our template at the top of the file and assigned it to a variable called `template`. We then attached shadow root to our element. Now, we can have shadow root clone the template to create the element's internal shadow DOM structure.
+We previously defined our template at the top of the file and assigned it to a variable called `template`. We then attached shadow root to our element. Now, we can have shadow root clone the template to create the element's internal shadow DOM structure.
 
 We'll do all of this from within the constructor for now:
 
@@ -191,7 +192,7 @@ class MyCounter extends HTMLElement {
 }
 ```
 
-Looks good! But I also would like to add an effect of filling an SVG and emptying it based on the clicks. Let's add a fun little SVG to the HTML, just below our custom element:
+I also would like to add an effect of filling an SVG and emptying it based on the clicks. Let's add a fun little SVG to the HTML, just below our custom element:
 
 ```html
 <my-counter></my-counter>
@@ -385,19 +386,13 @@ By adding a `package.json` you could publish the module to npm, even if it's not
 
 Using TypeScript is possible with web components, but the implementation varies depending on what build tool you are using, if you're using one at all. Typically, this isn't very different than if you were using TypeScript for any other project, so I recommend you check the documentation for your specific build tool.
 
-## Polymer, AMP, and Other Libraries
-
-You can absolutely use a library like Polymer or AMP to manage your web components, but it's not really necessary. Web components come down to how you decide to structure your application and what you decide to use for templating. Sometimes, it's easier not to have to make that decision.
-
 ## Template Rendering for Web Components
 
-When it comes to template rendering, the options are endless. My advice is that you go with what you are most comfortable with, so long as you understand the tradeoffs. It's possible to leave template rendering to a framework like React, Angular, or Vue. Of course, you can also use a library that is specifically for template rendering like lit-html, Slim.js, or Pencil.
+When it comes to template rendering, you have a variety of options that use very different approaches. It's possible to leave template rendering to a framework like React, Angular, or Vue. Of course, you can also use a library that is specifically for templating, such as <a href="https://lit-html.polymer-project.org/" rel="nofollow" target="_blank">lit-html</a>.
 
 ## Browser Compatibility of Web Components
 
-As recently as Fall 2018, the only browsers that had full support for web components were Chrome and Safari. Although custom elements were a quick and easy polyfill, shadow DOM was far more complicated and difficult to use without native support. It really wasn't until late 2019 / early 2020 that all major browsers adopted support for Web Components. With the release of Chromium-based Edge 76, web components are now supported by most modern browsers.
-
-If you do need to support older browsers, you'll need to include polyfills. They add a little bit of overhead, but it's still a small cost to pay for the flexibility that web components provide us.
+As recently as Fall 2018, the only browsers that had full support for web components were Chrome and Safari. Although custom elements were a quick and easy polyfill, shadow DOM was far more complicated and difficult to use without native support. It really wasn't until late 2019 / early 2020 that all major browsers adopted support for Web Components. With the release of Chromium-based Edge 76, web components are now supported by most modern browsers. If you do need to support legacy browsers, you'll need to include <a href="https://www.webcomponents.org/polyfills" rel="nofollow" target="_blank">polyfills</a>.
 
 ## Styling Web Components
 
@@ -465,15 +460,16 @@ my-counter::part(action) {
 
 It's always a good idea to [unit test your components](https://www.nerdycode.com/unit-testing-react-guide/). Polymer has a TDD testing tool called [web-component-tester](https://github.com/Polymer/tools/tree/master/packages/web-component-tester) that works with Mocha and Chai out of the box, but you can also use [Karma](https://karma-runner.github.io/latest/index.html) as well. Depending on your setup, it might also be a good idea to write some integration tests to ensure there is no issue rendering custom HTML, especially if you're using a SPA framework.
 
-## When To Use Web Components
+## Drawbacks
 
-So, why isn't everyone using web components already? Those that have been working with web components for a long time now are all too familiar with some of the shortcomings of the past, one of which was lack of compatibility with modern web browsers.
+Though I won't go into all of the drawbacks of using web components, there are a few you should probably know about:
 
-There may have also been some loss of momentum to frameworks like Angular and React, maybe in part because web components didn't seem to be as easy to implement, or maybe because those that had tried them felt let down by the lack of examples, documentation, or browser support. Digging through comments and tweets I've even found that sometimes people associate web components with Polymer and the like, not really understanding how to use them without introducing a third party dependency. In my opinion, there have been some inconsistencies with marketing web components as well.
+- Polyfills. As I previously mentioned, if you need to support legacy browsers you'll need to include polyfills. They can be a bit chunky, and you'll also face some <a href="https://www.webcomponents.org/polyfills#known-limitations" target="_blank" rel="nofollow">limitations</a> on things like CSS encapsulation.
+- They don't work without JS. This may or may not be an issue for you, but it's kind of a big one if it is.
+- Issues with accessibility. There is no encapsulation of Aria declarations, and you have to re-add them for custom elements.
+- Custom CSS pseudo selectors don't work with web components.
+- They're not a drop-in replacement for frameworks. They don't support data binding out of the box, and you're responsible for architecting an application in a way that best makes sense for you. You probably won't be able to just drag and drop components into an existing application without writing some code.
 
-In any case, all of this is slowly changing. Browser compatibility is less of a concern, and developers around the world are getting a bit fed up with one-size-fits-all solutions that don't scale or age well. Still, changing common misperceptions of web components is a bit of an uphill battle. My advice is to give web components another go, this time with a fresh mind.
+## Final Thoughts
 
-## In Conclusion
-
-Web components have been around for a long time now, and they don't seem to have taken off as quickly as one would hope. But we're just getting started.
-
+Those that have been working with web components for a long time now are all too familiar with some of their shortcomings in the past. But even today, web components still have a long way to go, and not just in terms of changing misperceptions surrounding the technology. With that being said, it's a very exciting set of technologies that are certainly worth working with and learning about. After all, if we don't all push for a better modern web, who will?
