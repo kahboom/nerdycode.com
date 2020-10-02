@@ -472,4 +472,4 @@ Though I won't go into all of the drawbacks of using web components, there are a
 
 ## Final Thoughts
 
-Those that have been working with web components for a long time now are all too familiar with some of their shortcomings in the past. But even today, web components still have a long way to go, and not just in terms of changing misperceptions surrounding the technology. With that being said, it's a very exciting set of technologies that are certainly worth working with and learning about. After all, if we don't all push for a better modern web, who will?
+Those that have been working with web components for a long time now are all too familiar with some of the shortcomings they have been plagued with in the past. But even today, web components still have a long way to go, and not just in terms of changing misperceptions surrounding the technology. With that being said, it's a very exciting set of technologies that are certainly worth working with and learning about. After all, if we don't all push for a better modern web, who will?
