@@ -422,9 +422,9 @@ When creating components, we can also style our slots using the `::slotted()` se
 ```html
 <template id="my-counter">
   <style>
-    ::slotted(button) {
-      background-color: orange;
-    }
+      ::slotted(button) {
+        background-color: orange;
+      }
   </style>
   <h1>Some Counter</h1>
   <slot name="decrease">-</slot>
@@ -446,9 +446,9 @@ my-counter::part(action) {
 ```html
 <template id="my-counter">
   <style>
-  :host {
-    display: flex;
-  }
+      :host {
+        display: flex;
+      }
   </style>
   <button id="dec" part="action">-</button>
   <span id="count"></span>
