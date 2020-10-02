@@ -1,7 +1,7 @@
 ---
-title: Understanding Web Components
+title: "Web Components: The Basics"
 date: 2020-10-01
-permalink: "/understanding-web-components/"
+permalink: "/web-components-basics/"
 dynamicPermalink: false
 layout: post.njk
 references:
