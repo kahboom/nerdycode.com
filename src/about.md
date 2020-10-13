@@ -15,11 +15,11 @@ I sometimes blog about technology from the perspective of a decidedly pragmatic 
 
 I was born in the beautiful Dominican Republic (I'm Latin/Hispanic). I later went on to study Chemistry in college, but eventually decided to make a career out of what I had been doing for most of my life instead, namely: lounging around, eating pizza, writing code
 
-I've worked on software for everything from children's education to distributed enterprise software. A few areas of particular interest are e-commerce, online education, ML/AI, data integration, and application security. I'm also a fan of polyglot programming, DSLs, and the modern web.
+I've worked on software for everything from children's education to distributed enterprise software. I have many areas of interest that I'm always striving to learn more about, some of which are e-commerce, data integration, ML/AI, e-learning, and application security. I'm also a fan of polyglot programming and the modern web.
 
 <p class="marquee">
    <span>
-   Other things I like: dancing - ballet, jazz+modern, jumping around, etc; mechanical keyboards; dogs; climbing trees; programming; science; documentaries; learning; music; playing the guitar; mechanical keyboards; vintage computers; pizza
+   Other things I like: dancing - ballet, jazz+modern, jumping around, etc; mechanical keyboards; dogs; climbing trees; programming electronics; organic chemistry; documentaries; learning; music; playing the guitar; mechanical keyboards; vintage computers; pizza
    </span>
  </p>
 </div>
