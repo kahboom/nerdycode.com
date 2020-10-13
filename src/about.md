@@ -19,7 +19,7 @@ I've worked on software for everything from children's education to distributed 
 
 <p class="marquee">
    <span>
-   Other things I like: dancing - ballet, jazz+modern, jumping around, etc; mechanical keyboards; dogs; climbing trees; programming electronics; organic chemistry; documentaries; learning; music; playing the guitar; mechanical keyboards; vintage computers; pizza
+   Other things I like: dancing - ballet, jazz+modern; mechanical keyboards; dogs; climbing trees; programming electronics; organic chemistry; documentaries; learning; playing the guitar; vintage computers; pizza
    </span>
  </p>
 </div>
