@@ -1,3 +1,6 @@
-[submodule "src/posts"]
+[submodule "posts"]
 	path = src/posts
 	url = git@github.com:kahboom/nerdycode-posts.git
+[submodule "images"]
+	path = src/img
+	url = git@github.com:kahboom/nerdycode-images.git
