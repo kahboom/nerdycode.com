@@ -216,7 +216,7 @@ html, body, .navbar {
   background-color: var(--background);
 }
 
-a.tag:hover {
+a.nc-tag:hover {
   text-decoration: none !important;
 }
 
@@ -255,9 +255,9 @@ a.panel-block:hover, label.panel-block:hover {
 
 // PRISM.JS
 
-.tag:not(body) {
-  background-color: inherit;
-}
+//.tag:not(body) {
+//  background-color: inherit;
+//}
 
 // CONTACT FORM
 
@@ -285,7 +285,7 @@ a.panel-block:hover, label.panel-block:hover {
   padding: 2rem 1.5rem !important;
 }
 
-.tag.is-primary {
+.nc-tag.is-primary {
   background-color: $nerdy-purple;
   &:hover {
     background-color: lighten($nerdy-purple, 20%);

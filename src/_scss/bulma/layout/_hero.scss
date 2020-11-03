@@ -31,7 +31,7 @@ $hero-colors: $colors !default;
       background-color: $color;
       color: $color-invert;
 
-      a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
+      a:not(.button):not(.dropdown-item):not(.nc-tag):not(.pagination-link.is-current),
       strong {
         color: inherit;
       }

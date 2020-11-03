@@ -31,7 +31,7 @@ $message-colors: $colors !default;
     color: currentColor;
   }
 
-  a:not(.button):not(.tag):not(.dropdown-item) {
+  a:not(.button):not(.nc-tag):not(.dropdown-item) {
     color: currentColor;
     text-decoration: underline;
   }
