@@ -2,8 +2,15 @@
 layout: home.njk
 ---
 
-<h1>Latest Ramblings</h1>
+<div class="wrapper">
+    <div class="typing">
+        git commit -m "random thoughts on software"
+    </div>
+</div>
+
+
+<h1>⚡️ Latest Ramblings</h1>
 
 {% set postslist = collections.posts | head(-3) %}
 {% set postslistCounter = collections.posts | length %}
-{% include "postslist.njk" %}
+{% include "_postslist.njk" %}
