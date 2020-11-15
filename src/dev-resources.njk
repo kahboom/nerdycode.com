@@ -22,8 +22,9 @@ eleventyNavigation:
         <div class="tile is-child is-2">
           <nav class="datanav">
               <aside class="menu is-size-5">
+                  <!--
                   <label for="All" class="menu-label"><a class="panel-block">All</a></label>
-
+                  -->
                   {% for tag in devLinkTags %}
                       <label for="{{ tag.value }}" class="menu-label"><a class="panel-block">{{ tag.label }}</a></label>
                   {% endfor %}
