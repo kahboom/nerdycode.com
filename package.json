@@ -25,9 +25,9 @@
     "build": "yarn run sass && eleventy",
     "debug": "DEBUG=* eleventy",
     "sass": "node-sass src/_scss -o src/css --output-style compressed",
-    "start": "npm-run-all sass --parallel watch:*",
+    "start": "npm-run-all --parallel watch:eleventy watch:sass",
     "watch": "eleventy --watch",
-    "watch:eleventy": "eleventy --serve",
+    "watch:eleventy": "eleventy --serve --quiet",
     "watch:sass": "yarn run sass --watch"
   },
   "bugs": {
