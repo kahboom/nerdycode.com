@@ -4,7 +4,6 @@
 @import "bulma/utilities/initial-variables";
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
-//@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 $nerdy-blue: #329ebb;
 $nerdy-green: #b1bf52;
@@ -51,6 +50,7 @@ $nerdy-yellow: #ebdf41;
   --button-background: var(--color-dark);
   --button-color: var(--color-light);
   --border-color: var(--color-dark-alpha);
+  --code-background: #353535;
 
   --background-blue: var(--color-blue);
   --background-green: var(--color-green);
@@ -76,6 +76,10 @@ $nerdy-yellow: #ebdf41;
     --button-background: var(--color-light);
     --button-color: var(--color-dark);
     --border-color: var(--color-light-alpha);
+
+    pre[class*=language-] {
+      box-shadow: none;
+    }
   }
 }
 
@@ -87,6 +91,10 @@ $nerdy-yellow: #ebdf41;
   --button-background: var(--color-light-alpha);
   --button-color: var(--color-dark);
   --border-color: var(--color-light-alpha);
+
+  pre[class*=language-] {
+    box-shadow: none;
+  }
 }
 
 // Removes all animations and transitions for people that prefer not to see them
