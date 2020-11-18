@@ -13,9 +13,8 @@ $nerdy-purple: #5a3da5;
 $nerdy-yellow: #ebdf41;
 
 // Here we set CSS variables to be used by our Bulma overrides
-
 :root {
-  --color-mode: 'light';
+  --color-mode: 'dark';
   --color-dark: #16161d;
   --color-dark-alpha: rgba(0, 0, 0, 0.1);
   --color-light: #efefef;
@@ -43,13 +42,14 @@ $nerdy-yellow: #ebdf41;
   </svg>');
   --icon-moon-filter: invert(0.75);
 
-  --background: #efefef;
-  --text-color: #141414;
-  --button-icon: var(--icon-moon);
-  --button-icon-filter: var(--icon-moon-filter);
-  --button-background: var(--color-dark);
-  --button-color: var(--color-light);
-  --border-color: var(--color-dark-alpha);
+  --background: var(--color-dark);
+  --text-color: var(--color-light);
+  --button-icon: var(--icon-sun);
+
+  --button-icon-filter: var(--icon-sun-filter);
+  --button-background: var(--color-light);
+  --button-color: var(--color-dark);
+  --border-color: var(--color-light-alpha);
   --code-background: #353535;
 
   --background-blue: var(--color-blue);
@@ -62,7 +62,7 @@ $nerdy-yellow: #ebdf41;
 
 
 // Media-defined color scheme;
-
+/**
 @media (prefers-color-scheme: dark) {
   :root {
     --color-mode: 'dark';
@@ -82,6 +82,19 @@ $nerdy-yellow: #ebdf41;
     }
   }
 }
+ */
+
+// Switching it around so that dark is the default for now
+[data-user-color-scheme="light"] {
+  --background: var(--color-light);
+  --text-color: var(--color-dark);
+  --button-icon: var(--icon-moon);
+  --button-icon-filter: var(--icon-sun-filter);
+  --button-background: var(--color-dark-alpha);
+  --button-color: var(--color-light);
+  --border-color: var(--color-dark-alpha);
+}
+
 
 [data-user-color-scheme="dark"] {
   --background: var(--color-dark);
@@ -113,7 +126,6 @@ $nerdy-yellow: #ebdf41;
 // BULMA OVERRIDES, in alphabetical order
 
 $primary: $nerdy-purple;
-//$scheme-main: #16161d;
 
 $body-color: var(--text-color);
 $body-font-size: 1.2em;
@@ -249,10 +261,6 @@ a.panel-block:hover, label.panel-block:hover {
 
 // MOBILE NAVBAR
 
-.navbar-menu {
-  //background-color: var(--background-color);
-}
-
 @media screen and (max-width: 1023px) {
   .navbar-menu {
     background-color: var(--background-color);
@@ -260,12 +268,6 @@ a.panel-block:hover, label.panel-block:hover {
     border-bottom: solid pink;
   }
 }
-
-// PRISM.JS
-
-//.tag:not(body) {
-//  background-color: inherit;
-//}
 
 // CONTACT FORM
 
@@ -297,7 +299,6 @@ a.panel-block:hover, label.panel-block:hover {
   background-color: $nerdy-purple;
   &:hover {
     background-color: lighten($nerdy-purple, 20%);
-    //color: darken($nerdy-purple, 25%);
   }
 }
 
@@ -338,7 +339,6 @@ Bulma puts on header tags
 
 .content h1 {
   color: darken($nerdy-pink, 5%);
-  //font-family: 'Permanent Marker', cursive;
   font-size: 2rem;
 }
 .content h2 {
