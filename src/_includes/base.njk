@@ -52,15 +52,15 @@
     <meta name="twitter:site" content="@nerdycode">
 </head>
 <body>
-<section class="section">
+<header class="section">
     <nav class="navbar is-fixed-top is-size-6" role="navigation" aria-label="navigation">
         <div class="container">
 
             <!-- Brand -->
-            <div class="navbar-brand">
+            <section class="navbar-brand">
                 <a href="{{ '/' | url }}" class="navbar-item">
                     <?xml version="1.0" encoding="UTF-8"?>
-                    <svg width="258px" height="38px" viewBox="0 0 258 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                    <svg width="258px" height="38px" viewBox="0 0 258 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
                         <title>NerdyCode</title>
                         <defs></defs>
                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
@@ -79,10 +79,10 @@
                     <span></span>
                     <span></span>
                 </a>
-            </div>
+            </section>
 
             <!-- Menu -->
-            <div id="navbarMenu" class="navbar-menu">
+            <section id="navbarMenu" class="navbar-menu">
                 <div class="navbar-end">
                 {%- for entry in collections.all | eleventyNavigation %}
                     <li class="navbar-item is-nav-link {% if entry.url == page.url %} is-active{% endif
@@ -92,18 +92,14 @@
                 {%- endfor %}
                     <theme-toggle></theme-toggle>
                 </div>
-            </div>
+            </section>
         </div>
     </nav>
-</section>
+</header>
 
-<section{% if templateClass %} class="section {{ templateClass }}"{% endif %}>
-    <div class="container">
-        <div class="content">
-            {{ content | safe }}
-        </div>
-    </div>
-</section>
+<main class="section container content {% if templateClass %} {{ templateClass }}{% endif %}">
+    {{ content | safe }}
+</main>
 
 {% include '_footer.njk' %}
 <script type="module" src="/js/theme-toggle.js" async defer></script>

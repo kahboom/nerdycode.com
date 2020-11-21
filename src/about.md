@@ -7,7 +7,7 @@ eleventyNavigation:
 ---
 
 <div class="columns">
-<div class="column is-three-quarters">
+<section class="column is-three-quarters">
 
 Hello, world. My name is Rachel, and I'm a software engineer at Red Hat. I've also been a "webmaster" since the 90s.
 
@@ -22,17 +22,16 @@ I've worked on software for everything from children's education to distributed 
    Other things I like: dancing - ballet, jazz+modern; mechanical keyboards; dogs; climbing trees; programming electronics; organic chemistry; documentaries; learning; playing the guitar; vintage computers; pizza
    </span>
  </p>
-</div>
+</section>
 
-
-<div class="column">
+<aside class="column">
 <div class="picture">
 <div class="picture__border">
 <img src="/img/photos/rachel-cropped.jpg">
 <figcaption>I wonder if they do sticky toffee pudding here?</figcaption>
 </div>
 </div>
-</div>
+</aside>
 </div>
 
 

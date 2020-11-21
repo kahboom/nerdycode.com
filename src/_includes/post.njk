@@ -6,11 +6,11 @@ templateClass: tmpl-post
 <h1 class="title is-3">⚡️ {{ title }}</h1>
 
 <div class="columns">
-    <div class="column is-three-quarters">
+    <article class="column is-three-quarters">
         {{ content | safe }}
 
         {% if references %}
-            <div class="references-block">
+            <aside class="references-block">
                 <span class="references-block__title">Further Reading</span>
                 <ul>
                     {% for ref in references %}
@@ -21,23 +21,24 @@ templateClass: tmpl-post
                         </li>
                     {% endfor %}
                 </ul>
-            </div>
+            </aside>
         {% endif %}
-    </div>
-    <div class="column">
-        <aside class="sidebar">
+    </article>
+    <aside class="column sidebar">
+        <section>
             <div class="picture pb-6" style="max-width: 75%">
                 <div class="picture__border">
                     <img src="/img/photos/rachel-cropped.jpg" alt="Rachel Software Engineer"/>
                     <figcaption>Hello, world.<br/>I'm Rachel, a software engineer.</figcaption>
                 </div>
             </div>
+        </section>
 
-
+        <section>
             <div class="block">
-            <h4 class="mini-header">
-                <span>Tags</span>
-            </h4>
+                <h4 class="mini-header">
+                    <span>Tags</span>
+                </h4>
             </div>
 
             <div class="block pb-5">
@@ -48,7 +49,9 @@ templateClass: tmpl-post
                     {%- endif -%}
                 {% endfor %}
             </div>
+        </section>
 
+        <section>
             <div class="block">
                 <h4 class="mini-header">
                     <span>Published</span>
@@ -59,7 +62,9 @@ templateClass: tmpl-post
                 <p>{{ page.date | readableDate }}</p>
                 {% if updated %}<p><i>Updated {{ updated | readableDate }}</i></p>{% endif %}
             </div>
+        </section>
 
+        <section>
             <div class="block">
                 <h4 class="mini-header">
                     <span>Survey</span>
@@ -70,6 +75,6 @@ templateClass: tmpl-post
                 <p>⭐️ Take a <a href="https://forms.gle/FSSazib9yTS9ygEt7" rel="nofollow" target="_blank">2 minute
                         survey</a> to help me improve my website?</p>
             </div>
-        </aside>
-    </div>
+        </section>
+    </aside>
 </div>
