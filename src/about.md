@@ -27,7 +27,7 @@ I've worked on software for everything from children's education to distributed 
 <aside class="column">
 <div class="picture">
 <div class="picture__border">
-<img loading="lazy" src="/img/photos/rachel-cropped.jpg">
+<img loading="lazy" src="/img/photos/rachel-cropped.jpg" alt="My face">
 <figcaption>I wonder if they do sticky toffee pudding here?</figcaption>
 </div>
 </div>
