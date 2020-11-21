@@ -2,6 +2,8 @@
   "title": "NerdyCode | Web Development and Software",
   "url": "https://www.nerdycode.com/",
   "description": "A website about software and sometimes non-software things.",
+  "domain": "nerdycode.com",
+  "googleAnalyticsId": "UA-41791588-1",
   "feed": {
     "subtitle": "A website about software and sometimes non-software things.",
     "filename": "feed.xml",
@@ -10,6 +12,7 @@
   },
   "author": {
     "name": "Rachel Yordán",
-    "email": "nerdycodeblog@gmail.com"
+    "email": "nerdycodeblog@gmail.com",
+    "twitter": "NerdyCode"
   }
 }

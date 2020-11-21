@@ -1,8 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" domain="{{ metadata.domain }}" ga-id="{{ metadata.googleAnalyticsId }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="{{ csp.regular | safe }}">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
     <!-- Favicon -->
     <link rel="shortcut icon"
           href="/img/favicon.ico"
@@ -10,12 +13,38 @@
     <link rel="apple-touch-icon" sizes="180x180"
           href="/img/favicon.ico">
 
-    <link rel="canonical" href="https://www.nerdycode.com/">
+    <link rel="canonical" href="{{ metadata.url }}{{ canonicalUrl or page.url }}">
 
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml"
           title="{{ metadata.title }}">
 
+    <link rel="preconnect" href="/" crossorigin>
+
     <title>{{ renderData.title or title or metadata.title }}{% if title %}&nbsp;|&nbsp;NerdyCode{% endif %}</title>
+
+    <!-- Meta Stuff -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ renderData.title or title or metadata.title | escape  }}">
+    {% set desc = renderData.description or description or metadata.description %}
+    {% if not desc %}
+        {% set desc = content | striptags | truncate(140) %}
+    {% endif %}
+    {% if desc %}
+        <meta name="description" content="{{ desc | escape  }}">
+        <meta property="og:description" content="{{ desc | escape }}">
+    {% endif %}
+
+    <meta property="og:url" content="https://www.nerdycode.com/">
+    <meta property="og:site_name" content="NerdyCode">
+
+    {% if image %}
+        <meta property="og:image" content="{{ image | absoluteUrl(metadata.url) }}">
+    {% endif %}
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@{{ metadata.author.twitter }}">
+    <meta name="twitter:creator" content="@{{ metadata.author.twitter }}">
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
@@ -26,7 +55,7 @@
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41791588-1"></script>
+    <script async defer src="https://www.googletagmanager.com/gtag/js?id=UA-41791588-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
 
@@ -39,17 +68,7 @@
       gtag('config', 'UA-41791588-1');
     </script>
 
-    <!-- Meta Stuff -->
-    <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
 
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="NerdyCode | Web Development and Software">
-    <meta property="og:description" content="Web Development and Software">
-    <meta property="og:url" content="https://www.nerdycode.com/">
-    <meta property="og:site_name" content="NerdyCode">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@nerdycode">
 </head>
 <body>
 <header class="section">
@@ -103,6 +122,6 @@
 
 {% include '_footer.njk' %}
 <script type="module" src="/js/theme-toggle.js" async defer></script>
-<script src="/js/mobile-nav.js"></script>
+<script async defer src="/js/mobile-nav.js"></script>
 </body>
 </html>
