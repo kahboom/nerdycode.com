@@ -3,9 +3,6 @@ layout: page.njk
 title: Contact Me
 templateClass: contact-page
 css_include: /css/contact.css
-eleventyNavigation:
-  key: Contact
-  order: 10
 ---
 
 <section class="columns is-mobile is-centered">

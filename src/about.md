@@ -18,11 +18,15 @@ I was born in the beautiful Dominican Republic (I'm Latin/Hispanic). I later wen
 
 I've worked on software for everything from children's education to distributed enterprise software. I have many areas of interest that I'm always striving to learn more about, some of which are e-commerce, data integration, ML/AI, e-learning, and application security. I'm also a fan of polyglot programming and the modern web.
 
+<a href="https://www.nerdycode.com/contact">📬 Send me an email</a>
+
 <p class="marquee">
    <span>
    Other things I like: dancing - ballet, jazz+modern; mechanical keyboards; dogs; climbing trees; programming electronics; organic chemistry; documentaries; learning; playing the guitar; vintage computers; pizza
    </span>
  </p>
+
+
 </section>
 
 <aside class="column">
