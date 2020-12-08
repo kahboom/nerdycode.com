@@ -1,6 +1,7 @@
 ---
 layout: page.njk
 title: About Me
+css_include: /css/about.css
 eleventyNavigation:
   key: About
   order: 6

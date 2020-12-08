@@ -150,10 +150,10 @@ $title-color: var(--text-color);
 // Now that Bulma has been imported,
 // you can import the rest of the overrides.
 
-@import "home";
-@import "elements/main";
-@import "list";
-
+@import "layout/logo";
+@import "layout/footer";
+//@import "layout/main";
+//@import "list";
 
 // LIGHT/DARK TOGGLE
 // If there’s no JS, there’s no need for the user toggle component to show
@@ -269,20 +269,6 @@ a.panel-block:hover, label.panel-block:hover {
   }
 }
 
-// CONTACT FORM
-
-.label {
-  color: var(--text-color);
-}
-
-.input, .textarea, .select select {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-.contact-page .title {
-  text-align: center;
-}
 
 // I cannot for the life of me remember wth this is for..
 .rc-anchor-light {
@@ -302,39 +288,6 @@ a.panel-block:hover, label.panel-block:hover {
   }
 }
 
-// SIDEBAR
-.sidebar {
-  padding-left: 1.5em;
-}
-
-// Used for things like the sidebar
-h4.mini-header {
-  width: 100%;
-  text-align: left;
-  border-bottom: 1px solid var(--color-pink);
-  line-height: 0.1em;
-  margin: 10px 0 20px;
-}
-
-h4.mini-header span {
-  background-color: var(--background);
-  font-size: 0.8em;
-  padding-right: 0.3em;
-  text-transform: uppercase;
-}
-
-// Sidebar Stuff
-.published {
-  font-size: 0.8em;
-}
-
-.sidebar .picture__border {
-  padding: 20px 10px 15px;
-}
-
-.sidebar .picture__border figcaption {
-  font: 0.8em "Permanent Marker";
-}
 
 /**
 This overrides the default font sizes
@@ -367,21 +320,6 @@ a.panel-block:hover, label.panel-block:hover {
   color: var(--color-blue);
 }
 
-// LOGO
-// Fills "Nerdy" to be the text color,
-// which changes depending on light/dark mode
-.navbar-item {
-  tspan.nerdy {
-    fill: var(--text-color);
-  }
-}
-
-// Logo sizing
-.navbar-brand {
-  .navbar-item {
-    max-width: 230px;
-  }
-}
 
 
 // HOME LINK at the bottom of most pages

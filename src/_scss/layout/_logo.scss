@@ -1,0 +1,15 @@
+// LOGO
+// Fills "Nerdy" to be the text color,
+// which changes depending on light/dark mode
+.navbar-item {
+  tspan.nerdy {
+    fill: var(--text-color);
+  }
+}
+
+// Logo sizing
+.navbar-brand {
+  .navbar-item {
+    max-width: 230px;
+  }
+}

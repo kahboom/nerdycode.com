@@ -12,7 +12,6 @@
           type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180"
           href="/img/favicon.ico">
-
     <link rel="canonical" href="{{ metadata.url }}{{ canonicalUrl or page.url }}">
 
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml"
@@ -20,7 +19,7 @@
 
     <link rel="preconnect" href="/" crossorigin>
 
-    <title>{{ renderData.title or title or metadata.title }}{% if title %}&nbsp;|&nbsp;NerdyCode{% endif %}</title>
+    <title>{{ renderData.title or title or metadata.title }}{% if title %}{{ metadata.titleTrail }}{% endif %}</title>
 
     <!-- Meta Stuff -->
     <meta property="og:locale" content="en_US">
