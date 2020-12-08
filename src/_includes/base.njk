@@ -71,9 +71,7 @@
 </head>
 <body>
 <header class="section">
-    <nav class="navbar is-fixed-top is-size-6" role="navigation" aria-label="navigation">
-        <div class="container">
-
+    <nav class="navbar is-fixed-top is-size-6 condense" role="navigation" aria-label="navigation">
             <!-- Brand -->
             <section class="navbar-brand">
                 <a href="{{ '/' | url }}" class="navbar-item">
@@ -111,16 +109,15 @@
                     <theme-toggle></theme-toggle>
                 </div>
             </section>
-        </div>
     </nav>
 </header>
 
-<main class="section container content {% if templateClass %} {{ templateClass }}{% endif %}">
+<main class="content condense {% if templateClass %} {{ templateClass }}{% endif %}">
     {{ content | safe }}
 </main>
 
 {% include '_footer.njk' %}
 <script async defer type="module" src="/js/theme-toggle.js"></script>
-<script async defer src="/js/mobile-nav.js"></script>
+<script src="/js/mobile-nav.js"></script>
 </body>
 </html>

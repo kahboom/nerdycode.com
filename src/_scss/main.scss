@@ -152,65 +152,10 @@ $title-color: var(--text-color);
 
 @import "layout/logo";
 @import "layout/footer";
+@import "layout/navbar";
 //@import "layout/main";
 //@import "list";
-
-// LIGHT/DARK TOGGLE
-// If there’s no JS, there’s no need for the user toggle component to show
-.no-js .user-toggle {
-  display: none;
-}
-
-.theme-toggle {
-  padding: 0.5rem 0.75rem;
-}
-
-.user-toggle {
-  margin: 2rem auto 0 auto;
-  padding-top: 2.5rem;
-  max-width: 20rem;
-  border: none;
-  text-align: center;
-}
-
-.toggle-button__icon {
-  background: var(--button-icon);
-  width: 1.2em;
-  height: 1.2em;
-  margin: 0 0 0 0.5em;
-  filter: var(--button-icon-filter);
-  transform: translateY(1px); // Optical adjustment
-  transition: filter 500ms ease-in-out;
-}
-
-.js-mode-toggle {
-  border: none;
-  outline: none;
-}
-
-.js-mode-toggle:focus:not(:active), .js-mode-toggle.is-focused:not(:active) {
-  box-shadow: none;
-  outline: none;
-}
-
-.button.js-mode-toggle:focus, .button.js-mode-toggle:active, .button.js-mode-toggle.is-active {
-  outline: none;
-  border-color: inherit;
-  color: inherit;
-}
-
-
-// LIGHT/DARK TOGGLE
-// Presentation
-
-article {
-  max-width: 75ch;
-  margin: 0 auto;
-}
-
-article > * + * {
-  margin-top: 1em;
-}
+@import "elements/theme-toggle";
 
 .visually-hidden {
   display: block;
@@ -230,6 +175,15 @@ article > * + * {
 html, body, .navbar {
   background-color: var(--background);
   color: var(--text-color);
+}
+
+.condense {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .button {
@@ -258,7 +212,6 @@ a.panel-block:hover, label.panel-block:hover {
   display: none;
 }
 
-
 // MOBILE NAVBAR
 
 @media screen and (max-width: 1023px) {
@@ -268,6 +221,7 @@ a.panel-block:hover, label.panel-block:hover {
     border-bottom: solid pink;
   }
 }
+
 
 
 // I cannot for the life of me remember wth this is for..
