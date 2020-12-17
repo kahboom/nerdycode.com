@@ -22,3 +22,15 @@
     }
   }
 }
+
+.footer--social-media {
+  .social-media__item {
+    &:hover {
+      svg {
+        path{
+          fill: var(--color-green);
+        }
+      }
+    }
+  }
+}
