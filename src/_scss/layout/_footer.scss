@@ -1,6 +1,8 @@
 // FOOTER SOCIAL MEDIA ICONS
 
-.social-media {
+@import "../elements/social";
+
+.footer--social-media {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -18,84 +20,5 @@
     path {
       fill: var(--color);
     }
-  }
-
-  .social-media__item {
-    height: 2rem;
-    transform-origin: center;
-    transition-duration: .2s;
-    transition-property: opacity,transform;
-    width: 4rem;
-
-    &:hover {
-      svg {
-        path{
-          fill: var(--color-green);
-        }
-      }
-    }
-  }
-
-  .facebook {
-    --color: #3b5998;
-    --hover-color: darken(#3b5998, 20%);
-  }
-
-  .discord {
-    --color: #7289DA;
-    --hover-color: darken(#7289DA, 50%);
-  }
-
-  .github {
-    //--color: #181717;
-    --color: var(--text-color);
-    --hover-color: darken(var(--text-color), 10%);
-  }
-
-  /*
-  .gitter {
-    --color: #ED1965;
-    --hover-color: #ED1965, 50%);
-  }
-   */
-
-  .instagram {
-    --color: #E4405F;
-    --hover-color: darken(#E4405F, 10%);
-  }
-
-  .linkedin {
-    --color: #15aabf;
-    --hover-color: darken(#15aabf, 50%);
-  }
-
-  .pinterest {
-    --color: #BD081C;
-    --hover-color: darken(#BD081C, 10%);
-  }
-
-  .reddit {
-    --color: #FF4500;
-    --hover-color: darken(#FF4500, 10%);
-  }
-
-  .rss {
-    --color: #FFA500;
-    --hover-color: darken(#FFA500, 10%);
-  }
-
-  .tumblr {
-    --color: #36465D;
-    --hover-color: darken(#36465D, 10%);
-  }
-
-  .twitter {
-    --color: #55acee;
-    --hover-color: darken(#55acee, 10%);
-  }
-
-  .youtube {
-    --color: #FF0000;
-    --hover-color: darken(#FF0000, 50%);
   }
 }
