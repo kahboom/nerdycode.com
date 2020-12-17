@@ -2,18 +2,37 @@
 layout: home.njk
 ---
 
-<section class="landing">
-    Rachel Yordán is a software engineer with a passion for learning.
-</section>
-
 <div class="wrapper">
     <div class="typing">
         git commit -m "random thoughts on software"
     </div>
 </div>
 
-<h1>⚡️ Latest Ramblings</h1>
+<div class="columns dotted-box">
+    <div class="column is-three-quarters">
+        <div class="landing">
+            <h1>Hello! I'm Rachel.</h1>
+            <p>I'm a software engineer with a passion for learning and teaching.</p>
+            <p>You can follow me on Instagram or Twitter, or send me an email.</p>
+        </div>
+    </div>
+    <!-- Sidebar -->
+    <aside class="column sidebar">
+        <section>
+            <div class="picture pb-6">
+                <div class="picture__border">
+                    <img src="/img/photos/rachel-cropped.jpg" alt="My face"/>
+                    <figcaption>Hello, world.</figcaption>
+                </div>
+            </div>
+        </section>
+    </aside>
+</div>
+
+<section>
+<h2>⚡️ Latest Ramblings</h2>
 
 {% set postslist = collections.posts | head(-3) %}
 {% set postslistCounter = collections.posts | length %}
 {% include "_postslist.njk" %}
+</section>

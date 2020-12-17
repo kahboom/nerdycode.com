@@ -1,6 +1,21 @@
 // HOME
 
 @import "list";
+@import "layout/sidebar";
+@import "elements/picture";
+@import "elements/tape";
+
+.landing {
+  font-size: 1.5rem;
+}
+
+.dotted-box {
+  border-radius: 1rem;
+  border: 1px dotted var(--color-blue);
+  font-size: 0.7em;
+  margin: 3em 0 0;
+  padding: 3em;
+}
 
 .wrapper {
   display: flex;
