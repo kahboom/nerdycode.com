@@ -2,26 +2,43 @@
 layout: home.njk
 ---
 
+<!-- Mobile -->
 
+<div class="is-hidden-tablet">
+    <!--<h1>Hello, I'm Rachel.</h1>-->
+    <div class="typing"><p>Hello, world. I'm Rachel.</p></div>
+    <p>I'm a software engineer with a passion for learning and teaching. I sometimes blog about things.</p>
 
-<div class="columns dotted-box">
+    <div class="buttons">
+        <a class="button is-primary is-small" href="https://www.instagram.com/nerdy.code" rel="nofollow"
+           target="_blank">Instagram</a>
+        <a class="button is-info is-small" href="https://www.twitter.com/nerdycode" rel="nofollow"
+           target="_blank">Twitter</a>
+        <a class="button is-danger is-small" href="/contact">Contact</a>
+    </div>
+</div>
+
+<!-- Desktop -->
+<div class="columns is-hidden-mobile dotted-box">
     <div class="column is-three-quarters">
         <div class="landing">
-            <h1>Hello, I'm Rachel.</h1>
-            <!--<div class="typing">Hello, world. I'm Rachel.</div>-->
-            <p>I'm a software engineer with a passion for learning and teaching. You can follow me on Instagram or
-                Twitter, or send me an email.</p>
-            <div class="buttons">
-                <button class="button is-primary">About Me</button>
-                <button class="button is-success">Instagram</button>
-                <button class="button is-warning">Twitter</button>
-                <button class="button is-danger">GitHub</button>
+            <div class="typing pb-2">Hello, world. I'm Rachel.</div>
+            <p>I'm a software engineer with a passion for learning and teaching. I sometimes
+                blog about things.</p>
+            <div class="buttons pt-5">
+                <a class="button is-primary is-small" href="/about">About Me</a>
+                <a class="button is-success is-small" href="https://www.instagram.com/nerdy.code" rel="nofollow"
+                   target="_blank">Instagram</a>
+                <a class="button is-warning is-small" href="https://www.twitter.com/nerdycode" rel="nofollow"
+                   target="_blank">Twitter</a>
+                <a class="button is-danger is-small" href="https://www.github.com/kahboom" rel="nofollow"
+                   target="_blank">GitHub</a>
             </div>
         </div>
 
     </div>
     <!-- Sidebar -->
-    <aside class="column sidebar">
+    <aside class="column sidebar is-hidden-mobile">
         <section>
             <div class="picture">
                 <div class="picture__border">

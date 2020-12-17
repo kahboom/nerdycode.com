@@ -45,6 +45,12 @@
   font-size: 1em;
 }
 
+.is-hidden-tablet {
+  .typing {
+    margin: 1em 0;
+  }
+}
+
 @keyframes typing {
   from {
     width: 0
