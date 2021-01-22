@@ -1,4 +1,5 @@
 {
+  "baseTitle": "NerdyCode",
   "title": "NerdyCode | Web Development and Software",
   "titleTrail": "&nbsp;|&nbsp;NerdyCode",
   "url": "https://www.nerdycode.com",
@@ -13,7 +14,7 @@
   },
   "author": {
     "name": "Rachel Yordán",
-    "email": "nerdycodeblog@gmail.com",
+    "email": "hello@nerydcode.com",
     "twitter": "NerdyCode"
   }
 }

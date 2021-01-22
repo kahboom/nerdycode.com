@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" domain="{{ metadata.domain }}" ga-id="{{ metadata.googleAnalyticsId }}">
+<html lang="en" domain="{{ metadata.domain }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +25,11 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ renderData.title or title or metadata.title | escape  }}">
+    <meta property="og:url" content="{{ metadata.url }}{{ canonicalUrl or page.url }}">
+    <meta property="og:site_name" content="{{ metadata.baseTitle }}">
+
+    <meta name="author" content="{{ metadata.author.name }}">
+
     {% set desc = renderData.description or description or metadata.description %}
     {% if not desc %}
         {% set desc = content | striptags | truncate(140) %}
@@ -32,18 +37,20 @@
     {% if desc %}
         <meta name="description" content="{{ desc | escape  }}">
         <meta property="og:description" content="{{ desc | escape }}">
-    {% endif %}
-
-    <meta property="og:url" content="https://www.nerdycode.com/">
-    <meta property="og:site_name" content="NerdyCode">
-
-    {% if image %}
-        <meta property="og:image" content="{{ image | absoluteUrl(metadata.url) }}">
+        <meta name="twitter:description" content="{{ desc | escape }}">
     {% endif %}
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@{{ metadata.author.twitter }}">
+    <meta name="twitter:title" content="{{ renderData.title or title or metadata.title | escape  }}">
     <meta name="twitter:creator" content="@{{ metadata.author.twitter }}">
+
+    {% if image %}
+        <meta property="og:image" content="{{ image | absoluteUrl(metadata.url) }}">
+        <meta property="og:image:alt" content="{{ imageAlt or metadata.baseTitle }}">
+        <meta name="twitter:image" content="{{ image | absoluteUrl(metadata.url) }}">
+        <meta name="twitter:image:alt" content="{{ imageAlt or metadata.baseTitle }}">
+    {% endif %}
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">

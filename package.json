@@ -32,5 +32,6 @@
   },
   "bugs": {
     "url": "https://www.github.com/kahboom/nerdycode.com/issues"
-  }
+  },
+  "dependencies": {}
 }
