@@ -86,6 +86,7 @@ css_include: /css/post.css
             </div>
         </section>
 
+        {% if tags.length > 1 %}
         <section>
             <div class="block">
                 <h4 class="mini-header">
@@ -102,6 +103,7 @@ css_include: /css/post.css
                 {% endfor %}
             </div>
         </section>
+        {% endif %}
 
         <section>
             <div class="block">
