@@ -21,12 +21,11 @@
     "purgecss": "^2.2.1"
   },
   "scripts": {
-    "build": "yarn run sass && eleventy",
+    "build": "eleventy",
     "debug": "DEBUG=* eleventy",
-    "start": "npm-run-all --parallel watch:eleventy watch:sass",
+    "start": "npm-run-all --parallel watch:eleventy",
     "watch": "eleventy --watch",
-    "watch:eleventy": "eleventy --serve --quiet",
-    "watch:sass": "yarn run sass --watch"
+    "watch:eleventy": "eleventy --serve --quiet"
   },
   "bugs": {
     "url": "https://www.github.com/kahboom/nerdycode.com/issues"
