@@ -24,7 +24,7 @@
     <!-- Meta Stuff -->
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ renderData.title or title or metadata.title | escape  }}">
+    <meta property="og:title" content="{{ renderData.title or title or metadata.title | escape }}">
     <meta property="og:url" content="{{ metadata.url }}{{ canonicalUrl or page.url }}">
     <meta property="og:site_name" content="{{ metadata.baseTitle }}">
 
@@ -35,14 +35,14 @@
         {% set desc = content | striptags | truncate(140) %}
     {% endif %}
     {% if desc %}
-        <meta name="description" content="{{ desc | escape  }}">
+        <meta name="description" content="{{ desc | escape }}">
         <meta property="og:description" content="{{ desc | escape }}">
         <meta name="twitter:description" content="{{ desc | escape }}">
     {% endif %}
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@{{ metadata.author.twitter }}">
-    <meta name="twitter:title" content="{{ renderData.title or title or metadata.title | escape  }}">
+    <meta name="twitter:title" content="{{ renderData.title or title or metadata.title | escape }}">
     <meta name="twitter:creator" content="@{{ metadata.author.twitter }}">
 
     {% if image %}
@@ -63,53 +63,57 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CL55XCP1WR"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'G-CL55XCP1WR');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+
+      gtag("config", "G-CL55XCP1WR");
     </script>
 
 </head>
 <body>
 <header class="section">
     <nav class="navbar is-fixed-top is-size-6 condense" role="navigation" aria-label="navigation">
-            <!-- Brand -->
-            <section class="navbar-brand">
-                <a href="{{ '/' | url }}" class="navbar-item">
-                    <?xml version="1.0" encoding="UTF-8"?>
-                    <svg width="258px" height="38px" viewBox="0 0 258 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-                        <title>NerdyCode</title>
-                        <defs></defs>
-                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-                            <text id="NerdyCode" sketch:type="MSTextLayer" font-family="Menlo" font-size="48"
-                                  font-weight="normal">
-                                <tspan x="0" y="37" fill="#000000" class="nerdy">NERDY</tspan>
-                                <tspan x="144.492188" y="37" fill="#329EBB" class="code">CODE</tspan>
-                            </text>
-                        </g>
-                    </svg>
-                </a>
+        <!-- Brand -->
+        <section class="navbar-brand">
+            <a href="{{ '/' | url }}" class="navbar-item">
+                <?xml version="1.0" encoding="UTF-8"?>
+                <svg width="258px" height="38px" viewBox="0 0 258 38" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                    <title>NerdyCode</title>
+                    <defs></defs>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                        <text id="NerdyCode" sketch:type="MSTextLayer" font-family="Menlo" font-size="48"
+                              font-weight="normal">
+                            <tspan x="0" y="37" fill="#000000" class="nerdy">NERDY</tspan>
+                            <tspan x="144.492188" y="37" fill="#329EBB" class="code">CODE</tspan>
+                        </text>
+                    </g>
+                </svg>
+            </a>
 
-                <!-- Responsive toggle -->
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a>
-            </section>
+            <!-- Responsive toggle -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </section>
 
-            <!-- Menu -->
-            <section id="navbarMenu" class="navbar-menu">
-                <div class="navbar-end">
+        <!-- Menu -->
+        <section id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
                 {%- for entry in collections.all | eleventyNavigation %}
-                    <li class="navbar-item is-nav-link {% if entry.url == page.url %} is-active{% endif
-                    %}">
+                    <li class="navbar-item is-nav-link {% if entry.url == page.url %} is-active{% endif %}">
                         <a href="{{ entry.url | url }}">{{ entry.title }}</a>
                     </li>
                 {%- endfor %}
-                    <theme-toggle></theme-toggle>
-                </div>
-            </section>
+                <theme-toggle></theme-toggle>
+            </div>
+        </section>
     </nav>
 </header>
 
