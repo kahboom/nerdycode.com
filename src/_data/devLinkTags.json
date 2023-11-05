@@ -4,8 +4,8 @@
     "value": "Amusing"
   },
   {
-    "label": "API",
-    "value": "API"
+    "label": "C",
+    "value": "C"
   },
   {
     "label": "Career",
@@ -24,16 +24,16 @@
     "value": "Data"
   },
   {
-    "label": "Data+Viz",
-    "value": "DataViz"
-  },
-  {
-    "label": "Hardware",
-    "value": "Hardware"
+    "label": "Embedded",
+    "value": "Embedded"
   },
   {
     "label": "InfoSec",
     "value": "InfoSec"
+  },
+  {
+    "label": "Inspirations",
+    "value": "Inspirations"
   },
   {
     "label": "JavaScript",
@@ -48,12 +48,12 @@
     "value": "Multimedia"
   },
   {
-    "label": "Networking",
-    "value": "Networking"
-  },
-  {
     "label": "Productivity",
     "value": "Productivity"
+  },
+  {
+    "label": "Rust",
+    "value": "Rust"
   },
   {
     "label": "Tech+News",

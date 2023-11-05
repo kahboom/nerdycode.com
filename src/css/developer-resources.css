@@ -13,16 +13,56 @@
     margin: 0 auto
 }
 
+[value="All"]:checked ~ .filters [for="All"],
+[value="Amusing"]:checked ~ .filters [for="Amusing"],
+[value="C"]:checked ~ .filters [for="C"],
+[value="Career"]:checked ~ .filters [for="Career"],
+[value="Communities"]:checked ~ .filters [for="Communities"],
+[value="CSS"]:checked ~ .filters [for="CSS"],
+[value="Data"]:checked ~ .filters [for="Data"],
+[value="Embedded"]:checked ~ .filters [for="Embedded"],
+[value="Etc"]:checked ~ .filters [for="Etc"],
+[value="InfoSec"]:checked ~ .filters [for="InfoSec"],
+[value="Inspirations"]:checked ~ .filters [for="Inspirations"],
+[value="JavaScript"]:checked ~ .filters [for="JavaScript"],
+[value="Learning"]:checked ~ .filters [for="Learning"],
+[value="Multimedia"]:checked ~ .filters [for="Multimedia"],
+[value="Productivity"]:checked ~ .filters [for="Productivity"],
+[value="Rust"]:checked ~ .filters [for="Rust"],
+[value="Tech+News"]:checked ~ .filters [for="Tech+News"],
+[value="Utilities"]:checked ~ .filters [for="Utilities"],
+[value="UXD"]:checked ~ .filters [for="UXD"],
+[value="Web+Dev"]:checked ~ .filters [for="Web+Dev"],
+[value="Workflow"]:checked ~ .filters [for="Workflow"] {
+    background: var(--green);
+    color: var(--white)
+}
+
 input[type="radio"] {
     position: absolute;
     left: -9999px
 }
 
-[value="All"]:checked ~ .filters [for="All"], [value="Amusing"]:checked ~ .filters [for="Amusing"], [value="API"]:checked ~ .filters [for="API"], [value="Career"]:checked ~ .filters [for="Career"], [value="Communities"]:checked ~ .filters [for="Communities"], [value="CSS"]:checked ~ .filters [for="CSS"], [value="Data"]:checked ~ .filters [for="Data"], [value="Data+Viz"]:checked ~ .filters [for="Data+Viz"], [value="Etc"]:checked ~ .filters [for="Etc"], [value="Hardware"]:checked ~ .filters [for="Hardware"], [value="InfoSec"]:checked ~ .filters [for="InfoSec"], [value="JavaScript"]:checked ~ .filters [for="JavaScript"], [value="Learning"]:checked ~ .filters [for="Learning"], [value="Multimedia"]:checked ~ .filters [for="Multimedia"], [value="Networking"]:checked ~ .filters [for="Networking"], [value="Productivity"]:checked ~ .filters [for="Productivity"], [value="Tech+News"]:checked ~ .filters [for="Tech+News"], [value="Utilities"]:checked ~ .filters [for="Utilities"], [value="UXD"]:checked ~ .filters [for="UXD"], [value="Web+Dev"]:checked ~ .filters [for="Web+Dev"], [value="Workflow"]:checked ~ .filters [for="Workflow"] {
-    background: var(--green);
-    color: var(--white)
-}
-
-[value="Amusing"]:checked ~ .links .link:not([data-tag~="Amusing"]), [value="API"]:checked ~ .links .link:not([data-tag~="API"]), [value="Career"]:checked ~ .links .link:not([data-tag~="Career"]), [value="Communities"]:checked ~ .links .link:not([data-tag~="Communities"]), [value="CSS"]:checked ~ .links .link:not([data-tag~="CSS"]), [value="Data"]:checked ~ .links .link:not([data-tag~="Data"]), [value="Data+Viz"]:checked ~ .links .link:not([data-tag~="Data+Viz"]), [value="Etc"]:checked ~ .links .link:not([data-tag~="Etc"]), [value="Hardware"]:checked ~ .links .link:not([data-tag~="Hardware"]), [value="InfoSec"]:checked ~ .links .link:not([data-tag~="InfoSec"]), [value="JavaScript"]:checked ~ .links .link:not([data-tag~="JavaScript"]), [value="Learning"]:checked ~ .links .link:not([data-tag~="Learning"]), [value="Multimedia"]:checked ~ .links .link:not([data-tag~="Multimedia"]), [value="Networking"]:checked ~ .links .link:not([data-tag~="Networking"]), [value="Productivity"]:checked ~ .links .link:not([data-tag~="Productivity"]), [value="Tech+News"]:checked ~ .links .link:not([data-tag~="Tech+News"]), [value="Utilities"]:checked ~ .links .link:not([data-tag~="Utilities"]), [value="UXD"]:checked ~ .links .link:not([data-tag~="UXD"]), [value="Web+Dev"]:checked ~ .links .link:not([data-tag~="Web+Dev"]), [value="Workflow"]:checked ~ .links .link:not([data-tag~="Workflow"]) {
+[value="Amusing"]:checked ~ .links .link:not([data-tag~="Amusing"]),
+[value="Career"]:checked ~ .links .link:not([data-tag~="Career"]),
+[value="C"]:checked ~ .links .link:not([data-tag~="C"]),
+[value="Communities"]:checked ~ .links .link:not([data-tag~="Communities"]),
+[value="CSS"]:checked ~ .links .link:not([data-tag~="CSS"]),
+[value="Data"]:checked ~ .links .link:not([data-tag~="Data"]),
+[value="Embedded"]:checked ~ .links .link:not([data-tag~="Embedded"]),
+[value="Etc"]:checked ~ .links .link:not([data-tag~="Etc"]),
+[value="InfoSec"]:checked ~ .links .link:not([data-tag~="InfoSec"]),
+[value="Inspirations"]:checked ~ .links .link:not([data-tag~="Inspirations"]),
+[value="JavaScript"]:checked ~ .links .link:not([data-tag~="JavaScript"]),
+[value="Learning"]:checked ~ .links .link:not([data-tag~="Learning"]),
+[value="Multimedia"]:checked ~ .links .link:not([data-tag~="Multimedia"]),
+[value="Networking"]:checked ~ .links .link:not([data-tag~="Networking"]),
+[value="Productivity"]:checked ~ .links .link:not([data-tag~="Productivity"]),
+[value="Rust"]:checked ~ .links .link:not([data-tag~="Rust"]),
+[value="Tech+News"]:checked ~ .links .link:not([data-tag~="Tech+News"]),
+[value="Utilities"]:checked ~ .links .link:not([data-tag~="Utilities"]),
+[value="UXD"]:checked ~ .links .link:not([data-tag~="UXD"]),
+[value="Web+Dev"]:checked ~ .links .link:not([data-tag~="Web+Dev"]),
+[value="Workflow"]:checked ~ .links .link:not([data-tag~="Workflow"]) {
     display: none
 }
