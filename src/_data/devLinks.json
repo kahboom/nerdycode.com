@@ -15,7 +15,7 @@
     "title": "Nathalie Lawhead",
     "url": "https://alienmelon.com/",
     "created": "2023-11-04 23:40:20",
-    "tags": "Retro Inspirations"
+    "tags": "Retro Amusing"
   },
   {
     "title": "asciinema",
@@ -68,12 +68,6 @@
     "url": "https://www.browsersync.io/",
     "description": "Free synchronised browser testing",
     "tags": "Web+Dev"
-  },
-  {
-    "title": "BubbleSort by Amy Wibowo",
-    "url": "https://shop.bubblesort.io/",
-    "created": "2023-11-04 23:44:39",
-    "tags": "Inspirations"
   },
   {
     "title": "Can I use...",
@@ -240,12 +234,6 @@
     "created": "2019-07-12 19:11:12",
     "url": "https://egghead.io/",
     "tags": "Learning"
-  },
-  {
-    "title": "Estefannie",
-    "url": "https://www.estefannie.com/",
-    "created": "2023-11-04 23:39:26",
-    "tags": "Inspirations"
   },
   {
     "title": "Excalidraw",
@@ -431,12 +419,6 @@
     "tags": "Web+Dev"
   },
   {
-    "title": "Jackie Liu",
-    "created": "2023-11-04 23:37:30",
-    "url": "https://jackieis.online/",
-    "tags": "Inspirations"
-  },
-  {
     "title": "Joplin",
     "created": "2023-11-04 23:01:24",
     "description": "Open source secure note taking app",
@@ -505,12 +487,6 @@
     "tags": "Amusing"
   },
   {
-    "title": "Maggie Appleton",
-    "url": "https://maggieappleton.com/",
-    "created": "2023-11-04 23:01:24",
-    "tags": "Inspirations"
-  },
-  {
     "title": "MFG Labs Icon Set",
     "created": "2019-07-14 16:06:58",
     "url": "https://mfglabs.github.io/mfglabs-iconset/",
@@ -533,12 +509,6 @@
     "created": "2019-07-12 19:43:59",
     "url": "https://github.com/micromata/awesome-css-learning",
     "tags": "CSS"
-  },
-  {
-    "title": "Mintlodica",
-    "created": "2023-11-04 19:43:59",
-    "url": "https://mintlodica.com/",
-    "tags": "Inspirations"
   },
   {
     "title": "Morguefile.com",
@@ -572,25 +542,13 @@
     "title": "Neopets",
     "url": "https://neopets.com/",
     "created": "2023-11-04 22:48:27",
-    "tags": "Retro Inspiration"
+    "tags": "Retro"
   },
   {
     "title": "NMAP",
     "created": "2019-07-12 16:38:46",
     "url": "https://nmap.org/",
     "tags": "InfoSec"
-  },
-  {
-    "title": "No Bad Memories",
-    "created": "2023-11-04 22:48:27",
-    "url": "https://www.nobadmemories.com/",
-    "tags": "Inspirations"
-  },
-  {
-    "title": "Norbauer",
-    "created": "2023-11-04 22:48:27",
-    "url": "https://www.norbauer.co/",
-    "tags": "Inspirations"
   },
   {
     "title": "OBS Open Broadcaster Software",
@@ -609,7 +567,7 @@
     "url": "https://www.old-computers.com/museum/default.asp",
     "created": "2023-11-04 23:47:29",
     "description": "On-line museum since 1995",
-    "tags": "Retro Inspirations"
+    "tags": "Retro"
   },
   {
     "title": "One Terabyte of Kilobyte Age",
@@ -679,7 +637,7 @@
     "created": "2019-07-30 19:06:12",
     "url": "https://poolsuite.net/",
     "description": "My fav website on the whole internet",
-    "tags": "Amusing Inspirations Retro"
+    "tags": "Amusing Retro"
   },
   {
     "title": "ProductHunt",
@@ -751,12 +709,6 @@
     "url": "https://robohash.org/",
     "description": "Generate unique images from any text",
     "tags": "Amusing"
-  },
-  {
-    "title": "SailorHg (Amy Wibowo)",
-    "created": "2023-11-04 23:49:03",
-    "url": "https://sailorhg.com/",
-    "tags": "Inspirations"
   },
   {
     "title": "SSL Checker",
