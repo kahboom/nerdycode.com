@@ -10,19 +10,19 @@ eleventyNavigation:
 <div class="columns">
 <section class="column is-three-quarters">
 
-Hello, world. My name is Rachel, and I'm a software engineer at Red Hat. I've also been a "webmaster" since the 90s.
+My name is Rachel, and I'm a software engineer at Red Hat. I've also been a "webmaster" since the 90s.
 
 I sometimes blog about technology from the perspective of a decidedly pragmatic developer, other times I blog about mechanical keyboards and Predator.
 
-I was born in the beautiful Dominican Republic (I'm Latin/Hispanic). I later went on to study Chemistry in college, but eventually decided to make a career out of what I had been doing for most of my life instead, namely, lounging around, eating pizza, and writing code.
+I was born in the Dominican Republic. I'm left-handed and a little bit weird. I studied Chemistry in college, but eventually decided to make a career out of what I had been doing for most of my life instead, namely, lounging around, eating pizza, and coding.
 
-I've worked on software for everything from children's education to distributed enterprise software. My main interests in tech are human-computer interaction and embedded programming. I'm also very interested in the juxtaposition of old school computing with the modern web.
+My interests in tech are IoT and embedded, though I specialize in web dev.
 
 <a href="/contact" rel="nofollow">📬 Send me an email</a>
 
 <p class="marquee">
    <span>
-   Other things I like: dancing - ballet, jazz+modern; mechanical keyboards; animals; climbing trees; programming electronics; organic chemistry; documentaries; learning; playing the guitar; vintage computers; pizza
+   This webpage is still under construction.
    </span>
  </p>
 
