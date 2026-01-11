@@ -6,12 +6,28 @@ Built with [Eleventy](https://github.com/11ty/eleventy).
 
 ## Install Dependencies
 
-`$ yarn`
+`$ npm install`
 
 ## Run the App
 
-`$ yarn start`
+`$ npm start`
 
 Navigate to [http://localhost:8080/](http://localhost:8080/).
+
+## E2E Tests
+
+This project uses [Playwright](https://playwright.dev/) for end-to-end testing. The test suites are located in `e2e/playwright/`.
+
+### Running Tests
+
+Run all e2e tests:
+
+`$ npm run test:e2e`
+
+Run tests with the Playwright UI:
+
+`$ npm run test:e2e:ui`
+
+> **Note:** The tests will automatically start a local dev server on port 8080 before running.
 
 - [Website](https://www.nerdycode.com/)
