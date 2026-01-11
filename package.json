@@ -15,7 +15,6 @@
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@playwright/test": "^1.40.0",
-    "cypress": "^13.6.0",
     "luxon": "^3.4.4",
     "markdown-it": "^14.0.0",
     "markdown-it-anchor": "^8.3.0",
@@ -31,11 +30,8 @@
     "start": "npm-run-all --parallel watch:eleventy",
     "watch": "eleventy --watch",
     "watch:eleventy": "eleventy --serve --quiet",
-    "test:e2e": "npm-run-all test:e2e:playwright test:e2e:cypress",
-    "test:e2e:playwright": "playwright test",
-    "test:e2e:playwright:ui": "playwright test --ui",
-    "test:e2e:cypress": "cypress run",
-    "test:e2e:cypress:open": "cypress open"
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
   },
   "bugs": {
     "url": "https://www.github.com/kahboom/nerdycode.com/issues"

@@ -10,8 +10,3 @@ Thumbs.db
 playwright-report/
 playwright/.cache/
 test-results/
-
-# Cypress
-cypress/screenshots/
-cypress/videos/
-cypress/downloads/
