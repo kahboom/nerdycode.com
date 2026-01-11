@@ -1,2 +1,6 @@
 README.md
 _11ty/
+e2e/
+cypress/
+playwright.config.ts
+cypress.config.js

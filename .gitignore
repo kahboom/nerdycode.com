@@ -5,3 +5,13 @@ package-lock.json
 .idea
 *.log
 Thumbs.db
+
+# Playwright
+playwright-report/
+playwright/.cache/
+test-results/
+
+# Cypress
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
