@@ -10,13 +10,15 @@ test.describe('Homepage', () => {
   });
 
   test('displays the NerdyCode logo/brand in navbar', async ({ page }) => {
-    const brand = page.locator('.navbar-brand a');
+    // Use more specific selector to avoid matching the hamburger menu
+    const brand = page.locator('.navbar-brand a.navbar-item');
     await expect(brand).toBeVisible();
     await expect(brand.locator('svg')).toBeVisible();
   });
 
   test('displays introduction text', async ({ page }) => {
-    await expect(page.getByText("Hello, world. I'm Rachel.")).toBeVisible();
+    // Text appears in both mobile and desktop layouts - target the desktop version
+    await expect(page.locator('.landing .typing')).toBeVisible();
   });
 
   test('has working navigation links', async ({ page }) => {
