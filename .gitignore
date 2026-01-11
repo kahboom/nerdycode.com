@@ -1,7 +1,11 @@
 _site/
 node_modules/
-package-lock.json
 .DS_Store
 .idea
 *.log
 Thumbs.db
+
+# Playwright
+playwright-report/
+playwright/.cache/
+test-results/
