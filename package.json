@@ -13,7 +13,7 @@
     "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-navigation": "^1.0.5",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "@playwright/test": "^1.40.0",
     "luxon": "^3.4.4",
     "markdown-it": "^14.0.0",
