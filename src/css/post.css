@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Droid+Serif|Permanent+Marker");
 
+/* ============================================
+   Post Sidebar
+   ============================================ */
 .sidebar {
     padding-left: 3em
 }
@@ -10,6 +13,9 @@
     }
 }
 
+/* ============================================
+   Mini Header
+   ============================================ */
 h4.mini-header {
     width: 100%;
     text-align: left;
@@ -25,10 +31,16 @@ h4.mini-header span {
     text-transform: uppercase
 }
 
+/* ============================================
+   Published Date
+   ============================================ */
 .published {
     font-size: 0.8em
 }
 
+/* ============================================
+   Sidebar Picture Adjustments
+   ============================================ */
 .sidebar .picture__border {
     padding: 20px 10px 15px
 }
@@ -37,123 +49,9 @@ h4.mini-header span {
     font: 0.8em "Permanent Marker"
 }
 
-.border-top {
-    border-top: 1px solid lightgrey
-}
-
-.references-block, .further-reading {
-    border-radius: 1rem;
-    border: 1px dotted var(--color-blue);
-    font-size: 0.7em;
-    margin: 3em 0 0;
-    padding: 3em
-}
-
-.references-block__title {
-    font-weight: 600;
-    text-transform: uppercase
-}
-
-.box-shadow {
-    -webkit-box-shadow: 0 10px 6px -6px #777;
-    -moz-box-shadow: 0 10px 6px -6px #777;
-    box-shadow: 0 10px 6px -6px #777
-}
-
-.dotted-box {
-    border-radius: 1rem;
-    border: 1px dotted var(--color-blue)
-}
-
-.number {
-    align-items: inherit;
-    background-color: inherit;
-    border-radius: inherit;
-    display: inherit;
-    font-size: inherit;
-    height: inherit;
-    justify-content: inherit;
-    margin-right: inherit;
-    min-width: inherit;
-    padding: inherit;
-    text-align: inherit;
-    vertical-align: inherit
-}
-
-code {
-    background-color: var(--background);
-    color: var(--color-orange)
-}
-
-code[class*="language-"], pre[class*="language-"] {
-    background-color: var(--code-background)
-}
-
-pre[class*=language-] {
-    padding: 1.5rem;
-    margin: .6rem -1.5rem 2rem !important;
-    overflow: auto;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.06), 0 2px 2px rgba(0, 0, 0, 0.06), 0 4px 4px rgba(0, 0, 0, 0.06), 0 8px 8px rgba(0, 0, 0, 0.06), 0 16px 16px rgba(0, 0, 0, 0.06)
-}
-
-@media screen and (min-width: 800px) {
-    pre[class*=language-] {
-        padding: 1.5rem;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: .35rem
-    }
-}
-
-@media screen and (min-width: 800px) {
-    code[class*=language-], pre[class*=language-] {
-        font-size: .95rem
-    }
-}
-
-.picture {
-    grid-area: picture;
-    margin-bottom: 2em;
-    margin-left: 1em
-}
-
-.picture__border {
-    width: 100%;
-    background: #f9f9f9;
-    padding: 20px 10px 10px;
-    height: 95%;
-    transform: rotate(5deg);
-    position: relative;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15)
-}
-
-.picture__border:after {
-    content: "";
-    width: 55%;
-    height: 20px;
-    top: -10px;
-    z-index: 5;
-    left: 25%;
-    transform: rotate(-2deg);
-    position: absolute;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    background: rgba(220, 220, 220, 0.4)
-}
-
-.picture__border img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover
-}
-
-.picture__border figcaption {
-    margin: 10px 0;
-    text-align: center;
-    display: block;
-    font: 1.10em "Permanent Marker";
-    color: #444
-}
-
+/* ============================================
+   Share Buttons
+   ============================================ */
 .share {
     margin: 1.5em auto
 }
@@ -241,33 +139,4 @@ pre[class*=language-] {
 
 .resp-sharing-button--twitter:hover {
     background-color: #2795e9
-}
-
-.tape {
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: inset 0 0 1em 0.5em rgba(255, 255, 255, 0.1);
-    position: absolute;
-    transform: rotate(-5deg);
-    -webkit-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3))
-}
-
-.tape:after, .tape:before {
-    background-size: .4em .4em;
-    bottom: 0;
-    content: '';
-    position: absolute;
-    top: 0;
-    width: .2em
-}
-
-.tape:after {
-    background-image: linear-gradient(45deg, transparent 50%, rgba(255, 255, 255, 0.3) 50%), linear-gradient(-45deg, transparent 50%, rgba(255, 255, 255, 0.3) 50%);
-    background-position: 0 100%;
-    left: -.2em
-}
-
-.tape:before {
-    background-image: linear-gradient(135deg, transparent 50%, rgba(255, 255, 255, 0.3) 50%), linear-gradient(-135deg, transparent 50%, rgba(255, 255, 255, 0.3) 50%);
-    background-position: 100% 100%;
-    right: -.2em
 }
