@@ -1,14 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Droid+Serif|Permanent+Marker");
 
-ol.postlist {
-    margin-left: 0em;
-    margin-top: 1em
-}
-
-ol.postlist:not([type]) {
-    list-style-type: none
-}
-
+/* ============================================
+   Home Page Sidebar
+   ============================================ */
 .sidebar {
     padding-left: 3em
 }
@@ -19,6 +13,9 @@ ol.postlist:not([type]) {
     }
 }
 
+/* ============================================
+   Mini Header
+   ============================================ */
 h4.mini-header {
     width: 100%;
     text-align: left;
@@ -34,10 +31,16 @@ h4.mini-header span {
     text-transform: uppercase
 }
 
+/* ============================================
+   Published Date
+   ============================================ */
 .published {
     font-size: 0.8em
 }
 
+/* ============================================
+   Sidebar Picture Adjustments
+   ============================================ */
 .sidebar .picture__border {
     padding: 20px 10px 15px
 }
@@ -46,141 +49,9 @@ h4.mini-header span {
     font: 0.8em "Permanent Marker"
 }
 
-.social-media__item {
-    height: 2rem;
-    transform-origin: center;
-    transition-duration: .2s;
-    transition-property: opacity, transform;
-    width: 4rem
-}
-
-.facebook {
-    --color: #3b5998;
-    --hover-color: darken(#3b5998, 20%)
-}
-
-.discord {
-    --color: #7289DA;
-    --hover-color: darken(#7289DA, 50%)
-}
-
-.github {
-    --color: var(--text-color);
-    --hover-color: darken(var(--text-color), 10%)
-}
-
-.instagram {
-    --color: #E4405F;
-    --hover-color: darken(#E4405F, 10%)
-}
-
-.linkedin {
-    --color: #15aabf;
-    --hover-color: darken(#15aabf, 50%)
-}
-
-.pinterest {
-    --color: #BD081C;
-    --hover-color: darken(#BD081C, 10%)
-}
-
-.reddit {
-    --color: #FF4500;
-    --hover-color: darken(#FF4500, 10%)
-}
-
-.rss {
-    --color: #FFA500;
-    --hover-color: darken(#FFA500, 10%)
-}
-
-.tumblr {
-    --color: #36465D;
-    --hover-color: darken(#36465D, 10%)
-}
-
-.twitter {
-    --color: #55acee;
-    --hover-color: darken(#55acee, 10%)
-}
-
-.youtube {
-    --color: #FF0000;
-    --hover-color: darken(#FF0000, 50%)
-}
-
-.picture {
-    grid-area: picture;
-    margin-bottom: 2em;
-    margin-left: 1em
-}
-
-.picture__border {
-    width: 100%;
-    background: #f9f9f9;
-    padding: 20px 10px 10px;
-    height: 95%;
-    transform: rotate(5deg);
-    position: relative;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15)
-}
-
-.picture__border:after {
-    content: "";
-    width: 55%;
-    height: 20px;
-    top: -10px;
-    z-index: 5;
-    left: 25%;
-    transform: rotate(-2deg);
-    position: absolute;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    background: rgba(220, 220, 220, 0.4)
-}
-
-.picture__border img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover
-}
-
-.picture__border figcaption {
-    margin: 10px 0;
-    text-align: center;
-    display: block;
-    font: 1.10em "Permanent Marker";
-    color: #444
-}
-
-.tape {
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: inset 0 0 1em 0.5em rgba(255, 255, 255, 0.1);
-    position: absolute;
-    transform: rotate(-5deg);
-    -webkit-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3))
-}
-
-.tape:after, .tape:before {
-    background-size: .4em .4em;
-    bottom: 0;
-    content: '';
-    position: absolute;
-    top: 0;
-    width: .2em
-}
-
-.tape:after {
-    background-image: linear-gradient(45deg, transparent 50%, rgba(255, 255, 255, 0.3) 50%), linear-gradient(-45deg, transparent 50%, rgba(255, 255, 255, 0.3) 50%);
-    background-position: 0 100%;
-    left: -.2em
-}
-
-.tape:before {
-    background-image: linear-gradient(135deg, transparent 50%, rgba(255, 255, 255, 0.3) 50%), linear-gradient(-135deg, transparent 50%, rgba(255, 255, 255, 0.3) 50%);
-    background-position: 100% 100%;
-    right: -.2em
-}
-
+/* ============================================
+   Home Page Latest Ramblings
+   ============================================ */
 .home--latest-ramblings {
     margin-top: 3em
 }
@@ -189,16 +60,11 @@ h4.mini-header span {
     margin-bottom: inherit
 }
 
+/* ============================================
+   Landing Section
+   ============================================ */
 .landing {
     font-size: 1.5rem
-}
-
-.dotted-box {
-    border-radius: 1rem;
-    border: 1px dotted var(--color-blue);
-    font-size: 0.7em;
-    margin: 3em 0 0;
-    padding: 3em
 }
 
 .wrapper {
@@ -207,6 +73,9 @@ h4.mini-header span {
     justify-content: center
 }
 
+/* ============================================
+   Typing Animation
+   ============================================ */
 .typing {
     width: 26ch;
     animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
